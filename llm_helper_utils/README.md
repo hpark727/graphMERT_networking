@@ -88,7 +88,7 @@ It is highly recommended to inspect the quality of LLM-generated outputs in the 
 
 ## 1. entity_discovery
 
-`entity_discovery.py` finds head entity spans in the tokenized dataset following the prompt guidlines. You can obtain tokenized dataset after the very 1st pipeline step (`run_tokenization.py`). Some of identified entities may be hallucinations, so you need to further filter them using `filter_heads.py`. 
+`entity_discovery.py` finds head entity spans in the tokenized dataset following the prompt guidlines. You can obtain tokenized dataset after the very 1st pipeline step (`run_tokenization.py`). Some of identified entities may be hallucinations, so you need to further filter them using `find_heads_positions.py`. 
 
 In prompts, include both positive and negative domain-speicific head entity examples. ~2 positive and ~1 negative examples are recommended. 
 
@@ -109,7 +109,7 @@ Read the log to see the path where the cleaned dataset is saved.
 
 
 ## 2. relation_adding
-We add relations to the discovered head entities for prediction with the trained model. Note that they are required for prediction only, but not for training. For training we use relations from the seed KG only, but for prediction we add more relations (same set of allowed relations) to increase coverage.
+We add relations to the discovered head entities for prediction with the trained model. Note that **they are required for prediction only, but not for training**. For training we use relations from the seed KG only, but for prediction we add more relations (same set of allowed relations) to increase coverage.
 `add_relations.py` matches allowed relations to head entities found on the previous `entity_discovery` step. The list of allowed relations can be obtained after running `seed_kg_injection_algorithm.ipynb` on previous step: these are all relations included in the seed KG. **You must add list of your allowed relations in`add_relations_prompts.py`**, MEANING_EXPL, and REL_USAGE_EXAMPLES. However, it is ok if you decide to remove MEANING_EXPL and the corresponding part in the prompt. 
 
 ### Usage
@@ -119,10 +119,10 @@ To run the relation adding script (uses GPU):
 python llm_helper_utils/relation_adding/add_relations.py 
 ```
 
-Next, run `filter_relations.py` to filter out hallucinated relations (cpu-only job). It removes all relations but in the ALLOWED_RELATIONS list defined in `filter_relations_prompts.py`:
+Next, run `clean_relations.py` to filter out hallucinated relations (cpu-only job). It removes all relations but in the ALLOWED_RELATIONS list defined in `add_relations_prompts.py`:
 
 ```bash
-python llm_helper_utils/relation_adding/filter_relations.py 
+python llm_helper_utils/relation_adding/clean_relations.py 
 ```
 Read the log to see the path where the cleaned dataset is saved.
 

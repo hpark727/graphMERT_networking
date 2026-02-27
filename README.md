@@ -262,7 +262,7 @@ The number of leaves, 3 vs 7, (2^n - 1) depends on the number of tokens in your 
 
 Adjust these parameters based on your dataset size and GPU memory. The higher `root_nodes` is, the longer is your actual traiing sequence and context. High `max_nodes` increases GPU memory usage.
 
-```
+
 * `relation_emb_dropout`: used in `graphmert_model/configuration_graphmert.py` to set the dropout rate for relation embeddings. Set higher values (e.g., 0.3-0.5) if semantic vocabulary size is small to prevent overfitting.
 * `mlm_sbo`: used in `mlm_utils.py` to enable span boundary objective during MLM training. Set to true for training with masked node objective.
 * `exp_mask_base`: used in `mlm_utils.py` to set the base for exponential masking of tokens. Smaller values focus on nearby tokens, larger values spread attention more evenly and distantly.
@@ -301,7 +301,7 @@ This dataset serves as an input to the seed KG injection algorithm. It must cont
 
 If you followed the pipeline instructions in `../README.md` and `llm_helper_utils/README.md`, you should already have a file with necesary columns containing the discovered head entities. After mathcing those entities to an external knowledge graph, you should have gotten `top_k_relations_with_scores` column added to the dataset. Now you can proceed to use the seed KG injection algorithm.
 
-
+You need to run this step before running relation matching to get the list of allowed relations: they must match the seed KG relations.
 
 ### Usage
 
@@ -354,7 +354,7 @@ Configure the prediction parameters in `utils/args_predict.yaml`. Below are the 
 
 * `model_path`: Should point to the directory containing your trained model checkpoint (with `config.json`, `model.safetensors` or `pytorch_model.bin`).
 * `relation_map_path`: If not provided, the script assumes the relation map is located at `{model_path}/relation_map.json` (generated during dataset preprocessing step).
-* `preprocessed_dataset_path`: This should be a dataset after relation matching step that contains columns `cleaned_response` and `head_positions` from the relation matching step, where `cleaned_response` conintains the matched relation for each head entity in `head_positions`.
+* `preprocessed_dataset_path`: This should be a dataset after relation matching step (`llm_helper_utils/relation_adding/add_relations.py` followed by `llm_helper_utils/relation_adding/clean_relations.py`). This dataset should contain columns `cleaned_response` and `head_positions` from the relation matching step, where `cleaned_response` (`added with clean_relations.py`) conintains the matched relation for each head entity in `head_positions`.
 * `top_k`: Adjust based on your application needs. Higher values yield more predictions but less reliable. Recommended range is 10-20. It is advised to launch a test run with smaller `top_k` first to verify that these top_k predictions are reasonable. 
 Larger `top_k` values will increase computation time and memory usage on later steps (combine tails).
 * `num_leaves`, `root_nodes`: These architecture parameters must match the values used during model training. Check your training config if unsure.
