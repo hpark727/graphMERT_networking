@@ -321,7 +321,7 @@ The algorithm produces three files per dataset split (train/eval):
 ## Prerequisites
 
 1. A trained GraphMERT model checkpoint
-2. A dataset with relation matching completed  (output from `llm_helper_utils/match_relations.py`, see `llm_helper_utils/README.md` for details)
+2. A dataset with relation matching completed  (output from `llm_helper_utils/add_relations.py`, see `llm_helper_utils/README.md` for details)
 
 ## Usage
 ```bash

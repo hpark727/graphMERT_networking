@@ -88,7 +88,7 @@ do_train: true
 bf16: true
 #eval_accumulation_steps: null
 #eval_delay: 0
-evaluation_strategy: steps
+eval_strategy: steps
 #full_determinism: false
 #gradient_checkpointing: false
 #logging_dir: "test/runs/Oct01_13-56-37_della-gpu.princeton.edu"
