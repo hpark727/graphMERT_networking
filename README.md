@@ -50,7 +50,7 @@ python -m ipykernel install --user --name=graphmert
 
 # Project Structure
 
-![Description](images/pipeline-methodology.svg "Pipeline")
+![Description](images/pipeline.svg "Pipeline")
 
 ```
 graphmert/
