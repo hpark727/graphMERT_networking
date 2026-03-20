@@ -1,5 +1,6 @@
 # GraphMert
 
+This is the official repo for [GraphMERT: Efficient and Scalable Distillation of Reliable Knowledge Graphs from Unstructured Data](https://openreview.net/pdf?id=tnXSdDhvqc).
 This folder contains the main GraphMert model implementation and utilities for training. 
 
 ## Citation
