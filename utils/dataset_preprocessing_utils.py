@@ -70,7 +70,6 @@ def inject_leaves(dataset, split: str, relation_map, injections_dict, data_args,
         batch['leaf_node_ids'] = leaf_node_ids
         batch['leaf_relationships'] = leaf_relationships
         batch['head_lengths'] = head_lengths
-        batch.pop('head_positions')
         return batch
     
     
@@ -82,7 +81,6 @@ def inject_leaves(dataset, split: str, relation_map, injections_dict, data_args,
             Sequence(Value("uint32"), length=num_leaves),
             length=config.root_nodes
     )
-    new_features.pop('head_positions')
 
     with training_args.main_process_first(desc="preprocessing texts for graphmert"):
         dataset = dataset.map(
@@ -118,7 +116,6 @@ def preprocess_items_for_graphmert(dataset, split: str, data_args, training_args
             ],
             dtype=np.uint8
         )
-        items.pop('leaf_node_ids')
         return items
     
     # set feature typs to speed up processing
@@ -127,7 +124,6 @@ def preprocess_items_for_graphmert(dataset, split: str, data_args, training_args
     new_features['attention_mask'] = Sequence(Value(dtype='uint8'), length=config.max_nodes)
     new_features['special_tokens_mask'] = Sequence(Value(dtype='uint8'), length=config.max_nodes)
     new_features['start_indices'] = Sequence(Value(dtype='uint16'))
-    new_features.pop('leaf_node_ids')
     
     with training_args.main_process_first(desc="preprocessing texts for graphmert"):
         dataset = dataset.map(
