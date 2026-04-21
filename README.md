@@ -261,7 +261,7 @@ max_noides = 1024, root_nodes = 256: 3 leaves per head.
 
 The number of leaves, 3 vs 7, (2^n - 1) depends on the number of tokens in your triple tails. If triple tails in your seed KG fit well into 3 tokens on average, this is fine. If your tails have elaborated long phrases, choose number of leaves equal to 7.
 
-Adjust these parameters based on your dataset size and GPU memory. The higher `root_nodes` is, the longer is your actual trainng sequence and context. High `max_nodes` increases GPU memory usage.
+Adjust these parameters based on your dataset size and GPU memory. The higher `root_nodes` is, the longer is your actual training sequence and context. High `max_nodes` increases GPU memory usage.
 
 
 * `relation_emb_dropout`: used in `graphmert_model/configuration_graphmert.py` to set the dropout rate for relation embeddings. Set higher values (e.g., 0.3-0.5) if semantic vocabulary size is small to prevent overfitting.
