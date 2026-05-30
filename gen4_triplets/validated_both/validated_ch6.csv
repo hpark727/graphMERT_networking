@@ -1,0 +1,285 @@
+head,relation_type,tail,verdict_qwen,verdict_gpt
+802.11,operates_at,link layer,yes,yes
+802.1q,provides,vlan tag,yes,yes
+access router,connects_to,top-tier switch,yes,yes
+adapter,connects_to,broadcast channel,yes,yes
+adapter,has_part,buffer,yes,yes
+adapter,has_part,mac address,yes,yes
+adapter,implements,cyclic redundancy check,yes,yes
+adapter,part_of,node,yes,yes
+adapter,receives,datagram,yes,yes
+adapter,receives,ethernet frame,yes,yes
+adapter,receives,frame,yes,yes
+adapter,receives,ip datagram,yes,yes
+adapter,sends,ethernet frame,yes,yes
+adapter,sends,frame,yes,yes
+aloha,is_a,random access protocol,yes,yes
+arp,identifies,mac address,yes,yes
+arp,maps_to,mac address,yes,yes
+arp,operates_at,link layer,yes,yes
+arp packet,contains,ip address,yes,yes
+arp packet,contains,mac address,yes,yes
+arp table,contains,ip address,yes,yes
+arp table,contains,mac address,yes,yes
+arq,provides,error correction,yes,yes
+atheros ar5006 controller,implements,802.11,yes,yes
+atm,is_a,protocol,yes,yes
+bob laptop,receives,ethernet frame,yes,yes
+bob laptop,requires,arp,yes,yes
+bob laptop,sends,ethernet frame,yes,yes
+border router,connects_to,access router,yes,yes
+border router,connects_to,data center network,yes,yes
+buffer,contains,frame,yes,yes
+buffer,part_of,adapter,yes,yes
+buffer,part_of,switch,yes,yes
+burst error,causes,undetected error,yes,yes
+cable modem,communicates_with,cmts,yes,yes
+cable modem,sends,mini-slot-request frame,yes,yes
+cdma,supports,broadcast channel,yes,yes
+checksum,provides,error detection,yes,yes
+checksumming method,provides,error detection,yes,yes
+cmts,receives,mini-slot-request frame,yes,yes
+cmts,sends,map message,yes,yes
+collision,causes,packet loss,yes,yes
+collision,decreases,bandwidth,yes,yes
+column parity,part_of,error-detection bits,yes,yes
+control plane,enables,operational state management,yes,yes
+control plane,manages,data plane,yes,yes
+controller,receives,frame,yes,yes
+crc,requires,generator 1001,yes,yes
+crc,requires,generator 10011,yes,yes
+csma,is_a,random access protocol,yes,yes
+csma,requires,carrier sensing,yes,yes
+csma/cd,implements,binary exponential backoff,yes,yes
+csma/cd,requires,carrier sensing,yes,yes
+csma/cd,requires,collision detection,yes,yes
+csma/cd,supports,broadcast link,yes,yes
+csma/cd-like multiple access protocol,implements,csma/cd algorithm,yes,yes
+cyclic redundancy check,operates_at,link layer,yes,yes
+cyclic redundancy check,provides,error detection,yes,yes
+cyclic redundancy check,requires,modulo-2 arithmetic,yes,yes
+cyclic redundancy check,requires,xor,yes,yes
+cyclic redundancy check,supports,link layer,yes,yes
+data center interconnection network,has_part,switch,yes,yes
+data center network,connects_to,host,yes,yes
+data center network,has_part,border router,yes,yes
+data center network,has_part,switch,yes,yes
+dns,maps_to,ip address,yes,yes
+docsis,implements,binary exponential backoff algorithm,yes,yes
+ecmp,implements,multipath routing,yes,yes
+edc bits,enables,error correction,yes,yes
+edc bits,enables,error detection,yes,yes
+efficiency,measures,successful slot,yes,yes
+error-detection bits,part_of,link-layer frame,yes,yes
+ethernet,has_part,csma/cd,yes,yes
+ethernet,implements,binary exponential backoff algorithm,yes,yes
+ethernet,implements,csma/cd,yes,yes
+ethernet,is_a,protocol,yes,yes
+ethernet,operates_at,link layer,yes,yes
+ethernet,provides,connectionless service,yes,yes
+ethernet,supports,broadcast channel,yes,yes
+ethernet,supports,broadcast link,yes,yes
+ethernet frame,contains,arp query message,yes,yes
+ethernet frame,contains,arp reply message,yes,yes
+ethernet frame,contains,ip datagram,yes,yes
+ethernet frame,contains,vlan tag,yes,yes
+ethernet frame,has_part,data field,yes,yes
+even parity scheme,contains,single parity bit,yes,yes
+even parity scheme,provides,error detection,yes,yes
+fddi protocol,is_a,token-passing protocol,yes,yes
+fdm,prevents,collision,yes,yes
+fdm,supports,broadcast channel,yes,yes
+forward error correction,provides,error correction,yes,yes
+forward error correction,supports,arq,yes,yes
+forwarding,part_of,switch,yes,yes
+forwarding table,contains,mac address,yes,yes
+forwarding table,part_of,gateway router,yes,yes
+forwarding table,part_of,router,yes,yes
+forwarding table,part_of,switch,yes,yes
+frame,contains,mac address,yes,yes
+frame,contains,mac broadcast address,yes,yes
+frame,contains,mpls header,yes,yes
+frame,contains,packet,yes,yes
+frame,has_part,cyclic redundancy check,yes,yes
+frame,has_part,preamble,yes,yes
+frame,has_part,source address,yes,yes
+frame,has_part,type field,yes,yes
+frame-relay,is_a,protocol,yes,yes
+full-duplex,prevents,frame collisions,yes,yes
+gateway router,forwards,ip datagram,yes,yes
+gateway router,manages,forwarding table,yes,yes
+gateway router,receives,ethernet frame,yes,yes
+gateway router,sends,ethernet frame,yes,yes
+gigabit ethernet,supports,csma/cd,yes,yes
+hierarchical tiered network,has_part,switch,yes,yes
+high-level data link control,operates_at,link layer,yes,yes
+high-level data link control,supports,point-to-point link,yes,yes
+host,connects_to,hub,yes,yes
+host,connects_to,switch,yes,yes
+host,connects_to,top of rack switch,yes,yes
+host,connects_to,tor switch,yes,yes
+host,connects_to,vlan,yes,yes
+host,connects_to,wifi access point,yes,yes
+host,has_part,adapter,yes,yes
+host,has_part,ip address,yes,yes
+host,has_part,mac address,yes,yes
+host,is_a,network component,yes,yes
+host,part_of,rack,yes,yes
+host,receives,arp response packet,yes,yes
+host,requires,arp,yes,yes
+host,requires,ip address,yes,yes
+host,sends,arp query packet,yes,yes
+hub,operates_at,physical layer,yes,yes
+hub,receives,ethernet frame,yes,yes
+ip,is_a,protocol,yes,yes
+ip,operates_at,network layer,yes,yes
+ip,requires,internet checksum,yes,yes
+ip address,identifies,host,yes,yes
+ip address,identifies,host a,yes,yes
+ip address,identifies,router,yes,yes
+ip address,maps_to,mac address,yes,yes
+label‑switched router,forwards,mpls frame,yes,yes
+label‑switched router,is_a,router,yes,yes
+leftmost router,forwards,ip datagram,yes,yes
+link,connects_to,host,yes,yes
+link layer,has_part,hardware,yes,yes
+link layer,has_part,software,yes,yes
+link layer,provides,error correction,yes,yes
+link layer,provides,error detection,yes,yes
+link layer,provides,framing,yes,yes
+link layer,provides,link access,yes,yes
+link layer,provides,link-layer addressing information,yes,yes
+link layer software,receives,controller interrupts,yes,yes
+link layer software,runs_on,host,yes,yes
+link-layer switch,forwards,frame,yes,yes
+link-level frame,has_part,edc bits,yes,yes
+link-level frame,has_part,sequence number,yes,yes
+link‑layer protocol,provides,framing,yes,yes
+mac address,identifies,adapter,yes,yes
+mac address,identifies,host a,yes,yes
+medium access protocol,enables,frame,yes,yes
+modem,connects_to,host,yes,yes
+mpls,enables,traffic engineering,yes,yes
+mpls,implements,vpn,yes,yes
+mpls,is_a,protocol,yes,yes
+mpls,provides,traffic engineering,yes,yes
+mpls infrastructure,connects_to,destination a,yes,yes
+mpls infrastructure,connects_to,destination d,yes,yes
+mpls infrastructure,connects_to,r5,yes,yes
+multiple access protocol,supports,broadcast channel,yes,yes
+network adapter,implements,error correction,yes,yes
+network adapter,implements,error detection,yes,yes
+network adapter,implements,framing,yes,yes
+network adapter,implements,link access,yes,yes
+node,connects_to,adapter,yes,yes
+node,receives,frame,yes,yes
+node,receives,token,yes,yes
+node,sends,frame,yes,yes
+node,sends,packet,yes,yes
+node a,communicates_with,node b,yes,yes
+odd parity scheme,contains,single parity bit,yes,yes
+odd parity scheme,provides,error detection,yes,yes
+ospf,implements,link‑state routing,yes,yes
+ospf,supports,link‑state information,yes,yes
+output buffer,part_of,switch,yes,yes
+parity check,provides,error detection,yes,yes
+point-to-point link,connects_to,host,yes,yes
+point-to-point link,connects_to,router,yes,yes
+point-to-point link,connects_to,switch,yes,yes
+point-to-point protocol,operates_at,link layer,yes,yes
+port,connects_to,vlan,yes,yes
+port-to-vlan mapping table,part_of,switch,yes,yes
+r1,is_a,router,yes,yes
+r1,routes_to,destination a,yes,yes
+r2,is_a,router,yes,yes
+r2,routes_to,destination a,yes,yes
+r3,routes_to,destination a,yes,yes
+r3,routes_to,destination d,yes,yes
+r5,is_a,router,yes,yes
+r6,is_a,router,yes,yes
+rdma,runs_on,ethernet,yes,yes
+receiving node,receives,link-level frame,yes,yes
+repeater,operates_at,physical layer,yes,yes
+router,connects_to,hub,yes,yes
+router,connects_to,switch,yes,yes
+router,forwards,ip datagram,yes,yes
+router,has_part,adapter,yes,yes
+router,has_part,forwarding table,yes,yes
+router,implements,store-and-forward,yes,yes
+router,operates_at,network layer,yes,yes
+router,provides,firewall protection,yes,yes
+router,receives,frame,yes,yes
+router,requires,ip address,yes,yes
+router,sends,frame,yes,yes
+router r1,receives,ethernet frame,yes,yes
+sdn-like centralized control,is_a,concept,yes,yes
+second-tier switch,connects_to,tor switch,yes,yes
+sending node,sends,link-level frame,yes,yes
+single parity bit,enables,error detection,yes,yes
+switch,connects_to,interface,yes,yes
+switch,connects_to,lan segment,yes,yes
+switch,connects_to,router,yes,yes
+switch,connects_to,server,yes,yes
+switch,forwards,ethernet frame,yes,yes
+switch,forwards,frame,yes,yes
+switch,forwards,link-layer frame,yes,yes
+switch,has_part,buffer,yes,yes
+switch,has_part,forwarding table,yes,yes
+switch,has_part,port-to-vlan mapping table,yes,yes
+switch,has_part,switch table,yes,yes
+switch,implements,ethernet,yes,yes
+switch,implements,store-and-forward,yes,yes
+switch,operates_at,data link layer,yes,yes
+switch,operates_at,layer 2,yes,yes
+switch,operates_at,link layer,yes,yes
+switch,prevents,collision,yes,yes
+switch,provides,store-and-forward,yes,yes
+switch,receives,frame,yes,yes
+switch,receives,link-layer frame,yes,yes
+switch,supports,vlan,yes,yes
+switch s1,has_part,forwarding table,yes,yes
+switch table,contains,mac address,yes,yes
+switch table,part_of,switch,yes,yes
+switched local network,contains,switch,yes,yes
+tag control information,contains,vlan identifier,yes,yes
+tcp,requires,internet checksum,yes,yes
+tcp segment,contains,http get message,yes,yes
+tcp segment,contains,http response message,yes,yes
+tdm,prevents,collision,yes,yes
+tier-1 switch,connects_to,tier-2 switch,yes,yes
+tier-2 switch,connects_to,tier-1 switch,yes,yes
+tier-2 switch,connects_to,tor switch,yes,yes
+time frame,contains,time slot,yes,yes
+token,is_a,frame,yes,yes
+token-passing protocol,has_part,token,yes,yes
+token-passing protocol,is_a,taking-turns protocol,yes,yes
+token-ring protocol,operates_at,link layer,yes,yes
+top of rack switch,connects_to,switch,yes,yes
+top of rack switch,part_of,rack,yes,yes
+top-tier switch,connects_to,load balancer,yes,yes
+top-tier switch,connects_to,second-tier switch,yes,yes
+tor switch,connects_to,second-tier switch,yes,yes
+tor switch,connects_to,server,yes,yes
+tor switch,connects_to,tier-2 switch,yes,yes
+transport layer,provides,error correction,yes,yes
+transport layer,provides,error detection,yes,yes
+trunk port,connects_to,switch,yes,yes
+trunk port,supports,vlan,yes,yes
+two-dimensional parity,provides,error correction,yes,yes
+two-dimensional parity,provides,error detection,yes,yes
+two-dimensional parity scheme,contains,row parity,yes,yes
+two-dimensional parity scheme,provides,error correction,yes,yes
+two-dimensional parity scheme,provides,error detection,yes,yes
+type field,maps_to,appletalk,yes,yes
+type field,maps_to,novell ipx,yes,yes
+udp,contains,dns query,yes,yes
+upstream channel,contains,mini-slot,yes,yes
+vlan,has_part,priority field,yes,yes
+vlan tag,has_part,priority field,yes,yes
+vlan tag,has_part,tag control information,yes,yes
+vlan tag,has_part,tag protocol identifier,yes,yes
+wifi access point,connects_to,switch,yes,yes
+wireless lan,operates_at,link layer,yes,yes
+wireless lan,supports,broadcast channel,yes,yes
+wireless lan,supports,broadcast link,yes,yes
+xtp,requires,checksum,yes,yes

@@ -1,0 +1,425 @@
+head,relation_type,tail
+4g lte,implements,symmetric indirect routing
+4g lte,is_a,protocol
+5g,enables,mimo-technology
+5g,is_a,protocol
+5g,provides,available spectrum
+5g,supports,millimeter wave frequencies
+5g,variant_of,4g lte
+5g nr,is_a,protocol
+5g nr,operates_at,physical layer
+802.11,connects_to,ethernet
+802.11,contains,frame
+802.11,enables,channel reservation
+802.11,has_part,frame format
+802.11,implements,csma/ca
+802.11,operates_at,link layer
+802.11,operates_at,physical layer
+802.11,provides,crc
+802.11,provides,link-layer acknowledgment
+802.11,provides,power management
+802.11,requires,beacon frame
+802.11,supports,collision avoidance
+802.11 ac,supports,mimo
+802.11 ac,supports,smart antennas
+802.11 ac,variant_of,802.11
+802.11 af,variant_of,802.11
+802.11 ah,variant_of,802.11
+802.11 ax,supports,centralized scheduling
+802.11 ax,supports,mimo
+802.11 ax,supports,smart antennas
+802.11 ax,variant_of,802.11
+802.11 b,variant_of,802.11
+802.11 frame,contains,address 3
+802.11 g,communicates_with,base station
+802.11 g,variant_of,802.11
+802.11 n,supports,mimo
+802.11 n,variant_of,802.11
+access point,connects_to,router interface
+access point,connects_to,switch
+access point,forwards,ethernet frame
+access point,forwards,router
+access point,has_part,channel
+access point,is_a,base station
+access point,is_a,station
+access point,part_of,ip subnet
+access point,receives,802.11 frame
+access point,receives,frame
+access point,receives,rts frame
+access point,sends,acknowledgment
+access point,sends,beacon frame
+access point,sends,cts frame
+access point,sends,data frame
+access point,variant_of,base station
+ack,increases,transmission rate
+adaptive modulation and coding,supports,wifi
+address 1,identifies,access point
+address 1,identifies,wireless station
+address 2,identifies,access point
+address 2,identifies,wireless station
+address 3,identifies,router
+address 3,identifies,router interface
+amf,part_of,mme
+anchor point,supports,handover
+ap,provides,wireless bandwidth
+ap,receives,association request frame
+ap,receives,probe request frame
+ap,sends,association response frame
+ap,sends,probe response frame
+ap2,sends,beacon frame
+ap2,sends,broadcast ethernet frame
+ap2,sends,ethernet frame
+arp,maps_to,ip address
+arp,maps_to,mac address
+base station,communicates_with,mme
+base station,communicates_with,mobile device
+base station,communicates_with,wireless host
+base station,connects_to,gateway
+base station,connects_to,larger network
+base station,connects_to,mobile device
+base station,connects_to,modem
+base station,connects_to,serving gateway
+base station,enables,channel access
+base station,enables,ip tunnel
+base station,forwards,ip datagram
+base station,is_a,network component
+base station,manages,interference
+base station,manages,mobile device
+base station,manages,mobility
+base station,manages,radio spectrum
+base station,manages,wireless host
+base station,manages,wireless radio resources
+base station,operates_at,link layer
+base station,receives,ip datagram
+base station,receives,packet
+base station,sends,packet
+base station,sends,paging messages
+base station,sends,udp
+beacon frame,contains,mac address
+beacon frame,contains,node
+beacon frame,contains,ssid
+beacon frame,identifies,ap
+bit slot time,has_part,mini-slot
+bluetooth,enables,wireless peripheral connectivity
+bluetooth,implements,frequency-hopping spread spectrum
+bluetooth,operates_at,link layer
+bluetooth,provides,streaming
+bluetooth,provides,throughput
+bluetooth,supports,ack
+bluetooth,supports,ad hoc network
+bluetooth,supports,error detection
+bluetooth,supports,frequency division multiplexing
+bluetooth,supports,nak
+bluetooth,supports,personal area network
+bluetooth,supports,polling
+bluetooth,supports,randomized backoff
+bluetooth,supports,time division multiplexing
+broadcast ethernet frame,contains,mac address
+bss,connects_to,wired lan
+bss,part_of,ip subnet
+cdma,is_a,channel partitioning
+cdma,provides,shared-medium access
+cdma,requires,chipping rate
+cell tower,is_a,base station
+cellular carrier,connects_to,ipx network
+channel partitioning,is_a,medium access protocol
+client,communicates_with,master
+client device,connects_to,base station
+client device,sends,ack
+congestion,causes,handover
+correspondent,communicates_with,hss
+correspondent,sends,datagram
+correspondent,sends,gateway router
+csma/ca,enables,backoff
+csma/ca,enables,random backoff
+csma/ca,operates_at,link layer
+csma/ca,supports,cts frame
+csma/ca,supports,rts frame
+cts frame,increases,delay
+cts frame,mitigates,hidden terminal
+data frame,contains,datagram
+datagram,routes_to,correspondent
+datagram,routes_to,home gateway
+datagram,routes_to,home network
+datagram,routes_to,mobile device
+datagram,routes_to,visited gateway router
+datagram tunneling protocol,encapsulates,datagram
+datagram tunneling protocol,forwards,datagram
+datagram tunneling protocol,provides,nat
+direct routing,mitigates,triangle routing problem
+embb,is_a,service
+embb,provides,bandwidth
+embb,provides,latency
+enode-b,variant_of,base station
+ethernet,implements,csma/cd
+ethernet frame,contains,mac address
+ethernet frame,encapsulates,datagram
+fading,causes,collision
+fading,prevents,collision detection
+foreign agent,provides,agent discovery
+foreign agent,provides,care-of-address
+forwarding table,maps_to,mac address
+forwarding table,maps_to,switch interface
+forwarding table,part_of,router
+forwarding table,part_of,switch
+fr1,is_a,concept
+fr2,is_a,concept
+frame,contains,crc
+frame control field,contains,subtype field
+frame control field,contains,type field
+gateway router,forwards,ip datagram
+gateway router,is_a,router
+global unique identifier,identifies,mobile device
+gprs tunneling protocol,encapsulates,ip datagram
+gprs tunneling protocol,runs_on,udp
+gsm,supports,circuit switching
+h1,connects_to,ap2
+h1,receives,beacon frame
+h1,sends,ap2
+handover,mitigates,congestion
+handover,requires,latency
+hidden terminal,causes,collision
+hidden terminal problem,causes,interference
+hidden terminal problem,prevents,collision detection
+home agent,forwards,datagram
+home gateway,encapsulates,datagram
+home gateway,forwards,datagram
+home network,communicates_with,visited network
+home network gateway router,connects_to,visited network gateway router
+home network gateway router,forwards,datagram
+home network gateway router,forwards,visited network gateway router
+home network gateway router,receives,datagram
+host,communicates_with,larger network
+host,connects_to,access point
+host,connects_to,base station
+host,receives,acknowledgment
+host,sends,802.11 frame
+hss,identifies,mobile device
+hss,manages,mobile device
+hss,maps_to,visited network
+hss,sends,encrypted information
+ieee 802.11,operates_at,link layer
+ieee 802.11,supports,cts frame
+ieee 802.11,supports,rts frame
+imsi,identifies,mobile device
+indirect routing,causes,triangle routing problem
+indirect routing,enables,tunnel
+infrastructure mode,provides,address assignment
+infrastructure mode,provides,routing
+ip address,identifies,mobile device
+ip address,maps_to,mac address
+ipx,is_a,protocol
+ipx network,enables,cellular carrier
+larger datagram,routes_to,visited gateway router
+link layer,has_part,mac
+link layer,has_part,pdcp
+link layer,has_part,rlc
+local breakout,routes_to,datagram
+lte,is_a,protocol
+lte,supports,orthogonal frequency division multiplexing
+lte‑advanced,enables,aggregated channel
+mac,operates_at,link layer
+mac sublayer,provides,forward error-correction
+mac sublayer,provides,redundant bit transmission
+master,controls,client
+master,implements,polling
+master,sends,beacon message
+master node,communicates_with,client device
+master node,receives,ack
+millimeter wave frequencies,is_a,concept
+mimo-technology,is_a,concept
+mme,authenticates,mobile device
+mme,communicates_with,hss
+mme,controls,attachment process
+mme,controls,tunnel
+mme,enables,tunnel
+mme,has_part,amf
+mme,has_part,smf
+mme,manages,mobile device
+mme,manages,serving gateway
+mmmtc,is_a,service
+mobile device,causes,datagram loss
+mobile device,communicates_with,base station
+mobile device,communicates_with,foreign agent
+mobile device,communicates_with,home agent
+mobile device,communicates_with,hss
+mobile device,communicates_with,streaming server
+mobile device,communicates_with,visited gateway router
+mobile device,connects_to,802.11 ap
+mobile device,connects_to,base station
+mobile device,connects_to,lte base station
+mobile device,connects_to,visited network
+mobile device,has_part,transient identifier
+mobile device,provides,international mobile subscriber identity
+mobile device,receives,beacon signal
+mobile device,receives,datagram
+mobile device,receives,ip datagram
+mobile device,requires,ip address
+mobile device,sends,attach request
+mobile device,sends,datagram
+mobile device,sends,ip datagram
+mobile host,connects_to,base station
+mobile ip,enables,mobility
+mobile ip,enables,tunnel
+mobile ip,implements,agent discovery
+mobile ip,implements,forwarding
+mobile ip,implements,indirect routing
+mobile ip,implements,mobility services
+mobile ip,implements,registration
+mobile ip,provides,mobility
+mobile ip,runs_on,ipv4
+mobile ip,supports,home network
+mobile ip,supports,visited network
+mobility,enables,handover
+mobility management entity,manages,mobile device
+nat,provides,ip address
+nat gateway router,forwards,datagram
+nat gateway router,provides,address translation
+network congestion,causes,datagram loss
+node,sends,802.11 frame
+node,supports,power management
+node a,communicates_with,node b
+node b,communicates_with,node a
+node b,communicates_with,node c
+node c,communicates_with,node b
+node c,communicates_with,node d
+node d,communicates_with,node c
+opportunistic scheduling,variant_of,scheduling algorithms
+orthogonal frequency division multiplexing,variant_of,frequency division multiplexing
+orthogonal frequency division multiplexing,variant_of,time division multiplexing
+p-gw,forwards,ip datagram
+packet data network gateway,is_a,router
+packet data network gateway,provides,nat
+packet data network gateway,provides,nat ip address
+passive scanning,receives,beacon frame
+payload,contains,arp packet
+payload,contains,ip datagram
+pdcp,operates_at,link layer
+permanent address,identifies,mobile device
+permanent ip address,identifies,mobile device
+phone number,identifies,mobile device
+point of attachment,identifies,base station
+random access,is_a,medium access protocol
+rdt2.1,implements,sequence number
+reservation scheme,mitigates,collision
+rlc,implements,arq
+rlc,operates_at,link layer
+rlc,sends,ack
+router,connects_to,ip subnet
+router,forwards,datagram
+router,forwards,ip datagram
+router,forwards,packet
+router,has_part,forwarding table
+router,implements,distance-vector algorithm
+router interface,connects_to,subnet
+router interface,encapsulates,datagram
+router interface,part_of,router
+rts frame,increases,delay
+rts frame,mitigates,hidden terminal
+rts/cts exchange,decreases,collision
+rts/cts exchange,enables,data frame
+rts/cts exchange,increases,delay
+scheduling algorithms,controls,mobile device
+sdn,enables,latency
+serving gateway,connects_to,pdn gateway
+serving gateway,connects_to,target base station
+serving gateway,is_a,router
+serving gateway,receives,udp
+serving gateway,sends,datagram
+signal,causes,handover
+sim card,has_part,imsi
+sim card,has_part,phone number
+"single-hop, infrastructure-based network",has_part,base station
+smart antennas,decreases,interference
+smartphone,connects_to,base station
+smartphone,connects_to,wifi
+smf,part_of,mme
+smf,provides,dhcp service
+snr,decreases,ber
+source base station,communicates_with,mobile device
+source base station,forwards,datagram
+source base station,forwards,tunnel
+ssid,identifies,access point
+station,connects_to,access point
+station,implements,binary exponential backoff
+station,implements,csma/ca
+station,receives,acknowledgment
+station,receives,frame
+station,sends,acknowledgment frame
+station,sends,frame
+station h1,connects_to,access point
+station h1,receives,cts frame
+station h1,sends,rts frame
+station h2,connects_to,access point
+station h2,receives,cts frame
+streaming server,provides,streaming
+streaming server,receives,ip datagram
+streaming server,sends,ip datagram
+switch,has_part,forwarding table
+switch,manages,forwarding table
+switch,receives,broadcast ethernet frame
+switch,receives,ethernet frame
+tablet,connects_to,wifi
+taking turns,is_a,medium access protocol
+target base station,communicates_with,mme
+target base station,communicates_with,mobile device
+target base station,communicates_with,source base station
+target base station,forwards,datagram
+target base station,provides,channel resources
+target base station,receives,datagram
+target base station,receives,tunnel
+target base station,sends,mobile device
+target base station,supports,mobile device
+tcp,operates_at,transport layer
+time slot,increases,transmission rate
+transmission power,increases,energy consumption
+transmission power,increases,interference
+transmission rate,increases,ber
+tunnel,connects_to,mobile device
+tunnel,enables,handover
+tunnel,encapsulates,datagram
+tunnel endpoint,connects_to,gateway router
+tunnel endpoint identifier,identifies,tunnel
+tunneling,supports,ipv6
+type field,identifies,cts
+type field,identifies,rts
+udp,operates_at,transport layer
+upper-layer mechanisms,mitigates,datagram loss
+urllc,is_a,service
+urllc,provides,latency
+user equipment,is_a,mobile device
+user priorities,supports,scheduling algorithms
+visited gateway router,forwards,original datagram
+visited gateway router,provides,nat
+visited gateway router,receives,larger datagram
+visited network,connects_to,mobile device
+visited network,routes_to,mobile device
+visited network gateway router,forwards,datagram
+visited network gateway router,provides,address translation
+visited network gateway router,receives,datagram
+vlan,connects_to,lan
+wep,encrypts,data
+wide-area data service,provides,latency
+wifi,has_part,channel
+wifi,supports,wireless lan
+wireless device,connects_to,ap
+wireless device,receives,association response frame
+wireless device,receives,probe response frame
+wireless device,sends,association request frame
+wireless device,sends,probe request frame
+wireless host,communicates_with,base station
+wireless host,communicates_with,larger network
+wireless host,connects_to,base station
+wireless laptop,communicates_with,access point
+wireless laptop,sends,frame
+wireless link,connects_to,base station
+wireless link,connects_to,router
+wireless link,connects_to,switch
+wireless link,connects_to,wireless host
+wireless link,enables,mobility
+wireless medium,is_a,shared medium
+wireless station,communicates_with,access point
+wireless station,connects_to,access point
+wireless station,is_a,host
+wireless station,receives,beacon frame
+wireless station,receives,data frame

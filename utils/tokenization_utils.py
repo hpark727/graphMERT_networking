@@ -172,8 +172,10 @@ def concatenate_texts_into_chunks(dataset, split: str, max_seq_length: int, toke
 
         out = {}
         # Use numpy array so PyArrow infers fixed-size list from shape
+        cls_id = tokenizer.cls_token_id if tokenizer.cls_token_id is not None else tokenizer.bos_token_id
+        sep_id = tokenizer.sep_token_id if tokenizer.sep_token_id is not None else tokenizer.eos_token_id
         out["input_ids"] = np.array([
-            tokenizer.build_inputs_with_special_tokens(concatenated["input_ids"][i : i + max_raw])
+            [cls_id] + concatenated["input_ids"][i : i + max_raw] + [sep_id]
             for i in range(0, total_length, max_raw)
         ], dtype=np.int64)
         return out

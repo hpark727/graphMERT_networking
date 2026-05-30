@@ -1,0 +1,432 @@
+head,relation_type,tail,verdict_qwen,verdict_gpt
+ack,enables,congestion window,,yes
+ack,identifies,packet,no,yes
+ack,identifies,sequence number,,yes
+ack,increases,congestion window size,yes,yes
+ack,is_a,packet,yes,yes
+ack,is_a,positive acknowledgment,yes,yes
+ack segment,supports,cumulative acknowledgments,yes,yes
+acknowledgment,enables,self-clocking,yes,yes
+acknowledgment,increases,cwnd,yes,yes
+acknowledgment number field,part_of,reliable data transfer service,,yes
+acknowledgment segment,contains,acknowledgment number,yes,yes
+acknowledgment segment,contains,sequence number,yes,yes
+additive increase,increases,congestion window,yes,yes
+alternating-bit protocol,is_a,stop-and-wait protocol,yes,yes
+alternating-bit protocol,provides,acknowledgment,,yes
+arq,requires,error detection,yes,yes
+arq,requires,receiver feedback,yes,yes
+arq,requires,retransmission,yes,yes
+attacker,sends,ack packet,yes,yes
+bic,variant_of,tcp,yes,no
+buffer,causes,packet loss,yes,yes
+buffer,contains,packet,yes,yes
+buffer,decreases,throughput,no,yes
+buffer,increases,end-to-end delay,yes,yes
+buffer,part_of,host,yes,yes
+buffer,part_of,router,yes,yes
+buffer,receives,packet,,yes
+channel,causes,packet reordering,,yes
+checksum calculation,requires,1s complement,yes,yes
+checksum field,contains,udp checksum,yes,yes
+client,communicates_with,server,yes,yes
+client,communicates_with,web server,yes,yes
+client,receives,acknowledgment segment,yes,yes
+client,receives,fin segment,yes,yes
+client,receives,segment,yes,yes
+client,receives,synack segment,yes,yes
+client,receives,tcp segment,yes,yes
+client,runs_on,host,yes,yes
+client,sends,acknowledgment segment,yes,yes
+client,sends,fin segment,yes,yes
+client,sends,segment,yes,yes
+client,sends,syn segment,yes,yes
+client,sends,tcp segment,yes,yes
+computer,connects_to,web server,yes,yes
+congestion,causes,congestion collapse,yes,yes
+congestion,causes,delay,yes,yes
+congestion,causes,end-to-end delay,yes,yes
+congestion,causes,packet loss,yes,yes
+congestion,increases,queuing delay,yes,yes
+congestion,increases,round-trip time,yes,yes
+congestion,increases,rtt,yes,yes
+congestion avoidance,increases,congestion window,yes,yes
+congestion avoidance,increases,congestion window size,yes,yes
+congestion control,controls,transmission rate,yes,yes
+congestion control,decreases,transmission rate,yes,yes
+congestion control,requires,congestion window,yes,yes
+congestion control,supports,delay-based approach,yes,yes
+congestion control mechanism,contains,congestion window,,yes
+congestion window,controls,send rate,yes,yes
+congestion window,controls,unacknowledged data,yes,yes
+connection state,has_part,acknowledgment number parameters,yes,yes
+connection state,has_part,congestion-control parameters,yes,yes
+connection state,has_part,receive buffer,yes,yes
+connection state,has_part,send buffer,yes,no
+connection state,has_part,sequence number parameters,,yes
+connection-establishment request,is_a,tcp segment,yes,yes
+corrupted packet,causes,negative acknowledgment,,yes
+ctcp,variant_of,tcp,yes,no
+cumulative acknowledgment,is_a,ack,yes,yes
+cwnd,controls,send rate,yes,yes
+cwnd,enables,send rate,,yes
+datagram,contains,segment,yes,yes
+dctcp,variant_of,tcp,yes,no
+destination port number field,part_of,segment,yes,yes
+devrtt,requires,ewma,yes,yes
+dns,runs_on,udp,yes,yes
+duplicate ack,identifies,packet loss,yes,yes
+duplicate ack,is_a,ack,yes,yes
+email service,runs_on,tcp,yes,yes
+estimatedrtt,requires,ewma,yes,yes
+ethernet,implements,csma/cd,yes,yes
+ethernet,provides,error detection,yes,yes
+fast retransmit,mitigates,packet loss,,yes
+file transfer,runs_on,tcp,yes,yes
+firewall,prevents,syn segment,yes,yes
+four-tuple,identifies,tcp socket,,yes
+ftp,requires,well-known port number,yes,yes
+gbn,requires,sequence number,yes,yes
+go-back-n,implements,checksum,yes,no
+go-back-n,implements,cumulative acknowledgment,yes,yes
+go-back-n,implements,retransmit operation,,yes
+go-back-n,implements,sequence number,yes,yes
+go-back-n,implements,timeout,,yes
+go-back-n,is_a,sliding-window protocol,yes,yes
+go-back-n,requires,ack,yes,yes
+go-back-n,requires,cumulative acknowledgment,yes,yes
+go-back-n,requires,sequence number,yes,yes
+host,communicates_with,name server,yes,yes
+host,has_part,buffer,yes,yes
+host,has_part,ip address,yes,yes
+host,has_part,socket,yes,yes
+host,provides,ftp,yes,yes
+host,provides,http,yes,yes
+host,receives,segment,yes,yes
+host,receives,tcp segment,yes,yes
+host,sends,icmp datagram,yes,yes
+host,sends,reset segment,yes,yes
+host a,communicates_with,host b,yes,yes
+host a,communicates_with,host c,yes,yes
+host a,communicates_with,router,yes,yes
+host a,connects_to,host b,yes,yes
+host a,receives,ack,yes,yes
+host a,receives,ack segment,yes,yes
+host a,receives,acknowledgment,yes,yes
+host a,receives,message,yes,yes
+host a,receives,segment,yes,yes
+host a,sends,file transfer,yes,yes
+host a,sends,message,yes,yes
+host a,sends,packet,yes,yes
+host a,sends,segment,yes,yes
+host b,communicates_with,router,yes,yes
+host b,has_part,receive buffer,yes,yes
+host b,receives,message,yes,yes
+host b,receives,packet,yes,yes
+host b,receives,segment,yes,yes
+host b,sends,ack segment,yes,yes
+host b,sends,acknowledgment,yes,yes
+host b,sends,message,yes,yes
+host b,sends,packet,yes,yes
+host b,sends,segment,yes,yes
+host c,receives,packet,yes,yes
+host c,sends,packet,yes,yes
+host d,sends,packet,yes,yes
+http,operates_at,application layer,yes,yes
+http,requires,well-known port number,,yes
+http,runs_on,tcp,yes,yes
+http/3,runs_on,quic,yes,yes
+internet phone,runs_on,udp,yes,yes
+ip,operates_at,network layer,yes,yes
+ip,provides,network-layer service,yes,yes
+ip,runs_on,link layer,yes,yes
+ip address,identifies,client,yes,yes
+ip address,identifies,host,yes,yes
+ip datagram,encapsulates,segment,yes,no
+ip datagram,encapsulates,syn segment,yes,no
+ip datagram,operates_at,network layer,,yes
+ip spoofing,is_a,attack,yes,yes
+jacobson algorithm,implements,estimated rtt,,yes
+link bandwidth,causes,packet loss,,yes
+link layer,provides,error detection,yes,yes
+logical timer,part_of,timer,yes,no
+loss event,decreases,congestion window size,yes,yes
+loss rate,measures,packet loss,yes,yes
+mail service,requires,address,yes,yes
+multimedia applications,runs_on,udp,yes,yes
+multiplicative decrease,decreases,congestion window,yes,yes
+multiplicative-decrease approach,is_a,congestion control,yes,yes
+nak,is_a,negative acknowledgment,yes,yes
+nak,is_a,packet,yes,yes
+name server,receives,datagram,yes,yes
+network,causes,packet reordering,yes,yes
+network,enables,packet reordering,no,yes
+network layer,enables,explicit congestion indication,yes,yes
+network layer,encapsulates,segment,yes,no
+network layer,provides,transport layer,yes,no
+network layer,receives,segment,,yes
+network layer,sends,datagram,yes,yes
+network protocol,operates_at,network layer,,yes
+offered load,decreases,throughput,yes,yes
+out-of-order packet,causes,positive acknowledgment,yes,yes
+packet,contains,checksum,yes,yes
+packet,contains,packet checksum field,yes,yes
+packet,has_part,sequence number,yes,yes
+packet checksum field,part_of,packet,yes,yes
+packet loss,increases,end-to-end delay,yes,yes
+packet-arrival rate,increases,queuing delay,yes,yes
+physical wire,is_a,channel,yes,yes
+pipelining,increases,utilization,yes,yes
+pipelining,requires,buffer,yes,yes
+pipelining,requires,sequence numbers,yes,yes
+pipelining,requires,window,yes,yes
+point-to-point channel,causes,packet loss,,yes
+port number,enables,demultiplexing,yes,yes
+port number,enables,multiplexing,yes,yes
+port number,identifies,socket,,yes
+quic,implements,congestion control,yes,yes
+quic,implements,reliable data transfer,yes,yes
+quic,implements,reliable data transfer service,yes,yes
+quic,operates_at,transport layer,yes,yes
+quic,runs_on,udp,yes,yes
+quic,supports,congestion control,yes,yes
+quic packet header,contains,connection id,yes,yes
+rdt,receives,packet,yes,yes
+rdt,sends,packet,yes,yes
+receive window,enables,flow control,yes,yes
+receiver,connects_to,channel,yes,yes
+receiver,has_part,window,,yes
+receiver,receives,control packet,yes,yes
+receiver,receives,data packet,yes,yes
+receiver,receives,message,yes,yes
+receiver,receives,packet,yes,yes
+receiver,requires,buffer,,yes
+receiver,sends,ack,yes,yes
+receiver,sends,control packet,yes,yes
+receiver,sends,nak,yes,yes
+receiver,sends,negative acknowledgment,yes,yes
+receiver,sends,positive acknowledgment,yes,yes
+reliable channel,provides,reliable data transfer,,yes
+reliable data transfer protocol,has_part,receiver,,yes
+reliable data transfer protocol,has_part,sender,yes,yes
+reliable data transfer protocol,implements,finite-state machine,yes,yes
+reliable data transfer protocol,requires,positive acknowledgment,yes,yes
+reliable data transfer protocol,requires,unreliable channel,yes,yes
+reliable data transfer protocol,supports,bidirectional data transfer,no,yes
+reliable data transfer protocol,supports,unidirectional data transfer,,yes
+retransmission,requires,packet loss,no,yes
+return address,has_part,ip address,,yes
+return address,has_part,source port number,,yes
+round‑trip time estimation,measures,rtt,yes,yes
+router,causes,retransmission,yes,yes
+router,decreases,throughput,,yes
+router,enables,congestion indication bit,yes,yes
+router,enables,network-assisted congestion control,yes,yes
+router,forwards,datagram,yes,yes
+router,forwards,packet,,yes
+router,has_part,buffer,yes,yes
+router,receives,datagram,yes,yes
+router buffer,causes,packet loss,yes,yes
+router r1,forwards,packet,yes,yes
+router r2,forwards,packet,yes,yes
+router r2,has_part,buffer,yes,yes
+router r2,receives,a-c traffic,yes,yes
+router r2,receives,b-d traffic,yes,yes
+rtt,measures,round-trip time,yes,no
+sample rtt,measures,round-trip time,yes,yes
+samplertt,measures,rtt,,yes
+segment,contains,destination port number,yes,yes
+segment,contains,port,yes,yes
+segment,contains,source port number,yes,yes
+segment,has_part,sequence number,yes,yes
+segment,operates_at,transport layer,,yes
+selective repeat,provides,reliable data transfer,yes,yes
+selective repeat,receives,ack,yes,yes
+selective repeat,requires,ack,yes,yes
+selective repeat,requires,logical timer,yes,yes
+selective repeat,requires,timer,yes,yes
+selective repeat,requires,window,yes,yes
+send buffer,part_of,tcp connection,no,yes
+send rate,causes,congestion,yes,yes
+sender,communicates_with,receiver,yes,yes
+sender,connects_to,channel,yes,yes
+sender,receives,ack,yes,yes
+sender,receives,control packet,yes,yes
+sender,receives,duplicate ack,yes,yes
+sender,requires,buffer,yes,yes
+sender,requires,window,yes,yes
+sender,sends,control packet,yes,yes
+sender,sends,data packet,yes,yes
+sender,sends,message,yes,yes
+sender,sends,packet,yes,yes
+sending rate,increases,congestion,yes,yes
+sending rate,increases,delay,yes,yes
+sequence number,identifies,packet,yes,yes
+sequence number field,part_of,reliable data transfer service,,yes
+server,has_part,welcoming socket,,yes
+server,implements,syn cookie,yes,yes
+server,receives,ack,yes,yes
+server,receives,acknowledgment segment,yes,yes
+server,receives,fin segment,yes,yes
+server,receives,packet,yes,yes
+server,receives,segment,yes,yes
+server,receives,syn,yes,yes
+server,receives,syn segment,yes,yes
+server,receives,tcp segment,yes,yes
+server,receives,udp packet,yes,yes
+server,runs_on,host,yes,yes
+server,sends,acknowledgment segment,yes,yes
+server,sends,fin segment,yes,yes
+server,sends,segment,yes,yes
+server,sends,synack,yes,yes
+server,sends,synack segment,yes,yes
+server,sends,tcp segment,yes,yes
+server,sends,udp packet,yes,yes
+server,supports,tcp connection socket,yes,yes
+sliding-window protocol,has_part,window size,,yes
+slow start,increases,congestion window,yes,yes
+slow start,increases,congestion window size,yes,yes
+slow start,increases,end-to-end delay,no,yes
+slow start,part_of,congestion control,yes,yes
+socket,receives,segment,yes,yes
+source host,receives,rst segment,,yes
+source host,receives,synack segment,yes,yes
+source host,sends,syn segment,yes,yes
+source port number field,part_of,segment,yes,yes
+stop-and-wait protocol,decreases,channel utilization,yes,yes
+stop-and-wait protocol,decreases,throughput,,yes
+stop-and-wait protocol,decreases,utilization,,yes
+stop-and-wait protocol,increases,end-to-end delay,no,yes
+stop-and-wait protocol,requires,ack,yes,yes
+stop-and-wait protocol,requires,acknowledgment,yes,yes
+stop-and-wait protocol,requires,checksum,yes,yes
+stop-and-wait protocol,supports,sequence number,yes,yes
+streaming,runs_on,tcp,yes,yes
+streaming,runs_on,udp,yes,yes
+syn cookie,enables,initial sequence number,,yes
+syn flood attack,is_a,denial-of-service attack,yes,yes
+target host,receives,syn segment,yes,yes
+target host,sends,rst segment,yes,yes
+tcp,controls,send rate,yes,yes
+tcp,has_part,congestion avoidance,yes,yes
+tcp,has_part,congestion control mechanism,yes,yes
+tcp,has_part,connection state,yes,yes
+tcp,has_part,fast recovery,yes,yes
+tcp,has_part,receive buffer,yes,yes
+tcp,has_part,send buffer,yes,yes
+tcp,has_part,slow start,yes,yes
+tcp,has_part,tcp state,yes,yes
+tcp,has_part,window behavior,yes,yes
+tcp,implements,aimd,yes,yes
+tcp,implements,aimd algorithm,yes,yes
+tcp,implements,congestion avoidance,yes,yes
+tcp,implements,congestion control,yes,yes
+tcp,implements,congestion control algorithm,yes,yes
+tcp,implements,demultiplexing,yes,yes
+tcp,implements,end-to-end congestion control,yes,yes
+tcp,implements,fast recovery,yes,yes
+tcp,implements,fast retransmit,yes,yes
+tcp,implements,network-assisted congestion control,,yes
+tcp,implements,reliable data transfer service,yes,yes
+tcp,implements,retransmit mechanism,yes,yes
+tcp,implements,slow start,yes,yes
+tcp,implements,slow-start,yes,yes
+tcp,implements,tcp congestion-control algorithm,yes,yes
+tcp,implements,three-way handshake,yes,yes
+tcp,implements,timeout interval,,yes
+tcp,is_a,transport-layer protocol,yes,yes
+tcp,operates_at,transport layer,yes,yes
+tcp,prevents,multicasting,no,yes
+tcp,provides,congestion control,yes,yes
+tcp,provides,cumulative acknowledgments,yes,yes
+tcp,provides,error detection,yes,yes
+tcp,provides,estimatedrtt,,yes
+tcp,provides,flow control,yes,yes
+tcp,provides,flow control service,yes,yes
+tcp,provides,full-duplex service,yes,yes
+tcp,provides,header fields,no,yes
+tcp,provides,point-to-point,yes,yes
+tcp,provides,reliable connection-oriented service,yes,yes
+tcp,provides,reliable data transfer,yes,yes
+tcp,provides,reliable data transfer service,yes,yes
+tcp,provides,retransmissions,yes,yes
+tcp,provides,round‑trip time estimation,yes,yes
+tcp,provides,timers,yes,yes
+tcp,receives,ack,yes,yes
+tcp,requires,acknowledgments,yes,yes
+tcp,requires,checksum,yes,yes
+tcp,requires,flow control,yes,yes
+tcp,requires,sequence numbers,yes,yes
+tcp,requires,timers,yes,yes
+tcp,requires,window-based congestion control,,yes
+tcp,runs_on,ip,yes,yes
+tcp,sends,segment,yes,yes
+tcp,supports,full-duplex,yes,yes
+tcp congestion control,controls,sending rate,yes,yes
+tcp congestion-control algorithm,has_part,congestion avoidance,yes,yes
+tcp congestion-control algorithm,has_part,fast recovery,yes,yes
+tcp congestion-control algorithm,has_part,slow start,yes,yes
+tcp connection establishment,increases,end-to-end delay,yes,yes
+tcp cubic,implements,congestion avoidance,yes,yes
+tcp cubic,increases,congestion window,yes,yes
+tcp cubic,increases,sending rate,yes,yes
+tcp cubic,provides,sending rate,no,yes
+tcp cubic,provides,throughput,yes,yes
+tcp cubic,variant_of,tcp,yes,no
+tcp cubic,variant_of,tcp reno,yes,no
+tcp reno,implements,aimd,yes,yes
+tcp reno,implements,fast recovery,yes,yes
+tcp reno,variant_of,tcp,yes,no
+tcp segment,contains,destination port number,yes,yes
+tcp segment,contains,source port number,no,yes
+tcp segment,identifies,sequence number,yes,no
+tcp segment,provides,acknowledgment,yes,yes
+tcp segment header,has_part,acknowledgment number field,yes,yes
+tcp segment header,has_part,sequence number field,yes,yes
+tcp state,part_of,tcp,no,yes
+tcp tahoe,variant_of,tcp,yes,no
+tcp vegas,measures,rtt,yes,yes
+telnet,operates_at,application layer,yes,yes
+telnet,runs_on,tcp,yes,yes
+timeout,causes,multiplicative decrease,yes,yes
+timeout interval,requires,devrtt,yes,yes
+timeout interval,requires,estimatedrtt,yes,yes
+timer,supports,retransmit mechanism,yes,yes
+tls,runs_on,tcp,yes,yes
+transport layer,enables,port number,,yes
+transport layer,identifies,socket,no,yes
+transport layer,implements,demultiplexing,yes,yes
+transport layer,implements,multiplexing,yes,yes
+transport layer,provides,error checking,yes,yes
+transport layer,provides,port number,yes,yes
+transport layer,receives,segment,yes,yes
+transport layer,sends,segment,,yes
+transport layer,sends,transport-level segment,yes,yes
+transport protocol,operates_at,transport layer,yes,yes
+transport protocol,provides,reliable data transfer service,yes,yes
+transport protocol,runs_on,host,yes,yes
+transport-layer demultiplexing,enables,process-to-process data delivery,yes,yes
+transport-layer multiplexing,enables,process-to-process data delivery,yes,yes
+transport-layer protocol,provides,reliable data transfer,yes,yes
+transport-layer protocol,requires,acknowledgment,yes,yes
+transport-layer protocol,requires,retransmission,,yes
+transport-layer protocol,requires,sequence number,yes,yes
+transport-layer protocol,requires,timer,,yes
+triple duplicate ack,causes,multiplicative decrease,yes,yes
+udp,implements,checksum calculation,yes,yes
+udp,implements,demultiplexing,yes,yes
+udp,operates_at,transport layer,yes,yes
+udp,provides,error checking,yes,yes
+udp,provides,error detection,yes,yes
+udp,provides,integrity checking,,yes
+udp,provides,process-to-process data delivery,yes,yes
+udp,provides,unreliable connectionless service,yes,yes
+udp,requires,checksum,yes,yes
+udp,sends,segment,yes,no
+udp,supports,multimedia applications,yes,yes
+udp checksum,provides,error detection,yes,yes
+udp segment,contains,checksum,yes,yes
+udp segment,contains,header fields,yes,yes
+udp segment,has_part,checksum field,yes,yes
+udt,runs_on,unreliable channel,yes,yes
+web browsers,enables,parallel connections,yes,yes

@@ -1,0 +1,391 @@
+head,relation_type,tail
+3des,is_a,block cipher
+4g authentication and key agreement protocol,provides,mutual authentication
+5g network,supports,aka protocol
+access control list,part_of,stateful filter
+access point,authenticates,mobile device
+access point,receives,link-level frame
+aes,encrypts,frame
+aes,encrypts,link-layer frame
+aes,is_a,block cipher
+aes,provides,confidentiality
+aes,requires,key
+aes,susceptible_to,bruteforce attack
+ah,provides,source authentication
+aka protocol,provides,key generation
+aka protocol,provides,mutual authentication
+aka protocol,requires,eap
+alice,communicates_with,bob
+alice,receives,public key
+alice,sends,rsa-encrypted message
+almost-tls,variant_of,tls
+anomaly-based ids,identifies,icmp
+ap,is_a,authentication protocol
+ap3.0,is_a,authentication protocol
+ap3.0,susceptible_to,eavesdropping
+ap3.0,susceptible_to,packet sniffing
+ap3.1,prevents,eavesdropping
+ap3.1,susceptible_to,playback attack
+ap4.0,encrypts,nonce
+ap4.0,requires,nonce
+application gateway,connects_to,external host
+application gateway,connects_to,external server
+application gateway,enables,application data
+application gateway,enables,telnet
+application gateway,is_a,firewall
+application gateway,is_a,server
+application gateway,runs_on,host
+application gateway,supports,deep packet inspection
+attach message,contains,international mobile subscriber identity
+authentication key,is_a,shared secret
+authentication server,authenticates,mobile device
+authentication server,provides,authentication services
+authentication server,provides,shared session key
+authentication server,sends,nonce
+base station,forwards,attach message
+block cipher,implements,cipher block chaining
+block cipher,implements,one-to-one mapping
+block cipher,implements,permutation
+block cipher,mitigates,brute-force attack
+block cipher,requires,key
+block cipher algorithm,encrypts,cleartext block
+block cipher algorithm,requires,secret key
+bob,has_part,private key
+bob,has_part,public key
+bob,receives,rsa-encrypted message
+branch-office gateway router,has_part,security association
+branch-office gateway router,manages,security association
+ca,authenticates,certificate
+ca,provides,certificate
+caesar cipher,is_a,algorithm
+caesar cipher,requires,session key
+caesar cipher,variant_of,monoalphabetic encryption
+central ids processor,receives,ids sensor
+certificate,contains,public key
+certificate,identifies,public key
+certificate,identifies,server
+certificate authority,authenticates,public key
+certificate authority,authenticates,server
+checksum,provides,message integrity
+chosen-plaintext attack,requires,plaintext
+cipher block chaining,requires,block cipher algorithm
+cipher block chaining,requires,iv
+ciphertext-only attack,requires,ciphertext
+client,communicates_with,server
+client,connects_to,server
+client,encrypts,pre-master secret
+client,sends,hmac
+client,sends,pre-master secret
+confidentiality,prevents,man-in-the-middle attack
+connection table,part_of,firewall
+crc,variant_of,cryptographic hash function
+cryptographic hash function,provides,message integrity
+cryptographic hashing,provides,message integrity
+cryptography,provides,authentication
+cryptography,provides,confidentiality
+cryptography,provides,message integrity
+cryptography,provides,nonrepudiation
+decryption,requires,private key
+decryption algorithm,requires,key
+decryption algorithm,requires,private key
+deep packet inspection,identifies,application data
+des,is_a,block cipher
+des,provides,confidentiality
+des,requires,key
+des,susceptible_to,bruteforce attack
+diffie-hellman,provides,shared secret
+diffie-hellman algorithm,provides,session key
+diffie-hellman key exchange,enables,public key cryptography
+digital signature,enables,public key certification
+digital signature,provides,message integrity
+digital signature,requires,hash algorithm
+digital signature,requires,private key
+digital signature,requires,public key
+digital signature,requires,public key infrastructure
+dns,susceptible_to,cache poisoning
+eavesdropping,is_a,attack
+email service,provides,confidentiality
+email service,provides,message integrity
+email service,provides,receiver authentication
+email service,provides,sender authentication
+encryption,encrypts,plaintext
+encryption,provides,confidentiality
+encryption,requires,public key
+encryption algorithm,encrypts,plaintext
+encryption algorithm,requires,key
+esp,provides,confidentiality
+e‑mail,is_a,service
+firewall,controls,malformed packet
+firewall,controls,packet
+firewall,forwards,packet
+firewall,has_part,connection table
+firewall,has_part,packet filter
+firewall,receives,datagram
+firewall,supports,ack
+firewall,supports,icmp
+firewall,supports,operational security
+firewall,supports,ospf
+firewall,supports,port
+firewall,supports,tcp
+firewall,supports,udp
+firewall,susceptible_to,ip spoofing
+forwarding table,part_of,router
+four-way handshake,provides,mutual authentication
+four-way handshake,provides,shared symmetric session key
+gateway router,connects_to,isp
+gateway router,forwards,packet
+gateway router,forwards,telnet
+gateway router,implements,firewall
+hash function,enables,fingerprint
+hash function,enables,message integrity
+headquarters gateway router,connects_to,branch-office gateway router
+headquarters gateway router,has_part,security association
+headquarters gateway router,manages,security association
+headquarters gateway router,sends,ipsec datagram
+headquarters gateway router,sends,ipv4 datagram
+hmac,authenticates,tls record
+hmac,implements,md5
+hmac,provides,message authentication code
+hmac,supports,md5
+hmac,supports,sha-1
+home subscriber service,contains,secret key
+home subscriber service,encrypts,international mobile subscriber identity
+home subscriber service,provides,authentication token
+home subscriber service,provides,expected authentication response token
+host,communicates_with,router
+host,has_part,application gateway
+host,receives,ipv4 datagram
+host,sends,ipsec datagram
+host,sends,ipv4 datagram
+ids,identifies,icmp
+ids,identifies,ping sweep
+ids,identifies,port scan
+ids,provides,traffic profile
+ids sensor,communicates_with,central ids processor
+ieee 802.11,operates_at,link layer
+ieee 802.11,provides,confidentiality
+ike,enables,security association
+integrity,prevents,man-in-the-middle attack
+integrity,prevents,tampering
+internet checksum,is_a,checksum
+internet checksum,variant_of,cryptographic hash function
+intrusion detection system,prevents,packet
+intrusion detection system,supports,operational security
+intrusion prevention system,prevents,packet
+ip address,identifies,application gateway
+ip spoofing,is_a,attack
+ipsec,authenticates,ip address
+ipsec,contains,transport mode
+ipsec,contains,tunnel mode
+ipsec,encapsulates,ip datagram
+ipsec,encrypts,datagram
+ipsec,encrypts,icmp message
+ipsec,encrypts,ip datagram
+ipsec,encrypts,tcp segment
+ipsec,encrypts,udp segment
+ipsec,has_part,ah
+ipsec,has_part,esp
+ipsec,has_part,transport mode
+ipsec,has_part,tunnel mode
+ipsec,implements,3des
+ipsec,implements,hmac
+ipsec,operates_at,network layer
+ipsec,provides,authentication
+ipsec,provides,confidentiality
+ipsec,provides,integrity
+ipsec,requires,public key certification
+ipsec,supports,block cipher
+ipsec datagram,contains,esp authentication field
+ipsec datagram,contains,esp header
+ipsec datagram,contains,esp trailer
+ipsec datagram,contains,ipv4 datagram
+ipsec datagram,encapsulates,ipv4 datagram
+ipsec datagram,is_a,ipv4 datagram
+key,enables,encryption algorithm
+key,encrypts,frame
+known-plaintext attack,requires,ciphertext
+known-plaintext attack,requires,plaintext
+link-level frame,contains,user-level data
+master secret,enables,session encryption key
+master secret,enables,session hmac key
+master secret,enables,session key
+md4,implements,hash function
+md5,implements,cryptographic hash function
+md5,implements,hash function
+message authentication code,provides,message integrity
+message digest,enables,message integrity
+mme,sends,key
+mobile device,authenticates,access point
+mobile device,authenticates,base station
+mobile device,authenticates,home subscriber service
+mobile device,communicates_with,ap
+mobile device,communicates_with,remote host
+mobile device,connects_to,access point
+mobile device,connects_to,base station
+mobile device,receives,authentication token
+mobile device,receives,nonce
+mobile device,sends,attach message
+mobile device,sends,link-level frame
+mobile device,sends,res
+mobility management entity,authenticates,mobile device
+mobility management entity,communicates_with,home subscriber service
+mobility management entity,provides,base station keys
+mobility management entity,sends,base station
+mobility management entity,sends,international mobile subscriber identity
+modular arithmetic,enables,rsa
+monoalphabetic cipher,variant_of,caesar cipher
+nonce,prevents,connection replay attack
+nonce,prevents,replay attack
+ospf,variant_of,link-state routing algorithm
+package,contains,encrypted message
+package,contains,encrypted symmetric key
+packet filter,identifies,icmp
+packet filter,identifies,ip
+packet filter,identifies,tcp
+packet filter,identifies,udp
+packet filter,is_a,firewall
+packet filter,part_of,router
+packet filter,prevents,telnet
+pgp,provides,authentication
+pgp,provides,confidentiality
+pgp,provides,data integrity
+pgp,provides,digital signature
+pgp,provides,public key
+pgp,requires,cast
+pgp,requires,idea
+pgp,requires,md5
+pgp,requires,rsa
+pgp,requires,sha
+pgp,requires,triple-des
+pgp,supports,block cipher
+polyalphabetic encryption,has_part,monoalphabetic encryption
+polyalphabetic encryption,variant_of,monoalphabetic encryption
+private key,contains,d
+private key,contains,n
+private key,enables,digital signature
+private key,encrypts,fingerprint
+private key,requires,password
+public key,authenticates,certificate
+public key,contains,e
+public key,contains,n
+public key,encrypts,authentication key
+public key,encrypts,message
+public key,encrypts,symmetric key
+public key cryptography,encrypts,imsi
+public key cryptography,provides,authentication
+public key cryptography,provides,digital signature
+public key cryptography,requires,private key
+public key cryptography,requires,public key
+public key server,provides,public key
+public-key cryptography,enables,digital signature
+quantum computing,enables,fast factoring algorithms
+r1,sends,ipsec datagram
+r2,receives,ipsec datagram
+random number,increases,bandwidth
+random number,susceptible_to,eavesdropping
+router,connects_to,isp
+router,forwards,ip datagram
+router,forwards,ipsec datagram
+router,has_part,forwarding table
+router,has_part,packet filter
+router,has_part,public key
+router,implements,access control list
+router,implements,least-cost routing algorithm
+router,implements,packet filter
+router,prevents,ip spoofing
+router,receives,encrypted authentication key
+router,receives,ipv4 datagram
+router,receives,link-state message
+router,requires,authentication key
+router,sends,ipsec datagram
+router,sends,link-state message
+router interface,has_part,access control list
+router r1,encrypts,ipsec datagram
+router r1,has_part,security association database
+router r1,manages,security association
+router r2,authenticates,ipsec datagram
+router r2,has_part,security association database
+router r2,manages,security association
+rsa,encrypts,message
+rsa,encrypts,session key
+rsa,has_part,decryption
+rsa,has_part,encryption
+rsa,has_part,private key
+rsa,has_part,public key
+rsa,implements,exponentiation
+rsa,implements,public-key cryptography
+rsa,requires,d
+rsa,requires,e
+rsa,requires,exponentiation
+rsa,requires,large prime numbers
+rsa,requires,modular arithmetic
+rsa,requires,n
+rsa,requires,number theory
+rsa,requires,prime p
+rsa,requires,prime q
+rsa,requires,private key
+rsa,requires,public key
+rsa,supports,symmetric key cryptography
+rsa,susceptible_to,quantum computing
+sad,has_part,sa
+salesperson laptop,connects_to,headquarters gateway router
+salesperson laptop,has_part,security association
+salesperson laptop,sends,ipsec datagram
+salesperson laptop,sends,ipv4 datagram
+secret key,enables,mutual authentication
+secure e‑mail system,is_a,service
+secure e‑mail system,provides,confidentiality
+secure e‑mail system,provides,sender authentication
+security association,has_part,authentication key
+security association,has_part,encryption key
+security association,has_part,security parameter index
+security association database,part_of,router r1
+security association database,part_of,router r2
+segment,part_of,tcp
+sequence number,prevents,man-in-the-middle attack
+sequence number,prevents,replay attack
+sequence numbers,prevents,replay attack
+sequence-number field,prevents,replay attack
+server,sends,hmac
+server,supports,tls
+session key,encrypts,frame
+sha-1,implements,cryptographic hash function
+sha-1,implements,hash function
+shared secret,enables,message integrity
+shared secret,enables,mutual authentication
+shared symmetric session key,encrypts,link-layer frame
+sim card,contains,secret key
+snort,is_a,ids
+snort,is_a,intrusion detection system
+snort,provides,alert
+snort,provides,attack signature
+snort,requires,libpcap
+snort,supports,throughput
+snort signature,identifies,icmp
+spd,maps_to,sa
+spi,identifies,sa
+stateful filter,has_part,access control list
+stateful filter,is_a,firewall
+statistical analysis,enables,ciphertext-only attack
+symmetric key,encrypts,message
+symmetric key encryption,encrypts,link-level frame
+symmetric key encryption,requires,shared session key
+tcp fin segment,enables,truncation attack
+three-way tcp handshake,mitigates,playback attack
+tls,encrypts,application data
+tls,operates_at,application layer
+tls,operates_at,transport layer
+tls,provides,confidentiality
+tls,provides,data integrity
+tls,provides,end-point authentication
+tls,provides,socket
+tls,requires,public key certification
+tls,requires,session key
+tls,runs_on,tcp
+tls,supports,block cipher
+tls,susceptible_to,man-in-the-middle
+web of trust,supports,public key
+web server,receives,packet
+web server,sends,packet
+wpa1,provides,message integrity check
+wpa2,requires,aes

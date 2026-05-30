@@ -1,0 +1,259 @@
+head,relation_type,tail,verdict_qwen,verdict_gpt
+access isp,connects_to,global transit isp,yes,yes
+access isp,connects_to,host,yes,yes
+access isp,connects_to,regional isp,yes,yes
+access isp,connects_to,tier-1 isp,yes,yes
+access isp,part_of,network of networks,yes,yes
+access network,connects_to,host,yes,yes
+access network,controls,throughput,yes,yes
+access point,connects_to,ethernet switch,yes,yes
+application layer,has_part,dns,yes,yes
+application layer,has_part,ftp,yes,yes
+bandwidth flooding,is_a,dos attack,yes,yes
+base station,communicates_with,laptop,yes,yes
+buffer,part_of,router a,yes,yes
+buffer,receives,packet,yes,yes
+cable head end,has_part,cable modem termination system,yes,yes
+cable internet access,requires,cable,yes,yes
+cable internet access,requires,cable modem,yes,yes
+circuit,implements,time-division multiplexing,yes,yes
+circuit,requires,time slot,yes,yes
+circuit switch,connects_to,link,yes,yes
+circuit switching,causes,idle network resources,yes,yes
+circuit switching,is_a,concept,yes,yes
+circuit-switched network,enables,dedicated end-to-end connection,yes,yes
+client,communicates_with,server,yes,yes
+client,connects_to,access link,yes,yes
+client,connects_to,router,yes,yes
+client,is_a,host,yes,yes
+computer,communicates_with,web server,yes,yes
+computer,has_part,network interface card,yes,yes
+congestion,causes,delay,yes,yes
+congestion,causes,packet loss,yes,yes
+congestion,increases,queuing delay,yes,yes
+congestion-control protocol,implements,congestion control,yes,yes
+connection flooding,is_a,dos attack,yes,yes
+connection‑oriented service,provides,flow control,yes,yes
+connection‑oriented service,provides,guaranteed delivery,yes,yes
+customer isp,connects_to,provider isp,yes,yes
+ddos attack,is_a,attack,yes,yes
+ddos attack,is_a,dos attack,yes,yes
+dedicated end-to-end connection,provides,transmission rate,yes,yes
+dedicated end-to-end connection,requires,circuit,yes,yes
+destination end system,receives,packet,yes,yes
+dns,maps_to,ip address,yes,yes
+dns,provides,dns service,yes,yes
+dns server,is_a,server,yes,yes
+docsis,provides,reliable delivery,yes,yes
+dsl,requires,telephone line,yes,yes
+dsl,supports,frequency-division multiplexing,yes,yes
+dsl modem,connects_to,dslam,yes,yes
+email server,is_a,server,yes,yes
+email service,is_a,service,yes,yes
+end system,connects_to,communication link,yes,yes
+end system,connects_to,isp,yes,yes
+end system,connects_to,router,yes,yes
+end system,sends,packet,yes,yes
+end system,sends,segment,yes,yes
+end-point authentication,is_a,concept,yes,yes
+end-to-end delay,has_part,processing delay,yes,yes
+end-to-end delay,has_part,propagation delay,yes,yes
+end-to-end delay,has_part,queuing delay,yes,yes
+end-to-end delay,has_part,transmission delay,yes,yes
+end-to-end delay,is_a,delay,yes,yes
+end-to-end delay,is_a,metric,yes,yes
+ethernet,has_part,copper wire,yes,yes
+ethernet,is_a,protocol,yes,yes
+ethernet,operates_at,data_link_layer,yes,yes
+ethernet switch,connects_to,edge router,yes,yes
+fiber optics,connects_to,cable head end,yes,yes
+forwarding table,maps_to,outbound link,yes,yes
+forwarding table,part_of,router,yes,yes
+frequency division multiplexing,has_part,frequency band,yes,yes
+frequency-division multiplexing,supports,frequency spectrum,yes,yes
+ftp,provides,file transfer,yes,yes
+global transit isp,has_part,router,yes,yes
+hfc,has_part,coaxial cable,yes,yes
+hfc,has_part,fiber cable,yes,yes
+higher-tier isp,is_a,isp,yes,yes
+home router,connects_to,optical network terminator,yes,yes
+host,connects_to,circuit switch,yes,yes
+host,connects_to,imp,yes,yes
+host,is_a,end system,yes,yes
+host,is_a,network component,yes,yes
+host,provides,socket interface,yes,yes
+host,sends,segment,yes,yes
+host a,communicates_with,host b,yes,yes
+host a,connects_to,link,yes,yes
+host a,sends,packet,yes,yes
+host b,connects_to,link,yes,yes
+host b,sends,packet,yes,yes
+host e,receives,packet,yes,yes
+http,operates_at,application_layer,yes,yes
+http,provides,web service,yes,yes
+hybrid fiber coax,has_part,coaxial cable,yes,yes
+hybrid fiber coax,has_part,fiber optics,yes,yes
+internet,supports,mission critical services,yes,yes
+internet protocol stack,has_part,application layer,yes,yes
+internet protocol stack,has_part,link layer,yes,yes
+internet protocol stack,has_part,network layer,yes,yes
+internet protocol stack,has_part,physical layer,yes,yes
+internet protocol stack,has_part,transport layer,yes,yes
+ip address,identifies,end system,yes,yes
+ip spoofing,is_a,attack,yes,yes
+isp,connects_to,server,yes,yes
+isp,enables,multi-homing,yes,yes
+isp,has_part,router,yes,yes
+laptop,connects_to,ethernet switch,yes,yes
+larger regional isp,connects_to,tier-1 isp,yes,yes
+leo satellite,communicates_with,ground station,yes,yes
+link,connects_to,router a,yes,yes
+link,connects_to,router b,yes,yes
+link,part_of,core,yes,yes
+link,provides,throughput,yes,yes
+link,supports,circuit switching,yes,yes
+link,supports,packet switching,yes,yes
+link,supports,time division multiplexing,yes,yes
+link layer,sends,link-layer frame,yes,yes
+link-layer frame,has_part,link-layer header information,yes,yes
+link-layer switch,is_a,packet switch,yes,yes
+link-layer switch,operates_at,link layer,yes,yes
+lower-tier isp,connects_to,higher-tier isp,yes,yes
+lower-tier isp,is_a,isp,yes,yes
+man-in-the-middle attack,is_a,attack,yes,yes
+mobile device,communicates_with,base station,yes,yes
+national isp,connects_to,tier-1 isp,yes,yes
+ncp,is_a,protocol,yes,yes
+network core,is_a,concept,yes,yes
+network interface card,implements,data link layer,yes,yes
+network layer,forwards,datagram,yes,yes
+network layer,receives,transport-layer segment,yes,yes
+network layer,requires,ip,yes,yes
+network layer,requires,link layer,yes,yes
+network security,mitigates,denial-of-service attack,yes,yes
+network security,mitigates,distributed denial-of-service attack,yes,yes
+network-layer datagram,has_part,network-layer header information,yes,yes
+network-layer header information,contains,end system address,yes,yes
+network_interface_card,supports,data_link_layer,yes,yes
+network_interface_card,supports,physical_layer,yes,yes
+nodal delay,contains,processing delay,yes,yes
+nodal delay,contains,queuing delay,yes,yes
+olt,sends,packet,yes,yes
+optical line terminator,connects_to,telco router,yes,yes
+optical network terminator,connects_to,neighborhood splitter,yes,yes
+output buffer,causes,packet loss,yes,yes
+output buffer,part_of,router,yes,yes
+packet,contains,destination address,yes,yes
+packet,contains,segment,yes,yes
+packet,contains,source address,yes,yes
+packet,has_part,header fields,yes,yes
+packet,has_part,payload field,yes,yes
+packet,increases,delay,yes,yes
+packet arrival rate,increases,traffic intensity,yes,yes
+packet header,part_of,packet,yes,yes
+packet loss,is_a,metric,yes,yes
+packet sniffer,receives,packet,yes,yes
+packet switch,connects_to,end system,yes,yes
+packet switch,forwards,packet,yes,yes
+packet switching,is_a,concept,yes,yes
+packet switching,provides,efficiency,yes,yes
+packet switching,provides,sharing of transmission capacity,yes,yes
+packet-switched network,provides,best effort,yes,yes
+physical media,connects_to,host,yes,yes
+point of presence,has_part,router,yes,yes
+processing delay,increases,delay,yes,yes
+processing delay,is_a,delay,yes,yes
+processing delay,is_a,metric,yes,yes
+processing delay,part_of,nodal delay,yes,yes
+propagation delay,increases,delay,yes,yes
+propagation delay,increases,round-trip delay,yes,yes
+propagation delay,is_a,delay,yes,yes
+propagation delay,is_a,metric,yes,yes
+protocol layering,is_a,concept,yes,yes
+provincial isp,connects_to,national isp,yes,yes
+queue,causes,packet loss,yes,yes
+queue,connects_to,link,yes,yes
+queue,part_of,router,yes,yes
+queue,receives,packet,yes,yes
+queuing delay,increases,delay,yes,yes
+queuing delay,increases,end-to-end delay,yes,yes
+queuing delay,is_a,delay,yes,yes
+queuing delay,is_a,metric,yes,yes
+queuing delay,part_of,nodal delay,yes,yes
+regional isp,connects_to,tier-1 isp,yes,yes
+remote login,is_a,service,yes,yes
+round-trip delay,has_part,queuing delay,yes,yes
+round-trip delay,has_part,router processing delay,yes,yes
+router,causes,packet loss,yes,yes
+router,communicates_with,host,yes,yes
+router,connects_to,base station,yes,yes
+router,connects_to,client,yes,yes
+router,connects_to,end system,yes,yes
+router,connects_to,pc,yes,yes
+router,connects_to,server,yes,yes
+router,forwards,datagram,yes,yes
+router,has_part,buffer,yes,yes
+router,has_part,forwarding table,yes,yes
+router,has_part,output buffer,yes,yes
+router,is_a,packet switch,yes,yes
+router,mitigates,ddos attack,yes,yes
+router,part_of,point of presence,yes,yes
+router,receives,packet,yes,yes
+router,receives,special packet,yes,yes
+router,sends,message,yes,yes
+router a,connects_to,router b,yes,yes
+router a,forwards,packet,yes,yes
+router a,has_part,buffer,yes,yes
+router a,receives,packet,yes,yes
+router b,forwards,packet,yes,yes
+routing protocol,enables,forwarding table,yes,yes
+routing protocol,enables,shortest path,yes,yes
+segment,contains,header,yes,yes
+server,connects_to,access link,yes,yes
+server,connects_to,core,yes,yes
+server,connects_to,ethernet switch,yes,yes
+server,connects_to,router,yes,yes
+server,is_a,host,yes,yes
+server,is_a,network component,yes,yes
+server,provides,email service,yes,yes
+server,provides,web service,yes,yes
+smtp,operates_at,application_layer,yes,yes
+smtp,provides,email service,yes,yes
+sniffing,is_a,attack,yes,yes
+source end system,sends,packet,yes,yes
+source host,measures,round-trip delay,yes,yes
+source host,sends,special packet,yes,yes
+store-and-forward transmission,requires,packet,yes,yes
+switch,is_a,network component,yes,yes
+tcp,implements,congestion control,yes,yes
+tcp,provides,congestion‑control mechanism,yes,yes
+tcp,provides,connection‑oriented service,yes,yes
+tcp,provides,reliable delivery,yes,yes
+tdm,has_part,time slot,yes,yes
+telephone calls,is_a,real-time services,yes,yes
+third-party telecommunications provider,provides,high-speed link,yes,yes
+throughput,is_a,metric,yes,yes
+tier-1 isp,connects_to,lower-tier isp,yes,yes
+time division multiplexing,has_part,frame,yes,yes
+traceroute,runs_on,source host,yes,yes
+traditional telephone network,is_a,circuit-switched network,yes,yes
+traffic intensity,increases,average queue length,yes,yes
+traffic intensity,increases,average queuing delay,yes,yes
+traffic intensity,increases,packet loss,yes,yes
+traffic intensity,increases,queuing delay,yes,yes
+transmission delay,increases,delay,yes,yes
+transmission delay,is_a,delay,yes,yes
+transmission delay,is_a,metric,yes,yes
+transport layer,sends,transport-layer segment,yes,yes
+transport-layer segment,has_part,transport-layer header information,yes,yes
+transport_layer,provides,reliable_delivery_service,yes,yes
+transport_layer,requires,unreliable_edge_to_edge_message_delivery_service,yes,yes
+udp,provides,connectionless service,yes,yes
+video conference calls,is_a,real-time services,yes,yes
+web,enables,internet commerce,yes,yes
+web,enables,search,yes,yes
+web,enables,social network,yes,yes
+web server,is_a,server,yes,yes
+wifi,is_a,protocol,yes,yes
+wifi,operates_at,data_link_layer,yes,yes
+wifi wireless router,connects_to,modem,yes,yes

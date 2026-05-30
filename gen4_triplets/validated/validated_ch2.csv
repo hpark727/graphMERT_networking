@@ -1,0 +1,230 @@
+head,relation_type,tail,verdict_qwen,verdict_gpt
+alias hostname,maps_to,canonical hostname,yes,yes
+arin,provides,ip address range,yes,yes
+authoritative dns server,provides,ip address,yes,yes
+authoritative server,is_a,dns server,yes,yes
+bandwidth-sensitive applications,requires,throughput,yes,yes
+bit torrent,is_a,protocol,yes,yes
+bittorrent,implements,p2p architecture,yes,yes
+bittorrent,is_a,protocol,yes,yes
+browser,communicates_with,http server,yes,yes
+browser,communicates_with,origin server,yes,yes
+browser,communicates_with,web cache,yes,yes
+browser,communicates_with,web proxy,yes,yes
+browser,communicates_with,web server,yes,yes
+browser,is_a,client,yes,yes
+browser,receives,http response,yes,yes
+browser,sends,cookie,yes,yes
+browser,sends,cookie header line,yes,yes
+browser,sends,header line,yes,yes
+browser,sends,http request,yes,yes
+cdn,provides,streaming,yes,yes
+chrome,implements,http,yes,yes
+client,communicates_with,cdn,yes,yes
+client,communicates_with,dns server,yes,yes
+client,communicates_with,server,yes,yes
+client,connects_to,mail server,yes,yes
+client,connects_to,server,yes,yes
+client,connects_to,web cache,yes,yes
+client,measures,rtt,yes,yes
+client,measures,throughput,yes,yes
+client,receives,http response,yes,yes
+client,receives,packet,yes,yes
+client,receives,response message,yes,yes
+client,sends,http request message,yes,yes
+client,sends,packet,yes,yes
+client,sends,request message,yes,yes
+client,sends,tcp segment,yes,yes
+client,sends,udp packet,yes,yes
+client program,communicates_with,server program,yes,yes
+client program,implements,http,yes,yes
+client socket,requires,port number,yes,yes
+client-server architecture,has_part,server,yes,yes
+client-server architecture,supports,email service,yes,yes
+congestion,decreases,throughput,yes,yes
+connection-oriented service,requires,handshaking procedure,yes,yes
+content distribution network,connects_to,access isp,yes,yes
+content distribution network,has_part,server cluster,yes,yes
+dash,provides,streaming,yes,yes
+dash,runs_on,http,yes,yes
+data center,contains,host,yes,yes
+data center,enables,streaming video service,yes,yes
+dhcp,provides,ip address,yes,yes
+dig,communicates_with,dns server,yes,yes
+dns,maps_to,ip address,yes,yes
+dns,operates_at,application layer,yes,yes
+dns,provides,host aliasing,yes,yes
+dns,provides,load distribution,yes,yes
+dns,runs_on,udp,yes,yes
+dns caching,decreases,delay,yes,yes
+dns client,communicates_with,dns server,yes,yes
+dns client,receives,dns reply message,yes,yes
+dns client,receives,dns response,yes,yes
+dns client,receives,ip address,yes,yes
+dns client,sends,dns query,yes,yes
+dns client,sends,dns query message,yes,yes
+dns query,contains,hostname,yes,yes
+dns rotation,provides,load distribution,yes,yes
+dns server,communicates_with,dns client,yes,yes
+dns server,has_part,cache,yes,yes
+dns server,provides,hostname-to-ip-address translation service,yes,yes
+dns server,receives,dns query message,yes,yes
+dns server,sends,dns reply message,yes,yes
+dns server,sends,ip address,yes,yes
+dns server,supports,recursion,yes,yes
+email,runs_on,tcp,yes,yes
+ethernet,operates_at,link layer,yes,yes
+file transfer,runs_on,tcp,yes,yes
+handshaking procedure,enables,connection-oriented service,yes,yes
+head of line blocking,increases,delay,yes,yes
+header,contains,header line,yes,yes
+header line,part_of,request message,yes,yes
+header line,part_of,response message,yes,yes
+header section,part_of,dns query message,yes,yes
+header section,part_of,dns reply message,yes,yes
+hit rate,measures,web cache,yes,yes
+host,communicates_with,local dns server,yes,yes
+host,connects_to,content server,yes,yes
+host,connects_to,server,yes,yes
+host,sends,dns query,yes,yes
+host header line,identifies,host,yes,yes
+hostname,identifies,host,yes,yes
+hostname,maps_to,ip address,yes,yes
+hotmail,implements,email service,yes,yes
+html file,part_of,web page,yes,yes
+http,enables,google maps,yes,yes
+http,enables,streaming,yes,yes
+http,operates_at,application layer,yes,yes
+http,provides,conditional get,yes,yes
+http,runs_on,tcp,yes,yes
+http,supports,persistent connection,yes,yes
+http,supports,pipelining,yes,yes
+http client,communicates_with,http server,yes,yes
+http request,contains,cookie header line,yes,yes
+http/1.1,runs_on,tcp,yes,yes
+http/2,decreases,latency,yes,yes
+http/2,enables,multiplexing,yes,yes
+http/2,provides,server push,yes,yes
+http/2,runs_on,tcp,yes,yes
+http/3,runs_on,quic,yes,yes
+institutional network,connects_to,internet,yes,yes
+interactive real-time applications,requires,timing guarantees,yes,yes
+internet explorer,implements,http,yes,yes
+internet telephony,runs_on,udp,yes,yes
+ip address,identifies,host,yes,yes
+isp,provides,ip address,yes,yes
+local dns server,communicates_with,authoritative dns server,yes,yes
+local dns server,communicates_with,root dns server,yes,yes
+local dns server,communicates_with,tld server,yes,yes
+local dns server,receives,dns query,yes,yes
+local dns server,sends,dns response,yes,yes
+mail message,contains,body,yes,yes
+mail message,contains,header,yes,yes
+mail server,has_part,queue,yes,yes
+mail server,receives,email,yes,yes
+mail server,receives,mail message,yes,yes
+malicious host,sends,spam e‑mail,yes,yes
+multiplayer games,requires,timing guarantees,yes,yes
+nslookup,communicates_with,dns server,yes,yes
+nslookup,enables,reconnaissance,yes,yes
+nslookup,sends,dns query,yes,yes
+origin server,receives,http request,yes,yes
+origin server,sends,http response,yes,yes
+parallel connections,enables,parallel downloads,yes,yes
+peer,provides,upload rate,yes,yes
+peer,receives,chunk,yes,yes
+peer,sends,chunk,yes,yes
+peer,sends,file,yes,yes
+persistent connection,supports,pipelining,yes,yes
+proxy cache,sends,conditional get,yes,yes
+question section,contains,type field,yes,yes
+quic,provides,flow control,yes,yes
+quic,runs_on,udp,yes,yes
+rarest first,is_a,algorithm,yes,yes
+rate-determination algorithm,enables,adaptive streaming,yes,yes
+recursion-available field,part_of,header,yes,yes
+recursion-desired flag,identifies,client desire for recursion,yes,yes
+remote terminal access,runs_on,tcp,yes,yes
+request line,has_part,http version field,yes,yes
+request line,has_part,method field,yes,yes
+request line,part_of,request message,yes,yes
+request message,contains,header line,yes,yes
+response message,contains,entity body,yes,yes
+response message,contains,header line,yes,yes
+response message,contains,status line,yes,yes
+root server,is_a,dns server,yes,yes
+router,forwards,packet,yes,yes
+router,has_part,buffer,yes,yes
+router,operates_at,network layer,yes,yes
+router,routes_to,host,yes,yes
+rtt,is_a,metric,yes,yes
+server,communicates_with,client,yes,yes
+server,has_part,storage,yes,yes
+server,is_a,host,yes,yes
+server,provides,email service,yes,yes
+server,receives,packet,yes,yes
+server,receives,request message,yes,yes
+server,receives,udp packet,yes,yes
+server,sends,chunk,yes,yes
+server,sends,frame,yes,yes
+server,sends,html file,yes,yes
+server,sends,packet,yes,yes
+server,sends,response message,yes,yes
+server,sends,tcp segment,yes,yes
+server,sends,udp packet,yes,yes
+server program,implements,http,yes,yes
+server rack,has_part,server,yes,yes
+server socket,requires,port number,yes,yes
+smtp,provides,email service,yes,yes
+smtp,runs_on,tcp,yes,yes
+smtp client,communicates_with,smtp server,yes,yes
+smtp client,is_a,client,yes,yes
+smtp server,is_a,server,yes,yes
+socket,receives,packet,yes,yes
+socket,sends,packet,yes,yes
+status line,contains,protocol version field,yes,yes
+status line,contains,status message,yes,yes
+streaming,requires,average end-to-end throughput,yes,yes
+switch,operates_at,link layer,yes,yes
+tcp,enables,tls,yes,yes
+tcp,provides,congestion control,yes,yes
+tcp,provides,congestion-control mechanism,yes,yes
+tcp,provides,connection-oriented service,yes,yes
+tcp,provides,reliable data transfer,yes,yes
+tcp,provides,reliable data transfer service,yes,yes
+tcp segment,contains,http request message,yes,yes
+tcp segment,part_of,three-way handshake,yes,yes
+telnet,runs_on,tcp,yes,yes
+three-way handshake,enables,tcp connection,yes,yes
+three-way handshake,operates_at,transport layer,yes,yes
+tld dns server,part_of,hierarchical architecture,yes,yes
+tld server,is_a,dns server,yes,yes
+tls,operates_at,application layer,yes,yes
+tls,provides,security services,yes,yes
+torrent,has_part,chunk,yes,yes
+tracker,sends,ip address,yes,yes
+traffic intensity,causes,delay,yes,yes
+traffic intensity,increases,delay,yes,yes
+udpclient,runs_on,host,yes,yes
+upload rate,is_a,metric,yes,yes
+url,has_part,hostname,yes,yes
+url,has_part,path name,yes,yes
+user agent,communicates_with,mail server,yes,yes
+user agent,sends,email,yes,yes
+verisign global registry services,manages,tld dns server,yes,yes
+web,runs_on,tcp,yes,yes
+web browser,implements,http,yes,yes
+web cache,communicates_with,origin web server,yes,yes
+web cache,connects_to,origin web server,yes,yes
+web cache,decreases,response time,yes,yes
+web cache,decreases,traffic intensity,yes,yes
+web cache,decreases,web traffic,yes,yes
+web cache,is_a,proxy server,yes,yes
+web proxy,receives,http request,yes,yes
+web proxy,receives,http response,yes,yes
+web proxy,sends,http request,yes,yes
+web proxy,sends,http response,yes,yes
+web server,implements,http,yes,yes
+web server,provides,web service,yes,yes
+web server,sends,http response,yes,yes
+whois database,enables,reconnaissance,yes,yes

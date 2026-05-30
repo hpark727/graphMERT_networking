@@ -1,0 +1,359 @@
+head,relation_type,tail
+access control,controls,switch
+agent,communicates_with,managing server
+agent,receives,request
+agent,sends,response
+agent,sends,trap
+as-path,contains,as
+autonomous system,has_part,router
+autonomous system,identifies,autonomous system number
+bellman-ford equation,enables,neighbor-to-neighbor communication
+bellman-ford equation,provides,forwarding table
+bgp,decreases,end-to-end delay
+bgp,enables,ip-anycast service
+bgp,enables,policy
+bgp,has_part,as-path
+bgp,has_part,next-hop
+bgp,implements,distance-vector algorithm
+bgp,implements,hot potato routing
+bgp,implements,route-selection algorithm
+bgp,implements,routing algorithm
+bgp,is_a,protocol
+bgp,requires,port 179
+bgp,routes_to,destination prefix
+bgp,routes_to,prefix
+bgp,routes_to,prefix x
+bgp,runs_on,tcp
+bgp connection,contains,bgp message
+bgp identifier,identifies,route
+buffer,causes,packet loss
+buffer,increases,end-to-end delay
+cdn,sends,ip address
+cdn,supports,ip-anycast service
+centralized routing algorithm,requires,global knowledge
+centralized routing algorithm,runs_on,controller
+centralized routing algorithm,variant_of,routing algorithm
+client,communicates_with,cdn
+client,communicates_with,web server
+client,receives,ip address
+client,sends,ip datagram
+client,sends,packet
+client host,receives,icmp echo response
+congestion,increases,delay
+control agent,manages,flow table
+control plane,controls,router
+control plane,has_part,network-control application
+control plane,has_part,sdn controller
+control plane,has_part,server
+control plane,manages,device
+controller,communicates_with,control agent
+controller,is_a,service
+controller,manages,router
+controller,provides,forwarding table
+cost,identifies,least-cost path
+cost,measures,number of links traversed
+data plane,has_part,switch
+decentralized routing algorithm,variant_of,routing algorithm
+dijkstra's algorithm,enables,shortest path
+dijkstra's algorithm,provides,distance value
+dijkstra's algorithm,provides,least-cost path
+dijkstra's algorithm,requires,link cost
+dijkstra's algorithm,runs_on,sdn controller
+distance vector,causes,routing table
+distance vector,contains,cost
+distance vector,part_of,node
+distance vector,part_of,routing table
+distance vector algorithm,is_a,algorithm
+distance vector routing,supports,poisoned reverse
+distance-vector algorithm,causes,count-to-infinity problem
+distance-vector algorithm,implements,bellman-ford equation
+distance-vector algorithm,implements,distance vector
+distance-vector algorithm,requires,link cost
+distance-vector algorithm,sends,routing packet
+distance-vector algorithm,variant_of,decentralized routing algorithm
+distance-vector routing algorithm,implements,bellman-ford equation
+dns server,maps_to,ip address
+domain name,maps_to,ip address
+dv algorithm,causes,routing table
+dv algorithm,implements,distance vector
+ebgp,variant_of,bgp
+ebgp connection,enables,reachability information
+ebgp connection,is_a,bgp connection
+edge,connects_to,router
+edge,part_of,graph
+flow table,contains,header field value
+flow table,has_part,flow table entry
+flow table,part_of,router
+flow table,part_of,sdn‑controlled switch
+flow table entry,forwards,packet
+flow table manager,sends,switch s1
+flow table manager,sends,switch s2
+flow table manager,sends,switch s4
+flow table manager,supports,openflow
+forwarding table,contains,next-hop node
+forwarding table,contains,prefix x
+forwarding table,identifies,router
+forwarding table,maps_to,interface
+forwarding table,part_of,node
+forwarding table,part_of,node u
+forwarding table,part_of,router
+gateway router,connects_to,router
+gateway router,is_a,router
+gateway router 2a,sends,gateway router 1c
+gateway router 2c,sends,gateway router 2a
+gateway router 3a,sends,gateway router 2c
+graph,has_part,edge
+graph,has_part,node
+host,communicates_with,router
+host,measures,round‑trip time
+host,receives,icmp
+host,receives,icmp port unreachable message
+host,sends,icmp echo reply
+host,sends,icmp echo request
+host,sends,icmp port unreachable message
+host,sends,ip datagram
+hot potato routing,is_a,algorithm
+hot potato routing,requires,cost
+http,communicates_with,wireless home router
+ibgp,variant_of,bgp
+ibgp connection,enables,reachability information
+ibgp connection,is_a,bgp connection
+icmp,contains,ip datagram
+icmp,enables,ping
+icmp,enables,traceroute
+icmp,is_a,protocol
+icmp,provides,error reporting
+icmp source quench message,enables,congestion control
+icmp warning message,identifies,router
+icmpv6,variant_of,icmp
+interface,has_part,mtu
+internal router,connects_to,host
+internal router,connects_to,router
+internal router,is_a,router
+ip,encapsulates,icmp
+ip,encapsulates,tcp
+ip,encapsulates,udp
+ip address,identifies,dns server
+ip address,identifies,gateway router
+ip address,identifies,mail server
+ip address,identifies,web server
+ip anycast,enables,dns query
+ip anycast,routes_to,root dns server
+ip datagram,contains,ttl
+ip datagram,contains,udp segment
+is-is,is_a,link-state protocol
+iso idrp,implements,distance-vector algorithm
+isp,provides,ip address range
+least-cost path,is_a,path
+link cost,causes,distance vector
+link cost,increases,delay
+link cost,is_a,metric
+link state routing,requires,global information
+link-state algorithm,implements,dijkstra's algorithm
+link-state algorithm,is_a,routing algorithm
+link-state algorithm,requires,complete map
+link-state algorithm,requires,global knowledge
+link-state packet,contains,link
+link-state packet,contains,link cost
+link-state protocol,implements,dijkstra's algorithm
+link-state routing,communicates_with,flow table manager
+link-state routing,communicates_with,link-state manager
+link-state routing,implements,dijkstra's algorithm
+link-state routing algorithm,implements,dijkstra's algorithm
+load,increases,link cost
+load-sensitive algorithm,requires,link cost
+ls algorithm,causes,oscillation
+ls algorithm,provides,least-cost path
+managed device,is_a,server
+managed device,receives,rpc
+managed device,sends,notification
+managing server,communicates_with,managed device
+managing server,controls,managed device
+managing server,enables,retransmission
+managing server,is_a,client
+managing server,receives,notification
+managing server,receives,response
+managing server,sends,request
+managing server,sends,rpc
+managing server,sends,trap
+neighbor,receives,distance vector
+netconf,enables,device configuration
+netconf,enables,transaction
+netconf,enables,yang
+netconf,provides,edit-config
+netconf,provides,get
+netconf,provides,get-config
+netconf,provides,lock
+netconf,provides,unlock
+netconf,requires,secure connection
+netconf,requires,tls
+netconf,runs_on,tcp
+netconf,supports,rpc
+network layer,has_part,control plane
+network management protocol,connects_to,managed device
+network management protocol,connects_to,managing server
+network-control application,controls,data plane
+network-control application,part_of,control plane
+network-control application,provides,access control
+network-control application,provides,server load balancing
+next-hop,identifies,router
+next-hop attribute,identifies,ip address
+next-hop attribute,identifies,router 2a
+next-hop attribute,identifies,router 3d
+node,has_part,distance vector
+node,has_part,routing table
+node,identifies,router
+node,manages,forwarding table
+node,part_of,graph
+node,receives,distance vector
+node,receives,link-state packet
+node,sends,link-state packet
+node,sends,neighbor
+node 0,receives,routing packet
+node 0,sends,routing packet
+node 1,communicates_with,node 2
+node 1,sends,routing packet
+node 2,sends,routing packet
+node 3,receives,routing packet
+node u,has_part,forwarding table
+node y,receives,distance vector
+node y,routes_to,node x
+node y,sends,distance vector
+node z,receives,distance vector
+node z,routes_to,node x
+node z,sends,distance vector
+novell ipx,implements,distance-vector algorithm
+nox,is_a,sdn controller
+onos,is_a,sdn controller
+opendaylight,is_a,sdn controller
+openflow protocol,connects_to,sdn controller
+openflow protocol,connects_to,sdn‑controlled switch
+openflow protocol,runs_on,tcp
+openflow1.0,enables,header field value
+openflow1.0,provides,flow-based forwarding
+ospf,implements,dijkstra's algorithm
+ospf,implements,link-state algorithm
+ospf,implements,link-state broadcast
+ospf,implements,link-state routing algorithm
+ospf,implements,reliable message transfer
+ospf,implements,routing algorithm
+ospf,is_a,link-state protocol
+ospf,is_a,protocol
+ospf,provides,least-cost path routing
+ospf,runs_on,ip
+ospf,supports,authentication
+ospf,supports,md5 authentication
+ospf,supports,simple authentication
+ospf message,contains,ospf advertisement
+packet switch,sends,sdn controller
+pdu,has_part,request-id
+ping,measures,packet loss
+ping,measures,rtt
+ping,receives,icmp echo response
+ping,sends,icmp echo request
+poisoned reverse,mitigates,count-to-infinity problem
+request,contains,mib object
+response,contains,mib value
+rip,implements,distance-vector algorithm
+route,contains,prefix
+route,has_part,as-path
+route,has_part,next-hop
+route-selection algorithm,causes,bgp
+route-selection algorithm,is_a,algorithm
+router,causes,oscillation
+router,forwards,datagram
+router,forwards,ip datagram
+router,forwards,packet
+router,has_part,flow table
+router,has_part,forwarding table
+router,implements,bgp route-selection algorithm
+router,implements,decentralized routing algorithm
+router,implements,dijkstra's algorithm
+router,implements,distance vector routing
+router,implements,distance-vector algorithm
+router,implements,link state routing
+router,implements,link-state algorithm
+router,implements,ls algorithm
+router,implements,match-plus-action abstraction
+router,implements,route-selection algorithm
+router,part_of,autonomous system
+router,part_of,isp
+router,provides,firewalling
+router,provides,load sharing
+router,provides,nat
+router,receives,distance vector
+router,receives,forwarding table
+router,receives,ip datagram
+router,receives,packet
+router,runs_on,distance-vector algorithm
+router,runs_on,intra-autonomous system routing protocol
+router,sends,distance vector
+router,sends,hello message
+router,sends,icmp
+router,sends,icmp warning message
+router,sends,link advertisement
+router,sends,link-state information
+router,sends,link-state packet
+router,sends,packet
+router,supports,self-synchronization
+router 1b,forwards,packet
+router 1b,manages,forwarding table
+router 1c,connects_to,router 2a
+router 2c,connects_to,router 3a
+router 2c,receives,bgp message
+router 2c,sends,bgp message
+router 3a,sends,bgp message
+routing algorithm,identifies,least-cost path
+routing algorithm,is_a,algorithm
+routing network-control application,implements,dijkstra's algorithm
+routing policy,controls,local-preference attribute
+routing table,has_part,distance vector
+routing table,part_of,node
+sdn,controls,access 4.0
+sdn,controls,activecore
+sdn,controls,b4
+sdn,controls,router
+sdn,controls,swan
+sdn,implements,logically centralized control
+sdn,supports,4g/5g cellular networking
+sdn controller,communicates_with,host
+sdn controller,communicates_with,sdn-enabled switch
+sdn controller,communicates_with,sdn‑controlled switch
+sdn controller,communicates_with,switch
+sdn controller,enables,unbundling
+sdn controller,has_part,server
+sdn controller,implements,openflow
+sdn controller,manages,flow table
+sdn controller,part_of,control plane
+sdn controller,provides,api
+sdn controller,provides,network state information
+sdn controller,receives,openflow
+sdn controller,sends,link-state manager
+sdn controller,sends,packet
+sdn‑controlled switch,has_part,flow table
+sdn‑controlled switch,sends,packet
+server,communicates_with,device
+server,part_of,control plane
+server,part_of,sdn controller
+server,sends,rpc
+server load balancing,controls,switch
+snmp,is_a,protocol
+snmp,operates_at,application layer
+snmp,runs_on,udp
+snmpv3,operates_at,application layer
+snmpv3,variant_of,snmpv2
+source host,identifies,router
+source host,measures,round-trip time
+source host,receives,icmp message
+source host,sends,udp
+switch,communicates_with,sdn controller
+switch,part_of,data plane
+switch s1,sends,sdn controller
+target host,receives,icmp echo request
+tcp,provides,congestion control
+tls,runs_on,tcp
+traceroute,implements,icmp
+trap,is_a,pdu
+udp datagram,contains,pdu
+y,communicates_with,z
+z,communicates_with,y

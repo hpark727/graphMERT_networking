@@ -1,4 +1,6 @@
 import os
+import re
+import argparse
 import torch
 from datasets import load_from_disk, concatenate_datasets
 import logging
@@ -7,147 +9,190 @@ import json
 from transformers import AutoTokenizer
 import yaml
 
-# Load shared entity discovery config and take needed keys
+# ── Model config (stable across chapters) ─────────────────────────────────────
 ECONF_PATH = os.path.join(os.path.dirname(__file__), 'entity_discovery_args.yaml')
 if not os.path.exists(ECONF_PATH):
     raise FileNotFoundError(f"Missing config: {ECONF_PATH}")
 with open(ECONF_PATH, 'r', encoding='utf-8') as _f:
-    config = yaml.safe_load(_f)
+    _cfg = yaml.safe_load(_f)
 
-
-tokenizer_name = config['model']['tokenizer_path']
-tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
-
+tokenizer = AutoTokenizer.from_pretrained(_cfg['model']['tokenizer_path'])
+MODEL_NAME = _cfg['model']['model_name']
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
-TAKE_SUBSET = config.get('data', {}).get('take_subset', False)
-subset_size = config.get('data', {}).get('subset_size', None)
-if TAKE_SUBSET:
-    assert subset_size is not None, "subset_size must be set if TAKE_SUBSET is True"
+# ── Normalization helpers ──────────────────────────────────────────────────────
+
+_DASH_CHARS = '‐‑‒–—―−﹘﹣－'
+_DASH_RE = re.compile(f'[{re.escape(_DASH_CHARS)}]')
 
 
-# to list the output chunks
-batch_size = config['data']['batch_size']
-num_batches = config['data']['num_batches']
-chunk_size = batch_size * num_batches
-model_name = config['model']['model_name']
-original_dataset_size = config['data']['original_dataset_size']
+def _normalize(s: str) -> str:
+    """Lowercase, replace Unicode dashes with ASCII hyphen, collapse whitespace."""
+    s = _DASH_RE.sub('-', s.lower())
+    return re.sub(r'\s+', ' ', s).strip()
 
 
-dataset_path = config.get('data', {}).get('output_path')
-output_path = f'{dataset_path}_{model_name}_all'
-
-def unite_output(dataset_path, original_dataset_size, chunk_size, model_name):
+def _candidate_variants(head: str) -> list[str]:
     """
-    original_dataset_size -- how many records in the dataset before running the entity discovery;
-    it's also in the filename in the folder -- the largest end index
+    Return a list of tokenization-friendly variants to try in order:
+      0. raw lowercased (preserves original Unicode dashes — matches if text also has them)
+      1. normalized as-is (Unicode dashes → ASCII hyphen)
+      2. parenthetical abbreviation stripped  e.g. "fiber to the home ( ftth )" → "fiber to the home"
+      3. spaces added around hyphens
+      4. spaces removed around hyphens
+    Combinations of 2+3 and 2+4 are also included.
     """
-    start_idx = 0
-    end_idx = 0
+    # Candidate 0: preserve original Unicode dashes; only lowercase + collapse whitespace
+    raw_lower = re.sub(r'\s+', ' ', head.lower()).strip()
 
-    datasets = []
-    if TAKE_SUBSET:
-        path = os.path.join(dataset_path, f'{model_name}_subset_{subset_size}_0-{subset_size}')
-        dataset = load_from_disk(path)
-        logger.info(f'loaded from {path}')
-        datasets.append(dataset)
-    else:
-        while end_idx < original_dataset_size:
-            end_idx = min(start_idx + chunk_size, original_dataset_size)
-            path = os.path.join(dataset_path, f'{model_name}_{start_idx}-{end_idx}')
-            dataset = load_from_disk(path)
-            logger.info(f'loaded from {path}')
-            datasets.append(dataset)
-            start_idx += chunk_size
-    
-    united_dataset = concatenate_datasets(datasets)
-    if not TAKE_SUBSET:
-        assert original_dataset_size == len(united_dataset), f'total of chunks {len(united_dataset)} is not equal to the original dataset size'
-    return united_dataset
+    base = _normalize(head)
+    # Strip trailing parenthetical: "foo ( bar )" or "foo (bar)"
+    stripped = re.sub(r'\s*[\(\[].*?[\)\]]\s*$', '', base).strip()
+
+    seeds = [base]
+    if stripped and stripped != base:
+        seeds.append(stripped)
+
+    variants: list[str] = []
+    seen: set[str] = set()
+
+    # Try raw lowercased first so original dash tokenization is preserved
+    if raw_lower and raw_lower not in seen:
+        seen.add(raw_lower)
+        variants.append(raw_lower)
+
+    for s in seeds:
+        for v in (
+            s,
+            re.sub(r'\s*-\s*', ' - ', s),   # add spaces around hyphens
+            re.sub(r'\s*-\s*', '-', s),      # remove spaces around hyphens
+        ):
+            v = re.sub(r'\s+', ' ', v).strip()
+            if v and v not in seen:
+                seen.add(v)
+                variants.append(v)
+
+    # Plural/singular fallback: try appending 's' (entity is singular, text may be plural)
+    # and stripping trailing 's' (entity is plural, text may be singular).
+    # Operate on the base normalized form only.
+    extra: list[str] = []
+    if base and not base.endswith('s'):
+        extra.append(base + 's')
+    elif base.endswith('s') and len(base) > 4:
+        extra.append(base[:-1])
+    for v in extra:
+        if v not in seen:
+            seen.add(v)
+            variants.append(v)
+
+    return variants
 
 
-dataset_heads = unite_output(dataset_path, original_dataset_size, chunk_size, model_name)
-logger.info(f"Whole dataset:\n{dataset_heads}")
-
-
-if TAKE_SUBSET:
-    dataset_heads = dataset_heads.select(range(subset_size))
+def _search(input_ids: list, head_token_ids: list) -> int:
+    """Return start index of head_token_ids in input_ids, or -1."""
+    n, m = len(input_ids), len(head_token_ids)
+    for i in range(n - m + 1):
+        if input_ids[i:i + m] == head_token_ids:
+            return i
+    return -1
 
 
 def find_head_positions(example, idx):
-    """
-    For each record, finds the starting token index of each head (key) in the response JSON.
-    Considers hyphen token mismatches: if the head token id equals 17, we allow dataset token 17 or 226.
-    Prints an error message if a head is not found.
-    """
-    input_ids = example["input_ids"]
-
-    if isinstance(input_ids, str):
-        response_str = example["response"].strip() if example["response"] else ""
-        try:
-            response_list = json.loads(response_str) if response_str else []
-        except Exception as e:
-            logger.info(f"{idx}: Error parsing response JSON - {e}")
-            response_list = []
-
-    # if isinstance(input_ids, list):
+    input_ids = list(example["input_ids"])
     response_list = example["response"]
-    
+
     head_positions = {}
-    
-    # Process each head in the original response.
+
     for head in response_list:
-        head_lower = head.lower()
-        head_token_ids = tokenizer.encode(head_lower, add_special_tokens=False)
-        
         match_index = -1
-        # Search for the head token sequence in the input_ids.
-        for i in range(len(input_ids) - len(head_token_ids) + 1):
-            found = True
-            for j, token in enumerate(head_token_ids):
-                dataset_token = input_ids[i + j]
-                # If token is the hyphen token (assumed to be 17), allow dataset token 17 or 226.
-                if token == 17:
-                    if dataset_token not in (17, 226):
-                        found = False
-                        break
-                else:
-                    if dataset_token != token:
-                        found = False
-                        break
-            if found:
-                match_index = i
+        matched_variant_ids = None
+
+        for variant in _candidate_variants(head):
+            token_ids = tokenizer.encode(variant, add_special_tokens=False)
+            if not token_ids:
+                continue
+            pos = _search(input_ids, token_ids)
+            if pos != -1:
+                match_index = pos
+                matched_variant_ids = token_ids
                 break
-        
+
         if match_index == -1:
-            logger.info(f"{idx}: head '{head_lower}' not found.")
+            logger.info(f"{idx}: head '{_normalize(head)}' not found.")
         else:
-            span_token_ids = input_ids[match_index: match_index + len(head_token_ids)]
-            matched_text = tokenizer.decode(span_token_ids, skip_special_tokens=True).strip()
+            span = input_ids[match_index: match_index + len(matched_variant_ids)]
+            matched_text = tokenizer.decode(span, skip_special_tokens=True).strip()
             head_positions[matched_text] = match_index
-    
+
     example["head_positions"] = json.dumps(head_positions)
     return example
 
 
-dataset_heads_with_positions = dataset_heads.map(find_head_positions, num_proc=100, with_indices=True)
-dataset_heads_with_positions = dataset_heads_with_positions.remove_columns(["response"])
+# ── Dataset loading ────────────────────────────────────────────────────────────
+
+def unite_output(dataset_path: str, model_name: str, subset_size=None) -> object:
+    """Scan dataset_path for chunk datasets and concatenate them."""
+    if subset_size is not None:
+        prefix = f"{model_name}_subset_{subset_size}_"
+    else:
+        prefix = f"{model_name}_"
+
+    entries = sorted(os.listdir(dataset_path))
+    chunk_dirs = [
+        e for e in entries
+        if e.startswith(prefix) and not e.endswith('_all')
+    ]
+
+    datasets = []
+    for d in chunk_dirs:
+        path = os.path.join(dataset_path, d)
+        if os.path.isdir(path):
+            ds = load_from_disk(path)
+            logger.info(f'loaded from {path}')
+            datasets.append(ds)
+
+    assert datasets, f"No chunk datasets found in {dataset_path!r} with prefix {prefix!r}"
+    return concatenate_datasets(datasets)
 
 
-dataset_heads_with_positions = dataset_heads_with_positions.map(
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--chapter', type=int, default=1, help='Chapter number (1-8)')
+    parser.add_argument('--subset', type=int, default=None, help='Subset size for testing')
+    args = parser.parse_args()
+
+    ch = args.chapter
+    subset_size = args.subset
+
+    # ch1 uses legacy flat paths; ch2+ use per-chapter subdirectories
+    if ch == 1:
+        dataset_path = 'json_data/entity_discovery_output'
+        output_path = f'json_data/entity_discovery_output_{MODEL_NAME}_all'
+    else:
+        dataset_path = f'json_data/entity_discovery_output/ch{ch}'
+        output_path = f'json_data/entity_discovery_output/ch{ch}_{MODEL_NAME}_all'
+
+    dataset_heads = unite_output(dataset_path, MODEL_NAME, subset_size)
+    logger.info(f"Whole dataset:\n{dataset_heads}")
+
+    if subset_size:
+        dataset_heads = dataset_heads.select(range(min(subset_size, len(dataset_heads))))
+
+    dataset_heads_with_positions = dataset_heads.map(
+        find_head_positions, num_proc=4, with_indices=True
+    )
+    dataset_heads_with_positions = dataset_heads_with_positions.remove_columns(["response"])
+
+    dataset_heads_with_positions = dataset_heads_with_positions.map(
         lambda example, idx: {"id": idx}, with_indices=True,
         desc='Indexing dataset',
-        num_proc=100,
-)
+        num_proc=4,
+    )
 
-if TAKE_SUBSET:
-    path_to_save = f'{output_path}_subset_{subset_size}'
-else:
-    path_to_save = output_path
-    
-dataset_heads_with_positions.save_to_disk(path_to_save)
-print(f'saved to {path_to_save}')
-print(dataset_heads_with_positions)
+    path_to_save = f'{output_path}_subset_{subset_size}' if subset_size else output_path
+    dataset_heads_with_positions.save_to_disk(path_to_save)
+    print(f'saved to {path_to_save}')
+    print(dataset_heads_with_positions)

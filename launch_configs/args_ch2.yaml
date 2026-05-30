@@ -1,0 +1,26 @@
+# Input data
+train_file: json_data/ch2_text_only_no_equations.txt
+validation_file: json_data/ch2_text_only_no_equations.txt
+validation_split_percentage: 10
+
+# Output paths
+cache_dir: json_data/cache
+tokenized_dataset_output_path: json_data/tokenized
+
+# Tokenizer — bert-base-uncased for general English text
+tokenizer_name: bert-base-uncased
+subword_token_start: "##"
+
+# Processing
+max_seq_length: 128
+preprocessing_num_workers: 4
+overwrite_cache: false
+cut_dataset_for_testing: false
+
+# Required by config parser but unused in tokenization
+output_dir: json_data/output
+do_train: false
+do_eval: false
+bf16: false
+seed: 0
+remove_unused_columns: false

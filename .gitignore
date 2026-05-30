@@ -1,6 +1,32 @@
 # Repo-specific
 transformers/src/transformers/models/graphmert/graph_data/
 
+# Intermediate KG generations (only gen4 is kept)
+gen1_triplets/
+gen2_triplets/
+gen3_triplets/
+
+# gen4: keep validated CSVs and relation_map, ignore large binary datasets and derived files
+gen4_triplets/training_data/
+gen4_triplets/validated_both/injections_ch*.csv
+
+# Local data — large tokenized datasets, entity discovery outputs, seed KG extractions
+json_data/
+
+# Training outputs and logs
+outputs/
+logs/
+*.log
+
+# Jupyter exploration notebooks
+jupyter/
+
+# UMLS mapping (not needed for networking training)
+umls_mapping/
+
+# PubMed dataset creation (not relevant to networking)
+create_dataset_from_pubmed/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -162,9 +188,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
-# slurm output
-*.slurm
+# slurm: track scripts in slurm/, ignore job output files
 slurm_logs/
+slurm/*.out
+slurm/*.err
 
 # output
 /output*/

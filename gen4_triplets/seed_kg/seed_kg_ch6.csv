@@ -1,0 +1,416 @@
+head,relation_type,tail
+111.111.111.111,sends,frame
+111.111.111.111,sends,ip datagram
+40 gigabit ethernet,variant_of,gigabit ethernet
+802.11,operates_at,link layer
+802.1q,provides,vlan tag
+access router,connects_to,top-tier switch
+adapter,connects_to,broadcast channel
+adapter,encapsulates,ip datagram
+adapter,has_part,buffer
+adapter,has_part,mac address
+adapter,implements,cyclic redundancy check
+adapter,part_of,node
+adapter,receives,datagram
+adapter,receives,ethernet frame
+adapter,receives,frame
+adapter,receives,ip datagram
+adapter,sends,ethernet frame
+adapter,sends,frame
+aloha,is_a,random access protocol
+arp,identifies,ip address
+arp,identifies,mac address
+arp,maps_to,mac address
+arp,operates_at,link layer
+arp,provides,link-layer addressing
+arp packet,contains,ip address
+arp packet,contains,mac address
+arp table,contains,ip address
+arp table,contains,mac address
+arp table,contains,ttl
+arq,provides,error correction
+atheros ar5006 controller,implements,802.11
+atm,is_a,protocol
+binary exponential backoff algorithm,runs_on,docsis
+binary exponential backoff algorithm,runs_on,ethernet
+bluetooth protocol,is_a,polling protocol
+bob laptop,receives,ethernet frame
+bob laptop,requires,arp
+bob laptop,sends,ethernet frame
+border router,connects_to,access router
+border router,connects_to,data center network
+broadcast address,is_a,mac address
+broadcast channel,connects_to,hfc access network
+broadcast channel,connects_to,host
+broadcast channel,connects_to,satellite network
+broadcast channel,connects_to,wireless lan
+buffer,contains,frame
+buffer,part_of,adapter
+buffer,part_of,switch
+burst error,causes,undetected error
+cable modem,communicates_with,cmts
+cable modem,sends,mini-slot-request frame
+carrier sensing,prevents,collision
+cdma,enables,code
+cdma,supports,broadcast channel
+channel partitioning protocol,variant_of,multiple access protocol
+checksum,part_of,checksumming method
+checksum,provides,error detection
+checksumming method,operates_at,transport layer
+checksumming method,provides,error detection
+checksumming method,supports,transport layer
+clos network,is_a,concept
+cmts,receives,mini-slot-request frame
+cmts,sends,map message
+collision,causes,collision interval
+collision,causes,packet loss
+collision,decreases,bandwidth
+column parity,part_of,error-detection bits
+container,has_part,host
+control plane,enables,automated configuration
+control plane,enables,operational state management
+control plane,manages,data plane
+controller,encapsulates,datagram
+controller,receives,frame
+controller,sends,frame
+crc,part_of,cyclic redundancy check
+crc,requires,generator 1001
+crc,requires,generator 10011
+crc-32,variant_of,crc
+cs host,receives,ip datagram
+csma,is_a,random access protocol
+csma,requires,carrier sensing
+csma/cd,implements,binary exponential backoff
+csma/cd,requires,carrier sensing
+csma/cd,requires,collision detection
+csma/cd,runs_on,ethernet
+csma/cd,supports,broadcast link
+csma/cd,variant_of,csma
+csma/cd algorithm,runs_on,ethernet
+csma/cd-like multiple access protocol,implements,csma/cd algorithm
+cyclic redundancy check,operates_at,link layer
+cyclic redundancy check,prevents,bit-flip errors
+cyclic redundancy check,provides,error detection
+cyclic redundancy check,requires,modulo-2 arithmetic
+cyclic redundancy check,requires,xor
+cyclic redundancy check,supports,adapter
+cyclic redundancy check,supports,link layer
+data center interconnection network,has_part,switch
+data center network,connects_to,host
+data center network,connects_to,rack
+data center network,has_part,border router
+data center network,has_part,switch
+data field,contains,ip datagram
+data plane,contains,switch
+data plane,has_part,commodity switch
+datagram,encapsulates,synack segment
+datagram,encapsulates,tcp segment
+destination address,contains,mac address
+dns,maps_to,ip address
+dns,susceptible_to,cache poisoning
+docsis,implements,binary exponential backoff algorithm
+docsis,implements,csma/cd
+ecmp,implements,multipath routing
+edc bits,enables,error correction
+edc bits,enables,error detection
+efficiency,measures,slotted aloha
+efficiency,measures,successful slot
+error-detection bits,part_of,link-layer frame
+ethernet,encapsulates,datagram
+ethernet,encapsulates,ip datagram
+ethernet,has_part,csma/cd
+ethernet,implements,binary exponential backoff algorithm
+ethernet,implements,csma/cd
+ethernet,is_a,protocol
+ethernet,operates_at,link layer
+ethernet,operates_at,physical layer
+ethernet,provides,connectionless service
+ethernet,supports,broadcast channel
+ethernet,supports,broadcast link
+ethernet,variant_of,csma
+ethernet frame,contains,arp query message
+ethernet frame,contains,arp reply message
+ethernet frame,contains,ip datagram
+ethernet frame,contains,vlan tag
+ethernet frame,has_part,data field
+even parity scheme,contains,single parity bit
+even parity scheme,provides,error detection
+fddi protocol,is_a,token-passing protocol
+fdm,prevents,collision
+fdm,supports,broadcast channel
+filtering,part_of,switch
+firewall protection,prevents,layer-2 broadcast storm
+forward error correction,prevents,round-trip propagation delay
+forward error correction,provides,error correction
+forward error correction,supports,arq
+forwarding,part_of,switch
+forwarding table,contains,host b
+forwarding table,contains,mac address
+forwarding table,contains,router r1
+forwarding table,part_of,gateway router
+forwarding table,part_of,router
+forwarding table,part_of,switch
+frame,contains,mac address
+frame,contains,mac broadcast address
+frame,contains,mpls header
+frame,contains,packet
+frame,encapsulates,datagram
+frame,encapsulates,ip datagram
+frame,has_part,cyclic redundancy check
+frame,has_part,preamble
+frame,has_part,source address
+frame,has_part,type field
+frame-relay,is_a,protocol
+frequency-division multiplexing,supports,broadcast channel
+full-duplex,prevents,frame collisions
+gateway router,forwards,ip datagram
+gateway router,manages,forwarding table
+gateway router,receives,ethernet frame
+gateway router,sends,ethernet frame
+gigabit ethernet,supports,csma/cd
+gigabit ethernet,variant_of,ethernet
+hierarchical tiered network,connects_to,host
+hierarchical tiered network,has_part,switch
+high-level data link control,operates_at,link layer
+high-level data link control,supports,point-to-point link
+host,connects_to,hub
+host,connects_to,switch
+host,connects_to,top of rack switch
+host,connects_to,tor switch
+host,connects_to,vlan
+host,connects_to,wifi access point
+host,has_part,adapter
+host,has_part,arp table
+host,has_part,ip address
+host,has_part,mac address
+host,is_a,network component
+host,part_of,rack
+host,receives,arp response packet
+host,requires,arp
+host,requires,ip address
+host,runs_on,ethernet
+host,sends,arp query packet
+hub,operates_at,physical layer
+hub,receives,ethernet frame
+intel 700 series adapters,implements,ethernet
+ip,encapsulates,udp segment
+ip,is_a,protocol
+ip,operates_at,network layer
+ip,requires,internet checksum
+ip address,identifies,host
+ip address,identifies,host a
+ip address,identifies,router
+ip address,maps_to,mac address
+ipsec,encapsulates,ip datagram
+label-switched router,forwards,frame
+label-switched router,is_a,router
+label‑switched router,forwards,mpls frame
+label‑switched router,is_a,router
+layer-4 switch,forwards,internal host
+layer-4 switch,provides,nat
+layer-4 switch,variant_of,switch
+leftmost router,forwards,ip datagram
+leftmost router,receives,ethernet frame
+link,connects_to,host
+link layer,has_part,hardware
+link layer,has_part,software
+link layer,provides,error correction
+link layer,provides,error detection
+link layer,provides,framing
+link layer,provides,link access
+link layer,provides,link-layer addressing information
+link layer software,implements,link-layer addressing information
+link layer software,receives,controller interrupts
+link layer software,runs_on,host
+link-layer frame,encapsulates,arp packet
+link-layer frame,encapsulates,ip datagram
+link-layer protocol,encapsulates,network-layer datagram
+link-layer switch,forwards,datagram
+link-layer switch,forwards,frame
+link-level frame,encapsulates,datagram
+link-level frame,has_part,edc bits
+link-level frame,has_part,sequence number
+link‑layer frame,encapsulates,datagram
+link‑layer protocol,provides,framing
+mac address,identifies,111.111.111.110
+mac address,identifies,222.222.222.222
+mac address,identifies,adapter
+mac address,identifies,host a
+mac address,identifies,router
+macbased vlan,variant_of,vlan
+medium access protocol,enables,frame
+modem,connects_to,host
+mpls,connects_to,ip router
+mpls,enables,traffic engineering
+mpls,encapsulates,ip datagram
+mpls,implements,vpn
+mpls,is_a,protocol
+mpls,operates_at,link layer
+mpls,provides,traffic engineering
+mpls header,part_of,frame
+mpls infrastructure,connects_to,destination a
+mpls infrastructure,connects_to,destination d
+mpls infrastructure,connects_to,r5
+mpls infrastructure,connects_to,r6
+multiple access protocol,supports,broadcast channel
+network adapter,implements,error correction
+network adapter,implements,error detection
+network adapter,implements,framing
+network adapter,implements,link access
+node,connects_to,adapter
+node,forwards,token
+node,part_of,broadcast bus
+node,receives,frame
+node,receives,token
+node,sends,frame
+node,sends,packet
+node a,communicates_with,node b
+odd parity scheme,contains,single parity bit
+odd parity scheme,provides,error detection
+ospf,implements,link‑state routing
+ospf,supports,link‑state information
+output buffer,part_of,switch
+parity check,provides,error detection
+physical layer,receives,ethernet frame
+physical layer,sends,ethernet frame
+point-to-point link,connects_to,host
+point-to-point link,connects_to,router
+point-to-point link,connects_to,switch
+point-to-point protocol,operates_at,link layer
+point-to-point protocol,supports,point-to-point link
+port,connects_to,vlan
+port-to-vlan mapping table,part_of,switch
+portbased vlan,variant_of,vlan
+propagation delay,increases,collision
+propagation delay,measures,broadcast channel
+propagation delay,measures,end-to-end channel propagation delay
+pure aloha,provides,efficiency
+pure aloha,variant_of,slotted aloha
+r1,is_a,router
+r1,routes_to,destination a
+r2,is_a,router
+r2,routes_to,destination a
+r3,is_a,router
+r3,routes_to,destination a
+r3,routes_to,destination d
+r4,is_a,router
+r5,is_a,router
+r6,is_a,router
+random access protocol,variant_of,multiple access protocol
+rdma,runs_on,ethernet
+receiving node,receives,link-level frame
+repeater,operates_at,physical layer
+router,connects_to,hub
+router,connects_to,switch
+router,enables,vlan
+router,forwards,ip datagram
+router,forwards,packet
+router,has_part,adapter
+router,has_part,arp table
+router,has_part,forwarding table
+router,has_part,ip address
+router,has_part,mac address
+router,implements,store-and-forward
+router,operates_at,network layer
+router,provides,firewall protection
+router,receives,frame
+router,requires,ip address
+router,sends,frame
+router r1,receives,ethernet frame
+row parity,part_of,error-detection bits
+rsvp‑te,variant_of,rsvp
+sdn-like centralized control,is_a,concept
+second-tier switch,connects_to,tor switch
+sending node,sends,link-level frame
+single parity bit,enables,error detection
+slotted aloha,provides,efficiency
+slotted aloha,variant_of,aloha
+socket,enables,tcp
+source address,contains,mac address
+switch,connects_to,interface
+switch,connects_to,lan segment
+switch,connects_to,router
+switch,connects_to,server
+switch,forwards,ethernet frame
+switch,forwards,frame
+switch,forwards,link-layer frame
+switch,has_part,buffer
+switch,has_part,forwarding table
+switch,has_part,port-to-vlan mapping table
+switch,has_part,switch table
+switch,implements,ethernet
+switch,implements,store-and-forward
+switch,measures,bandwidth
+switch,measures,collision
+switch,operates_at,data link layer
+switch,operates_at,layer 2
+switch,operates_at,link layer
+switch,prevents,collision
+switch,provides,store-and-forward
+switch,provides,throughput
+switch,receives,frame
+switch,receives,link-layer frame
+switch,supports,vlan
+switch s1,has_part,forwarding table
+switch table,contains,interface
+switch table,contains,mac address
+switch table,contains,time
+switch table,part_of,switch
+switched local network,contains,router
+switched local network,contains,server
+switched local network,contains,switch
+tag control information,contains,vlan identifier
+taking-turns protocol,variant_of,multiple access protocol
+tcp,requires,internet checksum
+tcp segment,contains,http get message
+tcp segment,contains,http response message
+tdm,prevents,collision
+tdm,supports,broadcast channel
+tier-1 switch,connects_to,tier-2 switch
+tier-2 switch,connects_to,tier-1 switch
+tier-2 switch,connects_to,tor switch
+time frame,contains,time slot
+time-division multiplexing,supports,broadcast channel
+token,is_a,frame
+token-passing protocol,has_part,token
+token-passing protocol,is_a,taking-turns protocol
+token-ring protocol,operates_at,link layer
+top of rack switch,connects_to,switch
+top of rack switch,part_of,rack
+top-tier switch,connects_to,layer-4 switch
+top-tier switch,connects_to,load balancer
+top-tier switch,connects_to,second-tier switch
+tor switch,connects_to,second-tier switch
+tor switch,connects_to,server
+tor switch,connects_to,tier-2 switch
+transport layer,provides,error correction
+transport layer,provides,error detection
+trunk port,connects_to,switch
+trunk port,supports,vlan
+two-dimensional parity,provides,error correction
+two-dimensional parity,provides,error detection
+two-dimensional parity scheme,contains,column parity
+two-dimensional parity scheme,contains,row parity
+two-dimensional parity scheme,provides,error correction
+two-dimensional parity scheme,provides,error detection
+two-dimensional parity scheme,requires,minimum-length checksum field
+type field,maps_to,appletalk
+type field,maps_to,arp
+type field,maps_to,ip
+type field,maps_to,novell ipx
+udp,contains,dns query
+udp,requires,internet checksum
+unslotted aloha,variant_of,aloha
+upstream channel,contains,mini-slot
+virtual machine,connects_to,physical server
+vlan,has_part,broadcast domain
+vlan,has_part,priority field
+vlan,has_part,vlan identifier field
+vlan tag,has_part,priority field
+vlan tag,has_part,tag control information
+vlan tag,has_part,tag protocol identifier
+wifi access point,connects_to,switch
+wireless lan,operates_at,link layer
+wireless lan,supports,broadcast channel
+wireless lan,supports,broadcast link
+xtp,requires,checksum

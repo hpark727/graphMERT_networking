@@ -1,0 +1,183 @@
+# KG extraction config — Computer Networking domain (Kurose & Ross)
+
+# --- LLM (Tinker) ---
+llm_config:
+  temperature: 0.0
+  max_tokens: 4096
+  batch_size: 10       # chunks packed per Tinker call
+
+# --- Delimiters (must match extract_kg_tinker.py) ---
+completion_delimiter: "<|COMPLETE|>"
+tuple_delimiter: "<|>"
+record_delimiter: "##"
+
+# --- Entity Types ---
+entity_types:
+  - Protocol
+  - Layer
+  - Network Component
+  - Algorithm
+  - Concept
+  - Service
+
+entity_types_examples: |
+  1. Protocol: TCP; UDP; IP; HTTP; HTTPS; FTP; SMTP; DNS; TLS; SSL; ICMP; BGP; OSPF; Ethernet; Wi-Fi
+  2. Layer: Application Layer; Transport Layer; Network Layer; Link Layer; Physical Layer
+  3. Network Component: Router; Switch; Host; Server; Client; Gateway; Firewall; Hub; Modem; Access Point; CDN; ISP
+  4. Algorithm: Dijkstra's Algorithm; Distance Vector; Link State; Slow Start; Congestion Avoidance; Round Robin; CSMA/CD
+  5. Concept: Throughput; Latency; Bandwidth; Packet Loss; Congestion; Delay; Jitter; RTT; Flow Control; Segment; Datagram; Frame; Packet; Socket; Port; IP Address; MAC Address; Checksum; Three-Way Handshake; ACK; SYN; Multiplexing; Encapsulation; Forwarding Table; Routing Table
+  6. Service: Web Service; Email Service; File Transfer; DNS Service; Streaming; VoIP; CDN Service; Peer-to-Peer
+
+# --- Relation Types ---
+relation_types:
+  - isa
+  - inverse_isa
+  - part_of
+  - has_part
+  - runs_over
+  - uses
+  - provides
+  - operates_at
+  - connects
+  - controls
+  - affects
+  - implements
+  - encapsulates
+  - communicates_with
+
+relation_types_examples: |
+  tcp, isa, transport protocol
+  transport protocol, inverse_isa, tcp
+  header, part_of, packet
+  packet, has_part, header
+  http, runs_over, tcp
+  tcp, uses, three-way handshake
+  tcp, provides, reliable delivery
+  tcp, operates_at, transport layer
+  router, connects, networks
+  congestion control, controls, transmission rate
+  packet loss, affects, throughput
+  router, implements, ip forwarding
+  ip, encapsulates, transport segment
+  client, communicates_with, server
+
+prompt_template: |
+  -Role-
+  You are an AI assistant specialized in extracting structured knowledge from computer networking textbooks to build a knowledge graph.
+
+  -Goal-
+  Given a passage from a computer networking textbook, a predefined list of entity types, and a predefined list of relation types, identify all networking entities and the meaningful relationships explicitly described among them.
+
+  -Entity Types-
+  Extract entities from the following types only:
+  {entity_types}
+
+  Use the examples below ONLY to understand what each type covers:
+  {entity_types_examples}
+
+  -Relation Types-
+  Use ONLY these relation types:
+  {relation_types}
+
+  One example per relation type (formatted as 'head, relation, tail'):
+  {relation_types_examples}
+
+  -Steps-
+  1. Identify all entities from the text that match one of the entity types above.
+     For each entity:
+     - entity_name: Name of the entity, lowercase
+     - entity_type: One of: Protocol, Layer, Network Component, Algorithm, Concept, Service
+     - entity_description: brief description from the text
+     Format: ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+  2. From the entities in step 1, identify clearly stated relationships using ONLY the predefined relation types.
+     - Only extract relationships explicitly supported by the text.
+     - Do not extract trivial or overly general relationships.
+     For each relationship:
+     - source_entity: lowercase name from step 1
+     - target_entity: lowercase name from step 1
+     - relationship: one relation from the predefined list
+     - relationship_strength: integer 1-10
+     Format: ("relationship"{tuple_delimiter}<source>{tuple_delimiter}<target>{tuple_delimiter}<relationship>{tuple_delimiter}<strength>)
+
+  3. Output all entities and relationships as a single list separated by **{record_delimiter}**.
+
+  4. End with {completion_delimiter}
+
+  -Constraints-
+  - Only extract from the provided text; no external knowledge.
+  - Only use entity types and relation types from the predefined lists.
+  - Use lowercase for all entity names.
+  - Keep entity descriptions concise (one sentence).
+
+
+user_prompt: |
+  ######################
+  Text:
+  {input_text}
+  ######################
+  Output:
+
+
+examples:
+  - user: |
+      ######################
+      Text:
+      The Transmission Control Protocol (TCP) provides reliable, in-order byte-stream delivery between two applications. TCP runs over IP at the transport layer. When a client wants to establish a TCP connection with a server, it uses a three-way handshake: the client sends a SYN segment, the server replies with a SYN-ACK, and the client responds with an ACK. Flow control prevents a fast sender from overwhelming a slow receiver by maintaining a receive window.
+      ######################
+      Output:
+    assistant: |
+      ("entity"{tuple_delimiter}tcp{tuple_delimiter}Protocol{tuple_delimiter}Transport-layer protocol providing reliable, in-order byte-stream delivery)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ip{tuple_delimiter}Protocol{tuple_delimiter}Network-layer protocol over which TCP operates)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}transport layer{tuple_delimiter}Layer{tuple_delimiter}Network stack layer where TCP operates)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}three-way handshake{tuple_delimiter}Concept{tuple_delimiter}Connection establishment procedure used by TCP involving SYN, SYN-ACK, and ACK segments)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}flow control{tuple_delimiter}Concept{tuple_delimiter}Mechanism that prevents a sender from overwhelming a receiver by maintaining a receive window)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}client{tuple_delimiter}Network Component{tuple_delimiter}Entity that initiates a TCP connection)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}server{tuple_delimiter}Network Component{tuple_delimiter}Entity that accepts incoming TCP connections)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}ip{tuple_delimiter}runs_over{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}transport layer{tuple_delimiter}operates_at{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}three-way handshake{tuple_delimiter}uses{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}reliable delivery{tuple_delimiter}provides{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}flow control{tuple_delimiter}tcp{tuple_delimiter}part_of{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}client{tuple_delimiter}server{tuple_delimiter}communicates_with{tuple_delimiter}8)
+      {completion_delimiter}
+
+  - user: |
+      ######################
+      Text:
+      Routers use forwarding tables to determine the output link for each arriving packet. The forwarding table is populated by routing algorithms such as link-state and distance-vector. In link-state routing, each router broadcasts its link costs to all other routers, then uses Dijkstra's algorithm to compute shortest paths. Distance-vector routing uses the Bellman-Ford equation, where each router maintains a distance vector to all destinations and exchanges it with neighbors.
+      ######################
+      Output:
+    assistant: |
+      ("entity"{tuple_delimiter}router{tuple_delimiter}Network Component{tuple_delimiter}Network device that forwards packets based on a forwarding table)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}forwarding table{tuple_delimiter}Concept{tuple_delimiter}Table used by routers to determine the output link for each arriving packet)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}link-state routing{tuple_delimiter}Algorithm{tuple_delimiter}Routing algorithm where each router broadcasts link costs and uses Dijkstra's algorithm)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}distance-vector routing{tuple_delimiter}Algorithm{tuple_delimiter}Routing algorithm using the Bellman-Ford equation where routers exchange distance vectors with neighbors)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}dijkstra's algorithm{tuple_delimiter}Algorithm{tuple_delimiter}Shortest-path algorithm used in link-state routing)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}router{tuple_delimiter}forwarding table{tuple_delimiter}uses{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}link-state routing{tuple_delimiter}dijkstra's algorithm{tuple_delimiter}uses{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}link-state routing{tuple_delimiter}forwarding table{tuple_delimiter}controls{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}distance-vector routing{tuple_delimiter}forwarding table{tuple_delimiter}controls{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}link-state routing{tuple_delimiter}distance-vector routing{tuple_delimiter}inverse_isa{tuple_delimiter}7)
+      {completion_delimiter}

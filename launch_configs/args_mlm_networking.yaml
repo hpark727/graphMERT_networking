@@ -1,0 +1,90 @@
+# GraphMERT MLM training config — Kurose & Ross networking textbook (gen4 KG)
+# Update paths prefixed with DELLA_ROOT before submitting to Princeton Della.
+# DELLA_ROOT suggested: /scratch/gpfs/<netid>/graphmert_networking
+
+config_overrides: 'max_nodes=1024,vocab_size=30522,num_hidden_layers=12,num_attention_heads=8,hidden_size=512,intermediate_size=2048,pretrained_emb_dim=0'
+cache_dir: DELLA_ROOT/cache
+
+# Raw text files (not used at preprocessing time — heads dataset is pre-built)
+train_file: DELLA_ROOT/data/ch1_txt_train.txt
+validation_file: DELLA_ROOT/data/ch8_txt_eval.txt
+
+tokenized_dataset_output_path: null
+cut_dataset_for_testing: false
+
+# Head-position datasets (output of find_heads_positions.py, merged by merge_for_training.py)
+train_dataset_with_heads: DELLA_ROOT/data/heads_train
+eval_dataset_with_heads: DELLA_ROOT/data/heads_eval
+
+# Injection CSVs (output of create_injection_csv.py, merged by merge_for_training.py)
+injections_train_path: DELLA_ROOT/data/injections_train.csv
+injections_eval_path:  DELLA_ROOT/data/injections_eval.csv
+
+# Relation map (gen4 — 32 relation types, values 1-32; 0 reserved for empty)
+relation_map_path: DELLA_ROOT/data/relation_map.json
+
+lr_scheduler_kwargs:
+    min_lr: !!float 1e-5
+learning_rate: !!float 0.0004
+num_train_epochs: 25
+
+output_dir: DELLA_ROOT/outputs/networking_graphmert
+
+per_device_train_batch_size: 32
+per_device_eval_batch_size: 32
+gradient_accumulation_steps: 2
+warmup_steps: 200
+
+preprocessing_num_workers: 8
+dataloader_num_workers: 4
+
+save_steps: 500
+eval_steps: 500
+logging_steps: 100
+
+# Model: 32 gen4 relation types (values 1-32)
+num_relationships: 33
+
+exp_mask_base: 0.6
+
+graph_types:
+    - root_undirected
+    - leaf_undirected
+    - leaf_connected_undirected
+
+relation_emb_dropout: 0.3
+mlm_sbo: true
+mlm_on_leaves_probability: 0.15
+span_upper_length: null
+weight_decay: 0.01
+
+max_train_samples: null
+
+tokenizer_name: bert-base-uncased
+subword_token_start: "##"
+
+use_auth_token: false
+dropout: 0.1
+attention_dropout: 0.1
+activation_dropout: 0.1
+layerdrop: 0.0
+
+overwrite_cache: false
+validation_split_percentage: 5
+max_seq_length: 128
+log_level: info
+
+dataloader_prefetch_factor: null
+seed: 42
+do_predict: false
+do_eval: true
+do_train: true
+bf16: true
+eval_strategy: steps
+logging_strategy: steps
+lr_scheduler_type: cosine_with_min_lr
+overwrite_output_dir: false
+resume_from_checkpoint: false
+remove_unused_columns: false
+save_safetensors: false
+save_total_limit: 3

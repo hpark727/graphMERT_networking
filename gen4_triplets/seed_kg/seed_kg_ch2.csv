@@ -1,0 +1,500 @@
+head,relation_type,tail
+a record,maps_to,ip address
+additional section,contains,type a
+alias hostname,maps_to,canonical hostname
+alice,communicates_with,bob
+alice,communicates_with,neighboring peer
+alice,communicates_with,peer
+alice,connects_to,neighboring peer
+alice,measures,upload rate
+alice local dns server,sends,alice host
+answer section,contains,resource record
+apache,provides,response message
+arin,provides,ip address range
+authoritative dns server,has_part,dns record
+authoritative dns server,part_of,hierarchical architecture
+authoritative dns server,provides,ip address
+authoritative flag,identifies,authoritative server
+authoritative server,is_a,dns server
+authority section,contains,authoritative server
+bandwidth,decreases,traffic intensity
+bandwidth-sensitive applications,requires,throughput
+bit torrent,implements,trading algorithm
+bit torrent,is_a,protocol
+bit torrent,provides,file distribution
+bittorrent,implements,p2p architecture
+bittorrent,is_a,protocol
+bob,communicates_with,alice
+bottleneck link,causes,head of line blocking
+browser,communicates_with,http server
+browser,communicates_with,origin server
+browser,communicates_with,web cache
+browser,communicates_with,web proxy
+browser,communicates_with,web server
+browser,connects_to,web cache
+browser,forwards,web cache
+browser,is_a,client
+browser,manages,cookie file
+browser,receives,http response
+browser,receives,ip address
+browser,sends,cookie
+browser,sends,cookie header line
+browser,sends,header line
+browser,sends,http request
+buffer,contains,video frame
+cdn,measures,delay
+cdn,measures,packet loss
+cdn,provides,streaming
+chrome,implements,http
+chunk,is_a,concept
+client,communicates_with,cdn
+client,communicates_with,dns server
+client,communicates_with,server
+client,connects_to,isp
+client,connects_to,mail server
+client,connects_to,server
+client,connects_to,web cache
+client,has_part,buffer
+client,implements,http
+client,implements,rate determination algorithm
+client,measures,bandwidth
+client,measures,rtt
+client,measures,throughput
+client,operates_at,application layer
+client,provides,email service
+client,receives,frame
+client,receives,header line
+client,receives,http response
+client,receives,ip address
+client,receives,manifest file
+client,receives,packet
+client,receives,response message
+client,requires,smtp
+client,requires,tcp
+client,requires,udp
+client,sends,hostname
+client,sends,http request message
+client,sends,packet
+client,sends,request message
+client,sends,server
+client,sends,tcp segment
+client,sends,udp packet
+client address,contains,ip address
+client address,contains,port number
+client program,communicates_with,server program
+client program,implements,http
+client socket,connects_to,tcp connection
+client socket,is_a,tcp socket
+client socket,requires,port number
+client-server architecture,has_part,peer
+client-server architecture,has_part,server
+client-server architecture,supports,email service
+client-server architecture,supports,ftp
+client-server architecture,supports,telnet
+client-server architecture,supports,web service
+cname record,maps_to,canonical hostname
+congestion,decreases,throughput
+congestion-control mechanism,controls,throughput
+connection-oriented service,requires,handshaking procedure
+content distribution network,connects_to,access isp
+content distribution network,enables,web cache
+content distribution network,has_part,server cluster
+content distribution network,manages,server
+content distribution network,provides,delay
+content distribution network,provides,throughput
+content ingestion,enables,content processing
+content processing,enables,streaming
+cookie,enables,shopping cart service
+cookie,enables,user session layer
+cookie file,contains,identification number
+dash,enables,audio version
+dash,enables,video version
+dash,provides,streaming
+dash,runs_on,http
+dash,supports,http
+data center,contains,host
+data center,enables,streaming video service
+data center,provides,internet commerce
+data center,provides,search engine
+data center,provides,social media
+data center,provides,web-based email
+dhcp,provides,ip address
+dig,communicates_with,dns server
+distribution time,increases,peer
+dns,enables,distributed database
+dns,enables,hierarchical architecture
+dns,has_part,dns server
+dns,has_part,port 53
+dns,maps_to,ip address
+dns,operates_at,application layer
+dns,provides,directory service
+dns,provides,dns service
+dns,provides,host aliasing
+dns,provides,hostname-to-ip-address translation service
+dns,provides,load distribution
+dns,provides,mail server aliasing
+dns,provides,mapping
+dns,provides,web content distribution
+dns,runs_on,udp
+dns,susceptible_to,cache poisoning
+dns caching,decreases,delay
+dns client,communicates_with,authoritative dns server
+dns client,communicates_with,dns server
+dns client,communicates_with,root dns server
+dns client,communicates_with,tld dns server
+dns client,receives,dns reply message
+dns client,receives,dns response
+dns client,receives,ip address
+dns client,sends,dns query
+dns client,sends,dns query message
+dns protocol,provides,hostname resolution
+dns query,contains,hostname
+dns rotation,enables,e-mail
+dns rotation,provides,load distribution
+dns server,communicates_with,dns client
+dns server,contains,mapping
+dns server,forwards,dns query
+dns server,has_part,a record
+dns server,has_part,cache
+dns server,has_part,ns record
+dns server,provides,hostname-to-ip-address translation service
+dns server,provides,ip address
+dns server,receives,dns query message
+dns server,receives,hostname
+dns server,sends,dns reply message
+dns server,sends,ip address
+dns server,supports,recursion
+dns service,provides,dns
+educause,manages,tld dns server
+email,runs_on,tcp
+ethernet,operates_at,link layer
+file,is_a,concept
+file transfer,runs_on,tcp
+form,enables,url
+framing sub-layer,enables,interleaving
+framing sub-layer,implements,binary encoding
+framing sub-layer,part_of,http/2
+get,variant_of,method field
+handshaking procedure,enables,connection-oriented service
+head of line blocking,increases,delay
+header,contains,header line
+header,contains,number-of fields
+header line,enables,object caching
+header line,part_of,header
+header line,part_of,request message
+header line,part_of,response message
+header section,part_of,dns query message
+header section,part_of,dns reply message
+hit rate,measures,web cache
+host,communicates_with,local dns server
+host,connects_to,content server
+host,connects_to,server
+host,provides,content ingestion
+host,provides,content processing
+host,sends,dns query
+host,sends,http
+host header line,identifies,host
+hostname,identifies,host
+hostname,maps_to,ip address
+hotmail,implements,email service
+html file,part_of,web page
+http,enables,cookie
+http,enables,email service
+http,enables,gmail
+http,enables,google maps
+http,enables,instagram
+http,enables,streaming
+http,enables,youtube
+http,operates_at,application layer
+http,provides,conditional get
+http,provides,email service
+http,runs_on,tcp
+http,supports,persistent connection
+http,supports,pipelining
+http client,communicates_with,http server
+http request,contains,cookie header line
+http response,contains,identification number
+http server,identifies,port 80
+http/1.0,variant_of,http
+http/1.1,mitigates,head of line blocking
+http/1.1,runs_on,tcp
+http/1.1,variant_of,http
+http/2,decreases,latency
+http/2,enables,multiplexing
+http/2,mitigates,head of line blocking
+http/2,provides,server push
+http/2,runs_on,tcp
+http/2,variant_of,http
+http/3,runs_on,quic
+iana,manages,root dns server
+identifier,identifies,dns query message
+imap,provides,email service
+institutional network,connects_to,internet
+institutional network,has_part,cache
+institutional router,connects_to,internet router
+institutional router,forwards,ip datagram
+interactive real-time applications,requires,timing guarantees
+interleaving,decreases,delay
+intermediate dns server,communicates_with,authoritative dns server
+internet explorer,implements,http
+internet router,receives,ip datagram
+internet telephony,requires,guaranteed throughput
+internet telephony,runs_on,tcp
+internet telephony,runs_on,udp
+ip address,identifies,host
+ip address,identifies,http server
+ip address,identifies,server
+ip address,identifies,web server
+isp,has_part,local dns server
+isp,provides,ip address
+isp,provides,web cache
+kingcdn dns system,provides,ip address
+local dns server,communicates_with,authoritative dns server
+local dns server,communicates_with,departmental dns server
+local dns server,communicates_with,intermediate dns server
+local dns server,communicates_with,root dns server
+local dns server,communicates_with,tld server
+local dns server,forwards,authoritative dns server
+local dns server,forwards,authoritative server
+local dns server,forwards,host
+local dns server,forwards,root dns server
+local dns server,forwards,tld server
+local dns server,receives,dns query
+local dns server,sends,dns response
+local dns server,sends,kingcdn dns system
+mail message,contains,body
+mail message,contains,header
+mail server,has_part,queue
+mail server,receives,email
+mail server,receives,mail message
+mail server,runs_on,smtp
+malicious host,sends,spam e‑mail
+message prioritization,enables,weight
+multiplayer games,requires,timing guarantees
+mx record,maps_to,canonical hostname
+mx record,provides,mail server aliasing
+n,increases,distribution time
+netflix,provides,adaptive streaming
+netflix,provides,cdn
+netflix,provides,streaming
+network cache server,sends,header line
+non-persistent http,variant_of,http
+nslookup,communicates_with,dns server
+nslookup,enables,reconnaissance
+nslookup,sends,dns query
+number-of fields,part_of,header
+optimistically unchoked,is_a,concept
+origin server,receives,http request
+origin server,sends,http response
+p2p architecture,enables,self-scaling
+p2p architecture,has_part,peer
+p2p architecture,has_part,server
+p2p architecture,provides,selfscalability
+packet,contains,client address
+packet,routes_to,destination address
+parallel connections,enables,parallel downloads
+peer,connects_to,neighboring peer
+peer,provides,download rate
+peer,provides,upload rate
+peer,receives,chunk
+peer,receives,file
+peer,receives,server
+peer,sends,bit
+peer,sends,chunk
+peer,sends,file
+peer-to-peer,is_a,service
+peer-to-peer,provides,file transfer
+peer-to-peer architecture,enables,redistribution
+persistent connection,supports,pipelining
+persistent http,variant_of,http
+port,identifies,http
+port,identifies,socket
+port number,identifies,mail server
+port number,identifies,socket
+port number,identifies,tcp
+port number,identifies,udp
+port number,identifies,web server
+port number,identifies,welcoming socket
+post,requires,entity body
+post,variant_of,method field
+private cdn,variant_of,content distribution network
+proxy cache,forwards,browser
+proxy cache,sends,conditional get
+question section,contains,name field
+question section,contains,type field
+quic,operates_at,application layer
+quic,provides,flow control
+quic,provides,message multiplexing
+quic,runs_on,udp
+rarest first,is_a,algorithm
+rate-determination algorithm,enables,adaptive streaming
+rate-determination algorithm,runs_on,client
+recursion-available field,identifies,recursion
+recursion-available field,part_of,header
+recursion-available flag,identifies,recursion support
+recursion-desired flag,identifies,client desire for recursion
+remote terminal access,runs_on,tcp
+request line,has_part,http version field
+request line,has_part,method field
+request line,has_part,url field
+request line,part_of,request message
+request message,contains,header line
+request message,contains,url
+request message,has_part,entity body
+response message,contains,entity body
+response message,contains,header line
+response message,contains,status line
+root dns server,part_of,hierarchical architecture
+root dns server,provides,ip address
+root dns server,provides,tld dns server
+root server,is_a,dns server
+router,forwards,packet
+router,has_part,buffer
+router,operates_at,network layer
+router,routes_to,host
+rtt,is_a,metric
+server,communicates_with,client
+server,controls,timeout interval
+server,has_part,ip address
+server,has_part,object
+server,has_part,storage
+server,implements,http
+server,is_a,host
+server,operates_at,application layer
+server,provides,email service
+server,provides,upload rate
+server,receives,client
+server,receives,packet
+server,receives,request message
+server,receives,udp packet
+server,requires,udp
+server,sends,alice local dns server
+server,sends,chunk
+server,sends,file
+server,sends,frame
+server,sends,header line
+server,sends,html file
+server,sends,isp
+server,sends,packet
+server,sends,peer
+server,sends,response message
+server,sends,tcp segment
+server,sends,udp packet
+server address,contains,ip address
+server address,contains,port number
+server program,implements,http
+server rack,has_part,server
+server rack,part_of,isp
+server rack,part_of,ixp
+server socket,connects_to,tcp connection
+server socket,is_a,tcp socket
+server socket,requires,port number
+smtp,provides,email service
+smtp,runs_on,tcp
+smtp client,communicates_with,smtp server
+smtp client,is_a,client
+smtp server,is_a,server
+socket,connects_to,application layer
+socket,connects_to,application process
+socket,connects_to,transport layer
+socket,connects_to,transport-layer protocol
+socket,implements,udp
+socket,part_of,client
+socket,part_of,host
+socket,part_of,server
+socket,receives,packet
+socket,sends,packet
+status line,contains,protocol version field
+status line,contains,status code
+status line,contains,status message
+stream,contains,frame
+streaming,requires,average end-to-end throughput
+switch,operates_at,link layer
+tcp,enables,tls
+tcp,provides,congestion control
+tcp,provides,congestion-control mechanism
+tcp,provides,connection-oriented service
+tcp,provides,reliable data transfer
+tcp,provides,reliable data transfer service
+tcp segment,contains,http request message
+tcp segment,part_of,three-way handshake
+tcp socket,communicates_with,connection socket
+tcp socket,identifies,ip address
+tcp socket,identifies,port number
+tcp socket,requires,tcp connection
+tcp socket,runs_on,ipv4
+tcpclient,runs_on,host
+tcpserver,runs_on,host
+telnet,enables,email service
+telnet,runs_on,tcp
+third-party cdn,variant_of,content distribution network
+three-way handshake,enables,tcp connection
+three-way handshake,operates_at,transport layer
+tld dns server,part_of,hierarchical architecture
+tld dns server,provides,authoritative dns server
+tld server,communicates_with,authoritative dns server
+tld server,is_a,dns server
+tld server,provides,ip address
+tls,operates_at,application layer
+tls,provides,security services
+torrent,has_part,chunk
+torrent,has_part,peer
+torrent,is_a,concept
+total response time,measures,delay
+tracker,sends,ip address
+trading algorithm,is_a,algorithm
+traffic intensity,causes,delay
+traffic intensity,decreases,delay
+traffic intensity,increases,delay
+transport protocol,encrypts,application data
+transport protocol,provides,confidentiality
+transport protocol,provides,data integrity
+transport protocol,provides,end-point authentication
+transport protocol,provides,timing guarantees
+transport-layer protocol,operates_at,transport layer
+transport-layer protocol,provides,guaranteed throughput service
+transport-layer protocol,provides,process-to-process reliable data transfer
+transport-layer protocol,provides,reliable data transfer
+transport-layer protocol,provides,security
+transport-layer protocol,provides,throughput
+transport-layer protocol,provides,timing
+type field,identifies,type a
+type field,identifies,type mx
+udp,provides,unreliable data transfer service
+udp,requires,destination address
+udpclient,runs_on,host
+unchoked,is_a,concept
+upload rate,is_a,metric
+url,contains,form fields
+url,has_part,hostname
+url,has_part,path name
+user agent,communicates_with,mail server
+user agent,sends,email
+user agent,sends,mail message
+user-agent header line,identifies,browser
+verisign global registry services,manages,tld dns server
+video segment,is_a,segment
+virtual environments,requires,timing guarantees
+web,runs_on,tcp
+web browser,communicates_with,dns
+web browser,implements,http
+web cache,communicates_with,origin web server
+web cache,connects_to,origin web server
+web cache,decreases,response time
+web cache,decreases,traffic intensity
+web cache,decreases,web traffic
+web cache,is_a,proxy server
+web page,contains,object
+web proxy,receives,http request
+web proxy,receives,http response
+web proxy,sends,http request
+web proxy,sends,http response
+web proxy cache,requires,host header line
+web server,implements,http
+web server,provides,web service
+web server,sends,header line
+web server,sends,http response
+welcoming socket,is_a,tcp socket
+whois database,enables,reconnaissance
+whois database,provides,dns server
+youtube,provides,streaming

@@ -1,0 +1,274 @@
+head,relation_type,tail,verdict_qwen,verdict_gpt
+address block,contains,subnet 1,yes,yes
+address block,contains,subnet 2,yes,yes
+address block,contains,subnet 3,yes,yes
+address block,part_of,address space,yes,yes
+address supporting organization,part_of,icann,yes,yes
+apnic,part_of,address supporting organization,yes,yes
+aqm mechanism,mitigates,bufferbloat,yes,yes
+arin,part_of,address supporting organization,yes,yes
+atm network architecture,provides,guaranteed delivery with bounded delay,yes,yes
+atm network architecture,provides,guaranteed minimal bandwidth,yes,yes
+atm network architecture,provides,in-order packet delivery,yes,yes
+base station,part_of,mobile cellular network,yes,yes
+bgp,is_a,protocol,yes,yes
+broadcast link,connects_to,host,yes,yes
+broadcast link,connects_to,router,yes,yes
+buffer,causes,packet loss,yes,yes
+buffer,decreases,packet loss,yes,yes
+buffer,increases,queueing delay,yes,yes
+bufferbloat,increases,queuing delay,yes,yes
+buffering,increases,delay,yes,yes
+buffering,increases,end-to-end delay,yes,yes
+buffering,increases,queueing delay,yes,yes
+cidr,supports,subnet,yes,yes
+cisco 6500 router,has_part,backplane bus,yes,yes
+classful addressing,decreases,utilization,yes,yes
+client,receives,dhcp ack,yes,yes
+client,sends,dhcp discover message,yes,yes
+client,sends,dhcp request,yes,yes
+client,sends,dhcp request message,yes,yes
+client,sends,udp packet,yes,yes
+codel,is_a,active queue management algorithm,yes,yes
+control plane,controls,routing,yes,yes
+control plane,implements,routing,yes,yes
+controller,is_a,network component,yes,yes
+crossbar,is_a,switch fabric,yes,yes
+crossbar switch,has_part,crosspoint,yes,yes
+crossbar switching fabric,forwards,packet,yes,yes
+crosspoint,part_of,crossbar switch,yes,yes
+data plane,implements,forwarding,yes,yes
+datagram length,part_of,ipv4 datagram,yes,yes
+destination address,part_of,ipv6,yes,yes
+destination-based forwarding,has_part,match,yes,yes
+dhcp,enables,ip address,yes,yes
+dhcp,provides,default gateway,yes,yes
+dhcp,provides,ip address,yes,yes
+dhcp,provides,lease renewal,yes,yes
+dhcp,provides,subnet mask,yes,yes
+dhcp,runs_on,udp,yes,yes
+dhcp discover message,part_of,udp packet,yes,yes
+dhcp offer message,contains,ip address,yes,yes
+dhcp offer message,contains,lease time,yes,yes
+dhcp offer message,contains,network mask,yes,yes
+dhcp offer message,contains,transaction id,yes,yes
+dhcp server,receives,dhcp discover message,yes,yes
+dhcp server,sends,dhcp ack,yes,yes
+dhcp server,sends,dhcp offer message,yes,yes
+digital signature,requires,private key,yes,yes
+digital signature,requires,public key,yes,yes
+distributed games,operates_at,application layer,yes,yes
+ethernet,supports,checksum,yes,yes
+ethernet frame,contains,ip datagram,yes,yes
+ethernet type field,identifies,ip,yes,yes
+explicit congestion notification,part_of,ipv4 datagram,yes,yes
+flags,part_of,ipv4 datagram,yes,yes
+flow table,contains,action,yes,yes
+flow table,contains,counter,yes,yes
+flow table,contains,flow table entry,yes,yes
+flow table,contains,header field,yes,yes
+flow table,contains,ip destination address,yes,yes
+flow table,contains,ip source address,yes,yes
+flow table,contains,ip type of service field,yes,yes
+flow table,contains,transport destination port,yes,yes
+flow table,part_of,switch,yes,yes
+flow table entry,contains,action,yes,yes
+flow table entry,contains,counter,yes,yes
+flow table entry,contains,header field,yes,yes
+forwarding,operates_at,network layer,yes,yes
+forwarding table,contains,prefix,yes,yes
+forwarding table,maps_to,output port,yes,yes
+forwarding table,part_of,router,yes,yes
+forwarding throughput,is_a,throughput,yes,yes
+fragmentation offset,part_of,ipv4 datagram,yes,yes
+frame,contains,ip datagram,yes,yes
+frame,contains,network-layer datagram,yes,yes
+header length,part_of,ipv4 datagram,yes,yes
+home network,contains,address space 10.0.0.0/24,yes,yes
+home router,has_part,queue,yes,yes
+hop limit,part_of,ipv6,yes,yes
+host,contains,application layer,yes,yes
+host,contains,transport layer,yes,yes
+host,has_part,network layer,yes,yes
+host,receives,datagram,yes,yes
+host,receives,segment,yes,yes
+host,sends,datagram,yes,yes
+host,sends,ip datagram,yes,yes
+host,sends,segment,yes,yes
+host interface,part_of,subnet,yes,yes
+icann,manages,dns root server,yes,yes
+icann,provides,ip address,yes,yes
+identifier,part_of,ipv4 datagram,yes,yes
+ingress port,part_of,packet switch,yes,yes
+input port,connects_to,crossbar switch,yes,yes
+input port,connects_to,switch fabric,yes,yes
+input port,connects_to,switching fabric,yes,yes
+input port,has_part,queue,yes,yes
+input port,part_of,router,yes,yes
+input port,requires,forwarding table,yes,yes
+input port,supports,link layer,yes,yes
+input queuing delay,is_a,queuing delay,yes,yes
+instant messaging,operates_at,application layer,yes,yes
+interface,part_of,subnet,yes,yes
+intserv architecture,provides,congestion-free communication,yes,yes
+intserv architecture,provides,guaranteed delivery with bounded delay,yes,yes
+ip,operates_at,network layer,yes,yes
+ip,requires,ip address,yes,yes
+ip address,identifies,host,yes,yes
+ip broadcast address,is_a,ip address,yes,yes
+ip datagram,contains,icmp,yes,yes
+ip datagram,contains,tcp segment,yes,yes
+ip datagram,contains,udp segment,yes,yes
+ipv4,is_a,protocol,yes,yes
+ipv4,operates_at,network layer,yes,yes
+ipv4 header,contains,header checksum,yes,yes
+ipv4 header,contains,ttl,yes,yes
+ipv4 router,forwards,ipv4 datagram,yes,yes
+ipv6,enables,anycast address,yes,yes
+ipv6,has_part,destination address,yes,yes
+ipv6,has_part,flow label,yes,yes
+ipv6,has_part,hop limit,yes,yes
+ipv6,has_part,next header,yes,yes
+ipv6,has_part,payload length,yes,yes
+ipv6,has_part,source address,yes,yes
+ipv6,has_part,traffic class,yes,yes
+ipv6,has_part,version,yes,yes
+ipv6,is_a,protocol,yes,yes
+ipv6,operates_at,network layer,yes,yes
+ipv6,prevents,fragmentation,yes,yes
+ipv6,prevents,ip fragmentation,yes,yes
+ipv6,provides,flow labeling,yes,yes
+ipv6 datagram,contains,data,yes,yes
+ipv6 header,contains,hop limit,yes,yes
+ipv6 header,contains,next header,yes,yes
+ipv6 node,forwards,ipv6 datagram,yes,yes
+isp,has_part,address block,yes,yes
+isp,provides,address allocation,yes,yes
+isp,provides,address block,yes,yes
+lacnic,part_of,address supporting organization,yes,yes
+line card,contains,input port,yes,yes
+line card,contains,output port,yes,yes
+line card,part_of,router,yes,yes
+match-plus-action paradigm,has_part,action,yes,yes
+match-plus-action paradigm,has_part,match,yes,yes
+mobile cellular network,enables,tcp,yes,yes
+multicast protocol,operates_at,network layer,yes,yes
+nat box,connects_to,host,yes,yes
+nat box,connects_to,router,yes,yes
+nat router,has_part,nat translation table,yes,yes
+nat router,manages,nat translation table,yes,yes
+nat-enabled router,connects_to,home network,yes,yes
+ncp,is_a,protocol,yes,yes
+network layer,contains,data plane,yes,yes
+network layer,has_part,data plane,yes,yes
+network layer,implements,forwarding,yes,yes
+network layer,implements,routing,yes,yes
+network layer,provides,best-effort service,yes,yes
+network layer,provides,network service model,yes,yes
+network layer,provides,network-layer service model,yes,yes
+network layer,receives,datagram,yes,yes
+network layer,sends,datagram,yes,yes
+network-layer datagram,contains,transport-layer segment,yes,yes
+next header,identifies,tcp,yes,yes
+next header,part_of,ipv6,yes,yes
+openflow,provides,match abstraction,yes,yes
+openflow,provides,match-plus-action forwarding abstraction,yes,yes
+ospf,is_a,protocol,yes,yes
+output port,connects_to,crossbar switch,yes,yes
+output port,connects_to,output link,yes,yes
+output port,connects_to,switch fabric,yes,yes
+output port,connects_to,switching fabric,yes,yes
+output port,forwards,packet,yes,yes
+output port,has_part,queue,yes,yes
+output port,part_of,router,yes,yes
+output port,receives,packet,yes,yes
+output port,sends,packet,yes,yes
+packet,contains,destination address,yes,yes
+packet queue,part_of,router,yes,yes
+packet switch,has_part,flow table,yes,yes
+payload length,part_of,ipv6,yes,yes
+per-hop buffer,decreases,packet loss,yes,yes
+per-hop buffer,increases,end-to-end delay,yes,yes
+pie,is_a,active queue management algorithm,yes,yes
+port,part_of,switch,yes,yes
+prefix 128.119.40.128/26,part_of,address block,yes,yes
+queue,part_of,output port,yes,yes
+queuing delay,is_a,delay,yes,yes
+random early detection,is_a,active queue management algorithm,yes,yes
+receiving host,receives,packet,yes,yes
+regional internet registry,manages,ip address,yes,yes
+remote controller,provides,forwarding table,yes,yes
+remote game server,receives,tcp segment,yes,yes
+resource reservation protocol,operates_at,network layer,yes,yes
+ripe,part_of,address supporting organization,yes,yes
+round robin service,supports,class 1,yes,yes
+router,decreases,time-to-live,yes,yes
+router,forwards,datagram,yes,yes
+router,forwards,ip datagram,yes,yes
+router,forwards,network-layer datagram,yes,yes
+router,forwards,packet,yes,yes
+router,has_part,forwarding table,yes,yes
+router,has_part,input port,yes,yes
+router,has_part,interface,yes,yes
+router,has_part,line card,yes,yes
+router,has_part,output port,yes,yes
+router,has_part,packet queue,yes,yes
+router,has_part,queue,yes,yes
+router,has_part,routing processor,yes,yes
+router,has_part,switching fabric,yes,yes
+router,implements,dhcp relay agent,yes,yes
+router,implements,forwarding,yes,yes
+router,implements,ip forwarding,yes,yes
+router,implements,longest prefix matching,yes,yes
+router,implements,longest prefix matching rule,yes,yes
+router,operates_at,network layer,yes,yes
+router,receives,ip datagram,yes,yes
+router,receives,packet,yes,yes
+router,requires,forwarding table,yes,yes
+router,sends,packet too big icmp error message,yes,yes
+router interface,part_of,subnet,yes,yes
+routing algorithm,manages,forwarding table,yes,yes
+routing messages,contains,routing information,yes,yes
+routing processor,communicates_with,remote controller,yes,yes
+routing processor,part_of,router,yes,yes
+routing processor,receives,control packet,yes,yes
+routing processor,requires,routing protocol,yes,yes
+routing protocol,enables,routing messages,yes,yes
+s1,has_part,flow table,yes,yes
+s1,has_part,forwarding table,yes,yes
+s2,has_part,flow table,yes,yes
+s2,receives,ip datagram,yes,yes
+sender,receives,packet too big icmp error message,yes,yes
+sender,sends,ipv6 datagram,yes,yes
+sending host,sends,packet,yes,yes
+server,sends,dhcp ack,yes,yes
+shared bus,connects_to,output port,yes,yes
+social media,operates_at,application layer,yes,yes
+software-defined networking,provides,control plane service,yes,yes
+source address,part_of,ipv6,yes,yes
+streaming media,operates_at,application layer,yes,yes
+subnet,has_part,host interface,yes,yes
+subnet 2,requires,prefix 223.1.17/24,yes,yes
+subnet portion,part_of,ip address,yes,yes
+switch,connects_to,interface,yes,yes
+switch,forwards,frame,yes,yes
+switch,forwards,packet,yes,yes
+switch,has_part,flow table,yes,yes
+switch,has_part,forwarding table,yes,yes
+switch,has_part,input port,yes,yes
+switch,has_part,output port,yes,yes
+switch,has_part,switch fabric,yes,yes
+switch fabric,forwards,packet,yes,yes
+switching fabric,connects_to,input port,yes,yes
+switching fabric,connects_to,output port,yes,yes
+switching fabric,part_of,router,yes,yes
+tls,operates_at,application layer,yes,yes
+tls,runs_on,tcp,yes,yes
+traffic class,part_of,ipv6,yes,yes
+transport layer,provides,process-to-process communication,yes,yes
+type of service,part_of,ipv4 datagram,yes,yes
+udp,supports,checksum,yes,yes
+version,part_of,ipv6,yes,yes
+version number,part_of,ipv4 datagram,yes,yes
+web,operates_at,application layer,yes,yes
+wfq,provides,throughput,yes,yes

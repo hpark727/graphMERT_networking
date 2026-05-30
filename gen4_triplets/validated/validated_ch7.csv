@@ -1,0 +1,358 @@
+head,relation_type,tail,verdict_qwen,verdict_gpt
+4g lte,is_a,protocol,yes,yes
+5g,supports,millimeter wave frequencies,yes,yes
+5g nr,is_a,protocol,yes,yes
+5g nr,operates_at,physical layer,,yes
+802.11,connects_to,ethernet,,yes
+802.11,contains,frame,yes,yes
+802.11,enables,channel reservation,yes,yes
+802.11,has_part,frame format,,yes
+802.11,implements,csma/ca,yes,yes
+802.11,operates_at,link layer,yes,yes
+802.11,operates_at,physical layer,yes,yes
+802.11,provides,crc,yes,yes
+802.11,provides,link-layer acknowledgment,yes,yes
+802.11,provides,power management,yes,yes
+802.11,requires,beacon frame,yes,yes
+802.11,supports,collision avoidance,yes,yes
+802.11 ac,supports,mimo,yes,yes
+802.11 ac,supports,smart antennas,yes,yes
+802.11 ac,variant_of,802.11,yes,no
+802.11 af,variant_of,802.11,yes,no
+802.11 ah,variant_of,802.11,yes,no
+802.11 ax,supports,centralized scheduling,yes,yes
+802.11 ax,supports,mimo,yes,yes
+802.11 ax,supports,smart antennas,yes,yes
+802.11 ax,variant_of,802.11,yes,no
+802.11 frame,contains,address 3,yes,yes
+802.11 g,communicates_with,base station,,yes
+802.11 g,variant_of,802.11,yes,no
+802.11 n,supports,mimo,yes,yes
+802.11 n,variant_of,802.11,yes,no
+access point,connects_to,router interface,yes,yes
+access point,connects_to,switch,yes,yes
+access point,forwards,ethernet frame,yes,yes
+access point,has_part,channel,no,yes
+access point,is_a,base station,yes,yes
+access point,is_a,station,yes,yes
+access point,part_of,ip subnet,,yes
+access point,receives,802.11 frame,no,yes
+access point,receives,frame,yes,yes
+access point,receives,rts frame,yes,yes
+access point,sends,acknowledgment,yes,yes
+access point,sends,beacon frame,yes,yes
+access point,sends,cts frame,yes,yes
+access point,sends,data frame,yes,yes
+ack,increases,transmission rate,,yes
+adaptive modulation and coding,supports,wifi,,yes
+address 1,identifies,access point,yes,no
+address 1,identifies,wireless station,yes,yes
+address 2,identifies,access point,yes,yes
+address 3,identifies,router,yes,yes
+address 3,identifies,router interface,yes,yes
+anchor point,supports,handover,yes,yes
+ap,provides,wireless bandwidth,yes,yes
+ap,receives,association request frame,yes,yes
+ap,receives,probe request frame,yes,yes
+ap,sends,association response frame,yes,yes
+ap,sends,probe response frame,yes,yes
+ap2,sends,beacon frame,yes,yes
+ap2,sends,broadcast ethernet frame,yes,yes
+ap2,sends,ethernet frame,,yes
+arp,maps_to,mac address,yes,yes
+base station,communicates_with,mme,yes,yes
+base station,communicates_with,mobile device,yes,yes
+base station,communicates_with,wireless host,yes,yes
+base station,connects_to,gateway,yes,yes
+base station,connects_to,larger network,yes,yes
+base station,connects_to,mobile device,yes,yes
+base station,connects_to,modem,no,yes
+base station,connects_to,serving gateway,yes,yes
+base station,enables,channel access,yes,yes
+base station,enables,ip tunnel,,yes
+base station,forwards,ip datagram,yes,yes
+base station,is_a,network component,yes,yes
+base station,manages,interference,yes,yes
+base station,manages,mobile device,yes,yes
+base station,manages,mobility,yes,yes
+base station,manages,radio spectrum,yes,no
+base station,manages,wireless host,yes,yes
+base station,manages,wireless radio resources,yes,yes
+base station,operates_at,link layer,yes,yes
+base station,receives,ip datagram,yes,yes
+base station,receives,packet,yes,yes
+base station,sends,packet,yes,yes
+base station,sends,paging messages,yes,yes
+beacon frame,contains,mac address,yes,yes
+beacon frame,contains,ssid,yes,yes
+beacon frame,identifies,ap,yes,yes
+bluetooth,enables,wireless peripheral connectivity,yes,yes
+bluetooth,implements,frequency-hopping spread spectrum,yes,yes
+bluetooth,operates_at,link layer,yes,yes
+bluetooth,provides,streaming,yes,yes
+bluetooth,provides,throughput,no,yes
+bluetooth,supports,ack,yes,yes
+bluetooth,supports,ad hoc network,yes,yes
+bluetooth,supports,error detection,yes,yes
+bluetooth,supports,nak,yes,no
+bluetooth,supports,personal area network,yes,yes
+bluetooth,supports,polling,yes,yes
+bluetooth,supports,randomized backoff,,yes
+bluetooth,supports,time division multiplexing,yes,yes
+broadcast ethernet frame,contains,mac address,yes,yes
+bss,connects_to,wired lan,yes,no
+cdma,provides,shared-medium access,yes,yes
+cdma,requires,chipping rate,yes,yes
+cell tower,is_a,base station,yes,yes
+cellular carrier,connects_to,ipx network,,yes
+channel partitioning,is_a,medium access protocol,no,yes
+client,communicates_with,master,yes,yes
+client device,connects_to,base station,yes,yes
+client device,sends,ack,yes,yes
+congestion,causes,handover,,yes
+correspondent,sends,datagram,yes,no
+csma/ca,enables,backoff,yes,yes
+csma/ca,enables,random backoff,yes,yes
+csma/ca,operates_at,link layer,yes,yes
+csma/ca,supports,cts frame,yes,yes
+csma/ca,supports,rts frame,yes,yes
+cts frame,increases,delay,yes,yes
+cts frame,mitigates,hidden terminal,,yes
+data frame,contains,datagram,yes,yes
+datagram tunneling protocol,encapsulates,datagram,yes,no
+datagram tunneling protocol,forwards,datagram,,yes
+direct routing,mitigates,triangle routing problem,,yes
+embb,is_a,service,yes,yes
+embb,provides,bandwidth,yes,yes
+enode-b,variant_of,base station,yes,no
+ethernet,implements,csma/cd,yes,yes
+ethernet frame,contains,mac address,yes,yes
+fading,prevents,collision detection,yes,yes
+foreign agent,provides,agent discovery,yes,yes
+foreign agent,provides,care-of-address,yes,yes
+forwarding table,maps_to,switch interface,yes,yes
+forwarding table,part_of,router,yes,yes
+forwarding table,part_of,switch,yes,yes
+frame,contains,crc,yes,yes
+frame control field,contains,subtype field,yes,yes
+frame control field,contains,type field,,yes
+gateway router,forwards,ip datagram,yes,yes
+gateway router,is_a,router,yes,yes
+global unique identifier,identifies,mobile device,yes,yes
+gprs tunneling protocol,runs_on,udp,yes,yes
+gsm,supports,circuit switching,yes,yes
+h1,connects_to,ap2,yes,yes
+h1,receives,beacon frame,yes,yes
+handover,mitigates,congestion,yes,yes
+handover,requires,latency,no,yes
+hidden terminal,causes,collision,yes,yes
+hidden terminal problem,causes,interference,yes,yes
+hidden terminal problem,prevents,collision detection,yes,yes
+home agent,forwards,datagram,yes,yes
+home gateway,forwards,datagram,yes,yes
+home network,communicates_with,visited network,yes,yes
+home network gateway router,connects_to,visited network gateway router,yes,no
+home network gateway router,forwards,datagram,yes,yes
+home network gateway router,receives,datagram,yes,yes
+host,communicates_with,larger network,yes,yes
+host,connects_to,access point,yes,yes
+host,connects_to,base station,yes,yes
+host,receives,acknowledgment,yes,yes
+host,sends,802.11 frame,yes,yes
+hss,identifies,mobile device,yes,yes
+hss,manages,mobile device,yes,no
+hss,sends,encrypted information,yes,yes
+ieee 802.11,operates_at,link layer,yes,yes
+ieee 802.11,supports,cts frame,yes,yes
+ieee 802.11,supports,rts frame,yes,yes
+imsi,identifies,mobile device,yes,yes
+indirect routing,causes,triangle routing problem,yes,yes
+infrastructure mode,provides,address assignment,yes,no
+ip address,identifies,mobile device,yes,yes
+ip address,maps_to,mac address,yes,yes
+ipx,is_a,protocol,yes,yes
+link layer,has_part,mac,yes,yes
+link layer,has_part,rlc,yes,yes
+lte,is_a,protocol,,yes
+lte,supports,orthogonal frequency division multiplexing,yes,yes
+lte‑advanced,enables,aggregated channel,yes,yes
+mac,operates_at,link layer,yes,yes
+master,controls,client,yes,yes
+master,implements,polling,,yes
+master,sends,beacon message,yes,yes
+master node,communicates_with,client device,yes,yes
+master node,receives,ack,yes,yes
+millimeter wave frequencies,is_a,concept,yes,yes
+mimo-technology,is_a,concept,yes,yes
+mme,communicates_with,hss,yes,yes
+mme,controls,attachment process,yes,yes
+mme,controls,tunnel,yes,yes
+mme,enables,tunnel,yes,yes
+mme,manages,mobile device,yes,yes
+mme,manages,serving gateway,yes,yes
+mobile device,causes,datagram loss,yes,yes
+mobile device,communicates_with,base station,yes,yes
+mobile device,communicates_with,foreign agent,yes,yes
+mobile device,communicates_with,home agent,yes,yes
+mobile device,communicates_with,streaming server,yes,yes
+mobile device,communicates_with,visited gateway router,yes,yes
+mobile device,connects_to,802.11 ap,yes,yes
+mobile device,connects_to,base station,yes,yes
+mobile device,connects_to,lte base station,yes,yes
+mobile device,connects_to,visited network,yes,yes
+mobile device,provides,international mobile subscriber identity,yes,yes
+mobile device,receives,beacon signal,yes,yes
+mobile device,receives,datagram,yes,yes
+mobile device,receives,ip datagram,yes,yes
+mobile device,requires,ip address,no,yes
+mobile device,sends,attach request,yes,yes
+mobile device,sends,datagram,yes,yes
+mobile device,sends,ip datagram,yes,yes
+mobile host,connects_to,base station,yes,yes
+mobile ip,enables,mobility,yes,yes
+mobile ip,enables,tunnel,yes,yes
+mobile ip,implements,agent discovery,yes,yes
+mobile ip,implements,forwarding,yes,yes
+mobile ip,implements,indirect routing,no,yes
+mobile ip,implements,mobility services,yes,yes
+mobile ip,implements,registration,yes,yes
+mobile ip,provides,mobility,yes,yes
+mobile ip,runs_on,ipv4,yes,yes
+mobile ip,supports,home network,,yes
+mobile ip,supports,visited network,yes,yes
+mobility,enables,handover,,yes
+mobility management entity,manages,mobile device,yes,yes
+nat,provides,ip address,yes,yes
+nat gateway router,forwards,datagram,yes,yes
+nat gateway router,provides,address translation,yes,yes
+network congestion,causes,datagram loss,yes,yes
+node,sends,802.11 frame,yes,yes
+node,supports,power management,yes,yes
+node a,communicates_with,node b,yes,yes
+node b,communicates_with,node a,yes,yes
+node b,communicates_with,node c,yes,yes
+node c,communicates_with,node b,yes,yes
+node c,communicates_with,node d,yes,yes
+node d,communicates_with,node c,yes,yes
+opportunistic scheduling,variant_of,scheduling algorithms,yes,no
+orthogonal frequency division multiplexing,variant_of,frequency division multiplexing,yes,no
+p-gw,forwards,ip datagram,yes,yes
+packet data network gateway,is_a,router,yes,yes
+packet data network gateway,provides,nat,yes,yes
+packet data network gateway,provides,nat ip address,yes,yes
+passive scanning,receives,beacon frame,yes,yes
+payload,contains,arp packet,yes,no
+pdcp,operates_at,link layer,,yes
+permanent address,identifies,mobile device,yes,yes
+permanent ip address,identifies,mobile device,yes,yes
+phone number,identifies,mobile device,yes,yes
+random access,is_a,medium access protocol,yes,yes
+rdt2.1,implements,sequence number,yes,yes
+reservation scheme,mitigates,collision,,yes
+rlc,implements,arq,yes,yes
+rlc,operates_at,link layer,yes,yes
+rlc,sends,ack,yes,yes
+router,connects_to,ip subnet,yes,yes
+router,forwards,datagram,yes,yes
+router,forwards,ip datagram,yes,yes
+router,forwards,packet,yes,yes
+router,has_part,forwarding table,yes,yes
+router,implements,distance-vector algorithm,yes,yes
+router interface,connects_to,subnet,yes,yes
+router interface,part_of,router,yes,yes
+rts frame,increases,delay,yes,yes
+rts frame,mitigates,hidden terminal,yes,yes
+rts/cts exchange,decreases,collision,yes,yes
+rts/cts exchange,enables,data frame,yes,yes
+rts/cts exchange,increases,delay,yes,yes
+serving gateway,connects_to,pdn gateway,yes,yes
+serving gateway,connects_to,target base station,,yes
+serving gateway,is_a,router,yes,yes
+serving gateway,receives,udp,yes,yes
+serving gateway,sends,datagram,yes,yes
+signal,causes,handover,yes,yes
+sim card,has_part,imsi,yes,yes
+sim card,has_part,phone number,no,yes
+"single-hop, infrastructure-based network",has_part,base station,yes,yes
+smart antennas,decreases,interference,yes,yes
+smartphone,connects_to,base station,yes,yes
+smartphone,connects_to,wifi,yes,yes
+snr,decreases,ber,no,yes
+source base station,communicates_with,mobile device,yes,yes
+source base station,forwards,datagram,yes,yes
+station,connects_to,access point,yes,yes
+station,implements,binary exponential backoff,yes,yes
+station,implements,csma/ca,yes,yes
+station,receives,acknowledgment,yes,yes
+station,receives,frame,yes,yes
+station,sends,acknowledgment frame,,yes
+station,sends,frame,yes,yes
+station h1,connects_to,access point,yes,yes
+station h1,receives,cts frame,no,yes
+station h1,sends,rts frame,yes,yes
+station h2,connects_to,access point,yes,yes
+station h2,receives,cts frame,,yes
+streaming server,provides,streaming,yes,yes
+streaming server,receives,ip datagram,yes,yes
+streaming server,sends,ip datagram,,yes
+switch,has_part,forwarding table,yes,yes
+switch,manages,forwarding table,yes,yes
+switch,receives,broadcast ethernet frame,yes,yes
+switch,receives,ethernet frame,yes,yes
+tablet,connects_to,wifi,yes,yes
+taking turns,is_a,medium access protocol,yes,yes
+target base station,communicates_with,mme,yes,yes
+target base station,communicates_with,mobile device,yes,yes
+target base station,communicates_with,source base station,yes,yes
+target base station,forwards,datagram,yes,yes
+target base station,provides,channel resources,yes,yes
+target base station,receives,datagram,yes,yes
+target base station,supports,mobile device,yes,yes
+tcp,operates_at,transport layer,yes,yes
+transmission power,increases,energy consumption,yes,yes
+transmission power,increases,interference,,yes
+transmission rate,increases,ber,yes,yes
+tunnel,connects_to,mobile device,no,yes
+tunnel,enables,handover,yes,yes
+tunnel,encapsulates,datagram,yes,no
+tunnel endpoint,connects_to,gateway router,yes,yes
+tunnel endpoint identifier,identifies,tunnel,yes,yes
+tunneling,supports,ipv6,yes,yes
+type field,identifies,rts,,yes
+udp,operates_at,transport layer,yes,yes
+upper-layer mechanisms,mitigates,datagram loss,yes,yes
+urllc,is_a,service,yes,yes
+urllc,provides,latency,no,yes
+user equipment,is_a,mobile device,yes,yes
+visited gateway router,forwards,original datagram,,yes
+visited gateway router,provides,nat,,yes
+visited gateway router,receives,larger datagram,,yes
+visited network,connects_to,mobile device,yes,yes
+visited network,routes_to,mobile device,yes,yes
+visited network gateway router,forwards,datagram,yes,yes
+visited network gateway router,provides,address translation,yes,yes
+visited network gateway router,receives,datagram,yes,yes
+vlan,connects_to,lan,yes,no
+wep,encrypts,data,yes,no
+wifi,has_part,channel,yes,yes
+wifi,supports,wireless lan,yes,yes
+wireless device,connects_to,ap,yes,yes
+wireless device,receives,association response frame,yes,yes
+wireless device,receives,probe response frame,yes,yes
+wireless device,sends,association request frame,yes,yes
+wireless device,sends,probe request frame,yes,yes
+wireless host,communicates_with,base station,yes,yes
+wireless host,communicates_with,larger network,yes,yes
+wireless host,connects_to,base station,yes,yes
+wireless laptop,communicates_with,access point,yes,yes
+wireless laptop,sends,frame,yes,yes
+wireless link,connects_to,base station,yes,yes
+wireless link,connects_to,router,yes,yes
+wireless link,connects_to,wireless host,yes,yes
+wireless link,enables,mobility,yes,yes
+wireless medium,is_a,shared medium,yes,yes
+wireless station,communicates_with,access point,yes,yes
+wireless station,connects_to,access point,yes,yes
+wireless station,is_a,host,yes,yes
+wireless station,receives,beacon frame,yes,yes
+wireless station,receives,data frame,yes,yes

@@ -1,0 +1,253 @@
+# KG extraction config v2 — Computer Networking domain (Kurose & Ross)
+# Extended relation set (30 types), added Metric entity type.
+
+# --- LLM (Tinker) ---
+llm_config:
+  temperature: 0.0
+  max_tokens: 4096
+
+# --- Delimiters ---
+completion_delimiter: "<|COMPLETE|>"
+tuple_delimiter: "<|>"
+record_delimiter: "##"
+
+# --- Entity Types ---
+entity_types:
+  - Protocol
+  - Layer
+  - Network Component
+  - Algorithm
+  - Concept
+  - Service
+  - Metric
+
+entity_types_examples: |
+  1. Protocol: TCP; UDP; IP; HTTP; HTTPS; FTP; SMTP; DNS; TLS; SSL; ICMP; BGP; OSPF; Ethernet; Wi-Fi; ARP; DHCP; QUIC
+  2. Layer: Application Layer; Transport Layer; Network Layer; Link Layer; Physical Layer
+  3. Network Component: Router; Switch; Host; Server; Client; Gateway; Firewall; Hub; Modem; Access Point; CDN; ISP; NAT; Buffer; Queue
+  4. Algorithm: Dijkstra's Algorithm; Distance Vector; Link State; Slow Start; Congestion Avoidance; Round Robin; CSMA/CD; Leaky Bucket; Token Bucket
+  5. Concept: Throughput; Latency; Bandwidth; Packet Loss; Congestion; Delay; Jitter; RTT; Flow Control; Segment; Datagram; Frame; Packet; Socket; Port; IP Address; MAC Address; Checksum; Three-Way Handshake; ACK; SYN; Multiplexing; Encapsulation; Forwarding Table; Routing Table; CRC; ARQ; Sliding Window; Sequence Number; Acknowledgment
+  6. Service: Web Service; Email Service; File Transfer; DNS Service; Streaming; VoIP; CDN Service; Peer-to-Peer; DHCP Service
+  7. Metric: RTT; Throughput; Utilization; Packet Loss Rate; Bit Error Rate; Propagation Delay; Queuing Delay; Processing Delay; Transmission Delay; End-to-End Delay; Bandwidth-Delay Product
+
+# --- Relation Types ---
+relation_types:
+  - is_a
+  - part_of
+  - has_part
+  - uses
+  - requires
+  - provides
+  - supports
+  - enables
+  - implements
+  - communicates_with
+  - sends
+  - receives
+  - forwards
+  - routes_to
+  - connects_to
+  - contains
+  - identifies
+  - maps_to
+  - operates_at
+  - runs_on
+  - transports
+  - controls
+  - manages
+  - measures
+  - affects
+  - increases
+  - decreases
+  - causes
+  - prevents
+  - mitigates
+
+relation_types_examples: |
+  tcp, is_a, transport protocol
+  header, part_of, packet
+  packet, has_part, header
+  tcp, uses, three-way handshake
+  tls, requires, tcp
+  tcp, provides, reliable delivery
+  ethernet, supports, full-duplex communication
+  nat, enables, address reuse
+  router, implements, ip forwarding
+  client, communicates_with, server
+  client, sends, syn segment
+  server, receives, syn segment
+  router, forwards, packet
+  bgp, routes_to, destination prefix
+  host, connects_to, access point
+  frame, contains, payload
+  ip address, identifies, host
+  dns, maps_to, ip address
+  tcp, operates_at, transport layer
+  http, runs_on, tcp
+  ip, transports, segment
+  congestion control, controls, transmission rate
+  ospf, manages, link-state database
+  rtt, measures, round-trip time
+  packet loss, affects, throughput
+  congestion, increases, queuing delay
+  flow control, decreases, send rate
+  buffer overflow, causes, packet loss
+  checksum, prevents, undetected errors
+  slow start, mitigates, congestion
+
+prompt_template: |
+  -Role-
+  You are an AI assistant specialized in extracting structured knowledge from computer networking textbooks to build a knowledge graph.
+
+  -Goal-
+  Given a passage from a computer networking textbook, a predefined list of entity types, and a predefined list of relation types, identify all networking entities and the meaningful relationships explicitly described among them.
+
+  -Entity Types-
+  Extract entities from the following types only:
+  {entity_types}
+
+  Use the examples below ONLY to understand what each type covers:
+  {entity_types_examples}
+
+  -Relation Types-
+  Use ONLY these relation types:
+  {relation_types}
+
+  One example per relation type (formatted as 'head, relation, tail'):
+  {relation_types_examples}
+
+  -Steps-
+  1. Identify all entities from the text that match one of the entity types above.
+     For each entity:
+     - entity_name: Name of the entity, lowercase
+     - entity_type: One of: Protocol, Layer, Network Component, Algorithm, Concept, Service, Metric
+     - entity_description: brief description from the text
+     Format: ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+  2. From the entities in step 1, identify clearly stated relationships using ONLY the predefined relation types.
+     - Only extract relationships explicitly supported by the text.
+     - Do not extract trivial or overly general relationships.
+     For each relationship:
+     - source_entity: lowercase name from step 1
+     - target_entity: lowercase name from step 1
+     - relationship: one relation from the predefined list
+     - relationship_strength: integer 1-10
+     Format: ("relationship"{tuple_delimiter}<source>{tuple_delimiter}<target>{tuple_delimiter}<relationship>{tuple_delimiter}<strength>)
+
+  3. Output all entities and relationships as a single list separated by **{record_delimiter}**.
+
+  4. End with {completion_delimiter}
+
+  -Relation Disambiguation-
+  The relation `uses` is a last resort. Always prefer a more specific relation when one fits:
+  - Use `runs_on` (NOT `uses`) when head is a protocol, service, or device that operates on top of tail (a lower-layer protocol, network layer, or physical medium). Examples: "http runs_on tcp", "tcp runs_on ip", "host runs_on ethernet".
+  - Use `implements` (NOT `uses`) when head executes tail as an algorithm, technique, or forwarding mechanism. Examples: "router implements store-and-forward", "link-state routing implements dijkstra's algorithm".
+  - Use `has_part` (NOT `uses`) when head structurally contains tail as a component such as a table, header, buffer, cache, field, or address. Examples: "router has_part forwarding table", "packet has_part header".
+  - Use `requires` (NOT `uses`) when head depends on tail to function. Examples: "tls requires tcp", "reliable transfer requires acknowledgment".
+  - Only use `uses` when none of the above apply and no other relation from the list fits better.
+
+  -Constraints-
+  - Only extract from the provided text; no external knowledge.
+  - Only use entity types and relation types from the predefined lists.
+  - Use lowercase for all entity names.
+  - Keep entity descriptions concise (one sentence).
+
+
+user_prompt: |
+  ######################
+  Text:
+  {input_text}
+  ######################
+  Output:
+
+
+examples:
+  - user: |
+      ######################
+      Text:
+      The Transmission Control Protocol (TCP) provides reliable, in-order byte-stream delivery between two applications. TCP runs on IP at the transport layer. When a client wants to establish a TCP connection with a server, it sends a SYN segment; the server receives the SYN and replies with a SYN-ACK; the client then sends an ACK to complete the three-way handshake. Flow control prevents a fast sender from overwhelming a slow receiver by decreasing the send rate when the receive window shrinks. Congestion in the network increases queuing delay and causes packet loss.
+      ######################
+      Output:
+    assistant: |
+      ("entity"{tuple_delimiter}tcp{tuple_delimiter}Protocol{tuple_delimiter}Transport-layer protocol providing reliable, in-order byte-stream delivery)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ip{tuple_delimiter}Protocol{tuple_delimiter}Network-layer protocol over which TCP operates)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}transport layer{tuple_delimiter}Layer{tuple_delimiter}Network stack layer where TCP operates)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}three-way handshake{tuple_delimiter}Concept{tuple_delimiter}TCP connection setup procedure using SYN, SYN-ACK, and ACK segments)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}flow control{tuple_delimiter}Concept{tuple_delimiter}Mechanism that adjusts send rate to avoid overwhelming a slow receiver)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}client{tuple_delimiter}Network Component{tuple_delimiter}Entity that initiates a TCP connection)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}server{tuple_delimiter}Network Component{tuple_delimiter}Entity that accepts incoming TCP connections)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}syn segment{tuple_delimiter}Concept{tuple_delimiter}First segment sent by a client to initiate a TCP connection)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}congestion{tuple_delimiter}Concept{tuple_delimiter}Network state where traffic demand exceeds available capacity)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}queuing delay{tuple_delimiter}Metric{tuple_delimiter}Time a packet spends waiting in a router queue)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}packet loss{tuple_delimiter}Metric{tuple_delimiter}Fraction of transmitted packets that fail to reach the destination)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}ip{tuple_delimiter}runs_on{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}transport layer{tuple_delimiter}operates_at{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}three-way handshake{tuple_delimiter}uses{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}reliable delivery{tuple_delimiter}provides{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}client{tuple_delimiter}server{tuple_delimiter}communicates_with{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}client{tuple_delimiter}syn segment{tuple_delimiter}sends{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}server{tuple_delimiter}syn segment{tuple_delimiter}receives{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}flow control{tuple_delimiter}send rate{tuple_delimiter}decreases{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}congestion{tuple_delimiter}queuing delay{tuple_delimiter}increases{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}congestion{tuple_delimiter}packet loss{tuple_delimiter}causes{tuple_delimiter}9)
+      {completion_delimiter}
+
+  - user: |
+      ######################
+      Text:
+      Routers use forwarding tables to determine the output link for each arriving packet and forward it toward its destination. The forwarding table is populated by routing algorithms. In link-state routing, each router manages a complete map of the network topology, then runs Dijkstra's algorithm to compute shortest paths. Distance-vector routing uses the Bellman-Ford equation; each router maintains a distance vector to all destinations and exchanges it with neighbors. BGP routes traffic to destination prefixes across autonomous systems. A router's buffer may overflow when arrival rates exceed its capacity, causing packet loss and increasing end-to-end delay.
+      ######################
+      Output:
+    assistant: |
+      ("entity"{tuple_delimiter}router{tuple_delimiter}Network Component{tuple_delimiter}Network device that forwards packets based on a forwarding table)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}forwarding table{tuple_delimiter}Concept{tuple_delimiter}Table used by routers to determine the output link for each arriving packet)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}link-state routing{tuple_delimiter}Algorithm{tuple_delimiter}Routing algorithm where each router maintains full topology and runs Dijkstra's algorithm)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}distance-vector routing{tuple_delimiter}Algorithm{tuple_delimiter}Routing algorithm using Bellman-Ford where routers exchange distance vectors with neighbors)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}dijkstra's algorithm{tuple_delimiter}Algorithm{tuple_delimiter}Shortest-path algorithm used in link-state routing)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}bgp{tuple_delimiter}Protocol{tuple_delimiter}Inter-domain routing protocol that routes traffic to destination prefixes across autonomous systems)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}packet loss{tuple_delimiter}Metric{tuple_delimiter}Fraction of packets dropped due to buffer overflow or congestion)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}end-to-end delay{tuple_delimiter}Metric{tuple_delimiter}Total time for a packet to travel from source to destination)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}buffer{tuple_delimiter}Network Component{tuple_delimiter}Memory in a router that holds packets waiting to be forwarded)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}router{tuple_delimiter}forwarding table{tuple_delimiter}uses{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}router{tuple_delimiter}packet{tuple_delimiter}forwards{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}link-state routing{tuple_delimiter}dijkstra's algorithm{tuple_delimiter}uses{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}link-state routing{tuple_delimiter}forwarding table{tuple_delimiter}manages{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}bgp{tuple_delimiter}destination prefix{tuple_delimiter}routes_to{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}buffer overflow{tuple_delimiter}packet loss{tuple_delimiter}causes{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}buffer overflow{tuple_delimiter}end-to-end delay{tuple_delimiter}increases{tuple_delimiter}8)
+      {completion_delimiter}
