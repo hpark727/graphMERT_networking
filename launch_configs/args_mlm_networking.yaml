@@ -42,8 +42,8 @@ save_steps: 500
 eval_steps: 500
 logging_steps: 100
 
-# Model: 32 gen4 relation types (values 1-32)
-num_relationships: 33
+# 22 canonical relation types (values 1-22); 5 aliases mapped to canonical ids
+num_relationships: 23
 
 exp_mask_base: 0.6
 
