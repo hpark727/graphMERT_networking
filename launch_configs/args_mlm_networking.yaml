@@ -30,7 +30,7 @@ relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
 lr_scheduler_kwargs:
     min_lr: !!float 1e-6
 learning_rate: !!float 3e-5
-num_train_epochs: 20
+num_train_epochs: 2
 
 output_dir: DELLA_ROOT/outputs/networking_graphmert
 
@@ -62,7 +62,7 @@ mlm_on_leaves_probability: 0.15
 span_upper_length: 3
 weight_decay: 0.01
 
-max_train_samples: null
+max_train_samples: 200
 
 tokenizer_name: bert-base-uncased
 subword_token_start: "##"
