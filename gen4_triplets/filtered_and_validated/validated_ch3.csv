@@ -1,0 +1,311 @@
+head,relation_type,tail
+ack,increases,congestion window size
+ack,is_a,positive acknowledgment
+ack segment,supports,cumulative acknowledgments
+acknowledgment,enables,self-clocking
+acknowledgment,increases,cwnd
+acknowledgment segment,contains,acknowledgment number
+acknowledgment segment,contains,sequence number
+additive increase,increases,congestion window
+alternating-bit protocol,is_a,stop-and-wait protocol
+arq,requires,error detection
+arq,requires,receiver feedback
+arq,requires,retransmission
+attacker,sends,ack packet
+buffer,causes,packet loss
+buffer,contains,packet
+buffer,increases,end-to-end delay
+buffer,part_of,host
+buffer,part_of,router
+checksum calculation,requires,1s complement
+checksum field,contains,udp checksum
+client,communicates_with,server
+client,communicates_with,web server
+client,receives,acknowledgment segment
+client,receives,fin segment
+client,receives,segment
+client,receives,synack segment
+client,receives,tcp segment
+client,runs_on,host
+client,sends,acknowledgment segment
+client,sends,fin segment
+client,sends,segment
+client,sends,syn segment
+client,sends,tcp segment
+computer,connects_to,web server
+congestion,causes,congestion collapse
+congestion,causes,delay
+congestion,causes,end-to-end delay
+congestion,causes,packet loss
+congestion,increases,queuing delay
+congestion,increases,round-trip time
+congestion,increases,rtt
+congestion avoidance,increases,congestion window
+congestion avoidance,increases,congestion window size
+congestion control,controls,transmission rate
+congestion control,decreases,transmission rate
+congestion control,requires,congestion window
+congestion control,supports,delay-based approach
+congestion window,controls,send rate
+congestion window,controls,unacknowledged data
+connection state,has_part,acknowledgment number parameters
+connection state,has_part,congestion-control parameters
+connection state,has_part,receive buffer
+connection-establishment request,is_a,tcp segment
+cumulative acknowledgment,is_a,ack
+cwnd,controls,send rate
+datagram,contains,segment
+destination port number field,part_of,segment
+devrtt,requires,ewma
+dns,runs_on,udp
+duplicate ack,identifies,packet loss
+duplicate ack,is_a,ack
+email service,runs_on,tcp
+estimatedrtt,requires,ewma
+ethernet,implements,csma/cd
+ethernet,provides,error detection
+file transfer,runs_on,tcp
+firewall,prevents,syn segment
+ftp,requires,well-known port number
+gbn,requires,sequence number
+go-back-n,implements,cumulative acknowledgment
+go-back-n,implements,sequence number
+go-back-n,is_a,sliding-window protocol
+go-back-n,requires,ack
+go-back-n,requires,cumulative acknowledgment
+go-back-n,requires,sequence number
+host,communicates_with,name server
+host,has_part,buffer
+host,has_part,ip address
+host,has_part,socket
+host,provides,ftp
+host,provides,http
+host,receives,segment
+host,receives,tcp segment
+host,sends,icmp datagram
+host,sends,reset segment
+http,operates_at,application layer
+http,runs_on,tcp
+http/3,runs_on,quic
+internet phone,runs_on,udp
+ip,operates_at,network layer
+ip,provides,network-layer service
+ip,runs_on,link layer
+ip address,identifies,client
+ip address,identifies,host
+link layer,provides,error detection
+loss event,decreases,congestion window size
+loss rate,measures,packet loss
+mail service,requires,address
+multimedia applications,runs_on,udp
+multiplicative decrease,decreases,congestion window
+multiplicative-decrease approach,is_a,congestion control
+nak,is_a,negative acknowledgment
+name server,receives,datagram
+network,causes,packet reordering
+network layer,enables,explicit congestion indication
+network layer,sends,datagram
+offered load,decreases,throughput
+out-of-order packet,causes,positive acknowledgment
+packet,contains,checksum
+packet,contains,packet checksum field
+packet,has_part,sequence number
+packet checksum field,part_of,packet
+packet loss,increases,end-to-end delay
+packet-arrival rate,increases,queuing delay
+pipelining,increases,utilization
+pipelining,requires,buffer
+pipelining,requires,sequence numbers
+pipelining,requires,window
+port number,enables,demultiplexing
+port number,enables,multiplexing
+quic,implements,congestion control
+quic,implements,reliable data transfer
+quic,operates_at,transport layer
+quic,runs_on,udp
+quic,supports,congestion control
+quic packet header,contains,connection id
+rdt,receives,packet
+rdt,sends,packet
+receive window,enables,flow control
+receiver,connects_to,channel
+receiver,receives,control packet
+receiver,receives,data packet
+receiver,receives,message
+receiver,receives,packet
+receiver,sends,ack
+receiver,sends,control packet
+receiver,sends,nak
+receiver,sends,negative acknowledgment
+receiver,sends,positive acknowledgment
+reliable data transfer protocol,has_part,sender
+reliable data transfer protocol,implements,finite-state machine
+reliable data transfer protocol,requires,positive acknowledgment
+reliable data transfer protocol,requires,unreliable channel
+round-trip time estimation,measures,rtt
+router,causes,retransmission
+router,enables,congestion indication bit
+router,enables,network-assisted congestion control
+router,forwards,datagram
+router,has_part,buffer
+router,receives,datagram
+router buffer,causes,packet loss
+sample rtt,measures,round-trip time
+segment,contains,destination port number
+segment,contains,port
+segment,contains,source port number
+segment,has_part,sequence number
+selective repeat,provides,reliable data transfer
+selective repeat,receives,ack
+selective repeat,requires,ack
+selective repeat,requires,logical timer
+selective repeat,requires,timer
+selective repeat,requires,window
+send rate,causes,congestion
+sender,communicates_with,receiver
+sender,connects_to,channel
+sender,receives,ack
+sender,receives,control packet
+sender,receives,duplicate ack
+sender,requires,buffer
+sender,requires,window
+sender,sends,control packet
+sender,sends,data packet
+sender,sends,message
+sender,sends,packet
+sending rate,increases,congestion
+sending rate,increases,delay
+sequence number,identifies,packet
+server,implements,syn cookie
+server,receives,ack
+server,receives,acknowledgment segment
+server,receives,fin segment
+server,receives,packet
+server,receives,segment
+server,receives,syn
+server,receives,syn segment
+server,receives,tcp segment
+server,receives,udp packet
+server,runs_on,host
+server,sends,acknowledgment segment
+server,sends,fin segment
+server,sends,segment
+server,sends,synack
+server,sends,synack segment
+server,sends,tcp segment
+server,sends,udp packet
+server,supports,tcp connection socket
+slow start,increases,congestion window
+slow start,increases,congestion window size
+slow start,part_of,congestion control
+socket,receives,segment
+source host,receives,synack segment
+source host,sends,syn segment
+source port number field,part_of,segment
+stop-and-wait protocol,decreases,channel utilization
+stop-and-wait protocol,requires,ack
+stop-and-wait protocol,requires,acknowledgment
+stop-and-wait protocol,requires,checksum
+stop-and-wait protocol,supports,sequence number
+streaming,runs_on,tcp
+streaming,runs_on,udp
+syn flood attack,is_a,denial-of-service attack
+target host,receives,syn segment
+target host,sends,rst segment
+tcp,controls,send rate
+tcp,has_part,congestion avoidance
+tcp,has_part,congestion control mechanism
+tcp,has_part,connection state
+tcp,has_part,fast recovery
+tcp,has_part,receive buffer
+tcp,has_part,send buffer
+tcp,has_part,slow start
+tcp,has_part,tcp state
+tcp,has_part,window behavior
+tcp,implements,aimd
+tcp,implements,aimd algorithm
+tcp,implements,congestion avoidance
+tcp,implements,congestion control
+tcp,implements,demultiplexing
+tcp,implements,fast recovery
+tcp,implements,fast retransmit
+tcp,implements,reliable data transfer service
+tcp,implements,retransmit mechanism
+tcp,implements,slow start
+tcp,implements,three-way handshake
+tcp,is_a,transport-layer protocol
+tcp,operates_at,transport layer
+tcp,provides,congestion control
+tcp,provides,cumulative acknowledgments
+tcp,provides,error detection
+tcp,provides,flow control
+tcp,provides,flow control service
+tcp,provides,full-duplex service
+tcp,provides,point-to-point
+tcp,provides,reliable connection-oriented service
+tcp,provides,reliable data transfer
+tcp,provides,retransmissions
+tcp,provides,round-trip time estimation
+tcp,provides,timers
+tcp,receives,ack
+tcp,requires,acknowledgments
+tcp,requires,checksum
+tcp,requires,flow control
+tcp,requires,sequence numbers
+tcp,requires,timers
+tcp,runs_on,ip
+tcp,sends,segment
+tcp,supports,full-duplex
+tcp congestion control,controls,sending rate
+tcp congestion-control algorithm,has_part,congestion avoidance
+tcp congestion-control algorithm,has_part,fast recovery
+tcp congestion-control algorithm,has_part,slow start
+tcp connection establishment,increases,end-to-end delay
+tcp cubic,implements,congestion avoidance
+tcp cubic,increases,congestion window
+tcp cubic,increases,sending rate
+tcp cubic,provides,throughput
+tcp reno,implements,aimd
+tcp reno,implements,fast recovery
+tcp segment,contains,destination port number
+tcp segment,provides,acknowledgment
+tcp segment header,has_part,acknowledgment number field
+tcp segment header,has_part,sequence number field
+tcp vegas,measures,rtt
+telnet,operates_at,application layer
+telnet,runs_on,tcp
+timeout,causes,multiplicative decrease
+timeout interval,requires,devrtt
+timeout interval,requires,estimatedrtt
+timer,supports,retransmit mechanism
+tls,runs_on,tcp
+transport layer,implements,demultiplexing
+transport layer,implements,multiplexing
+transport layer,provides,error checking
+transport layer,provides,port number
+transport layer,receives,segment
+transport layer,sends,transport-level segment
+transport protocol,operates_at,transport layer
+transport protocol,provides,reliable data transfer service
+transport protocol,runs_on,host
+transport-layer demultiplexing,enables,process-to-process data delivery
+transport-layer multiplexing,enables,process-to-process data delivery
+transport-layer protocol,provides,reliable data transfer
+transport-layer protocol,requires,acknowledgment
+transport-layer protocol,requires,sequence number
+triple duplicate ack,causes,multiplicative decrease
+udp,implements,checksum calculation
+udp,implements,demultiplexing
+udp,operates_at,transport layer
+udp,provides,error checking
+udp,provides,error detection
+udp,provides,process-to-process data delivery
+udp,provides,unreliable connectionless service
+udp,requires,checksum
+udp,supports,multimedia applications
+udp checksum,provides,error detection
+udp segment,contains,checksum
+udp segment,contains,header fields
+udp segment,has_part,checksum field
+udt,runs_on,unreliable channel
+web browsers,enables,parallel connections

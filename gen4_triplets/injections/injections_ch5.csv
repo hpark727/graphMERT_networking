@@ -1,0 +1,968 @@
+id,head,relation_type,tail
+0,network layer,has_part,control plane
+0,ospf,implements,dijkstra's algorithm
+0,ospf,implements,link-state algorithm
+0,ospf,implements,link-state broadcast
+0,ospf,implements,link-state routing algorithm
+0,ospf,implements,reliable message transfer
+0,ospf,implements,routing algorithm
+0,ospf,is_a,link-state protocol
+0,ospf,provides,least-cost path routing
+0,ospf,runs_on,ip
+0,ospf,supports,authentication
+0,ospf,supports,md5 authentication
+0,ospf,supports,simple authentication
+0,bgp,enables,ip-anycast service
+0,bgp,enables,policy
+0,bgp,has_part,as-path
+0,bgp,implements,hot potato routing
+0,bgp,implements,route-selection algorithm
+0,bgp,implements,routing algorithm
+0,bgp,requires,port 179
+0,bgp,routes_to,destination prefix
+0,bgp,routes_to,prefix
+0,bgp,runs_on,tcp
+1,ospf,implements,dijkstra's algorithm
+1,ospf,implements,link-state algorithm
+1,ospf,implements,link-state broadcast
+1,ospf,implements,link-state routing algorithm
+1,ospf,implements,reliable message transfer
+1,ospf,implements,routing algorithm
+1,ospf,is_a,link-state protocol
+1,ospf,provides,least-cost path routing
+1,ospf,runs_on,ip
+1,ospf,supports,authentication
+1,ospf,supports,md5 authentication
+1,ospf,supports,simple authentication
+1,bgp,enables,ip-anycast service
+1,bgp,enables,policy
+1,bgp,has_part,as-path
+1,bgp,implements,hot potato routing
+1,bgp,implements,route-selection algorithm
+1,bgp,implements,routing algorithm
+1,bgp,requires,port 179
+1,bgp,routes_to,destination prefix
+1,bgp,routes_to,prefix
+1,bgp,runs_on,tcp
+2,icmp,enables,ping
+2,icmp,enables,traceroute
+2,icmp,provides,error reporting
+2,snmp,operates_at,application layer
+2,snmp,runs_on,udp
+2,forwarding table,contains,next-hop node
+2,forwarding table,maps_to,interface
+2,forwarding table,part_of,node
+2,forwarding table,part_of,router
+3,flow table,contains,header field value
+3,flow table,has_part,flow table entry
+3,flow table,part_of,router
+3,flow table,part_of,sdn-controlled switch
+4,forwarding table,contains,next-hop node
+4,forwarding table,maps_to,interface
+4,forwarding table,part_of,node
+4,forwarding table,part_of,router
+4,ospf,implements,dijkstra's algorithm
+4,ospf,implements,link-state algorithm
+4,ospf,implements,link-state broadcast
+4,ospf,implements,link-state routing algorithm
+4,ospf,implements,reliable message transfer
+4,ospf,implements,routing algorithm
+4,ospf,is_a,link-state protocol
+4,ospf,provides,least-cost path routing
+4,ospf,runs_on,ip
+4,ospf,supports,authentication
+4,ospf,supports,md5 authentication
+4,ospf,supports,simple authentication
+4,bgp,enables,ip-anycast service
+4,bgp,enables,policy
+4,bgp,has_part,as-path
+4,bgp,implements,hot potato routing
+4,bgp,implements,route-selection algorithm
+4,bgp,implements,routing algorithm
+4,bgp,requires,port 179
+4,bgp,routes_to,destination prefix
+4,bgp,routes_to,prefix
+4,bgp,runs_on,tcp
+6,control agent,manages,flow table
+6,flow table,contains,header field value
+6,flow table,has_part,flow table entry
+6,flow table,part_of,router
+6,flow table,part_of,sdn-controlled switch
+7,sdn,controls,router
+7,sdn,implements,logically centralized control
+7,sdn,supports,4g/5g cellular networking
+8,sdn,controls,router
+8,sdn,implements,logically centralized control
+8,sdn,supports,4g/5g cellular networking
+9,sdn,controls,router
+9,sdn,implements,logically centralized control
+9,sdn,supports,4g/5g cellular networking
+10,graph,has_part,edge
+10,graph,has_part,node
+14,neighbor,receives,distance vector
+16,graph,has_part,edge
+16,graph,has_part,node
+17,centralized routing algorithm,requires,global knowledge
+17,centralized routing algorithm,runs_on,controller
+22,rip,implements,distance-vector algorithm
+22,ospf,implements,dijkstra's algorithm
+22,ospf,implements,link-state algorithm
+22,ospf,implements,link-state broadcast
+22,ospf,implements,link-state routing algorithm
+22,ospf,implements,reliable message transfer
+22,ospf,implements,routing algorithm
+22,ospf,is_a,link-state protocol
+22,ospf,provides,least-cost path routing
+22,ospf,runs_on,ip
+22,ospf,supports,authentication
+22,ospf,supports,md5 authentication
+22,ospf,supports,simple authentication
+22,bgp,enables,ip-anycast service
+22,bgp,enables,policy
+22,bgp,has_part,as-path
+22,bgp,implements,hot potato routing
+22,bgp,implements,route-selection algorithm
+22,bgp,implements,routing algorithm
+22,bgp,requires,port 179
+22,bgp,routes_to,destination prefix
+22,bgp,routes_to,prefix
+22,bgp,runs_on,tcp
+26,centralized routing algorithm,requires,global knowledge
+26,centralized routing algorithm,runs_on,controller
+28,ls algorithm,provides,least-cost path
+30,ls algorithm,provides,least-cost path
+30,forwarding table,contains,next-hop node
+30,forwarding table,maps_to,interface
+30,forwarding table,part_of,node
+30,forwarding table,part_of,router
+31,forwarding table,contains,next-hop node
+31,forwarding table,maps_to,interface
+31,forwarding table,part_of,node
+31,forwarding table,part_of,router
+32,ls algorithm,provides,least-cost path
+34,ls algorithm,provides,least-cost path
+35,ls algorithm,provides,least-cost path
+36,ls algorithm,provides,least-cost path
+42,forwarding table,contains,next-hop node
+42,forwarding table,maps_to,interface
+42,forwarding table,part_of,node
+42,forwarding table,part_of,router
+43,distance vector,contains,cost
+44,distance vector,contains,cost
+45,distance vector,contains,cost
+46,forwarding table,contains,next-hop node
+46,forwarding table,maps_to,interface
+46,forwarding table,part_of,node
+46,forwarding table,part_of,router
+47,forwarding table,contains,next-hop node
+47,forwarding table,maps_to,interface
+47,forwarding table,part_of,node
+47,forwarding table,part_of,router
+47,ls algorithm,provides,least-cost path
+48,rip,implements,distance-vector algorithm
+49,bgp,enables,ip-anycast service
+49,bgp,enables,policy
+49,bgp,has_part,as-path
+49,bgp,implements,hot potato routing
+49,bgp,implements,route-selection algorithm
+49,bgp,implements,routing algorithm
+49,bgp,requires,port 179
+49,bgp,routes_to,destination prefix
+49,bgp,routes_to,prefix
+49,bgp,runs_on,tcp
+50,distance vector,contains,cost
+51,distance vector,contains,cost
+52,distance vector,contains,cost
+53,distance vector,contains,cost
+55,distance vector,contains,cost
+56,distance vector,contains,cost
+62,poisoned reverse,mitigates,count-to-infinity problem
+63,poisoned reverse,mitigates,count-to-infinity problem
+65,poisoned reverse,mitigates,count-to-infinity problem
+70,router,causes,oscillation
+70,router,forwards,ip datagram
+70,router,forwards,packet
+70,router,has_part,flow table
+70,router,has_part,forwarding table
+70,router,implements,bgp route-selection algorithm
+70,router,implements,decentralized routing algorithm
+70,router,implements,dijkstra's algorithm
+70,router,implements,distance vector routing
+70,router,implements,distance-vector algorithm
+70,router,implements,link state routing
+70,router,implements,link-state algorithm
+70,router,implements,ls algorithm
+70,router,implements,match-plus-action abstraction
+70,router,implements,route-selection algorithm
+70,router,part_of,autonomous system
+70,router,part_of,isp
+70,router,provides,firewalling
+70,router,provides,load sharing
+70,router,receives,distance vector
+70,router,receives,ip datagram
+70,router,receives,packet
+70,router,sends,distance vector
+70,router,sends,hello message
+70,router,sends,icmp
+70,router,sends,icmp warning message
+70,router,sends,link advertisement
+70,router,sends,link-state information
+70,router,sends,link-state packet
+70,router,sends,packet
+71,router,causes,oscillation
+71,router,forwards,ip datagram
+71,router,forwards,packet
+71,router,has_part,flow table
+71,router,has_part,forwarding table
+71,router,implements,bgp route-selection algorithm
+71,router,implements,decentralized routing algorithm
+71,router,implements,dijkstra's algorithm
+71,router,implements,distance vector routing
+71,router,implements,distance-vector algorithm
+71,router,implements,link state routing
+71,router,implements,link-state algorithm
+71,router,implements,ls algorithm
+71,router,implements,match-plus-action abstraction
+71,router,implements,route-selection algorithm
+71,router,part_of,autonomous system
+71,router,part_of,isp
+71,router,provides,firewalling
+71,router,provides,load sharing
+71,router,receives,distance vector
+71,router,receives,ip datagram
+71,router,receives,packet
+71,router,sends,distance vector
+71,router,sends,hello message
+71,router,sends,icmp
+71,router,sends,icmp warning message
+71,router,sends,link advertisement
+71,router,sends,link-state information
+71,router,sends,link-state packet
+71,router,sends,packet
+73,isp,provides,ip address range
+74,autonomous system,has_part,router
+75,ospf,implements,dijkstra's algorithm
+75,ospf,implements,link-state algorithm
+75,ospf,implements,link-state broadcast
+75,ospf,implements,link-state routing algorithm
+75,ospf,implements,reliable message transfer
+75,ospf,implements,routing algorithm
+75,ospf,is_a,link-state protocol
+75,ospf,provides,least-cost path routing
+75,ospf,runs_on,ip
+75,ospf,supports,authentication
+75,ospf,supports,md5 authentication
+75,ospf,supports,simple authentication
+76,ospf,implements,dijkstra's algorithm
+76,ospf,implements,link-state algorithm
+76,ospf,implements,link-state broadcast
+76,ospf,implements,link-state routing algorithm
+76,ospf,implements,reliable message transfer
+76,ospf,implements,routing algorithm
+76,ospf,is_a,link-state protocol
+76,ospf,provides,least-cost path routing
+76,ospf,runs_on,ip
+76,ospf,supports,authentication
+76,ospf,supports,md5 authentication
+76,ospf,supports,simple authentication
+77,ospf,implements,dijkstra's algorithm
+77,ospf,implements,link-state algorithm
+77,ospf,implements,link-state broadcast
+77,ospf,implements,link-state routing algorithm
+77,ospf,implements,reliable message transfer
+77,ospf,implements,routing algorithm
+77,ospf,is_a,link-state protocol
+77,ospf,provides,least-cost path routing
+77,ospf,runs_on,ip
+77,ospf,supports,authentication
+77,ospf,supports,md5 authentication
+77,ospf,supports,simple authentication
+80,ospf,implements,dijkstra's algorithm
+80,ospf,implements,link-state algorithm
+80,ospf,implements,link-state broadcast
+80,ospf,implements,link-state routing algorithm
+80,ospf,implements,reliable message transfer
+80,ospf,implements,routing algorithm
+80,ospf,is_a,link-state protocol
+80,ospf,provides,least-cost path routing
+80,ospf,runs_on,ip
+80,ospf,supports,authentication
+80,ospf,supports,md5 authentication
+80,ospf,supports,simple authentication
+85,bgp,enables,ip-anycast service
+85,bgp,enables,policy
+85,bgp,has_part,as-path
+85,bgp,implements,hot potato routing
+85,bgp,implements,route-selection algorithm
+85,bgp,implements,routing algorithm
+85,bgp,requires,port 179
+85,bgp,routes_to,destination prefix
+85,bgp,routes_to,prefix
+85,bgp,runs_on,tcp
+86,forwarding table,contains,next-hop node
+86,forwarding table,maps_to,interface
+86,forwarding table,part_of,node
+86,forwarding table,part_of,router
+86,bgp,enables,ip-anycast service
+86,bgp,enables,policy
+86,bgp,has_part,as-path
+86,bgp,implements,hot potato routing
+86,bgp,implements,route-selection algorithm
+86,bgp,implements,routing algorithm
+86,bgp,requires,port 179
+86,bgp,routes_to,destination prefix
+86,bgp,routes_to,prefix
+86,bgp,runs_on,tcp
+87,bgp,enables,ip-anycast service
+87,bgp,enables,policy
+87,bgp,has_part,as-path
+87,bgp,implements,hot potato routing
+87,bgp,implements,route-selection algorithm
+87,bgp,implements,routing algorithm
+87,bgp,requires,port 179
+87,bgp,routes_to,destination prefix
+87,bgp,routes_to,prefix
+87,bgp,runs_on,tcp
+87,forwarding table,contains,next-hop node
+87,forwarding table,maps_to,interface
+87,forwarding table,part_of,node
+87,forwarding table,part_of,router
+88,bgp,enables,ip-anycast service
+88,bgp,enables,policy
+88,bgp,has_part,as-path
+88,bgp,implements,hot potato routing
+88,bgp,implements,route-selection algorithm
+88,bgp,implements,routing algorithm
+88,bgp,requires,port 179
+88,bgp,routes_to,destination prefix
+88,bgp,routes_to,prefix
+88,bgp,runs_on,tcp
+90,bgp,enables,ip-anycast service
+90,bgp,enables,policy
+90,bgp,has_part,as-path
+90,bgp,implements,hot potato routing
+90,bgp,implements,route-selection algorithm
+90,bgp,implements,routing algorithm
+90,bgp,requires,port 179
+90,bgp,routes_to,destination prefix
+90,bgp,routes_to,prefix
+90,bgp,runs_on,tcp
+90,gateway router,connects_to,router
+90,gateway router,is_a,router
+90,internal router,connects_to,host
+90,internal router,is_a,router
+91,internal router,connects_to,host
+91,internal router,is_a,router
+91,gateway router,connects_to,router
+91,gateway router,is_a,router
+93,tcp,provides,congestion control
+94,ebgp connection,enables,reachability information
+94,ebgp connection,is_a,bgp connection
+95,gateway router,connects_to,router
+95,gateway router,is_a,router
+96,gateway router,connects_to,router
+96,gateway router,is_a,router
+98,route,has_part,as-path
+98,route,has_part,next-hop
+102,hot potato routing,requires,cost
+104,forwarding table,contains,next-hop node
+104,forwarding table,maps_to,interface
+104,forwarding table,part_of,node
+104,forwarding table,part_of,router
+104,bgp,enables,ip-anycast service
+104,bgp,enables,policy
+104,bgp,has_part,as-path
+104,bgp,implements,hot potato routing
+104,bgp,implements,route-selection algorithm
+104,bgp,implements,routing algorithm
+104,bgp,requires,port 179
+104,bgp,routes_to,destination prefix
+104,bgp,routes_to,prefix
+104,bgp,runs_on,tcp
+104,hot potato routing,requires,cost
+105,ospf,implements,dijkstra's algorithm
+105,ospf,implements,link-state algorithm
+105,ospf,implements,link-state broadcast
+105,ospf,implements,link-state routing algorithm
+105,ospf,implements,reliable message transfer
+105,ospf,implements,routing algorithm
+105,ospf,is_a,link-state protocol
+105,ospf,provides,least-cost path routing
+105,ospf,runs_on,ip
+105,ospf,supports,authentication
+105,ospf,supports,md5 authentication
+105,ospf,supports,simple authentication
+105,hot potato routing,requires,cost
+106,hot potato routing,requires,cost
+106,bgp,enables,ip-anycast service
+106,bgp,enables,policy
+106,bgp,has_part,as-path
+106,bgp,implements,hot potato routing
+106,bgp,implements,route-selection algorithm
+106,bgp,implements,routing algorithm
+106,bgp,requires,port 179
+106,bgp,routes_to,destination prefix
+106,bgp,routes_to,prefix
+106,bgp,runs_on,tcp
+109,hot potato routing,requires,cost
+110,bgp,enables,ip-anycast service
+110,bgp,enables,policy
+110,bgp,has_part,as-path
+110,bgp,implements,hot potato routing
+110,bgp,implements,route-selection algorithm
+110,bgp,implements,routing algorithm
+110,bgp,requires,port 179
+110,bgp,routes_to,destination prefix
+110,bgp,routes_to,prefix
+110,bgp,runs_on,tcp
+112,cdn,supports,ip-anycast service
+113,ip address,identifies,dns server
+113,ip address,identifies,mail server
+113,ip address,identifies,web server
+114,ip address,identifies,dns server
+114,ip address,identifies,mail server
+114,ip address,identifies,web server
+115,cdn,supports,ip-anycast service
+115,ip address,identifies,dns server
+115,ip address,identifies,mail server
+115,ip address,identifies,web server
+123,bgp,enables,ip-anycast service
+123,bgp,enables,policy
+123,bgp,has_part,as-path
+123,bgp,implements,hot potato routing
+123,bgp,implements,route-selection algorithm
+123,bgp,implements,routing algorithm
+123,bgp,requires,port 179
+123,bgp,routes_to,destination prefix
+123,bgp,routes_to,prefix
+123,bgp,runs_on,tcp
+124,bgp,enables,ip-anycast service
+124,bgp,enables,policy
+124,bgp,has_part,as-path
+124,bgp,implements,hot potato routing
+124,bgp,implements,route-selection algorithm
+124,bgp,implements,routing algorithm
+124,bgp,requires,port 179
+124,bgp,routes_to,destination prefix
+124,bgp,routes_to,prefix
+124,bgp,runs_on,tcp
+125,gateway router,connects_to,router
+125,gateway router,is_a,router
+126,gateway router,connects_to,router
+126,gateway router,is_a,router
+127,domain name,maps_to,ip address
+129,ip datagram,contains,ttl
+129,ip datagram,contains,udp segment
+130,router,causes,oscillation
+130,router,forwards,ip datagram
+130,router,forwards,packet
+130,router,has_part,flow table
+130,router,has_part,forwarding table
+130,router,implements,bgp route-selection algorithm
+130,router,implements,decentralized routing algorithm
+130,router,implements,dijkstra's algorithm
+130,router,implements,distance vector routing
+130,router,implements,distance-vector algorithm
+130,router,implements,link state routing
+130,router,implements,link-state algorithm
+130,router,implements,ls algorithm
+130,router,implements,match-plus-action abstraction
+130,router,implements,route-selection algorithm
+130,router,part_of,autonomous system
+130,router,part_of,isp
+130,router,provides,firewalling
+130,router,provides,load sharing
+130,router,receives,distance vector
+130,router,receives,ip datagram
+130,router,receives,packet
+130,router,sends,distance vector
+130,router,sends,hello message
+130,router,sends,icmp
+130,router,sends,icmp warning message
+130,router,sends,link advertisement
+130,router,sends,link-state information
+130,router,sends,link-state packet
+130,router,sends,packet
+130,forwarding table,contains,next-hop node
+130,forwarding table,maps_to,interface
+130,forwarding table,part_of,node
+130,forwarding table,part_of,router
+130,bgp,enables,ip-anycast service
+130,bgp,enables,policy
+130,bgp,has_part,as-path
+130,bgp,implements,hot potato routing
+130,bgp,implements,route-selection algorithm
+130,bgp,implements,routing algorithm
+130,bgp,requires,port 179
+130,bgp,routes_to,destination prefix
+130,bgp,routes_to,prefix
+130,bgp,runs_on,tcp
+131,bgp,enables,ip-anycast service
+131,bgp,enables,policy
+131,bgp,has_part,as-path
+131,bgp,implements,hot potato routing
+131,bgp,implements,route-selection algorithm
+131,bgp,implements,routing algorithm
+131,bgp,requires,port 179
+131,bgp,routes_to,destination prefix
+131,bgp,routes_to,prefix
+131,bgp,runs_on,tcp
+134,flow table,contains,header field value
+134,flow table,has_part,flow table entry
+134,flow table,part_of,router
+134,flow table,part_of,sdn-controlled switch
+134,control plane,controls,router
+134,control plane,has_part,network-control application
+134,control plane,has_part,sdn controller
+136,sdn controller,communicates_with,sdn-enabled switch
+136,sdn controller,communicates_with,sdn-controlled switch
+136,sdn controller,communicates_with,switch
+136,sdn controller,enables,unbundling
+136,sdn controller,implements,openflow
+136,sdn controller,manages,flow table
+136,sdn controller,part_of,control plane
+136,sdn controller,provides,api
+136,sdn controller,provides,network state information
+137,sdn controller,communicates_with,sdn-enabled switch
+137,sdn controller,communicates_with,sdn-controlled switch
+137,sdn controller,communicates_with,switch
+137,sdn controller,enables,unbundling
+137,sdn controller,implements,openflow
+137,sdn controller,manages,flow table
+137,sdn controller,part_of,control plane
+137,sdn controller,provides,api
+137,sdn controller,provides,network state information
+139,sdn,controls,router
+139,sdn,implements,logically centralized control
+139,sdn,supports,4g/5g cellular networking
+141,sdn controller,communicates_with,sdn-enabled switch
+141,sdn controller,communicates_with,sdn-controlled switch
+141,sdn controller,communicates_with,switch
+141,sdn controller,enables,unbundling
+141,sdn controller,implements,openflow
+141,sdn controller,manages,flow table
+141,sdn controller,part_of,control plane
+141,sdn controller,provides,api
+141,sdn controller,provides,network state information
+142,sdn controller,communicates_with,sdn-enabled switch
+142,sdn controller,communicates_with,sdn-controlled switch
+142,sdn controller,communicates_with,switch
+142,sdn controller,enables,unbundling
+142,sdn controller,implements,openflow
+142,sdn controller,manages,flow table
+142,sdn controller,part_of,control plane
+142,sdn controller,provides,api
+142,sdn controller,provides,network state information
+147,opendaylight,is_a,sdn controller
+148,onos,is_a,sdn controller
+148,opendaylight,is_a,sdn controller
+149,openflow protocol,runs_on,tcp
+149,tcp,provides,congestion control
+149,sdn controller,communicates_with,sdn-enabled switch
+149,sdn controller,communicates_with,sdn-controlled switch
+149,sdn controller,communicates_with,switch
+149,sdn controller,enables,unbundling
+149,sdn controller,implements,openflow
+149,sdn controller,manages,flow table
+149,sdn controller,part_of,control plane
+149,sdn controller,provides,api
+149,sdn controller,provides,network state information
+153,sdn controller,communicates_with,sdn-enabled switch
+153,sdn controller,communicates_with,sdn-controlled switch
+153,sdn controller,communicates_with,switch
+153,sdn controller,enables,unbundling
+153,sdn controller,implements,openflow
+153,sdn controller,manages,flow table
+153,sdn controller,part_of,control plane
+153,sdn controller,provides,api
+153,sdn controller,provides,network state information
+155,openflow protocol,runs_on,tcp
+157,control plane,controls,router
+157,control plane,has_part,network-control application
+157,control plane,has_part,sdn controller
+157,sdn,controls,router
+157,sdn,implements,logically centralized control
+157,sdn,supports,4g/5g cellular networking
+160,icmp,enables,ping
+160,icmp,enables,traceroute
+160,icmp,provides,error reporting
+161,icmp,enables,ping
+161,icmp,enables,traceroute
+161,icmp,provides,error reporting
+161,ip datagram,contains,ttl
+161,ip datagram,contains,udp segment
+161,tcp,provides,congestion control
+162,ip datagram,contains,ttl
+162,ip datagram,contains,udp segment
+164,icmp source quench message,enables,congestion control
+165,ip datagram,contains,ttl
+165,ip datagram,contains,udp segment
+168,icmp,enables,ping
+168,icmp,enables,traceroute
+168,icmp,provides,error reporting
+169,network layer,has_part,control plane
+170,sdn,controls,router
+170,sdn,implements,logically centralized control
+170,sdn,supports,4g/5g cellular networking
+171,sdn,controls,router
+171,sdn,implements,logically centralized control
+171,sdn,supports,4g/5g cellular networking
+173,managing server,communicates_with,managed device
+173,managing server,controls,managed device
+173,managing server,receives,notification
+173,managing server,receives,response
+173,managing server,sends,request
+174,managed device,receives,rpc
+174,managed device,sends,notification
+174,host,communicates_with,router
+174,host,measures,round-trip time
+174,host,receives,icmp
+174,host,receives,icmp port unreachable message
+174,host,sends,icmp echo reply
+174,host,sends,icmp echo request
+174,host,sends,icmp port unreachable message
+174,host,sends,ip datagram
+174,router,causes,oscillation
+174,router,forwards,ip datagram
+174,router,forwards,packet
+174,router,has_part,flow table
+174,router,has_part,forwarding table
+174,router,implements,bgp route-selection algorithm
+174,router,implements,decentralized routing algorithm
+174,router,implements,dijkstra's algorithm
+174,router,implements,distance vector routing
+174,router,implements,distance-vector algorithm
+174,router,implements,link state routing
+174,router,implements,link-state algorithm
+174,router,implements,ls algorithm
+174,router,implements,match-plus-action abstraction
+174,router,implements,route-selection algorithm
+174,router,part_of,autonomous system
+174,router,part_of,isp
+174,router,provides,firewalling
+174,router,provides,load sharing
+174,router,receives,distance vector
+174,router,receives,ip datagram
+174,router,receives,packet
+174,router,sends,distance vector
+174,router,sends,hello message
+174,router,sends,icmp
+174,router,sends,icmp warning message
+174,router,sends,link advertisement
+174,router,sends,link-state information
+174,router,sends,link-state packet
+174,router,sends,packet
+174,switch,communicates_with,sdn controller
+175,ospf,implements,dijkstra's algorithm
+175,ospf,implements,link-state algorithm
+175,ospf,implements,link-state broadcast
+175,ospf,implements,link-state routing algorithm
+175,ospf,implements,reliable message transfer
+175,ospf,implements,routing algorithm
+175,ospf,is_a,link-state protocol
+175,ospf,provides,least-cost path routing
+175,ospf,runs_on,ip
+175,ospf,supports,authentication
+175,ospf,supports,md5 authentication
+175,ospf,supports,simple authentication
+175,ip address,identifies,dns server
+175,ip address,identifies,mail server
+175,ip address,identifies,web server
+176,managing server,communicates_with,managed device
+176,managing server,controls,managed device
+176,managing server,receives,notification
+176,managing server,receives,response
+176,managing server,sends,request
+177,network management protocol,connects_to,managed device
+181,snmp,operates_at,application layer
+181,snmp,runs_on,udp
+182,netconf,enables,device configuration
+182,netconf,enables,transaction
+182,netconf,provides,edit-config
+182,netconf,provides,get
+182,netconf,provides,get-config
+182,netconf,provides,lock
+182,netconf,requires,secure connection
+182,netconf,supports,rpc
+183,snmpv3,operates_at,application layer
+183,netconf,enables,device configuration
+183,netconf,enables,transaction
+183,netconf,provides,edit-config
+183,netconf,provides,get
+183,netconf,provides,get-config
+183,netconf,provides,lock
+183,netconf,requires,secure connection
+183,netconf,supports,rpc
+185,snmpv3,operates_at,application layer
+190,managing server,communicates_with,managed device
+190,managing server,controls,managed device
+190,managing server,receives,notification
+190,managing server,receives,response
+190,managing server,sends,request
+190,agent,communicates_with,managing server
+190,agent,sends,response
+190,agent,sends,trap
+191,snmpv3,operates_at,application layer
+192,snmpv3,operates_at,application layer
+193,router,causes,oscillation
+193,router,forwards,ip datagram
+193,router,forwards,packet
+193,router,has_part,flow table
+193,router,has_part,forwarding table
+193,router,implements,bgp route-selection algorithm
+193,router,implements,decentralized routing algorithm
+193,router,implements,dijkstra's algorithm
+193,router,implements,distance vector routing
+193,router,implements,distance-vector algorithm
+193,router,implements,link state routing
+193,router,implements,link-state algorithm
+193,router,implements,ls algorithm
+193,router,implements,match-plus-action abstraction
+193,router,implements,route-selection algorithm
+193,router,part_of,autonomous system
+193,router,part_of,isp
+193,router,provides,firewalling
+193,router,provides,load sharing
+193,router,receives,distance vector
+193,router,receives,ip datagram
+193,router,receives,packet
+193,router,sends,distance vector
+193,router,sends,hello message
+193,router,sends,icmp
+193,router,sends,icmp warning message
+193,router,sends,link advertisement
+193,router,sends,link-state information
+193,router,sends,link-state packet
+193,router,sends,packet
+194,tcp,provides,congestion control
+195,managing server,communicates_with,managed device
+195,managing server,controls,managed device
+195,managing server,receives,notification
+195,managing server,receives,response
+195,managing server,sends,request
+196,netconf,enables,device configuration
+196,netconf,enables,transaction
+196,netconf,provides,edit-config
+196,netconf,provides,get
+196,netconf,provides,get-config
+196,netconf,provides,lock
+196,netconf,requires,secure connection
+196,netconf,supports,rpc
+196,tls,runs_on,tcp
+196,tcp,provides,congestion control
+197,managing server,communicates_with,managed device
+197,managing server,controls,managed device
+197,managing server,receives,notification
+197,managing server,receives,response
+197,managing server,sends,request
+197,client,communicates_with,cdn
+197,client,communicates_with,web server
+197,client,receives,ip address
+197,client,sends,packet
+197,server,communicates_with,device
+198,netconf,enables,device configuration
+198,netconf,enables,transaction
+198,netconf,provides,edit-config
+198,netconf,provides,get
+198,netconf,provides,get-config
+198,netconf,provides,lock
+198,netconf,requires,secure connection
+198,netconf,supports,rpc
+199,snmp,operates_at,application layer
+199,snmp,runs_on,udp
+199,netconf,enables,device configuration
+199,netconf,enables,transaction
+199,netconf,provides,edit-config
+199,netconf,provides,get
+199,netconf,provides,get-config
+199,netconf,provides,lock
+199,netconf,requires,secure connection
+199,netconf,supports,rpc
+200,netconf,enables,device configuration
+200,netconf,enables,transaction
+200,netconf,provides,edit-config
+200,netconf,provides,get
+200,netconf,provides,get-config
+200,netconf,provides,lock
+200,netconf,requires,secure connection
+200,netconf,supports,rpc
+201,netconf,enables,device configuration
+201,netconf,enables,transaction
+201,netconf,provides,edit-config
+201,netconf,provides,get
+201,netconf,provides,get-config
+201,netconf,provides,lock
+201,netconf,requires,secure connection
+201,netconf,supports,rpc
+204,snmp,operates_at,application layer
+204,snmp,runs_on,udp
+206,control plane,controls,router
+206,control plane,has_part,network-control application
+206,control plane,has_part,sdn controller
+206,router,causes,oscillation
+206,router,forwards,ip datagram
+206,router,forwards,packet
+206,router,has_part,flow table
+206,router,has_part,forwarding table
+206,router,implements,bgp route-selection algorithm
+206,router,implements,decentralized routing algorithm
+206,router,implements,dijkstra's algorithm
+206,router,implements,distance vector routing
+206,router,implements,distance-vector algorithm
+206,router,implements,link state routing
+206,router,implements,link-state algorithm
+206,router,implements,ls algorithm
+206,router,implements,match-plus-action abstraction
+206,router,implements,route-selection algorithm
+206,router,part_of,autonomous system
+206,router,part_of,isp
+206,router,provides,firewalling
+206,router,provides,load sharing
+206,router,receives,distance vector
+206,router,receives,ip datagram
+206,router,receives,packet
+206,router,sends,distance vector
+206,router,sends,hello message
+206,router,sends,icmp
+206,router,sends,icmp warning message
+206,router,sends,link advertisement
+206,router,sends,link-state information
+206,router,sends,link-state packet
+206,router,sends,packet
+206,sdn,controls,router
+206,sdn,implements,logically centralized control
+206,sdn,supports,4g/5g cellular networking
+207,ospf,implements,dijkstra's algorithm
+207,ospf,implements,link-state algorithm
+207,ospf,implements,link-state broadcast
+207,ospf,implements,link-state routing algorithm
+207,ospf,implements,reliable message transfer
+207,ospf,implements,routing algorithm
+207,ospf,is_a,link-state protocol
+207,ospf,provides,least-cost path routing
+207,ospf,runs_on,ip
+207,ospf,supports,authentication
+207,ospf,supports,md5 authentication
+207,ospf,supports,simple authentication
+207,bgp,enables,ip-anycast service
+207,bgp,enables,policy
+207,bgp,has_part,as-path
+207,bgp,implements,hot potato routing
+207,bgp,implements,route-selection algorithm
+207,bgp,implements,routing algorithm
+207,bgp,requires,port 179
+207,bgp,routes_to,destination prefix
+207,bgp,routes_to,prefix
+207,bgp,runs_on,tcp
+207,sdn,controls,router
+207,sdn,implements,logically centralized control
+207,sdn,supports,4g/5g cellular networking
+208,sdn controller,communicates_with,sdn-enabled switch
+208,sdn controller,communicates_with,sdn-controlled switch
+208,sdn controller,communicates_with,switch
+208,sdn controller,enables,unbundling
+208,sdn controller,implements,openflow
+208,sdn controller,manages,flow table
+208,sdn controller,part_of,control plane
+208,sdn controller,provides,api
+208,sdn controller,provides,network state information
+208,openflow protocol,runs_on,tcp
+208,icmp,enables,ping
+208,icmp,enables,traceroute
+208,icmp,provides,error reporting
+208,snmp,operates_at,application layer
+208,snmp,runs_on,udp
+208,netconf,enables,device configuration
+208,netconf,enables,transaction
+208,netconf,provides,edit-config
+208,netconf,provides,get
+208,netconf,provides,get-config
+208,netconf,provides,lock
+208,netconf,requires,secure connection
+208,netconf,supports,rpc
+208,network layer,has_part,control plane
+209,network layer,has_part,control plane
+209,ospf,implements,dijkstra's algorithm
+209,ospf,implements,link-state algorithm
+209,ospf,implements,link-state broadcast
+209,ospf,implements,link-state routing algorithm
+209,ospf,implements,reliable message transfer
+209,ospf,implements,routing algorithm
+209,ospf,is_a,link-state protocol
+209,ospf,provides,least-cost path routing
+209,ospf,runs_on,ip
+209,ospf,supports,authentication
+209,ospf,supports,md5 authentication
+209,ospf,supports,simple authentication
+209,bgp,enables,ip-anycast service
+209,bgp,enables,policy
+209,bgp,has_part,as-path
+209,bgp,implements,hot potato routing
+209,bgp,implements,route-selection algorithm
+209,bgp,implements,routing algorithm
+209,bgp,requires,port 179
+209,bgp,routes_to,destination prefix
+209,bgp,routes_to,prefix
+209,bgp,runs_on,tcp
+210,bgp,enables,ip-anycast service
+210,bgp,enables,policy
+210,bgp,has_part,as-path
+210,bgp,implements,hot potato routing
+210,bgp,implements,route-selection algorithm
+210,bgp,implements,routing algorithm
+210,bgp,requires,port 179
+210,bgp,routes_to,destination prefix
+210,bgp,routes_to,prefix
+210,bgp,runs_on,tcp
+214,distance vector,contains,cost
+216,distance vector,contains,cost
+217,poisoned reverse,mitigates,count-to-infinity problem
+218,bgp,enables,ip-anycast service
+218,bgp,enables,policy
+218,bgp,has_part,as-path
+218,bgp,implements,hot potato routing
+218,bgp,implements,route-selection algorithm
+218,bgp,implements,routing algorithm
+218,bgp,requires,port 179
+218,bgp,routes_to,destination prefix
+218,bgp,routes_to,prefix
+218,bgp,runs_on,tcp
+218,ospf,implements,dijkstra's algorithm
+218,ospf,implements,link-state algorithm
+218,ospf,implements,link-state broadcast
+218,ospf,implements,link-state routing algorithm
+218,ospf,implements,reliable message transfer
+218,ospf,implements,routing algorithm
+218,ospf,is_a,link-state protocol
+218,ospf,provides,least-cost path routing
+218,ospf,runs_on,ip
+218,ospf,supports,authentication
+218,ospf,supports,md5 authentication
+218,ospf,supports,simple authentication
+219,rip,implements,distance-vector algorithm
+220,forwarding table,contains,next-hop node
+220,forwarding table,maps_to,interface
+220,forwarding table,part_of,node
+220,forwarding table,part_of,router
+222,bgp,enables,ip-anycast service
+222,bgp,enables,policy
+222,bgp,has_part,as-path
+222,bgp,implements,hot potato routing
+222,bgp,implements,route-selection algorithm
+222,bgp,implements,routing algorithm
+222,bgp,requires,port 179
+222,bgp,routes_to,destination prefix
+222,bgp,routes_to,prefix
+222,bgp,runs_on,tcp
+225,snmp,operates_at,application layer
+225,snmp,runs_on,udp
+226,icmp,enables,ping
+226,icmp,enables,traceroute
+226,icmp,provides,error reporting
+226,ping,measures,packet loss
+226,ping,measures,rtt
+226,ping,receives,icmp echo response
+226,ping,sends,icmp echo request
+227,icmp,enables,ping
+227,icmp,enables,traceroute
+227,icmp,provides,error reporting

@@ -1,0 +1,992 @@
+id,head,relation_type,tail
+0,link layer,has_part,hardware
+0,link layer,has_part,software
+0,link layer,provides,error correction
+0,link layer,provides,error detection
+0,link layer,provides,framing
+0,link layer,provides,link access
+0,link layer,provides,link-layer addressing information
+1,switch,connects_to,interface
+1,switch,connects_to,lan segment
+1,switch,connects_to,router
+1,switch,connects_to,server
+1,switch,forwards,ethernet frame
+1,switch,forwards,frame
+1,switch,forwards,link-layer frame
+1,switch,has_part,buffer
+1,switch,has_part,forwarding table
+1,switch,has_part,port-to-vlan mapping table
+1,switch,has_part,switch table
+1,switch,implements,ethernet
+1,switch,implements,store-and-forward
+1,switch,operates_at,data link layer
+1,switch,operates_at,layer 2
+1,switch,operates_at,link layer
+1,switch,prevents,collision
+1,switch,provides,store-and-forward
+1,switch,receives,frame
+1,switch,receives,link-layer frame
+1,switch,supports,vlan
+1,router,connects_to,hub
+1,router,connects_to,switch
+1,router,forwards,ip datagram
+1,router,has_part,adapter
+1,router,has_part,forwarding table
+1,router,implements,store-and-forward
+1,router,operates_at,network layer
+1,router,provides,firewall protection
+1,router,receives,frame
+1,router,requires,ip address
+1,router,sends,frame
+2,medium access protocol,enables,frame
+4,ethernet,has_part,csma/cd
+4,ethernet,implements,binary exponential backoff algorithm
+4,ethernet,implements,csma/cd
+4,ethernet,operates_at,link layer
+4,ethernet,provides,connectionless service
+4,ethernet,supports,broadcast channel
+4,ethernet,supports,broadcast link
+4,node,connects_to,adapter
+4,node,receives,frame
+4,node,receives,token
+4,node,sends,frame
+4,node,sends,packet
+6,router,connects_to,hub
+6,router,connects_to,switch
+6,router,forwards,ip datagram
+6,router,has_part,adapter
+6,router,has_part,forwarding table
+6,router,implements,store-and-forward
+6,router,operates_at,network layer
+6,router,provides,firewall protection
+6,router,receives,frame
+6,router,requires,ip address
+6,router,sends,frame
+8,link,connects_to,host
+10,frame,contains,mac address
+10,frame,contains,mac broadcast address
+10,frame,contains,mpls header
+10,frame,contains,packet
+10,frame,has_part,cyclic redundancy check
+10,frame,has_part,preamble
+10,frame,has_part,source address
+10,frame,has_part,type field
+11,tcp,requires,internet checksum
+14,ethernet,has_part,csma/cd
+14,ethernet,implements,binary exponential backoff algorithm
+14,ethernet,implements,csma/cd
+14,ethernet,operates_at,link layer
+14,ethernet,provides,connectionless service
+14,ethernet,supports,broadcast channel
+14,ethernet,supports,broadcast link
+15,network adapter,implements,error correction
+15,network adapter,implements,error detection
+15,network adapter,implements,framing
+15,network adapter,implements,link access
+19,link layer,has_part,hardware
+19,link layer,has_part,software
+19,link layer,provides,error correction
+19,link layer,provides,error detection
+19,link layer,provides,framing
+19,link layer,provides,link access
+19,link layer,provides,link-layer addressing information
+23,single parity bit,enables,error detection
+23,even parity scheme,contains,single parity bit
+23,even parity scheme,provides,error detection
+25,burst error,causes,undetected error
+28,forward error correction,provides,error correction
+28,forward error correction,supports,arq
+31,tcp,requires,internet checksum
+31,udp,contains,dns query
+32,ip,operates_at,network layer
+32,ip,requires,internet checksum
+32,xtp,requires,checksum
+32,cyclic redundancy check,operates_at,link layer
+32,cyclic redundancy check,provides,error detection
+32,cyclic redundancy check,requires,modulo-2 arithmetic
+32,cyclic redundancy check,requires,xor
+32,cyclic redundancy check,supports,link layer
+32,tcp,requires,internet checksum
+32,udp,contains,dns query
+33,link layer,has_part,hardware
+33,link layer,has_part,software
+33,link layer,provides,error correction
+33,link layer,provides,error detection
+33,link layer,provides,framing
+33,link layer,provides,link access
+33,link layer,provides,link-layer addressing information
+33,transport layer,provides,error correction
+33,transport layer,provides,error detection
+33,cyclic redundancy check,operates_at,link layer
+33,cyclic redundancy check,provides,error detection
+33,cyclic redundancy check,requires,modulo-2 arithmetic
+33,cyclic redundancy check,requires,xor
+33,cyclic redundancy check,supports,link layer
+34,cyclic redundancy check,operates_at,link layer
+34,cyclic redundancy check,provides,error detection
+34,cyclic redundancy check,requires,modulo-2 arithmetic
+34,cyclic redundancy check,requires,xor
+34,cyclic redundancy check,supports,link layer
+34,crc,requires,generator 1001
+34,crc,requires,generator 10011
+41,ethernet,has_part,csma/cd
+41,ethernet,implements,binary exponential backoff algorithm
+41,ethernet,implements,csma/cd
+41,ethernet,operates_at,link layer
+41,ethernet,provides,connectionless service
+41,ethernet,supports,broadcast channel
+41,ethernet,supports,broadcast link
+46,collision,causes,packet loss
+46,collision,decreases,bandwidth
+46,multiple access protocol,supports,broadcast channel
+50,tdm,prevents,collision
+51,tdm,prevents,collision
+52,tdm,prevents,collision
+53,fdm,prevents,collision
+53,fdm,supports,broadcast channel
+53,tdm,prevents,collision
+54,cdma,supports,broadcast channel
+55,cdma,supports,broadcast channel
+57,csma,is_a,random access protocol
+57,csma,requires,carrier sensing
+57,ethernet,has_part,csma/cd
+57,ethernet,implements,binary exponential backoff algorithm
+57,ethernet,implements,csma/cd
+57,ethernet,operates_at,link layer
+57,ethernet,provides,connectionless service
+57,ethernet,supports,broadcast channel
+57,ethernet,supports,broadcast link
+74,csma,is_a,random access protocol
+74,csma,requires,carrier sensing
+80,adapter,connects_to,broadcast channel
+80,adapter,has_part,buffer
+80,adapter,has_part,mac address
+80,adapter,implements,cyclic redundancy check
+80,adapter,part_of,node
+80,adapter,receives,datagram
+80,adapter,receives,ethernet frame
+80,adapter,receives,frame
+80,adapter,receives,ip datagram
+80,adapter,sends,ethernet frame
+80,adapter,sends,frame
+80,frame,contains,mac address
+80,frame,contains,mac broadcast address
+80,frame,contains,mpls header
+80,frame,contains,packet
+80,frame,has_part,cyclic redundancy check
+80,frame,has_part,preamble
+80,frame,has_part,source address
+80,frame,has_part,type field
+82,ethernet,has_part,csma/cd
+82,ethernet,implements,binary exponential backoff algorithm
+82,ethernet,implements,csma/cd
+82,ethernet,operates_at,link layer
+82,ethernet,provides,connectionless service
+82,ethernet,supports,broadcast channel
+82,ethernet,supports,broadcast link
+82,docsis,implements,binary exponential backoff algorithm
+85,ethernet,has_part,csma/cd
+85,ethernet,implements,binary exponential backoff algorithm
+85,ethernet,implements,csma/cd
+85,ethernet,operates_at,link layer
+85,ethernet,provides,connectionless service
+85,ethernet,supports,broadcast channel
+85,ethernet,supports,broadcast link
+88,aloha,is_a,random access protocol
+91,token,is_a,frame
+92,token,is_a,frame
+94,fdm,prevents,collision
+94,fdm,supports,broadcast channel
+95,upstream channel,contains,mini-slot
+95,cmts,receives,mini-slot-request frame
+95,cmts,sends,map message
+96,cmts,receives,mini-slot-request frame
+96,cmts,sends,map message
+99,fdm,prevents,collision
+99,fdm,supports,broadcast channel
+99,tdm,prevents,collision
+99,switched local network,contains,switch
+99,link layer,has_part,hardware
+99,link layer,has_part,software
+99,link layer,provides,error correction
+99,link layer,provides,error detection
+99,link layer,provides,framing
+99,link layer,provides,link access
+99,link layer,provides,link-layer addressing information
+100,ospf,implements,link-state routing
+100,ospf,supports,link-state information
+103,mac address,identifies,adapter
+103,ethernet,has_part,csma/cd
+103,ethernet,implements,binary exponential backoff algorithm
+103,ethernet,implements,csma/cd
+103,ethernet,operates_at,link layer
+103,ethernet,provides,connectionless service
+103,ethernet,supports,broadcast channel
+103,ethernet,supports,broadcast link
+104,mac address,identifies,adapter
+105,mac address,identifies,adapter
+106,mac address,identifies,adapter
+107,mac address,identifies,adapter
+107,ip address,identifies,host
+107,ip address,identifies,router
+107,ip address,maps_to,mac address
+108,mac address,identifies,adapter
+109,ethernet,has_part,csma/cd
+109,ethernet,implements,binary exponential backoff algorithm
+109,ethernet,implements,csma/cd
+109,ethernet,operates_at,link layer
+109,ethernet,provides,connectionless service
+109,ethernet,supports,broadcast channel
+109,ethernet,supports,broadcast link
+111,switch,connects_to,interface
+111,switch,connects_to,lan segment
+111,switch,connects_to,router
+111,switch,connects_to,server
+111,switch,forwards,ethernet frame
+111,switch,forwards,frame
+111,switch,forwards,link-layer frame
+111,switch,has_part,buffer
+111,switch,has_part,forwarding table
+111,switch,has_part,port-to-vlan mapping table
+111,switch,has_part,switch table
+111,switch,implements,ethernet
+111,switch,implements,store-and-forward
+111,switch,operates_at,data link layer
+111,switch,operates_at,layer 2
+111,switch,operates_at,link layer
+111,switch,prevents,collision
+111,switch,provides,store-and-forward
+111,switch,receives,frame
+111,switch,receives,link-layer frame
+111,switch,supports,vlan
+111,frame,contains,mac address
+111,frame,contains,mac broadcast address
+111,frame,contains,mpls header
+111,frame,contains,packet
+111,frame,has_part,cyclic redundancy check
+111,frame,has_part,preamble
+111,frame,has_part,source address
+111,frame,has_part,type field
+112,mac address,identifies,adapter
+113,mac address,identifies,adapter
+114,arp table,contains,ip address
+114,arp table,contains,mac address
+115,arp table,contains,ip address
+115,arp table,contains,mac address
+116,arp table,contains,ip address
+116,arp table,contains,mac address
+119,arp packet,contains,ip address
+119,arp packet,contains,mac address
+119,arp table,contains,ip address
+119,arp table,contains,mac address
+120,arp table,contains,ip address
+120,arp table,contains,mac address
+121,arp packet,contains,ip address
+121,arp packet,contains,mac address
+122,router,connects_to,hub
+122,router,connects_to,switch
+122,router,forwards,ip datagram
+122,router,has_part,adapter
+122,router,has_part,forwarding table
+122,router,implements,store-and-forward
+122,router,operates_at,network layer
+122,router,provides,firewall protection
+122,router,receives,frame
+122,router,requires,ip address
+122,router,sends,frame
+123,ip address,identifies,host
+123,ip address,identifies,router
+123,ip address,maps_to,mac address
+123,adapter,connects_to,broadcast channel
+123,adapter,has_part,buffer
+123,adapter,has_part,mac address
+123,adapter,implements,cyclic redundancy check
+123,adapter,part_of,node
+123,adapter,receives,datagram
+123,adapter,receives,ethernet frame
+123,adapter,receives,frame
+123,adapter,receives,ip datagram
+123,adapter,sends,ethernet frame
+123,adapter,sends,frame
+123,mac address,identifies,adapter
+125,adapter,connects_to,broadcast channel
+125,adapter,has_part,buffer
+125,adapter,has_part,mac address
+125,adapter,implements,cyclic redundancy check
+125,adapter,part_of,node
+125,adapter,receives,datagram
+125,adapter,receives,ethernet frame
+125,adapter,receives,frame
+125,adapter,receives,ip datagram
+125,adapter,sends,ethernet frame
+125,adapter,sends,frame
+126,mac address,identifies,adapter
+127,arp,identifies,mac address
+127,arp,maps_to,mac address
+127,arp,operates_at,link layer
+127,mac address,identifies,adapter
+128,router,connects_to,hub
+128,router,connects_to,switch
+128,router,forwards,ip datagram
+128,router,has_part,adapter
+128,router,has_part,forwarding table
+128,router,implements,store-and-forward
+128,router,operates_at,network layer
+128,router,provides,firewall protection
+128,router,receives,frame
+128,router,requires,ip address
+128,router,sends,frame
+128,forwarding table,contains,mac address
+128,forwarding table,part_of,gateway router
+128,forwarding table,part_of,router
+128,forwarding table,part_of,switch
+128,adapter,connects_to,broadcast channel
+128,adapter,has_part,buffer
+128,adapter,has_part,mac address
+128,adapter,implements,cyclic redundancy check
+128,adapter,part_of,node
+128,adapter,receives,datagram
+128,adapter,receives,ethernet frame
+128,adapter,receives,frame
+128,adapter,receives,ip datagram
+128,adapter,sends,ethernet frame
+128,adapter,sends,frame
+129,arp,identifies,mac address
+129,arp,maps_to,mac address
+129,arp,operates_at,link layer
+129,ethernet,has_part,csma/cd
+129,ethernet,implements,binary exponential backoff algorithm
+129,ethernet,implements,csma/cd
+129,ethernet,operates_at,link layer
+129,ethernet,provides,connectionless service
+129,ethernet,supports,broadcast channel
+129,ethernet,supports,broadcast link
+129,mac address,identifies,adapter
+130,ethernet,has_part,csma/cd
+130,ethernet,implements,binary exponential backoff algorithm
+130,ethernet,implements,csma/cd
+130,ethernet,operates_at,link layer
+130,ethernet,provides,connectionless service
+130,ethernet,supports,broadcast channel
+130,ethernet,supports,broadcast link
+132,ethernet,has_part,csma/cd
+132,ethernet,implements,binary exponential backoff algorithm
+132,ethernet,implements,csma/cd
+132,ethernet,operates_at,link layer
+132,ethernet,provides,connectionless service
+132,ethernet,supports,broadcast channel
+132,ethernet,supports,broadcast link
+133,hub,operates_at,physical layer
+133,hub,receives,ethernet frame
+134,hub,operates_at,physical layer
+134,hub,receives,ethernet frame
+134,collision,causes,packet loss
+134,collision,decreases,bandwidth
+134,switch,connects_to,interface
+134,switch,connects_to,lan segment
+134,switch,connects_to,router
+134,switch,connects_to,server
+134,switch,forwards,ethernet frame
+134,switch,forwards,frame
+134,switch,forwards,link-layer frame
+134,switch,has_part,buffer
+134,switch,has_part,forwarding table
+134,switch,has_part,port-to-vlan mapping table
+134,switch,has_part,switch table
+134,switch,implements,ethernet
+134,switch,implements,store-and-forward
+134,switch,operates_at,data link layer
+134,switch,operates_at,layer 2
+134,switch,operates_at,link layer
+134,switch,prevents,collision
+134,switch,provides,store-and-forward
+134,switch,receives,frame
+134,switch,receives,link-layer frame
+134,switch,supports,vlan
+135,ethernet frame,contains,arp query message
+135,ethernet frame,contains,arp reply message
+135,ethernet frame,contains,ip datagram
+135,ethernet frame,contains,vlan tag
+135,ethernet frame,has_part,data field
+136,ethernet frame,contains,arp query message
+136,ethernet frame,contains,arp reply message
+136,ethernet frame,contains,ip datagram
+136,ethernet frame,contains,vlan tag
+136,ethernet frame,has_part,data field
+137,ethernet,has_part,csma/cd
+137,ethernet,implements,binary exponential backoff algorithm
+137,ethernet,implements,csma/cd
+137,ethernet,operates_at,link layer
+137,ethernet,provides,connectionless service
+137,ethernet,supports,broadcast channel
+137,ethernet,supports,broadcast link
+138,ethernet frame,contains,arp query message
+138,ethernet frame,contains,arp reply message
+138,ethernet frame,contains,ip datagram
+138,ethernet frame,contains,vlan tag
+138,ethernet frame,has_part,data field
+138,mac address,identifies,adapter
+139,mac address,identifies,adapter
+139,type field,maps_to,appletalk
+139,type field,maps_to,novell ipx
+139,ethernet,has_part,csma/cd
+139,ethernet,implements,binary exponential backoff algorithm
+139,ethernet,implements,csma/cd
+139,ethernet,operates_at,link layer
+139,ethernet,provides,connectionless service
+139,ethernet,supports,broadcast channel
+139,ethernet,supports,broadcast link
+139,ip,operates_at,network layer
+139,ip,requires,internet checksum
+140,ip,operates_at,network layer
+140,ip,requires,internet checksum
+141,cyclic redundancy check,operates_at,link layer
+141,cyclic redundancy check,provides,error detection
+141,cyclic redundancy check,requires,modulo-2 arithmetic
+141,cyclic redundancy check,requires,xor
+141,cyclic redundancy check,supports,link layer
+144,udp,contains,dns query
+145,link layer,has_part,hardware
+145,link layer,has_part,software
+145,link layer,provides,error correction
+145,link layer,provides,error detection
+145,link layer,provides,framing
+145,link layer,provides,link access
+145,link layer,provides,link-layer addressing information
+145,ethernet,has_part,csma/cd
+145,ethernet,implements,binary exponential backoff algorithm
+145,ethernet,implements,csma/cd
+145,ethernet,operates_at,link layer
+145,ethernet,provides,connectionless service
+145,ethernet,supports,broadcast channel
+145,ethernet,supports,broadcast link
+146,udp,contains,dns query
+146,tcp,requires,internet checksum
+150,repeater,operates_at,physical layer
+151,switch,connects_to,interface
+151,switch,connects_to,lan segment
+151,switch,connects_to,router
+151,switch,connects_to,server
+151,switch,forwards,ethernet frame
+151,switch,forwards,frame
+151,switch,forwards,link-layer frame
+151,switch,has_part,buffer
+151,switch,has_part,forwarding table
+151,switch,has_part,port-to-vlan mapping table
+151,switch,has_part,switch table
+151,switch,implements,ethernet
+151,switch,implements,store-and-forward
+151,switch,operates_at,data link layer
+151,switch,operates_at,layer 2
+151,switch,operates_at,link layer
+151,switch,prevents,collision
+151,switch,provides,store-and-forward
+151,switch,receives,frame
+151,switch,receives,link-layer frame
+151,switch,supports,vlan
+152,gigabit ethernet,supports,csma/cd
+153,gigabit ethernet,supports,csma/cd
+157,switch,connects_to,interface
+157,switch,connects_to,lan segment
+157,switch,connects_to,router
+157,switch,connects_to,server
+157,switch,forwards,ethernet frame
+157,switch,forwards,frame
+157,switch,forwards,link-layer frame
+157,switch,has_part,buffer
+157,switch,has_part,forwarding table
+157,switch,has_part,port-to-vlan mapping table
+157,switch,has_part,switch table
+157,switch,implements,ethernet
+157,switch,implements,store-and-forward
+157,switch,operates_at,data link layer
+157,switch,operates_at,layer 2
+157,switch,operates_at,link layer
+157,switch,prevents,collision
+157,switch,provides,store-and-forward
+157,switch,receives,frame
+157,switch,receives,link-layer frame
+157,switch,supports,vlan
+158,router,connects_to,hub
+158,router,connects_to,switch
+158,router,forwards,ip datagram
+158,router,has_part,adapter
+158,router,has_part,forwarding table
+158,router,implements,store-and-forward
+158,router,operates_at,network layer
+158,router,provides,firewall protection
+158,router,receives,frame
+158,router,requires,ip address
+158,router,sends,frame
+158,switch,connects_to,interface
+158,switch,connects_to,lan segment
+158,switch,connects_to,router
+158,switch,connects_to,server
+158,switch,forwards,ethernet frame
+158,switch,forwards,frame
+158,switch,forwards,link-layer frame
+158,switch,has_part,buffer
+158,switch,has_part,forwarding table
+158,switch,has_part,port-to-vlan mapping table
+158,switch,has_part,switch table
+158,switch,implements,ethernet
+158,switch,implements,store-and-forward
+158,switch,operates_at,data link layer
+158,switch,operates_at,layer 2
+158,switch,operates_at,link layer
+158,switch,prevents,collision
+158,switch,provides,store-and-forward
+158,switch,receives,frame
+158,switch,receives,link-layer frame
+158,switch,supports,vlan
+159,switch table,contains,mac address
+159,switch table,part_of,switch
+159,mac address,identifies,adapter
+161,switch table,contains,mac address
+161,switch table,part_of,switch
+161,mac address,identifies,adapter
+163,output buffer,part_of,switch
+163,switch table,contains,mac address
+163,switch table,part_of,switch
+164,switch table,contains,mac address
+164,switch table,part_of,switch
+166,mac address,identifies,adapter
+168,switch,connects_to,interface
+168,switch,connects_to,lan segment
+168,switch,connects_to,router
+168,switch,connects_to,server
+168,switch,forwards,ethernet frame
+168,switch,forwards,frame
+168,switch,forwards,link-layer frame
+168,switch,has_part,buffer
+168,switch,has_part,forwarding table
+168,switch,has_part,port-to-vlan mapping table
+168,switch,has_part,switch table
+168,switch,implements,ethernet
+168,switch,implements,store-and-forward
+168,switch,operates_at,data link layer
+168,switch,operates_at,layer 2
+168,switch,operates_at,link layer
+168,switch,prevents,collision
+168,switch,provides,store-and-forward
+168,switch,receives,frame
+168,switch,receives,link-layer frame
+168,switch,supports,vlan
+177,ip,operates_at,network layer
+177,ip,requires,internet checksum
+181,arp,identifies,mac address
+181,arp,maps_to,mac address
+181,arp,operates_at,link layer
+182,router,connects_to,hub
+182,router,connects_to,switch
+182,router,forwards,ip datagram
+182,router,has_part,adapter
+182,router,has_part,forwarding table
+182,router,implements,store-and-forward
+182,router,operates_at,network layer
+182,router,provides,firewall protection
+182,router,receives,frame
+182,router,requires,ip address
+182,router,sends,frame
+187,router,connects_to,hub
+187,router,connects_to,switch
+187,router,forwards,ip datagram
+187,router,has_part,adapter
+187,router,has_part,forwarding table
+187,router,implements,store-and-forward
+187,router,operates_at,network layer
+187,router,provides,firewall protection
+187,router,receives,frame
+187,router,requires,ip address
+187,router,sends,frame
+188,vlan,has_part,priority field
+190,trunk port,connects_to,switch
+190,trunk port,supports,vlan
+191,vlan tag,has_part,priority field
+191,vlan tag,has_part,tag control information
+191,vlan tag,has_part,tag protocol identifier
+195,vlan,has_part,priority field
+197,mpls,enables,traffic engineering
+197,mpls,implements,vpn
+197,mpls,provides,traffic engineering
+200,ethernet,has_part,csma/cd
+200,ethernet,implements,binary exponential backoff algorithm
+200,ethernet,implements,csma/cd
+200,ethernet,operates_at,link layer
+200,ethernet,provides,connectionless service
+200,ethernet,supports,broadcast channel
+200,ethernet,supports,broadcast link
+202,forwarding table,contains,mac address
+202,forwarding table,part_of,gateway router
+202,forwarding table,part_of,router
+202,forwarding table,part_of,switch
+207,ospf,implements,link-state routing
+207,ospf,supports,link-state information
+208,mpls,enables,traffic engineering
+208,mpls,implements,vpn
+208,mpls,provides,traffic engineering
+209,mpls,enables,traffic engineering
+209,mpls,implements,vpn
+209,mpls,provides,traffic engineering
+216,data center network,connects_to,host
+216,data center network,has_part,border router
+216,data center network,has_part,switch
+219,border router,connects_to,access router
+219,border router,connects_to,data center network
+220,border router,connects_to,access router
+220,border router,connects_to,data center network
+221,ethernet,has_part,csma/cd
+221,ethernet,implements,binary exponential backoff algorithm
+221,ethernet,implements,csma/cd
+221,ethernet,operates_at,link layer
+221,ethernet,provides,connectionless service
+221,ethernet,supports,broadcast channel
+221,ethernet,supports,broadcast link
+222,access router,connects_to,top-tier switch
+232,tor switch,connects_to,second-tier switch
+232,tor switch,connects_to,server
+232,tor switch,connects_to,tier-2 switch
+235,control plane,enables,operational state management
+235,control plane,manages,data plane
+238,tcp,requires,internet checksum
+238,rdma,runs_on,ethernet
+242,link layer,has_part,hardware
+242,link layer,has_part,software
+242,link layer,provides,error correction
+242,link layer,provides,error detection
+242,link layer,provides,framing
+242,link layer,provides,link access
+242,link layer,provides,link-layer addressing information
+245,router,connects_to,hub
+245,router,connects_to,switch
+245,router,forwards,ip datagram
+245,router,has_part,adapter
+245,router,has_part,forwarding table
+245,router,implements,store-and-forward
+245,router,operates_at,network layer
+245,router,provides,firewall protection
+245,router,receives,frame
+245,router,requires,ip address
+245,router,sends,frame
+246,udp,contains,dns query
+247,ethernet frame,contains,arp query message
+247,ethernet frame,contains,arp reply message
+247,ethernet frame,contains,ip datagram
+247,ethernet frame,contains,vlan tag
+247,ethernet frame,has_part,data field
+248,ethernet frame,contains,arp query message
+248,ethernet frame,contains,arp reply message
+248,ethernet frame,contains,ip datagram
+248,ethernet frame,contains,vlan tag
+248,ethernet frame,has_part,data field
+248,mac address,identifies,adapter
+251,ethernet frame,contains,arp query message
+251,ethernet frame,contains,arp reply message
+251,ethernet frame,contains,ip datagram
+251,ethernet frame,contains,vlan tag
+251,ethernet frame,has_part,data field
+252,ethernet frame,contains,arp query message
+252,ethernet frame,contains,arp reply message
+252,ethernet frame,contains,ip datagram
+252,ethernet frame,contains,vlan tag
+252,ethernet frame,has_part,data field
+252,switch,connects_to,interface
+252,switch,connects_to,lan segment
+252,switch,connects_to,router
+252,switch,connects_to,server
+252,switch,forwards,ethernet frame
+252,switch,forwards,frame
+252,switch,forwards,link-layer frame
+252,switch,has_part,buffer
+252,switch,has_part,forwarding table
+252,switch,has_part,port-to-vlan mapping table
+252,switch,has_part,switch table
+252,switch,implements,ethernet
+252,switch,implements,store-and-forward
+252,switch,operates_at,data link layer
+252,switch,operates_at,layer 2
+252,switch,operates_at,link layer
+252,switch,prevents,collision
+252,switch,provides,store-and-forward
+252,switch,receives,frame
+252,switch,receives,link-layer frame
+252,switch,supports,vlan
+256,ethernet frame,contains,arp query message
+256,ethernet frame,contains,arp reply message
+256,ethernet frame,contains,ip datagram
+256,ethernet frame,contains,vlan tag
+256,ethernet frame,has_part,data field
+256,gateway router,forwards,ip datagram
+256,gateway router,manages,forwarding table
+256,gateway router,receives,ethernet frame
+256,gateway router,sends,ethernet frame
+256,link layer,has_part,hardware
+256,link layer,has_part,software
+256,link layer,provides,error correction
+256,link layer,provides,error detection
+256,link layer,provides,framing
+256,link layer,provides,link access
+256,link layer,provides,link-layer addressing information
+257,ethernet frame,contains,arp query message
+257,ethernet frame,contains,arp reply message
+257,ethernet frame,contains,ip datagram
+257,ethernet frame,contains,vlan tag
+257,ethernet frame,has_part,data field
+257,switch,connects_to,interface
+257,switch,connects_to,lan segment
+257,switch,connects_to,router
+257,switch,connects_to,server
+257,switch,forwards,ethernet frame
+257,switch,forwards,frame
+257,switch,forwards,link-layer frame
+257,switch,has_part,buffer
+257,switch,has_part,forwarding table
+257,switch,has_part,port-to-vlan mapping table
+257,switch,has_part,switch table
+257,switch,implements,ethernet
+257,switch,implements,store-and-forward
+257,switch,operates_at,data link layer
+257,switch,operates_at,layer 2
+257,switch,operates_at,link layer
+257,switch,prevents,collision
+257,switch,provides,store-and-forward
+257,switch,receives,frame
+257,switch,receives,link-layer frame
+257,switch,supports,vlan
+257,gateway router,forwards,ip datagram
+257,gateway router,manages,forwarding table
+257,gateway router,receives,ethernet frame
+257,gateway router,sends,ethernet frame
+258,ethernet frame,contains,arp query message
+258,ethernet frame,contains,arp reply message
+258,ethernet frame,contains,ip datagram
+258,ethernet frame,contains,vlan tag
+258,ethernet frame,has_part,data field
+258,switch,connects_to,interface
+258,switch,connects_to,lan segment
+258,switch,connects_to,router
+258,switch,connects_to,server
+258,switch,forwards,ethernet frame
+258,switch,forwards,frame
+258,switch,forwards,link-layer frame
+258,switch,has_part,buffer
+258,switch,has_part,forwarding table
+258,switch,has_part,port-to-vlan mapping table
+258,switch,has_part,switch table
+258,switch,implements,ethernet
+258,switch,implements,store-and-forward
+258,switch,operates_at,data link layer
+258,switch,operates_at,layer 2
+258,switch,operates_at,link layer
+258,switch,prevents,collision
+258,switch,provides,store-and-forward
+258,switch,receives,frame
+258,switch,receives,link-layer frame
+258,switch,supports,vlan
+258,gateway router,forwards,ip datagram
+258,gateway router,manages,forwarding table
+258,gateway router,receives,ethernet frame
+258,gateway router,sends,ethernet frame
+259,ethernet frame,contains,arp query message
+259,ethernet frame,contains,arp reply message
+259,ethernet frame,contains,ip datagram
+259,ethernet frame,contains,vlan tag
+259,ethernet frame,has_part,data field
+259,gateway router,forwards,ip datagram
+259,gateway router,manages,forwarding table
+259,gateway router,receives,ethernet frame
+259,gateway router,sends,ethernet frame
+260,switch,connects_to,interface
+260,switch,connects_to,lan segment
+260,switch,connects_to,router
+260,switch,connects_to,server
+260,switch,forwards,ethernet frame
+260,switch,forwards,frame
+260,switch,forwards,link-layer frame
+260,switch,has_part,buffer
+260,switch,has_part,forwarding table
+260,switch,has_part,port-to-vlan mapping table
+260,switch,has_part,switch table
+260,switch,implements,ethernet
+260,switch,implements,store-and-forward
+260,switch,operates_at,data link layer
+260,switch,operates_at,layer 2
+260,switch,operates_at,link layer
+260,switch,prevents,collision
+260,switch,provides,store-and-forward
+260,switch,receives,frame
+260,switch,receives,link-layer frame
+260,switch,supports,vlan
+260,gateway router,forwards,ip datagram
+260,gateway router,manages,forwarding table
+260,gateway router,receives,ethernet frame
+260,gateway router,sends,ethernet frame
+260,forwarding table,contains,mac address
+260,forwarding table,part_of,gateway router
+260,forwarding table,part_of,router
+260,forwarding table,part_of,switch
+260,leftmost router,forwards,ip datagram
+261,leftmost router,forwards,ip datagram
+261,forwarding table,contains,mac address
+261,forwarding table,part_of,gateway router
+261,forwarding table,part_of,router
+261,forwarding table,part_of,switch
+261,ospf,implements,link-state routing
+261,ospf,supports,link-state information
+265,tcp segment,contains,http get message
+265,tcp segment,contains,http response message
+265,gateway router,forwards,ip datagram
+265,gateway router,manages,forwarding table
+265,gateway router,receives,ethernet frame
+265,gateway router,sends,ethernet frame
+265,switch,connects_to,interface
+265,switch,connects_to,lan segment
+265,switch,connects_to,router
+265,switch,connects_to,server
+265,switch,forwards,ethernet frame
+265,switch,forwards,frame
+265,switch,forwards,link-layer frame
+265,switch,has_part,buffer
+265,switch,has_part,forwarding table
+265,switch,has_part,port-to-vlan mapping table
+265,switch,has_part,switch table
+265,switch,implements,ethernet
+265,switch,implements,store-and-forward
+265,switch,operates_at,data link layer
+265,switch,operates_at,layer 2
+265,switch,operates_at,link layer
+265,switch,prevents,collision
+265,switch,provides,store-and-forward
+265,switch,receives,frame
+265,switch,receives,link-layer frame
+265,switch,supports,vlan
+265,forwarding table,contains,mac address
+265,forwarding table,part_of,gateway router
+265,forwarding table,part_of,router
+265,forwarding table,part_of,switch
+265,router,connects_to,hub
+265,router,connects_to,switch
+265,router,forwards,ip datagram
+265,router,has_part,adapter
+265,router,has_part,forwarding table
+265,router,implements,store-and-forward
+265,router,operates_at,network layer
+265,router,provides,firewall protection
+265,router,receives,frame
+265,router,requires,ip address
+265,router,sends,frame
+268,tcp segment,contains,http get message
+268,tcp segment,contains,http response message
+270,gateway router,forwards,ip datagram
+270,gateway router,manages,forwarding table
+270,gateway router,receives,ethernet frame
+270,gateway router,sends,ethernet frame
+272,link layer,has_part,hardware
+272,link layer,has_part,software
+272,link layer,provides,error correction
+272,link layer,provides,error detection
+272,link layer,provides,framing
+272,link layer,provides,link access
+272,link layer,provides,link-layer addressing information
+272,wifi access point,connects_to,switch
+273,multiple access protocol,supports,broadcast channel
+273,mpls,enables,traffic engineering
+273,mpls,implements,vpn
+273,mpls,provides,traffic engineering
+275,cyclic redundancy check,operates_at,link layer
+275,cyclic redundancy check,provides,error detection
+275,cyclic redundancy check,requires,modulo-2 arithmetic
+275,cyclic redundancy check,requires,xor
+275,cyclic redundancy check,supports,link layer
+278,link layer,has_part,hardware
+278,link layer,has_part,software
+278,link layer,provides,error correction
+278,link layer,provides,error detection
+278,link layer,provides,framing
+278,link layer,provides,link access
+278,link layer,provides,link-layer addressing information
+283,crc,requires,generator 1001
+283,crc,requires,generator 10011
+290,ethernet frame,contains,arp query message
+290,ethernet frame,contains,arp reply message
+290,ethernet frame,contains,ip datagram
+290,ethernet frame,contains,vlan tag
+290,ethernet frame,has_part,data field
+291,ethernet frame,contains,arp query message
+291,ethernet frame,contains,arp reply message
+291,ethernet frame,contains,ip datagram
+291,ethernet frame,contains,vlan tag
+291,ethernet frame,has_part,data field
+291,forwarding table,contains,mac address
+291,forwarding table,part_of,gateway router
+291,forwarding table,part_of,router
+291,forwarding table,part_of,switch
+293,adapter,connects_to,broadcast channel
+293,adapter,has_part,buffer
+293,adapter,has_part,mac address
+293,adapter,implements,cyclic redundancy check
+293,adapter,part_of,node
+293,adapter,receives,datagram
+293,adapter,receives,ethernet frame
+293,adapter,receives,frame
+293,adapter,receives,ip datagram
+293,adapter,sends,ethernet frame
+293,adapter,sends,frame
+294,frame,contains,mac address
+294,frame,contains,mac broadcast address
+294,frame,contains,mpls header
+294,frame,contains,packet
+294,frame,has_part,cyclic redundancy check
+294,frame,has_part,preamble
+294,frame,has_part,source address
+294,frame,has_part,type field
+296,multiple access protocol,supports,broadcast channel
+301,switch,connects_to,interface
+301,switch,connects_to,lan segment
+301,switch,connects_to,router
+301,switch,connects_to,server
+301,switch,forwards,ethernet frame
+301,switch,forwards,frame
+301,switch,forwards,link-layer frame
+301,switch,has_part,buffer
+301,switch,has_part,forwarding table
+301,switch,has_part,port-to-vlan mapping table
+301,switch,has_part,switch table
+301,switch,implements,ethernet
+301,switch,implements,store-and-forward
+301,switch,operates_at,data link layer
+301,switch,operates_at,layer 2
+301,switch,operates_at,link layer
+301,switch,prevents,collision
+301,switch,provides,store-and-forward
+301,switch,receives,frame
+301,switch,receives,link-layer frame
+301,switch,supports,vlan
+302,hub,operates_at,physical layer
+302,hub,receives,ethernet frame
+303,switch table,contains,mac address
+303,switch table,part_of,switch
+306,link layer,has_part,hardware
+306,link layer,has_part,software
+306,link layer,provides,error correction
+306,link layer,provides,error detection
+306,link layer,provides,framing
+306,link layer,provides,link access
+306,link layer,provides,link-layer addressing information
+308,ethernet,has_part,csma/cd
+308,ethernet,implements,binary exponential backoff algorithm
+308,ethernet,implements,csma/cd
+308,ethernet,operates_at,link layer
+308,ethernet,provides,connectionless service
+308,ethernet,supports,broadcast channel
+308,ethernet,supports,broadcast link
+308,dns,maps_to,ip address
+309,dns,maps_to,ip address
+309,tcp,requires,internet checksum
+309,gateway router,forwards,ip datagram
+309,gateway router,manages,forwarding table
+309,gateway router,receives,ethernet frame
+309,gateway router,sends,ethernet frame
+309,data center network,connects_to,host
+309,data center network,has_part,border router
+309,data center network,has_part,switch

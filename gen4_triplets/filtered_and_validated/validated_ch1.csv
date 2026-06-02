@@ -1,0 +1,210 @@
+head,relation_type,tail
+access isp,connects_to,global transit isp
+access isp,connects_to,host
+access isp,connects_to,regional isp
+access isp,connects_to,tier-1 isp
+access isp,part_of,network of networks
+access network,connects_to,host
+access network,controls,throughput
+access point,connects_to,ethernet switch
+application layer,has_part,dns
+application layer,has_part,ftp
+bandwidth flooding,is_a,dos attack
+base station,communicates_with,laptop
+buffer,receives,packet
+cable head end,has_part,cable modem termination system
+cable internet access,requires,cable
+cable internet access,requires,cable modem
+circuit,implements,time-division multiplexing
+circuit,requires,time slot
+circuit switch,connects_to,link
+circuit switching,causes,idle network resources
+circuit-switched network,enables,dedicated end-to-end connection
+client,communicates_with,server
+client,connects_to,access link
+client,connects_to,router
+client,is_a,host
+computer,communicates_with,web server
+computer,has_part,network interface card
+congestion,causes,delay
+congestion,causes,packet loss
+congestion,increases,queuing delay
+congestion-control protocol,implements,congestion control
+connection flooding,is_a,dos attack
+connection-oriented service,provides,flow control
+connection-oriented service,provides,guaranteed delivery
+customer isp,connects_to,provider isp
+ddos attack,is_a,dos attack
+dedicated end-to-end connection,provides,transmission rate
+dedicated end-to-end connection,requires,circuit
+destination end system,receives,packet
+dns,maps_to,ip address
+dns server,is_a,server
+docsis,provides,reliable delivery
+dsl,requires,telephone line
+dsl,supports,frequency-division multiplexing
+dsl modem,connects_to,dslam
+email server,is_a,server
+end system,connects_to,communication link
+end system,connects_to,isp
+end system,connects_to,router
+end system,sends,packet
+end system,sends,segment
+end-to-end delay,has_part,processing delay
+end-to-end delay,has_part,propagation delay
+end-to-end delay,has_part,queuing delay
+end-to-end delay,has_part,transmission delay
+ethernet,has_part,copper wire
+ethernet,operates_at,data link layer
+ethernet switch,connects_to,edge router
+fiber optics,connects_to,cable head end
+forwarding table,maps_to,outbound link
+forwarding table,part_of,router
+frequency division multiplexing,has_part,frequency band
+frequency-division multiplexing,supports,frequency spectrum
+ftp,provides,file transfer
+global transit isp,has_part,router
+hfc,has_part,coaxial cable
+hfc,has_part,fiber cable
+higher-tier isp,is_a,isp
+home router,connects_to,optical network terminator
+host,connects_to,circuit switch
+host,connects_to,imp
+host,is_a,end system
+host,is_a,network component
+host,provides,socket interface
+host,sends,segment
+http,operates_at,application layer
+http,provides,web service
+hybrid fiber coax,has_part,coaxial cable
+hybrid fiber coax,has_part,fiber optics
+internet,supports,mission critical services
+internet protocol stack,has_part,application layer
+internet protocol stack,has_part,link layer
+internet protocol stack,has_part,network layer
+internet protocol stack,has_part,physical layer
+internet protocol stack,has_part,transport layer
+ip address,identifies,end system
+isp,connects_to,server
+isp,enables,multi-homing
+isp,has_part,router
+laptop,connects_to,ethernet switch
+larger regional isp,connects_to,tier-1 isp
+leo satellite,communicates_with,ground station
+link,part_of,core
+link,provides,throughput
+link,supports,circuit switching
+link,supports,packet switching
+link,supports,time division multiplexing
+link layer,sends,link-layer frame
+link-layer frame,has_part,link-layer header information
+link-layer switch,is_a,packet switch
+link-layer switch,operates_at,link layer
+lower-tier isp,connects_to,higher-tier isp
+lower-tier isp,is_a,isp
+mobile device,communicates_with,base station
+national isp,connects_to,tier-1 isp
+network interface card,implements,data link layer
+network layer,forwards,datagram
+network layer,receives,transport-layer segment
+network layer,requires,ip
+network layer,requires,link layer
+network security,mitigates,denial-of-service attack
+network security,mitigates,distributed denial-of-service attack
+network-layer datagram,has_part,network-layer header information
+network-layer header information,contains,end system address
+network interface card,supports,data link layer
+network interface card,supports,physical layer
+nodal delay,contains,processing delay
+nodal delay,contains,queuing delay
+olt,sends,packet
+optical line terminator,connects_to,telco router
+optical network terminator,connects_to,neighborhood splitter
+output buffer,causes,packet loss
+output buffer,part_of,router
+packet,contains,destination address
+packet,contains,segment
+packet,contains,source address
+packet,has_part,header fields
+packet,has_part,payload field
+packet arrival rate,increases,traffic intensity
+packet header,part_of,packet
+packet sniffer,receives,packet
+packet switch,connects_to,end system
+packet switch,forwards,packet
+packet switching,provides,efficiency
+packet switching,provides,sharing of transmission capacity
+packet-switched network,provides,best effort
+physical media,connects_to,host
+point of presence,has_part,router
+processing delay,increases,delay
+processing delay,part_of,nodal delay
+propagation delay,increases,delay
+propagation delay,increases,round-trip delay
+provincial isp,connects_to,national isp
+queue,causes,packet loss
+queue,connects_to,link
+queue,part_of,router
+queue,receives,packet
+queuing delay,increases,delay
+queuing delay,increases,end-to-end delay
+queuing delay,part_of,nodal delay
+regional isp,connects_to,tier-1 isp
+round-trip delay,has_part,queuing delay
+round-trip delay,has_part,router processing delay
+router,communicates_with,host
+router,connects_to,base station
+router,connects_to,client
+router,connects_to,end system
+router,connects_to,pc
+router,connects_to,server
+router,forwards,datagram
+router,has_part,buffer
+router,has_part,forwarding table
+router,has_part,output buffer
+router,is_a,packet switch
+router,mitigates,ddos attack
+router,part_of,point of presence
+router,receives,packet
+router,receives,special packet
+router,sends,message
+routing protocol,enables,forwarding table
+routing protocol,enables,shortest path
+segment,contains,header
+server,connects_to,access link
+server,connects_to,core
+server,connects_to,ethernet switch
+server,connects_to,router
+server,is_a,host
+server,is_a,network component
+server,provides,email service
+server,provides,web service
+smtp,operates_at,application layer
+smtp,provides,email service
+source end system,sends,packet
+source host,sends,special packet
+store-and-forward transmission,requires,packet
+switch,is_a,network component
+tcp,implements,congestion control
+tcp,provides,congestion-control mechanism
+tcp,provides,reliable delivery
+tdm,has_part,time slot
+telephone calls,is_a,real-time services
+third-party telecommunications provider,provides,high-speed link
+tier-1 isp,connects_to,lower-tier isp
+time division multiplexing,has_part,frame
+traditional telephone network,is_a,circuit-switched network
+traffic intensity,increases,average queue length
+traffic intensity,increases,average queuing delay
+traffic intensity,increases,packet loss
+traffic intensity,increases,queuing delay
+transmission delay,increases,delay
+transport layer,sends,transport-layer segment
+transport-layer segment,has_part,transport-layer header information
+transport layer,provides,reliable delivery service
+transport layer,requires,unreliable channel
+udp,provides,connectionless service
+video conference calls,is_a,real-time services
+web server,is_a,server
+wifi,operates_at,data link layer
+wifi wireless router,connects_to,modem

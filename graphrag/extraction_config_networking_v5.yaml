@@ -1,0 +1,389 @@
+# KG extraction config v5 — Computer Networking domain (Kurose & Ross)
+#
+# Changes from v4:
+#   REMOVED (zero-occurrence): variant_of, encapsulates, susceptible_to, authenticates, encrypts
+#   MERGED into canonical relations:
+#     routes_to   → forwards      (both describe packet/traffic forwarding)
+#     manages     → controls      (administers ≈ governs)
+#     measures    → identifies    (both characterise a property)
+#     decreases   → controls      (decreasing a rate is a form of control)
+#     mitigates   → prevents      (reducing severity → preventing outcome)
+#   RESULT: 22 canonical relations, tighter and more uniformly distributed.
+#
+#   Security concepts (attacks, TLS, IPsec, etc.) remain as entity types.
+#   Their relationships are expressed via the general-purpose vocab:
+#     causes / prevents / provides / requires / identifies / controls
+
+# --- LLM (Tinker) ---
+llm_config:
+  temperature: 0.0
+  max_tokens: 4096
+
+# --- Delimiters ---
+completion_delimiter: "<|COMPLETE|>"
+tuple_delimiter: "<|>"
+record_delimiter: "##"
+
+# --- Entity Types ---
+entity_types:
+  - Protocol
+  - Layer
+  - Network Component
+  - Algorithm
+  - Concept
+  - Service
+  - Metric
+  - Attack
+
+entity_types_examples: |
+  1. Protocol: TCP; UDP; IP; HTTP; HTTPS; FTP; SMTP; DNS; TLS; SSL; ICMP; BGP; OSPF; Ethernet; Wi-Fi; ARP; DHCP; QUIC; IPsec; SSH
+  2. Layer: Application Layer; Transport Layer; Network Layer; Link Layer; Physical Layer; Data Link Layer
+  3. Network Component: Router; Switch; Host; Server; Client; Gateway; Firewall; Hub; Modem; Access Point; CDN; ISP; NAT; Buffer; Queue; Certificate Authority; Base Station
+  4. Algorithm: Dijkstra's Algorithm; Distance Vector; Link State; Slow Start; Congestion Avoidance; Round Robin; CSMA/CD; CSMA/CA; Leaky Bucket; Token Bucket; RSA; AES; MD5; SHA-1
+  5. Concept: Throughput; Latency; Bandwidth; Packet Loss; Congestion; Delay; Jitter; RTT; Flow Control; Segment; Datagram; Frame; Packet; Socket; Port; IP Address; MAC Address; Checksum; Three-Way Handshake; ACK; SYN; Multiplexing; Forwarding Table; Routing Table; CRC; ARQ; Sliding Window; Sequence Number; Digital Signature; Certificate; Public Key; Private Key; Session Key
+  6. Service: Web Service; Email Service; File Transfer; DNS Service; Streaming; VoIP; CDN Service; Peer-to-Peer; DHCP Service
+  7. Metric: RTT; Throughput; Utilization; Packet Loss Rate; Bit Error Rate; Propagation Delay; Queuing Delay; Processing Delay; Transmission Delay; End-to-End Delay; Bandwidth-Delay Product
+  8. Attack: SYN Flood; DDoS; DNS Spoofing; Cache Poisoning; Man-in-the-Middle; Replay Attack; Eavesdropping; IP Spoofing; Packet Sniffing
+
+# --- Relation Types (22 canonical) ---
+relation_types:
+  # Taxonomy
+  - is_a
+  # Structural composition
+  - has_part
+  - part_of
+  - contains
+  # Functional capabilities
+  - provides
+  - enables
+  - supports
+  - requires
+  # Protocol layering & implementation
+  - runs_on
+  - operates_at
+  - implements
+  # Communication & data flow
+  - sends
+  - receives
+  - forwards
+  - communicates_with
+  # Identification & mapping
+  - identifies
+  - maps_to
+  - connects_to
+  # Control & management
+  - controls
+  # Causality & performance
+  - causes
+  - increases
+  - prevents
+
+relation_types_examples: |
+  tcp, is_a, transport protocol
+  router, has_part, forwarding table
+  forwarding table, part_of, router
+  ip datagram, contains, tcp segment
+  tcp, provides, reliable delivery
+  nat, enables, address reuse
+  ethernet, supports, full-duplex communication
+  tls, requires, tcp
+  http, runs_on, tcp
+  tcp, operates_at, transport layer
+  router, implements, store-and-forward
+  client, sends, syn segment
+  server, receives, syn segment
+  router, forwards, packet
+  client, communicates_with, server
+  ip address, identifies, host
+  dns, maps_to, ip address
+  host, connects_to, access point
+  congestion control, controls, transmission rate
+  buffer overflow, causes, packet loss
+  congestion, increases, queuing delay
+  firewall, prevents, unauthorized access
+
+prompt_template: |
+  -Role-
+  You are an AI assistant specialized in extracting structured knowledge from computer networking textbooks to build a knowledge graph.
+
+  -Goal-
+  Given a passage from a computer networking textbook, a predefined list of entity types, and a predefined list of relation types, identify all networking entities and the meaningful relationships explicitly described among them.
+
+  -Entity Types-
+  Extract entities from the following types only:
+  {entity_types}
+
+  Use the examples below ONLY to understand what each type covers:
+  {entity_types_examples}
+
+  -Relation Types-
+  Use ONLY these relation types:
+  {relation_types}
+
+  One example per relation type (formatted as 'head, relation, tail'):
+  {relation_types_examples}
+
+  -Relation Disambiguation-
+  Choose the most specific relation that fits. When multiple relations seem applicable, use these rules:
+
+  Taxonomy:
+  - `is_a` for type/class membership AND for variants of the same protocol or algorithm: "tcp, is_a, transport protocol"; "go-back-n, is_a, arq"; "distance-vector routing, is_a, routing algorithm"
+
+  Structural composition — pick by what the text describes:
+  - `has_part` when head structurally owns tail as a component: "router, has_part, forwarding table"
+  - `part_of` when tail structurally owns head: "header, part_of, packet"
+  - `contains` when head holds or wraps tail (both payload and protocol encapsulation): "frame, contains, ip datagram"; "ip datagram, contains, tcp segment"
+
+  Protocol layering — pick by relationship type:
+  - `runs_on` when head protocol operates on top of tail (a lower-layer protocol or medium): "http, runs_on, tcp"; "tcp, runs_on, ip"
+  - `operates_at` ONLY to name which layer head belongs to: "tcp, operates_at, transport layer"
+  - `implements` when head executes tail as an algorithm, mechanism, or technique: "router, implements, store-and-forward"; "ospf, implements, dijkstra's algorithm"
+
+  Functional capabilities — pick by dependency strength:
+  - `provides` when head actively offers tail as a service or guarantee: "tcp, provides, reliable delivery"
+  - `enables` when head makes tail possible but does not directly perform it: "nat, enables, address reuse"
+  - `supports` when head is compatible with or accommodates tail: "ethernet, supports, full-duplex communication"
+  - `requires` when head cannot function without tail: "tls, requires, tcp"
+
+  Control & management — use `controls` for all regulatory relationships:
+  - `controls` when head governs, regulates, administers, or adjusts tail: "congestion control, controls, transmission rate"; "flow control, controls, send rate"; "ospf, controls, routing table"
+
+  Identification & mapping:
+  - `identifies` when head uniquely names, addresses, or characterises tail: "ip address, identifies, host"; "certificate, identifies, server"; "rtt, identifies, round-trip time"
+  - `maps_to` when head translates or resolves to tail: "dns, maps_to, ip address"; "routing table, maps_to, next hop"
+
+  Causality — pick by effect type:
+  - `causes` for discrete event causation: "buffer overflow, causes, packet loss"
+  - `increases` for quantitative growth: "congestion, increases, queuing delay"
+  - `prevents` when head stops or reduces tail (absorbs both prevention and mitigation): "firewall, prevents, unauthorized access"; "slow start, prevents, congestion"; "checksum, prevents, undetected errors"
+
+  Security concepts — use the general relation vocab:
+  - Express security services via `provides`: "tls, provides, confidentiality"
+  - Express vulnerabilities via `causes`: "syn flood attack, causes, connection exhaustion"
+  - Express authentication via `identifies`: "certificate authority, identifies, server"
+  - Express protection via `prevents`: "ipsec, prevents, eavesdropping"
+  - Express protocol wrapping via `contains`: "ipsec packet, contains, ip datagram"
+
+  -Steps-
+  1. Identify all entities from the text that match one of the entity types above.
+     For each entity:
+     - entity_name: Name of the entity, lowercase
+     - entity_type: One of: Protocol, Layer, Network Component, Algorithm, Concept, Service, Metric, Attack
+     - entity_description: brief description from the text
+     Format: ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+  2. From the entities in step 1, identify clearly stated relationships using ONLY the predefined relation types.
+     - Only extract relationships explicitly supported by the text.
+     - Do not extract trivial or overly general relationships.
+     For each relationship:
+     - source_entity: lowercase name from step 1
+     - target_entity: lowercase name from step 1
+     - relationship: one relation from the predefined list
+     - relationship_strength: integer 1-10
+     Format: ("relationship"{tuple_delimiter}<source>{tuple_delimiter}<target>{tuple_delimiter}<relationship>{tuple_delimiter}<strength>)
+
+  3. Output all entities and relationships as a single list separated by **{record_delimiter}**.
+
+  4. End with {completion_delimiter}
+
+  -Constraints-
+  - Only extract from the provided text; no external knowledge.
+  - Only use entity types and relation types from the predefined lists.
+  - Use lowercase for all entity names.
+  - Keep entity descriptions concise (one sentence).
+  - Use `is_a` for both type membership and protocol/algorithm variants.
+  - Use `contains` for both payload enclosure and protocol PDU wrapping.
+  - Use `controls` for all regulatory relationships (governing, adjusting, managing rates).
+  - Use `prevents` for both full prevention and mitigation/reduction of negative outcomes.
+  - Do NOT use `has_part`/`contains` interchangeably — `has_part` is for structural components, `contains` is for data payloads and PDU wrapping.
+  - Do NOT use `runs_on` and `operates_at` for the same relationship.
+
+
+user_prompt: |
+  ######################
+  Text:
+  {input_text}
+  ######################
+  Output:
+
+
+examples:
+  - user: |
+      ######################
+      Text:
+      The Transmission Control Protocol (TCP) provides reliable, in-order byte-stream delivery. TCP runs on IP at the transport layer. To establish a connection, the client sends a SYN segment; the server receives it and sends back a SYN-ACK; the client replies with an ACK, completing the three-way handshake. An IP datagram contains the TCP segment as its payload. Flow control controls the send rate to prevent a fast sender from overwhelming a slow receiver. Congestion in the network causes packet loss and increases queuing delay. Slow start prevents congestion by gradually increasing the congestion window.
+      ######################
+      Output:
+    assistant: |
+      ("entity"{tuple_delimiter}tcp{tuple_delimiter}Protocol{tuple_delimiter}Transport-layer protocol providing reliable in-order byte-stream delivery)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ip{tuple_delimiter}Protocol{tuple_delimiter}Network-layer protocol that carries TCP segments)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}transport layer{tuple_delimiter}Layer{tuple_delimiter}Network stack layer where TCP operates)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ip datagram{tuple_delimiter}Concept{tuple_delimiter}Network-layer PDU that carries TCP segments as payload)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}tcp segment{tuple_delimiter}Concept{tuple_delimiter}Transport-layer PDU produced by TCP)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}three-way handshake{tuple_delimiter}Concept{tuple_delimiter}TCP connection setup procedure using SYN, SYN-ACK, and ACK)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}syn segment{tuple_delimiter}Concept{tuple_delimiter}First segment sent by the client to initiate a TCP connection)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}flow control{tuple_delimiter}Concept{tuple_delimiter}Mechanism that adjusts send rate to avoid overwhelming a slow receiver)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}congestion{tuple_delimiter}Concept{tuple_delimiter}Network state where demand exceeds available capacity)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}slow start{tuple_delimiter}Algorithm{tuple_delimiter}TCP algorithm that gradually increases congestion window to probe network capacity)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}packet loss{tuple_delimiter}Metric{tuple_delimiter}Fraction of packets dropped due to congestion or overflow)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}queuing delay{tuple_delimiter}Metric{tuple_delimiter}Time a packet waits in a router queue before being forwarded)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}client{tuple_delimiter}Network Component{tuple_delimiter}Entity that initiates a TCP connection)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}server{tuple_delimiter}Network Component{tuple_delimiter}Entity that accepts incoming TCP connections)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}ip{tuple_delimiter}runs_on{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}transport layer{tuple_delimiter}operates_at{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}reliable delivery{tuple_delimiter}provides{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tcp{tuple_delimiter}three-way handshake{tuple_delimiter}implements{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}ip datagram{tuple_delimiter}tcp segment{tuple_delimiter}contains{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}client{tuple_delimiter}syn segment{tuple_delimiter}sends{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}server{tuple_delimiter}syn segment{tuple_delimiter}receives{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}client{tuple_delimiter}server{tuple_delimiter}communicates_with{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}flow control{tuple_delimiter}send rate{tuple_delimiter}controls{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}congestion{tuple_delimiter}packet loss{tuple_delimiter}causes{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}congestion{tuple_delimiter}queuing delay{tuple_delimiter}increases{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}slow start{tuple_delimiter}congestion{tuple_delimiter}prevents{tuple_delimiter}8)
+      {completion_delimiter}
+
+  - user: |
+      ######################
+      Text:
+      Routers use forwarding tables to forward each arriving packet toward its destination. The forwarding table is populated by routing algorithms. In link-state routing, each router maintains a complete topology map and runs Dijkstra's algorithm to compute shortest paths. Distance-vector routing is a routing algorithm that uses the Bellman-Ford equation; routers exchange distance vectors with neighbors. Go-Back-N and Selective Repeat are both ARQ protocols. BGP forwards traffic to destination prefixes across autonomous systems. A router buffer may overflow when arrival rate exceeds capacity, causing packet loss and increasing end-to-end delay.
+      ######################
+      Output:
+    assistant: |
+      ("entity"{tuple_delimiter}router{tuple_delimiter}Network Component{tuple_delimiter}Network device that forwards packets toward their destination)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}forwarding table{tuple_delimiter}Concept{tuple_delimiter}Table a router uses to determine the output link for each packet)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}link-state routing{tuple_delimiter}Algorithm{tuple_delimiter}Routing algorithm where each router maintains full topology and runs Dijkstra's algorithm)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}distance-vector routing{tuple_delimiter}Algorithm{tuple_delimiter}Routing algorithm using Bellman-Ford where routers exchange distance vectors with neighbors)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}dijkstra's algorithm{tuple_delimiter}Algorithm{tuple_delimiter}Shortest-path algorithm used in link-state routing)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}go-back-n{tuple_delimiter}Algorithm{tuple_delimiter}ARQ protocol that retransmits all unacknowledged segments from a lost one)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}selective repeat{tuple_delimiter}Algorithm{tuple_delimiter}ARQ protocol that retransmits only the specific lost segment)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}arq{tuple_delimiter}Concept{tuple_delimiter}Automatic Repeat reQuest mechanism for reliable data transfer over lossy links)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}bgp{tuple_delimiter}Protocol{tuple_delimiter}Inter-domain routing protocol that forwards traffic to destination prefixes)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}buffer{tuple_delimiter}Network Component{tuple_delimiter}Memory in a router holding packets waiting to be forwarded)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}packet loss{tuple_delimiter}Metric{tuple_delimiter}Fraction of packets dropped due to buffer overflow or congestion)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}end-to-end delay{tuple_delimiter}Metric{tuple_delimiter}Total time for a packet to travel from source to destination)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}router{tuple_delimiter}forwarding table{tuple_delimiter}has_part{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}forwarding table{tuple_delimiter}router{tuple_delimiter}part_of{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}router{tuple_delimiter}packet{tuple_delimiter}forwards{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}link-state routing{tuple_delimiter}dijkstra's algorithm{tuple_delimiter}implements{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}distance-vector routing{tuple_delimiter}routing algorithm{tuple_delimiter}is_a{tuple_delimiter}8)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}go-back-n{tuple_delimiter}arq{tuple_delimiter}is_a{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}selective repeat{tuple_delimiter}arq{tuple_delimiter}is_a{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}bgp{tuple_delimiter}destination prefix{tuple_delimiter}forwards{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}buffer overflow{tuple_delimiter}packet loss{tuple_delimiter}causes{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}buffer overflow{tuple_delimiter}end-to-end delay{tuple_delimiter}increases{tuple_delimiter}8)
+      {completion_delimiter}
+
+  - user: |
+      ######################
+      Text:
+      TLS runs on TCP and provides confidentiality and data integrity for application-layer traffic. TLS requires a session key negotiated during the handshake to secure the connection. A certificate authority identifies the server by signing its public-key certificate. Digital signatures require a private key and a public key to verify. RSA is a public-key algorithm that is_a type of asymmetric encryption. A SYN flood attack causes connection table exhaustion on servers. Firewalls prevent unauthorized access by controlling inbound and outbound traffic. IPsec is a network-layer security protocol; an IPsec packet contains the original IP datagram. DNS maps hostnames to IP addresses.
+      ######################
+      Output:
+    assistant: |
+      ("entity"{tuple_delimiter}tls{tuple_delimiter}Protocol{tuple_delimiter}Transport-layer security protocol providing confidentiality and integrity over TCP)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}tcp{tuple_delimiter}Protocol{tuple_delimiter}Transport-layer protocol that TLS runs on top of)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}application layer{tuple_delimiter}Layer{tuple_delimiter}Topmost layer of the protocol stack where user-facing services operate)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}session key{tuple_delimiter}Concept{tuple_delimiter}Symmetric key negotiated during TLS handshake used to secure session data)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}certificate authority{tuple_delimiter}Network Component{tuple_delimiter}Trusted entity that signs and issues public-key certificates)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}digital signature{tuple_delimiter}Concept{tuple_delimiter}Cryptographic mechanism that authenticates message origin using a private key)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}public key{tuple_delimiter}Concept{tuple_delimiter}Asymmetric key used to verify digital signatures)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}private key{tuple_delimiter}Concept{tuple_delimiter}Asymmetric key used to create digital signatures)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}rsa{tuple_delimiter}Algorithm{tuple_delimiter}Public-key asymmetric encryption algorithm)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}asymmetric encryption{tuple_delimiter}Concept{tuple_delimiter}Encryption approach using a public/private key pair)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}syn flood attack{tuple_delimiter}Attack{tuple_delimiter}Attack where many SYN segments are sent without completing the handshake)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}firewall{tuple_delimiter}Network Component{tuple_delimiter}Device that controls inbound and outbound traffic to prevent unauthorized access)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ipsec{tuple_delimiter}Protocol{tuple_delimiter}Network-layer security protocol that carries IP datagrams securely)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ipsec packet{tuple_delimiter}Concept{tuple_delimiter}IPsec PDU that wraps the original IP datagram)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ip datagram{tuple_delimiter}Concept{tuple_delimiter}Network-layer PDU carried inside an IPsec packet)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}dns{tuple_delimiter}Protocol{tuple_delimiter}Application-layer protocol that maps hostnames to IP addresses)
+      {record_delimiter}
+      ("entity"{tuple_delimiter}ip address{tuple_delimiter}Concept{tuple_delimiter}Network-layer address that identifies a host)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tls{tuple_delimiter}tcp{tuple_delimiter}runs_on{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tls{tuple_delimiter}application layer{tuple_delimiter}operates_at{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tls{tuple_delimiter}confidentiality{tuple_delimiter}provides{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}tls{tuple_delimiter}session key{tuple_delimiter}requires{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}certificate authority{tuple_delimiter}server{tuple_delimiter}identifies{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}digital signature{tuple_delimiter}private key{tuple_delimiter}requires{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}digital signature{tuple_delimiter}public key{tuple_delimiter}requires{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}rsa{tuple_delimiter}asymmetric encryption{tuple_delimiter}is_a{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}syn flood attack{tuple_delimiter}connection table exhaustion{tuple_delimiter}causes{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}firewall{tuple_delimiter}unauthorized access{tuple_delimiter}prevents{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}firewall{tuple_delimiter}traffic{tuple_delimiter}controls{tuple_delimiter}9)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}ipsec packet{tuple_delimiter}ip datagram{tuple_delimiter}contains{tuple_delimiter}10)
+      {record_delimiter}
+      ("relationship"{tuple_delimiter}dns{tuple_delimiter}ip address{tuple_delimiter}maps_to{tuple_delimiter}10)
+      {completion_delimiter}

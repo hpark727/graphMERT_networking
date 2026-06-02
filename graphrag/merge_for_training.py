@@ -43,7 +43,7 @@ def heads_path(ch: int) -> Path:
 
 
 def injection_path(ch: int) -> Path:
-    return _REPO / f"gen4_triplets/validated_both/injections_ch{ch}.csv"
+    return _REPO / f"gen4_triplets/injections/injections_ch{ch}.csv"
 
 
 def merge_datasets(chapters: list[int]) -> object:

@@ -1,0 +1,1279 @@
+id,head,relation_type,tail
+1,link layer,has_part,mac
+1,link layer,has_part,rlc
+2,cdma,provides,shared-medium access
+2,cdma,requires,chipping rate
+3,wifi,has_part,channel
+3,wifi,supports,wireless lan
+3,bluetooth,enables,wireless peripheral connectivity
+3,bluetooth,implements,frequency-hopping spread spectrum
+3,bluetooth,operates_at,link layer
+3,bluetooth,provides,streaming
+3,bluetooth,supports,ack
+3,bluetooth,supports,ad hoc network
+3,bluetooth,supports,error detection
+3,bluetooth,supports,personal area network
+3,bluetooth,supports,polling
+3,bluetooth,supports,time division multiplexing
+4,mobile ip,enables,mobility
+4,mobile ip,enables,tunnel
+4,mobile ip,implements,agent discovery
+4,mobile ip,implements,forwarding
+4,mobile ip,implements,mobility services
+4,mobile ip,implements,registration
+4,mobile ip,provides,mobility
+4,mobile ip,runs_on,ipv4
+4,mobile ip,supports,visited network
+6,base station,communicates_with,mme
+6,base station,communicates_with,mobile device
+6,base station,communicates_with,wireless host
+6,base station,connects_to,gateway
+6,base station,connects_to,larger network
+6,base station,connects_to,mobile device
+6,base station,connects_to,serving gateway
+6,base station,enables,channel access
+6,base station,forwards,ip datagram
+6,base station,is_a,network component
+6,base station,manages,interference
+6,base station,manages,mobile device
+6,base station,manages,mobility
+6,base station,manages,wireless host
+6,base station,manages,wireless radio resources
+6,base station,operates_at,link layer
+6,base station,receives,ip datagram
+6,base station,receives,packet
+6,base station,sends,packet
+6,base station,sends,paging messages
+6,wireless host,communicates_with,base station
+6,wireless host,communicates_with,larger network
+6,wireless host,connects_to,base station
+8,base station,communicates_with,mme
+8,base station,communicates_with,mobile device
+8,base station,communicates_with,wireless host
+8,base station,connects_to,gateway
+8,base station,connects_to,larger network
+8,base station,connects_to,mobile device
+8,base station,connects_to,serving gateway
+8,base station,enables,channel access
+8,base station,forwards,ip datagram
+8,base station,is_a,network component
+8,base station,manages,interference
+8,base station,manages,mobile device
+8,base station,manages,mobility
+8,base station,manages,wireless host
+8,base station,manages,wireless radio resources
+8,base station,operates_at,link layer
+8,base station,receives,ip datagram
+8,base station,receives,packet
+8,base station,sends,packet
+8,base station,sends,paging messages
+9,base station,communicates_with,mme
+9,base station,communicates_with,mobile device
+9,base station,communicates_with,wireless host
+9,base station,connects_to,gateway
+9,base station,connects_to,larger network
+9,base station,connects_to,mobile device
+9,base station,connects_to,serving gateway
+9,base station,enables,channel access
+9,base station,forwards,ip datagram
+9,base station,is_a,network component
+9,base station,manages,interference
+9,base station,manages,mobile device
+9,base station,manages,mobility
+9,base station,manages,wireless host
+9,base station,manages,wireless radio resources
+9,base station,operates_at,link layer
+9,base station,receives,ip datagram
+9,base station,receives,packet
+9,base station,sends,packet
+9,base station,sends,paging messages
+10,base station,communicates_with,mme
+10,base station,communicates_with,mobile device
+10,base station,communicates_with,wireless host
+10,base station,connects_to,gateway
+10,base station,connects_to,larger network
+10,base station,connects_to,mobile device
+10,base station,connects_to,serving gateway
+10,base station,enables,channel access
+10,base station,forwards,ip datagram
+10,base station,is_a,network component
+10,base station,manages,interference
+10,base station,manages,mobile device
+10,base station,manages,mobility
+10,base station,manages,wireless host
+10,base station,manages,wireless radio resources
+10,base station,operates_at,link layer
+10,base station,receives,ip datagram
+10,base station,receives,packet
+10,base station,sends,packet
+10,base station,sends,paging messages
+10,mobile host,connects_to,base station
+11,mobile host,connects_to,base station
+12,wireless host,communicates_with,base station
+12,wireless host,communicates_with,larger network
+12,wireless host,connects_to,base station
+12,base station,communicates_with,mme
+12,base station,communicates_with,mobile device
+12,base station,communicates_with,wireless host
+12,base station,connects_to,gateway
+12,base station,connects_to,larger network
+12,base station,connects_to,mobile device
+12,base station,connects_to,serving gateway
+12,base station,enables,channel access
+12,base station,forwards,ip datagram
+12,base station,is_a,network component
+12,base station,manages,interference
+12,base station,manages,mobile device
+12,base station,manages,mobility
+12,base station,manages,wireless host
+12,base station,manages,wireless radio resources
+12,base station,operates_at,link layer
+12,base station,receives,ip datagram
+12,base station,receives,packet
+12,base station,sends,packet
+12,base station,sends,paging messages
+13,base station,communicates_with,mme
+13,base station,communicates_with,mobile device
+13,base station,communicates_with,wireless host
+13,base station,connects_to,gateway
+13,base station,connects_to,larger network
+13,base station,connects_to,mobile device
+13,base station,connects_to,serving gateway
+13,base station,enables,channel access
+13,base station,forwards,ip datagram
+13,base station,is_a,network component
+13,base station,manages,interference
+13,base station,manages,mobile device
+13,base station,manages,mobility
+13,base station,manages,wireless host
+13,base station,manages,wireless radio resources
+13,base station,operates_at,link layer
+13,base station,receives,ip datagram
+13,base station,receives,packet
+13,base station,sends,packet
+13,base station,sends,paging messages
+14,base station,communicates_with,mme
+14,base station,communicates_with,mobile device
+14,base station,communicates_with,wireless host
+14,base station,connects_to,gateway
+14,base station,connects_to,larger network
+14,base station,connects_to,mobile device
+14,base station,connects_to,serving gateway
+14,base station,enables,channel access
+14,base station,forwards,ip datagram
+14,base station,is_a,network component
+14,base station,manages,interference
+14,base station,manages,mobile device
+14,base station,manages,mobility
+14,base station,manages,wireless host
+14,base station,manages,wireless radio resources
+14,base station,operates_at,link layer
+14,base station,receives,ip datagram
+14,base station,receives,packet
+14,base station,sends,packet
+14,base station,sends,paging messages
+16,wireless link,connects_to,base station
+16,wireless link,connects_to,router
+16,wireless link,connects_to,wireless host
+16,wireless link,enables,mobility
+22,transmission power,increases,energy consumption
+26,hidden terminal problem,causes,interference
+26,hidden terminal problem,prevents,collision detection
+27,fading,prevents,collision detection
+27,hidden terminal problem,causes,interference
+27,hidden terminal problem,prevents,collision detection
+28,random access,is_a,medium access protocol
+28,taking turns,is_a,medium access protocol
+30,cdma,provides,shared-medium access
+30,cdma,requires,chipping rate
+34,cdma,provides,shared-medium access
+34,cdma,requires,chipping rate
+35,cdma,provides,shared-medium access
+35,cdma,requires,chipping rate
+36,cdma,provides,shared-medium access
+36,cdma,requires,chipping rate
+37,wifi,has_part,channel
+37,wifi,supports,wireless lan
+42,access point,connects_to,router interface
+42,access point,connects_to,switch
+42,access point,forwards,ethernet frame
+42,access point,is_a,base station
+42,access point,is_a,station
+42,access point,receives,frame
+42,access point,receives,rts frame
+42,access point,sends,acknowledgment
+42,access point,sends,beacon frame
+42,access point,sends,cts frame
+42,access point,sends,data frame
+43,router,connects_to,ip subnet
+43,router,forwards,ip datagram
+43,router,forwards,packet
+43,router,has_part,forwarding table
+43,router,implements,distance-vector algorithm
+45,wireless station,communicates_with,access point
+45,wireless station,connects_to,access point
+45,wireless station,is_a,host
+45,wireless station,receives,beacon frame
+45,wireless station,receives,data frame
+48,wireless station,communicates_with,access point
+48,wireless station,connects_to,access point
+48,wireless station,is_a,host
+48,wireless station,receives,beacon frame
+48,wireless station,receives,data frame
+49,wireless device,connects_to,ap
+49,wireless device,receives,association response frame
+49,wireless device,receives,probe response frame
+49,wireless device,sends,association request frame
+49,wireless device,sends,probe request frame
+50,wireless device,connects_to,ap
+50,wireless device,receives,association response frame
+50,wireless device,receives,probe response frame
+50,wireless device,sends,association request frame
+50,wireless device,sends,probe request frame
+50,ap,provides,wireless bandwidth
+50,ap,receives,association request frame
+50,ap,receives,probe request frame
+50,ap,sends,association response frame
+50,ap,sends,probe response frame
+51,wireless device,connects_to,ap
+51,wireless device,receives,association response frame
+51,wireless device,receives,probe response frame
+51,wireless device,sends,association request frame
+51,wireless device,sends,probe request frame
+51,ap,provides,wireless bandwidth
+51,ap,receives,association request frame
+51,ap,receives,probe request frame
+51,ap,sends,association response frame
+51,ap,sends,probe response frame
+52,ap,provides,wireless bandwidth
+52,ap,receives,association request frame
+52,ap,receives,probe request frame
+52,ap,sends,association response frame
+52,ap,sends,probe response frame
+53,passive scanning,receives,beacon frame
+57,cdma,provides,shared-medium access
+57,cdma,requires,chipping rate
+57,random access,is_a,medium access protocol
+57,taking turns,is_a,medium access protocol
+58,ethernet,implements,csma/cd
+61,hidden terminal problem,causes,interference
+61,hidden terminal problem,prevents,collision detection
+64,wireless device,connects_to,ap
+64,wireless device,receives,association response frame
+64,wireless device,receives,probe response frame
+64,wireless device,sends,association request frame
+64,wireless device,sends,probe request frame
+66,cdma,provides,shared-medium access
+66,cdma,requires,chipping rate
+70,access point,connects_to,router interface
+70,access point,connects_to,switch
+70,access point,forwards,ethernet frame
+70,access point,is_a,base station
+70,access point,is_a,station
+70,access point,receives,frame
+70,access point,receives,rts frame
+70,access point,sends,acknowledgment
+70,access point,sends,beacon frame
+70,access point,sends,cts frame
+70,access point,sends,data frame
+72,rts frame,increases,delay
+72,rts frame,mitigates,hidden terminal
+72,cts frame,increases,delay
+72,data frame,contains,datagram
+77,ethernet frame,contains,mac address
+77,frame control field,contains,subtype field
+80,address 2,identifies,access point
+80,wireless station,communicates_with,access point
+80,wireless station,connects_to,access point
+80,wireless station,is_a,host
+80,wireless station,receives,beacon frame
+80,wireless station,receives,data frame
+80,ap,provides,wireless bandwidth
+80,ap,receives,association request frame
+80,ap,receives,probe request frame
+80,ap,sends,association response frame
+80,ap,sends,probe response frame
+80,address 1,identifies,wireless station
+81,address 3,identifies,router
+81,address 3,identifies,router interface
+81,router interface,connects_to,subnet
+81,router interface,part_of,router
+81,ap,provides,wireless bandwidth
+81,ap,receives,association request frame
+81,ap,receives,probe request frame
+81,ap,sends,association response frame
+81,ap,sends,probe response frame
+81,wireless station,communicates_with,access point
+81,wireless station,connects_to,access point
+81,wireless station,is_a,host
+81,wireless station,receives,beacon frame
+81,wireless station,receives,data frame
+82,router,connects_to,ip subnet
+82,router,forwards,ip datagram
+82,router,forwards,packet
+82,router,has_part,forwarding table
+82,router,implements,distance-vector algorithm
+83,arp,maps_to,mac address
+83,ethernet frame,contains,mac address
+83,address 1,identifies,wireless station
+83,address 2,identifies,access point
+84,address 3,identifies,router
+84,address 3,identifies,router interface
+84,ap,provides,wireless bandwidth
+84,ap,receives,association request frame
+84,ap,receives,probe request frame
+84,ap,sends,association response frame
+84,ap,sends,probe response frame
+90,ip address,identifies,mobile device
+90,ip address,maps_to,mac address
+91,mobile ip,enables,mobility
+91,mobile ip,enables,tunnel
+91,mobile ip,implements,agent discovery
+91,mobile ip,implements,forwarding
+91,mobile ip,implements,mobility services
+91,mobile ip,implements,registration
+91,mobile ip,provides,mobility
+91,mobile ip,runs_on,ipv4
+91,mobile ip,supports,visited network
+93,broadcast ethernet frame,contains,mac address
+100,access point,connects_to,router interface
+100,access point,connects_to,switch
+100,access point,forwards,ethernet frame
+100,access point,is_a,base station
+100,access point,is_a,station
+100,access point,receives,frame
+100,access point,receives,rts frame
+100,access point,sends,acknowledgment
+100,access point,sends,beacon frame
+100,access point,sends,cts frame
+100,access point,sends,data frame
+100,beacon frame,contains,mac address
+100,beacon frame,contains,ssid
+100,beacon frame,identifies,ap
+101,beacon frame,contains,mac address
+101,beacon frame,contains,ssid
+101,beacon frame,identifies,ap
+106,master node,communicates_with,client device
+106,master node,receives,ack
+108,master node,communicates_with,client device
+108,master node,receives,ack
+108,client device,connects_to,base station
+108,client device,sends,ack
+109,base station,communicates_with,mme
+109,base station,communicates_with,mobile device
+109,base station,communicates_with,wireless host
+109,base station,connects_to,gateway
+109,base station,connects_to,larger network
+109,base station,connects_to,mobile device
+109,base station,connects_to,serving gateway
+109,base station,enables,channel access
+109,base station,forwards,ip datagram
+109,base station,is_a,network component
+109,base station,manages,interference
+109,base station,manages,mobile device
+109,base station,manages,mobility
+109,base station,manages,wireless host
+109,base station,manages,wireless radio resources
+109,base station,operates_at,link layer
+109,base station,receives,ip datagram
+109,base station,receives,packet
+109,base station,sends,packet
+109,base station,sends,paging messages
+111,bluetooth,enables,wireless peripheral connectivity
+111,bluetooth,implements,frequency-hopping spread spectrum
+111,bluetooth,operates_at,link layer
+111,bluetooth,provides,streaming
+111,bluetooth,supports,ack
+111,bluetooth,supports,ad hoc network
+111,bluetooth,supports,error detection
+111,bluetooth,supports,personal area network
+111,bluetooth,supports,polling
+111,bluetooth,supports,time division multiplexing
+114,base station,communicates_with,mme
+114,base station,communicates_with,mobile device
+114,base station,communicates_with,wireless host
+114,base station,connects_to,gateway
+114,base station,connects_to,larger network
+114,base station,connects_to,mobile device
+114,base station,connects_to,serving gateway
+114,base station,enables,channel access
+114,base station,forwards,ip datagram
+114,base station,is_a,network component
+114,base station,manages,interference
+114,base station,manages,mobile device
+114,base station,manages,mobility
+114,base station,manages,wireless host
+114,base station,manages,wireless radio resources
+114,base station,operates_at,link layer
+114,base station,receives,ip datagram
+114,base station,receives,packet
+114,base station,sends,packet
+114,base station,sends,paging messages
+119,mobile device,causes,datagram loss
+119,mobile device,communicates_with,base station
+119,mobile device,communicates_with,foreign agent
+119,mobile device,communicates_with,home agent
+119,mobile device,communicates_with,streaming server
+119,mobile device,communicates_with,visited gateway router
+119,mobile device,connects_to,802.11 ap
+119,mobile device,connects_to,base station
+119,mobile device,connects_to,lte base station
+119,mobile device,connects_to,visited network
+119,mobile device,provides,international mobile subscriber identity
+119,mobile device,receives,beacon signal
+119,mobile device,receives,datagram
+119,mobile device,receives,ip datagram
+119,mobile device,sends,attach request
+119,mobile device,sends,datagram
+119,mobile device,sends,ip datagram
+120,mobile device,causes,datagram loss
+120,mobile device,communicates_with,base station
+120,mobile device,communicates_with,foreign agent
+120,mobile device,communicates_with,home agent
+120,mobile device,communicates_with,streaming server
+120,mobile device,communicates_with,visited gateway router
+120,mobile device,connects_to,802.11 ap
+120,mobile device,connects_to,base station
+120,mobile device,connects_to,lte base station
+120,mobile device,connects_to,visited network
+120,mobile device,provides,international mobile subscriber identity
+120,mobile device,receives,beacon signal
+120,mobile device,receives,datagram
+120,mobile device,receives,ip datagram
+120,mobile device,sends,attach request
+120,mobile device,sends,datagram
+120,mobile device,sends,ip datagram
+120,ip address,identifies,mobile device
+120,ip address,maps_to,mac address
+120,nat,provides,ip address
+120,imsi,identifies,mobile device
+121,imsi,identifies,mobile device
+121,sim card,has_part,imsi
+122,base station,communicates_with,mme
+122,base station,communicates_with,mobile device
+122,base station,communicates_with,wireless host
+122,base station,connects_to,gateway
+122,base station,connects_to,larger network
+122,base station,connects_to,mobile device
+122,base station,connects_to,serving gateway
+122,base station,enables,channel access
+122,base station,forwards,ip datagram
+122,base station,is_a,network component
+122,base station,manages,interference
+122,base station,manages,mobile device
+122,base station,manages,mobility
+122,base station,manages,wireless host
+122,base station,manages,wireless radio resources
+122,base station,operates_at,link layer
+122,base station,receives,ip datagram
+122,base station,receives,packet
+122,base station,sends,packet
+122,base station,sends,paging messages
+125,mme,communicates_with,hss
+125,mme,controls,attachment process
+125,mme,controls,tunnel
+125,mme,enables,tunnel
+125,mme,manages,mobile device
+125,mme,manages,serving gateway
+126,serving gateway,connects_to,pdn gateway
+126,serving gateway,is_a,router
+126,serving gateway,receives,udp
+126,serving gateway,sends,datagram
+127,gateway router,forwards,ip datagram
+127,gateway router,is_a,router
+128,mobile device,causes,datagram loss
+128,mobile device,communicates_with,base station
+128,mobile device,communicates_with,foreign agent
+128,mobile device,communicates_with,home agent
+128,mobile device,communicates_with,streaming server
+128,mobile device,communicates_with,visited gateway router
+128,mobile device,connects_to,802.11 ap
+128,mobile device,connects_to,base station
+128,mobile device,connects_to,lte base station
+128,mobile device,connects_to,visited network
+128,mobile device,provides,international mobile subscriber identity
+128,mobile device,receives,beacon signal
+128,mobile device,receives,datagram
+128,mobile device,receives,ip datagram
+128,mobile device,sends,attach request
+128,mobile device,sends,datagram
+128,mobile device,sends,ip datagram
+129,imsi,identifies,mobile device
+129,mme,communicates_with,hss
+129,mme,controls,attachment process
+129,mme,controls,tunnel
+129,mme,enables,tunnel
+129,mme,manages,mobile device
+129,mme,manages,serving gateway
+130,imsi,identifies,mobile device
+131,base station,communicates_with,mme
+131,base station,communicates_with,mobile device
+131,base station,communicates_with,wireless host
+131,base station,connects_to,gateway
+131,base station,connects_to,larger network
+131,base station,connects_to,mobile device
+131,base station,connects_to,serving gateway
+131,base station,enables,channel access
+131,base station,forwards,ip datagram
+131,base station,is_a,network component
+131,base station,manages,interference
+131,base station,manages,mobile device
+131,base station,manages,mobility
+131,base station,manages,wireless host
+131,base station,manages,wireless radio resources
+131,base station,operates_at,link layer
+131,base station,receives,ip datagram
+131,base station,receives,packet
+131,base station,sends,packet
+131,base station,sends,paging messages
+131,serving gateway,connects_to,pdn gateway
+131,serving gateway,is_a,router
+131,serving gateway,receives,udp
+131,serving gateway,sends,datagram
+131,mme,communicates_with,hss
+131,mme,controls,attachment process
+131,mme,controls,tunnel
+131,mme,enables,tunnel
+131,mme,manages,mobile device
+131,mme,manages,serving gateway
+132,mme,communicates_with,hss
+132,mme,controls,attachment process
+132,mme,controls,tunnel
+132,mme,enables,tunnel
+132,mme,manages,mobile device
+132,mme,manages,serving gateway
+133,tcp,operates_at,transport layer
+133,udp,operates_at,transport layer
+135,mme,communicates_with,hss
+135,mme,controls,attachment process
+135,mme,controls,tunnel
+135,mme,enables,tunnel
+135,mme,manages,mobile device
+135,mme,manages,serving gateway
+137,tunnel endpoint identifier,identifies,tunnel
+137,gprs tunneling protocol,runs_on,udp
+137,mme,communicates_with,hss
+137,mme,controls,attachment process
+137,mme,controls,tunnel
+137,mme,enables,tunnel
+137,mme,manages,mobile device
+137,mme,manages,serving gateway
+137,base station,communicates_with,mme
+137,base station,communicates_with,mobile device
+137,base station,communicates_with,wireless host
+137,base station,connects_to,gateway
+137,base station,connects_to,larger network
+137,base station,connects_to,mobile device
+137,base station,connects_to,serving gateway
+137,base station,enables,channel access
+137,base station,forwards,ip datagram
+137,base station,is_a,network component
+137,base station,manages,interference
+137,base station,manages,mobile device
+137,base station,manages,mobility
+137,base station,manages,wireless host
+137,base station,manages,wireless radio resources
+137,base station,operates_at,link layer
+137,base station,receives,ip datagram
+137,base station,receives,packet
+137,base station,sends,packet
+137,base station,sends,paging messages
+138,udp,operates_at,transport layer
+138,serving gateway,connects_to,pdn gateway
+138,serving gateway,is_a,router
+138,serving gateway,receives,udp
+138,serving gateway,sends,datagram
+138,base station,communicates_with,mme
+138,base station,communicates_with,mobile device
+138,base station,communicates_with,wireless host
+138,base station,connects_to,gateway
+138,base station,connects_to,larger network
+138,base station,connects_to,mobile device
+138,base station,connects_to,serving gateway
+138,base station,enables,channel access
+138,base station,forwards,ip datagram
+138,base station,is_a,network component
+138,base station,manages,interference
+138,base station,manages,mobile device
+138,base station,manages,mobility
+138,base station,manages,wireless host
+138,base station,manages,wireless radio resources
+138,base station,operates_at,link layer
+138,base station,receives,ip datagram
+138,base station,receives,packet
+138,base station,sends,packet
+138,base station,sends,paging messages
+138,lte,supports,orthogonal frequency division multiplexing
+139,lte,supports,orthogonal frequency division multiplexing
+142,base station,communicates_with,mme
+142,base station,communicates_with,mobile device
+142,base station,communicates_with,wireless host
+142,base station,connects_to,gateway
+142,base station,connects_to,larger network
+142,base station,connects_to,mobile device
+142,base station,connects_to,serving gateway
+142,base station,enables,channel access
+142,base station,forwards,ip datagram
+142,base station,is_a,network component
+142,base station,manages,interference
+142,base station,manages,mobile device
+142,base station,manages,mobility
+142,base station,manages,wireless host
+142,base station,manages,wireless radio resources
+142,base station,operates_at,link layer
+142,base station,receives,ip datagram
+142,base station,receives,packet
+142,base station,sends,packet
+142,base station,sends,paging messages
+144,mobility management entity,manages,mobile device
+144,mme,communicates_with,hss
+144,mme,controls,attachment process
+144,mme,controls,tunnel
+144,mme,enables,tunnel
+144,mme,manages,mobile device
+144,mme,manages,serving gateway
+144,imsi,identifies,mobile device
+146,bluetooth,enables,wireless peripheral connectivity
+146,bluetooth,implements,frequency-hopping spread spectrum
+146,bluetooth,operates_at,link layer
+146,bluetooth,provides,streaming
+146,bluetooth,supports,ack
+146,bluetooth,supports,ad hoc network
+146,bluetooth,supports,error detection
+146,bluetooth,supports,personal area network
+146,bluetooth,supports,polling
+146,bluetooth,supports,time division multiplexing
+148,base station,communicates_with,mme
+148,base station,communicates_with,mobile device
+148,base station,communicates_with,wireless host
+148,base station,connects_to,gateway
+148,base station,connects_to,larger network
+148,base station,connects_to,mobile device
+148,base station,connects_to,serving gateway
+148,base station,enables,channel access
+148,base station,forwards,ip datagram
+148,base station,is_a,network component
+148,base station,manages,interference
+148,base station,manages,mobile device
+148,base station,manages,mobility
+148,base station,manages,wireless host
+148,base station,manages,wireless radio resources
+148,base station,operates_at,link layer
+148,base station,receives,ip datagram
+148,base station,receives,packet
+148,base station,sends,packet
+148,base station,sends,paging messages
+149,mme,communicates_with,hss
+149,mme,controls,attachment process
+149,mme,controls,tunnel
+149,mme,enables,tunnel
+149,mme,manages,mobile device
+149,mme,manages,serving gateway
+149,base station,communicates_with,mme
+149,base station,communicates_with,mobile device
+149,base station,communicates_with,wireless host
+149,base station,connects_to,gateway
+149,base station,connects_to,larger network
+149,base station,connects_to,mobile device
+149,base station,connects_to,serving gateway
+149,base station,enables,channel access
+149,base station,forwards,ip datagram
+149,base station,is_a,network component
+149,base station,manages,interference
+149,base station,manages,mobile device
+149,base station,manages,mobility
+149,base station,manages,wireless host
+149,base station,manages,wireless radio resources
+149,base station,operates_at,link layer
+149,base station,receives,ip datagram
+149,base station,receives,packet
+149,base station,sends,packet
+149,base station,sends,paging messages
+150,home network,communicates_with,visited network
+156,embb,provides,bandwidth
+157,embb,provides,bandwidth
+159,base station,communicates_with,mme
+159,base station,communicates_with,mobile device
+159,base station,communicates_with,wireless host
+159,base station,connects_to,gateway
+159,base station,connects_to,larger network
+159,base station,connects_to,mobile device
+159,base station,connects_to,serving gateway
+159,base station,enables,channel access
+159,base station,forwards,ip datagram
+159,base station,is_a,network component
+159,base station,manages,interference
+159,base station,manages,mobile device
+159,base station,manages,mobility
+159,base station,manages,wireless host
+159,base station,manages,wireless radio resources
+159,base station,operates_at,link layer
+159,base station,receives,ip datagram
+159,base station,receives,packet
+159,base station,sends,packet
+159,base station,sends,paging messages
+163,mobility management entity,manages,mobile device
+165,ip address,identifies,mobile device
+165,ip address,maps_to,mac address
+166,wifi,has_part,channel
+166,wifi,supports,wireless lan
+167,mobile device,causes,datagram loss
+167,mobile device,communicates_with,base station
+167,mobile device,communicates_with,foreign agent
+167,mobile device,communicates_with,home agent
+167,mobile device,communicates_with,streaming server
+167,mobile device,communicates_with,visited gateway router
+167,mobile device,connects_to,802.11 ap
+167,mobile device,connects_to,base station
+167,mobile device,connects_to,lte base station
+167,mobile device,connects_to,visited network
+167,mobile device,provides,international mobile subscriber identity
+167,mobile device,receives,beacon signal
+167,mobile device,receives,datagram
+167,mobile device,receives,ip datagram
+167,mobile device,sends,attach request
+167,mobile device,sends,datagram
+167,mobile device,sends,ip datagram
+170,tcp,operates_at,transport layer
+170,handover,mitigates,congestion
+172,sim card,has_part,imsi
+172,visited network,connects_to,mobile device
+172,visited network,routes_to,mobile device
+172,home network,communicates_with,visited network
+176,visited network,connects_to,mobile device
+176,visited network,routes_to,mobile device
+177,sim card,has_part,imsi
+177,permanent ip address,identifies,mobile device
+177,home network,communicates_with,visited network
+178,mobile ip,enables,mobility
+178,mobile ip,enables,tunnel
+178,mobile ip,implements,agent discovery
+178,mobile ip,implements,forwarding
+178,mobile ip,implements,mobility services
+178,mobile ip,implements,registration
+178,mobile ip,provides,mobility
+178,mobile ip,runs_on,ipv4
+178,mobile ip,supports,visited network
+178,visited network,connects_to,mobile device
+178,visited network,routes_to,mobile device
+178,mobile device,causes,datagram loss
+178,mobile device,communicates_with,base station
+178,mobile device,communicates_with,foreign agent
+178,mobile device,communicates_with,home agent
+178,mobile device,communicates_with,streaming server
+178,mobile device,communicates_with,visited gateway router
+178,mobile device,connects_to,802.11 ap
+178,mobile device,connects_to,base station
+178,mobile device,connects_to,lte base station
+178,mobile device,connects_to,visited network
+178,mobile device,provides,international mobile subscriber identity
+178,mobile device,receives,beacon signal
+178,mobile device,receives,datagram
+178,mobile device,receives,ip datagram
+178,mobile device,sends,attach request
+178,mobile device,sends,datagram
+178,mobile device,sends,ip datagram
+179,visited network,connects_to,mobile device
+179,visited network,routes_to,mobile device
+179,mobile device,causes,datagram loss
+179,mobile device,communicates_with,base station
+179,mobile device,communicates_with,foreign agent
+179,mobile device,communicates_with,home agent
+179,mobile device,communicates_with,streaming server
+179,mobile device,communicates_with,visited gateway router
+179,mobile device,connects_to,802.11 ap
+179,mobile device,connects_to,base station
+179,mobile device,connects_to,lte base station
+179,mobile device,connects_to,visited network
+179,mobile device,provides,international mobile subscriber identity
+179,mobile device,receives,beacon signal
+179,mobile device,receives,datagram
+179,mobile device,receives,ip datagram
+179,mobile device,sends,attach request
+179,mobile device,sends,datagram
+179,mobile device,sends,ip datagram
+179,permanent address,identifies,mobile device
+180,visited network,connects_to,mobile device
+180,visited network,routes_to,mobile device
+180,mobile device,causes,datagram loss
+180,mobile device,communicates_with,base station
+180,mobile device,communicates_with,foreign agent
+180,mobile device,communicates_with,home agent
+180,mobile device,communicates_with,streaming server
+180,mobile device,communicates_with,visited gateway router
+180,mobile device,connects_to,802.11 ap
+180,mobile device,connects_to,base station
+180,mobile device,connects_to,lte base station
+180,mobile device,connects_to,visited network
+180,mobile device,provides,international mobile subscriber identity
+180,mobile device,receives,beacon signal
+180,mobile device,receives,datagram
+180,mobile device,receives,ip datagram
+180,mobile device,sends,attach request
+180,mobile device,sends,datagram
+180,mobile device,sends,ip datagram
+182,hss,identifies,mobile device
+182,hss,sends,encrypted information
+182,home network,communicates_with,visited network
+182,visited network,connects_to,mobile device
+182,visited network,routes_to,mobile device
+183,visited network,connects_to,mobile device
+183,visited network,routes_to,mobile device
+183,nat,provides,ip address
+184,nat gateway router,forwards,datagram
+184,nat gateway router,provides,address translation
+184,visited network,connects_to,mobile device
+184,visited network,routes_to,mobile device
+184,home network,communicates_with,visited network
+184,hss,identifies,mobile device
+184,hss,sends,encrypted information
+184,mobile device,causes,datagram loss
+184,mobile device,communicates_with,base station
+184,mobile device,communicates_with,foreign agent
+184,mobile device,communicates_with,home agent
+184,mobile device,communicates_with,streaming server
+184,mobile device,communicates_with,visited gateway router
+184,mobile device,connects_to,802.11 ap
+184,mobile device,connects_to,base station
+184,mobile device,connects_to,lte base station
+184,mobile device,connects_to,visited network
+184,mobile device,provides,international mobile subscriber identity
+184,mobile device,receives,beacon signal
+184,mobile device,receives,datagram
+184,mobile device,receives,ip datagram
+184,mobile device,sends,attach request
+184,mobile device,sends,datagram
+184,mobile device,sends,ip datagram
+185,hss,identifies,mobile device
+185,hss,sends,encrypted information
+185,indirect routing,causes,triangle routing problem
+186,hss,identifies,mobile device
+186,hss,sends,encrypted information
+186,visited network,connects_to,mobile device
+186,visited network,routes_to,mobile device
+186,home network,communicates_with,visited network
+187,visited network gateway router,forwards,datagram
+187,visited network gateway router,provides,address translation
+187,visited network gateway router,receives,datagram
+187,hss,identifies,mobile device
+187,hss,sends,encrypted information
+188,gateway router,forwards,ip datagram
+188,gateway router,is_a,router
+189,gateway router,forwards,ip datagram
+189,gateway router,is_a,router
+189,tunneling,supports,ipv6
+190,mobile device,causes,datagram loss
+190,mobile device,communicates_with,base station
+190,mobile device,communicates_with,foreign agent
+190,mobile device,communicates_with,home agent
+190,mobile device,communicates_with,streaming server
+190,mobile device,communicates_with,visited gateway router
+190,mobile device,connects_to,802.11 ap
+190,mobile device,connects_to,base station
+190,mobile device,connects_to,lte base station
+190,mobile device,connects_to,visited network
+190,mobile device,provides,international mobile subscriber identity
+190,mobile device,receives,beacon signal
+190,mobile device,receives,datagram
+190,mobile device,receives,ip datagram
+190,mobile device,sends,attach request
+190,mobile device,sends,datagram
+190,mobile device,sends,ip datagram
+191,lte,supports,orthogonal frequency division multiplexing
+191,hss,identifies,mobile device
+191,hss,sends,encrypted information
+192,visited network gateway router,forwards,datagram
+192,visited network gateway router,provides,address translation
+192,visited network gateway router,receives,datagram
+192,mobile device,causes,datagram loss
+192,mobile device,communicates_with,base station
+192,mobile device,communicates_with,foreign agent
+192,mobile device,communicates_with,home agent
+192,mobile device,communicates_with,streaming server
+192,mobile device,communicates_with,visited gateway router
+192,mobile device,connects_to,802.11 ap
+192,mobile device,connects_to,base station
+192,mobile device,connects_to,lte base station
+192,mobile device,connects_to,visited network
+192,mobile device,provides,international mobile subscriber identity
+192,mobile device,receives,beacon signal
+192,mobile device,receives,datagram
+192,mobile device,receives,ip datagram
+192,mobile device,sends,attach request
+192,mobile device,sends,datagram
+192,mobile device,sends,ip datagram
+193,network congestion,causes,datagram loss
+194,indirect routing,causes,triangle routing problem
+196,hss,identifies,mobile device
+196,hss,sends,encrypted information
+197,hss,identifies,mobile device
+197,hss,sends,encrypted information
+197,indirect routing,causes,triangle routing problem
+208,serving gateway,connects_to,pdn gateway
+208,serving gateway,is_a,router
+208,serving gateway,receives,udp
+208,serving gateway,sends,datagram
+209,serving gateway,connects_to,pdn gateway
+209,serving gateway,is_a,router
+209,serving gateway,receives,udp
+209,serving gateway,sends,datagram
+209,base station,communicates_with,mme
+209,base station,communicates_with,mobile device
+209,base station,communicates_with,wireless host
+209,base station,connects_to,gateway
+209,base station,connects_to,larger network
+209,base station,connects_to,mobile device
+209,base station,connects_to,serving gateway
+209,base station,enables,channel access
+209,base station,forwards,ip datagram
+209,base station,is_a,network component
+209,base station,manages,interference
+209,base station,manages,mobile device
+209,base station,manages,mobility
+209,base station,manages,wireless host
+209,base station,manages,wireless radio resources
+209,base station,operates_at,link layer
+209,base station,receives,ip datagram
+209,base station,receives,packet
+209,base station,sends,packet
+209,base station,sends,paging messages
+210,source base station,communicates_with,mobile device
+210,source base station,forwards,datagram
+210,target base station,communicates_with,mme
+210,target base station,communicates_with,mobile device
+210,target base station,communicates_with,source base station
+210,target base station,forwards,datagram
+210,target base station,provides,channel resources
+210,target base station,receives,datagram
+210,target base station,supports,mobile device
+210,handover,mitigates,congestion
+211,serving gateway,connects_to,pdn gateway
+211,serving gateway,is_a,router
+211,serving gateway,receives,udp
+211,serving gateway,sends,datagram
+212,base station,communicates_with,mme
+212,base station,communicates_with,mobile device
+212,base station,communicates_with,wireless host
+212,base station,connects_to,gateway
+212,base station,connects_to,larger network
+212,base station,connects_to,mobile device
+212,base station,connects_to,serving gateway
+212,base station,enables,channel access
+212,base station,forwards,ip datagram
+212,base station,is_a,network component
+212,base station,manages,interference
+212,base station,manages,mobile device
+212,base station,manages,mobility
+212,base station,manages,wireless host
+212,base station,manages,wireless radio resources
+212,base station,operates_at,link layer
+212,base station,receives,ip datagram
+212,base station,receives,packet
+212,base station,sends,packet
+212,base station,sends,paging messages
+213,source base station,communicates_with,mobile device
+213,source base station,forwards,datagram
+213,target base station,communicates_with,mme
+213,target base station,communicates_with,mobile device
+213,target base station,communicates_with,source base station
+213,target base station,forwards,datagram
+213,target base station,provides,channel resources
+213,target base station,receives,datagram
+213,target base station,supports,mobile device
+215,target base station,communicates_with,mme
+215,target base station,communicates_with,mobile device
+215,target base station,communicates_with,source base station
+215,target base station,forwards,datagram
+215,target base station,provides,channel resources
+215,target base station,receives,datagram
+215,target base station,supports,mobile device
+215,source base station,communicates_with,mobile device
+215,source base station,forwards,datagram
+216,mme,communicates_with,hss
+216,mme,controls,attachment process
+216,mme,controls,tunnel
+216,mme,enables,tunnel
+216,mme,manages,mobile device
+216,mme,manages,serving gateway
+216,serving gateway,connects_to,pdn gateway
+216,serving gateway,is_a,router
+216,serving gateway,receives,udp
+216,serving gateway,sends,datagram
+216,target base station,communicates_with,mme
+216,target base station,communicates_with,mobile device
+216,target base station,communicates_with,source base station
+216,target base station,forwards,datagram
+216,target base station,provides,channel resources
+216,target base station,receives,datagram
+216,target base station,supports,mobile device
+216,source base station,communicates_with,mobile device
+216,source base station,forwards,datagram
+217,serving gateway,connects_to,pdn gateway
+217,serving gateway,is_a,router
+217,serving gateway,receives,udp
+217,serving gateway,sends,datagram
+217,target base station,communicates_with,mme
+217,target base station,communicates_with,mobile device
+217,target base station,communicates_with,source base station
+217,target base station,forwards,datagram
+217,target base station,provides,channel resources
+217,target base station,receives,datagram
+217,target base station,supports,mobile device
+217,tunnel,enables,handover
+218,handover,mitigates,congestion
+219,mobile ip,enables,mobility
+219,mobile ip,enables,tunnel
+219,mobile ip,implements,agent discovery
+219,mobile ip,implements,forwarding
+219,mobile ip,implements,mobility services
+219,mobile ip,implements,registration
+219,mobile ip,provides,mobility
+219,mobile ip,runs_on,ipv4
+219,mobile ip,supports,visited network
+221,mobile ip,enables,mobility
+221,mobile ip,enables,tunnel
+221,mobile ip,implements,agent discovery
+221,mobile ip,implements,forwarding
+221,mobile ip,implements,mobility services
+221,mobile ip,implements,registration
+221,mobile ip,provides,mobility
+221,mobile ip,runs_on,ipv4
+221,mobile ip,supports,visited network
+222,mobile ip,enables,mobility
+222,mobile ip,enables,tunnel
+222,mobile ip,implements,agent discovery
+222,mobile ip,implements,forwarding
+222,mobile ip,implements,mobility services
+222,mobile ip,implements,registration
+222,mobile ip,provides,mobility
+222,mobile ip,runs_on,ipv4
+222,mobile ip,supports,visited network
+222,home network,communicates_with,visited network
+223,home agent,forwards,datagram
+223,indirect routing,causes,triangle routing problem
+224,foreign agent,provides,agent discovery
+224,foreign agent,provides,care-of-address
+224,home agent,forwards,datagram
+225,tunneling,supports,ipv6
+225,mobile ip,enables,mobility
+225,mobile ip,enables,tunnel
+225,mobile ip,implements,agent discovery
+225,mobile ip,implements,forwarding
+225,mobile ip,implements,mobility services
+225,mobile ip,implements,registration
+225,mobile ip,provides,mobility
+225,mobile ip,runs_on,ipv4
+225,mobile ip,supports,visited network
+226,link layer,has_part,mac
+226,link layer,has_part,rlc
+226,fading,prevents,collision detection
+227,tcp,operates_at,transport layer
+227,udp,operates_at,transport layer
+228,tcp,operates_at,transport layer
+228,handover,mitigates,congestion
+229,tcp,operates_at,transport layer
+233,udp,operates_at,transport layer
+237,wireless link,connects_to,base station
+237,wireless link,connects_to,router
+237,wireless link,connects_to,wireless host
+237,wireless link,enables,mobility
+238,bluetooth,enables,wireless peripheral connectivity
+238,bluetooth,implements,frequency-hopping spread spectrum
+238,bluetooth,operates_at,link layer
+238,bluetooth,provides,streaming
+238,bluetooth,supports,ack
+238,bluetooth,supports,ad hoc network
+238,bluetooth,supports,error detection
+238,bluetooth,supports,personal area network
+238,bluetooth,supports,polling
+238,bluetooth,supports,time division multiplexing
+238,mobile ip,enables,mobility
+238,mobile ip,enables,tunnel
+238,mobile ip,implements,agent discovery
+238,mobile ip,implements,forwarding
+238,mobile ip,implements,mobility services
+238,mobile ip,implements,registration
+238,mobile ip,provides,mobility
+238,mobile ip,runs_on,ipv4
+238,mobile ip,supports,visited network
+239,base station,communicates_with,mme
+239,base station,communicates_with,mobile device
+239,base station,communicates_with,wireless host
+239,base station,connects_to,gateway
+239,base station,connects_to,larger network
+239,base station,connects_to,mobile device
+239,base station,connects_to,serving gateway
+239,base station,enables,channel access
+239,base station,forwards,ip datagram
+239,base station,is_a,network component
+239,base station,manages,interference
+239,base station,manages,mobile device
+239,base station,manages,mobility
+239,base station,manages,wireless host
+239,base station,manages,wireless radio resources
+239,base station,operates_at,link layer
+239,base station,receives,ip datagram
+239,base station,receives,packet
+239,base station,sends,packet
+239,base station,sends,paging messages
+240,mobile device,causes,datagram loss
+240,mobile device,communicates_with,base station
+240,mobile device,communicates_with,foreign agent
+240,mobile device,communicates_with,home agent
+240,mobile device,communicates_with,streaming server
+240,mobile device,communicates_with,visited gateway router
+240,mobile device,connects_to,802.11 ap
+240,mobile device,connects_to,base station
+240,mobile device,connects_to,lte base station
+240,mobile device,connects_to,visited network
+240,mobile device,provides,international mobile subscriber identity
+240,mobile device,receives,beacon signal
+240,mobile device,receives,datagram
+240,mobile device,receives,ip datagram
+240,mobile device,sends,attach request
+240,mobile device,sends,datagram
+240,mobile device,sends,ip datagram
+240,mme,communicates_with,hss
+240,mme,controls,attachment process
+240,mme,controls,tunnel
+240,mme,enables,tunnel
+240,mme,manages,mobile device
+240,mme,manages,serving gateway
+240,hss,identifies,mobile device
+240,hss,sends,encrypted information
+240,base station,communicates_with,mme
+240,base station,communicates_with,mobile device
+240,base station,communicates_with,wireless host
+240,base station,connects_to,gateway
+240,base station,connects_to,larger network
+240,base station,connects_to,mobile device
+240,base station,connects_to,serving gateway
+240,base station,enables,channel access
+240,base station,forwards,ip datagram
+240,base station,is_a,network component
+240,base station,manages,interference
+240,base station,manages,mobile device
+240,base station,manages,mobility
+240,base station,manages,wireless host
+240,base station,manages,wireless radio resources
+240,base station,operates_at,link layer
+240,base station,receives,ip datagram
+240,base station,receives,packet
+240,base station,sends,packet
+240,base station,sends,paging messages
+241,mobility management entity,manages,mobile device
+241,mme,communicates_with,hss
+241,mme,controls,attachment process
+241,mme,controls,tunnel
+241,mme,enables,tunnel
+241,mme,manages,mobile device
+241,mme,manages,serving gateway
+241,mobile device,causes,datagram loss
+241,mobile device,communicates_with,base station
+241,mobile device,communicates_with,foreign agent
+241,mobile device,communicates_with,home agent
+241,mobile device,communicates_with,streaming server
+241,mobile device,communicates_with,visited gateway router
+241,mobile device,connects_to,802.11 ap
+241,mobile device,connects_to,base station
+241,mobile device,connects_to,lte base station
+241,mobile device,connects_to,visited network
+241,mobile device,provides,international mobile subscriber identity
+241,mobile device,receives,beacon signal
+241,mobile device,receives,datagram
+241,mobile device,receives,ip datagram
+241,mobile device,sends,attach request
+241,mobile device,sends,datagram
+241,mobile device,sends,ip datagram
+241,base station,communicates_with,mme
+241,base station,communicates_with,mobile device
+241,base station,communicates_with,wireless host
+241,base station,connects_to,gateway
+241,base station,connects_to,larger network
+241,base station,connects_to,mobile device
+241,base station,connects_to,serving gateway
+241,base station,enables,channel access
+241,base station,forwards,ip datagram
+241,base station,is_a,network component
+241,base station,manages,interference
+241,base station,manages,mobile device
+241,base station,manages,mobility
+241,base station,manages,wireless host
+241,base station,manages,wireless radio resources
+241,base station,operates_at,link layer
+241,base station,receives,ip datagram
+241,base station,receives,packet
+241,base station,sends,packet
+241,base station,sends,paging messages
+241,hss,identifies,mobile device
+241,hss,sends,encrypted information
+242,base station,communicates_with,mme
+242,base station,communicates_with,mobile device
+242,base station,communicates_with,wireless host
+242,base station,connects_to,gateway
+242,base station,connects_to,larger network
+242,base station,connects_to,mobile device
+242,base station,connects_to,serving gateway
+242,base station,enables,channel access
+242,base station,forwards,ip datagram
+242,base station,is_a,network component
+242,base station,manages,interference
+242,base station,manages,mobile device
+242,base station,manages,mobility
+242,base station,manages,wireless host
+242,base station,manages,wireless radio resources
+242,base station,operates_at,link layer
+242,base station,receives,ip datagram
+242,base station,receives,packet
+242,base station,sends,packet
+242,base station,sends,paging messages
+243,visited network,connects_to,mobile device
+243,visited network,routes_to,mobile device
+243,home network,communicates_with,visited network
+243,cdma,provides,shared-medium access
+243,cdma,requires,chipping rate
+245,wifi,has_part,channel
+245,wifi,supports,wireless lan
+252,lte,supports,orthogonal frequency division multiplexing
+253,base station,communicates_with,mme
+253,base station,communicates_with,mobile device
+253,base station,communicates_with,wireless host
+253,base station,connects_to,gateway
+253,base station,connects_to,larger network
+253,base station,connects_to,mobile device
+253,base station,connects_to,serving gateway
+253,base station,enables,channel access
+253,base station,forwards,ip datagram
+253,base station,is_a,network component
+253,base station,manages,interference
+253,base station,manages,mobile device
+253,base station,manages,mobility
+253,base station,manages,wireless host
+253,base station,manages,wireless radio resources
+253,base station,operates_at,link layer
+253,base station,receives,ip datagram
+253,base station,receives,packet
+253,base station,sends,packet
+253,base station,sends,paging messages
+254,base station,communicates_with,mme
+254,base station,communicates_with,mobile device
+254,base station,communicates_with,wireless host
+254,base station,connects_to,gateway
+254,base station,connects_to,larger network
+254,base station,connects_to,mobile device
+254,base station,connects_to,serving gateway
+254,base station,enables,channel access
+254,base station,forwards,ip datagram
+254,base station,is_a,network component
+254,base station,manages,interference
+254,base station,manages,mobile device
+254,base station,manages,mobility
+254,base station,manages,wireless host
+254,base station,manages,wireless radio resources
+254,base station,operates_at,link layer
+254,base station,receives,ip datagram
+254,base station,receives,packet
+254,base station,sends,packet
+254,base station,sends,paging messages
+258,tunnel,enables,handover
+258,anchor point,supports,handover

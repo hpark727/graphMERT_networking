@@ -1,12 +1,13 @@
 # Repo-specific
 transformers/src/transformers/models/graphmert/graph_data/
 
-# Intermediate KG generations (only gen4 is kept)
+# Intermediate KG generations (only gen4 is current)
 gen1_triplets/
 gen2_triplets/
 gen3_triplets/
+gen5_triplets/
 
-# gen4: keep validated CSVs and relation_map, ignore large binary datasets and derived files
+# gen4: ignore large binary datasets and derived injection files
 gen4_triplets/training_data/
 gen4_triplets/validated_both/injections_ch*.csv
 

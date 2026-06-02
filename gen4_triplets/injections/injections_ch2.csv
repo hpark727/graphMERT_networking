@@ -1,0 +1,1229 @@
+id,head,relation_type,tail
+3,dns,has_part,dns server
+3,dns,maps_to,ip address
+3,dns,operates_at,application layer
+3,dns,provides,directory service
+3,dns,provides,host aliasing
+3,dns,provides,hostname-to-ip-address translation service
+3,dns,provides,load distribution
+3,dns,provides,mail server aliasing
+3,dns,runs_on,udp
+3,tcp,provides,congestion control
+3,tcp,provides,reliable data transfer
+3,udp,provides,unreliable data transfer service
+5,browser,communicates_with,http server
+5,browser,communicates_with,origin server
+5,browser,communicates_with,web cache
+5,browser,communicates_with,web proxy
+5,browser,communicates_with,web server
+5,browser,connects_to,web cache
+5,browser,is_a,client
+5,browser,manages,cookie file
+5,browser,receives,http response
+5,browser,sends,cookie
+5,browser,sends,cookie header line
+5,browser,sends,header line
+5,browser,sends,http request
+6,data center,contains,host
+6,data center,enables,streaming video service
+6,data center,provides,web-based email
+9,web server,implements,http
+9,web server,provides,web service
+9,web server,sends,header line
+9,web server,sends,http response
+10,ip address,identifies,host
+10,ip address,identifies,server
+10,ip address,identifies,web server
+10,web,runs_on,tcp
+10,telnet,runs_on,tcp
+10,packet,contains,client address
+11,data center,contains,host
+11,data center,enables,streaming video service
+11,data center,provides,web-based email
+13,p2p architecture,enables,self-scaling
+13,bittorrent,provides,file distribution
+13,bittorrent,implements,p2p architecture
+17,web server,implements,http
+17,web server,provides,web service
+17,web server,sends,header line
+17,web server,sends,http response
+17,browser,communicates_with,http server
+17,browser,communicates_with,origin server
+17,browser,communicates_with,web cache
+17,browser,communicates_with,web proxy
+17,browser,communicates_with,web server
+17,browser,connects_to,web cache
+17,browser,is_a,client
+17,browser,manages,cookie file
+17,browser,receives,http response
+17,browser,sends,cookie
+17,browser,sends,cookie header line
+17,browser,sends,header line
+17,browser,sends,http request
+20,socket,connects_to,transport layer
+20,socket,part_of,host
+20,socket,sends,packet
+21,socket,connects_to,transport layer
+21,socket,part_of,host
+21,socket,sends,packet
+22,transport protocol,provides,data integrity
+23,ip address,identifies,host
+23,ip address,identifies,server
+23,ip address,identifies,web server
+24,port number,identifies,mail server
+24,port number,identifies,welcoming socket
+25,socket,connects_to,transport layer
+25,socket,part_of,host
+25,socket,sends,packet
+25,iana,manages,root dns server
+32,file transfer,runs_on,tcp
+33,internet telephony,runs_on,udp
+33,multiplayer games,requires,timing guarantees
+35,udp,provides,unreliable data transfer service
+35,tcp,provides,congestion control
+35,tcp,provides,reliable data transfer
+36,udp,provides,unreliable data transfer service
+36,tcp,provides,congestion control
+36,tcp,provides,reliable data transfer
+37,handshaking procedure,enables,connection-oriented service
+40,udp,provides,unreliable data transfer service
+40,tcp,provides,congestion control
+40,tcp,provides,reliable data transfer
+41,tls,provides,security services
+41,internet telephony,runs_on,udp
+42,tcp,provides,congestion control
+42,tcp,provides,reliable data transfer
+42,internet telephony,runs_on,udp
+42,web,runs_on,tcp
+42,file transfer,runs_on,tcp
+43,udp,provides,unreliable data transfer service
+43,tcp,provides,congestion control
+43,tcp,provides,reliable data transfer
+43,internet telephony,runs_on,udp
+45,http,enables,cookie
+45,http,enables,streaming
+45,http,operates_at,application layer
+45,http,provides,conditional get
+45,http,runs_on,tcp
+45,http,supports,persistent connection
+45,http,supports,pipelining
+46,chrome,implements,http
+46,apache,provides,response message
+46,http,enables,cookie
+46,http,enables,streaming
+46,http,operates_at,application layer
+46,http,provides,conditional get
+46,http,runs_on,tcp
+46,http,supports,persistent connection
+46,http,supports,pipelining
+48,web,runs_on,tcp
+48,http,enables,cookie
+48,http,enables,streaming
+48,http,operates_at,application layer
+48,http,provides,conditional get
+48,http,runs_on,tcp
+48,http,supports,persistent connection
+48,http,supports,pipelining
+49,dns,has_part,dns server
+49,dns,maps_to,ip address
+49,dns,operates_at,application layer
+49,dns,provides,directory service
+49,dns,provides,host aliasing
+49,dns,provides,hostname-to-ip-address translation service
+49,dns,provides,load distribution
+49,dns,provides,mail server aliasing
+49,dns,runs_on,udp
+54,url,has_part,hostname
+54,url,has_part,path name
+55,internet explorer,implements,http
+55,chrome,implements,http
+55,apache,provides,response message
+56,tcp,provides,congestion control
+56,tcp,provides,reliable data transfer
+56,udp,provides,unreliable data transfer service
+56,http client,communicates_with,http server
+57,tcp,provides,congestion control
+57,tcp,provides,reliable data transfer
+58,http,enables,cookie
+58,http,enables,streaming
+58,http,operates_at,application layer
+58,http,provides,conditional get
+58,http,runs_on,tcp
+58,http,supports,persistent connection
+58,http,supports,pipelining
+59,web server,implements,http
+59,web server,provides,web service
+59,web server,sends,header line
+59,web server,sends,http response
+60,http,enables,cookie
+60,http,enables,streaming
+60,http,operates_at,application layer
+60,http,provides,conditional get
+60,http,runs_on,tcp
+60,http,supports,persistent connection
+60,http,supports,pipelining
+61,tcp,provides,congestion control
+61,tcp,provides,reliable data transfer
+62,http,enables,cookie
+62,http,enables,streaming
+62,http,operates_at,application layer
+62,http,provides,conditional get
+62,http,runs_on,tcp
+62,http,supports,persistent connection
+62,http,supports,pipelining
+62,port number,identifies,mail server
+62,port number,identifies,welcoming socket
+62,url,has_part,hostname
+62,url,has_part,path name
+63,socket,connects_to,transport layer
+63,socket,part_of,host
+63,socket,sends,packet
+64,html file,part_of,web page
+65,http,enables,cookie
+65,http,enables,streaming
+65,http,operates_at,application layer
+65,http,provides,conditional get
+65,http,runs_on,tcp
+65,http,supports,persistent connection
+65,http,supports,pipelining
+67,packet,contains,client address
+68,tcp segment,contains,http request message
+68,tcp segment,part_of,three-way handshake
+69,html file,part_of,web page
+70,web server,implements,http
+70,web server,provides,web service
+70,web server,sends,header line
+70,web server,sends,http response
+73,request line,has_part,http version field
+73,request line,has_part,method field
+73,request line,has_part,url field
+73,request line,part_of,request message
+77,http client,communicates_with,http server
+80,status line,contains,protocol version field
+80,status line,contains,status code
+80,status line,contains,status message
+81,header line,enables,object caching
+81,header line,part_of,request message
+81,header line,part_of,response message
+82,header line,enables,object caching
+82,header line,part_of,request message
+82,header line,part_of,response message
+84,telnet,runs_on,tcp
+84,web server,implements,http
+84,web server,provides,web service
+84,web server,sends,header line
+84,web server,sends,http response
+86,browser,communicates_with,http server
+86,browser,communicates_with,origin server
+86,browser,communicates_with,web cache
+86,browser,communicates_with,web proxy
+86,browser,communicates_with,web server
+86,browser,connects_to,web cache
+86,browser,is_a,client
+86,browser,manages,cookie file
+86,browser,receives,http response
+86,browser,sends,cookie
+86,browser,sends,cookie header line
+86,browser,sends,header line
+86,browser,sends,http request
+86,web server,implements,http
+86,web server,provides,web service
+86,web server,sends,header line
+86,web server,sends,http response
+88,cookie file,contains,identification number
+89,cookie file,contains,identification number
+90,cookie file,contains,identification number
+90,http request,contains,cookie header line
+90,http,enables,cookie
+90,http,enables,streaming
+90,http,operates_at,application layer
+90,http,provides,conditional get
+90,http,runs_on,tcp
+90,http,supports,persistent connection
+90,http,supports,pipelining
+93,hotmail,implements,email service
+94,web cache,communicates_with,origin web server
+94,web cache,connects_to,origin web server
+94,web cache,decreases,response time
+94,web cache,decreases,traffic intensity
+94,web cache,decreases,web traffic
+94,web cache,is_a,proxy server
+95,web cache,communicates_with,origin web server
+95,web cache,connects_to,origin web server
+95,web cache,decreases,response time
+95,web cache,decreases,traffic intensity
+95,web cache,decreases,web traffic
+95,web cache,is_a,proxy server
+95,http request,contains,cookie header line
+95,origin server,receives,http request
+95,origin server,sends,http response
+96,origin server,receives,http request
+96,origin server,sends,http response
+96,web cache,communicates_with,origin web server
+96,web cache,connects_to,origin web server
+96,web cache,decreases,response time
+96,web cache,decreases,traffic intensity
+96,web cache,decreases,web traffic
+96,web cache,is_a,proxy server
+97,web cache,communicates_with,origin web server
+97,web cache,connects_to,origin web server
+97,web cache,decreases,response time
+97,web cache,decreases,traffic intensity
+97,web cache,decreases,web traffic
+97,web cache,is_a,proxy server
+97,isp,provides,ip address
+97,isp,provides,web cache
+98,origin server,receives,http request
+98,origin server,sends,http response
+98,web cache,communicates_with,origin web server
+98,web cache,connects_to,origin web server
+98,web cache,decreases,response time
+98,web cache,decreases,traffic intensity
+98,web cache,decreases,web traffic
+98,web cache,is_a,proxy server
+99,router,forwards,packet
+99,router,has_part,buffer
+99,router,operates_at,network layer
+99,router,routes_to,host
+99,institutional network,connects_to,internet
+99,institutional network,has_part,cache
+100,http request,contains,cookie header line
+100,institutional router,connects_to,internet router
+100,institutional router,forwards,ip datagram
+100,internet router,receives,ip datagram
+101,internet router,receives,ip datagram
+103,web cache,communicates_with,origin web server
+103,web cache,connects_to,origin web server
+103,web cache,decreases,response time
+103,web cache,decreases,traffic intensity
+103,web cache,decreases,web traffic
+103,web cache,is_a,proxy server
+103,institutional network,connects_to,internet
+103,institutional network,has_part,cache
+105,web cache,communicates_with,origin web server
+105,web cache,connects_to,origin web server
+105,web cache,decreases,response time
+105,web cache,decreases,traffic intensity
+105,web cache,decreases,web traffic
+105,web cache,is_a,proxy server
+107,http,enables,cookie
+107,http,enables,streaming
+107,http,operates_at,application layer
+107,http,provides,conditional get
+107,http,runs_on,tcp
+107,http,supports,persistent connection
+107,http,supports,pipelining
+107,web server,implements,http
+107,web server,provides,web service
+107,web server,sends,header line
+107,web server,sends,http response
+108,proxy cache,sends,conditional get
+108,web server,implements,http
+108,web server,provides,web service
+108,web server,sends,header line
+108,web server,sends,http response
+109,header line,enables,object caching
+109,header line,part_of,request message
+109,header line,part_of,response message
+109,web server,implements,http
+109,web server,provides,web service
+109,web server,sends,header line
+109,web server,sends,http response
+110,proxy cache,sends,conditional get
+110,status line,contains,protocol version field
+110,status line,contains,status code
+110,status line,contains,status message
+111,internet explorer,implements,http
+122,quic,provides,flow control
+122,quic,provides,message multiplexing
+122,quic,runs_on,udp
+126,mail server,has_part,queue
+126,mail server,receives,email
+126,mail server,receives,mail message
+127,smtp,provides,email service
+127,smtp,runs_on,tcp
+128,smtp,provides,email service
+128,smtp,runs_on,tcp
+128,tcp,provides,congestion control
+128,tcp,provides,reliable data transfer
+128,mail server,has_part,queue
+128,mail server,receives,email
+128,mail server,receives,mail message
+129,smtp,provides,email service
+129,smtp,runs_on,tcp
+129,http,enables,cookie
+129,http,enables,streaming
+129,http,operates_at,application layer
+129,http,provides,conditional get
+129,http,runs_on,tcp
+129,http,supports,persistent connection
+129,http,supports,pipelining
+130,smtp,provides,email service
+130,smtp,runs_on,tcp
+130,http,enables,cookie
+130,http,enables,streaming
+130,http,operates_at,application layer
+130,http,provides,conditional get
+130,http,runs_on,tcp
+130,http,supports,persistent connection
+130,http,supports,pipelining
+131,user agent,communicates_with,mail server
+131,user agent,sends,email
+131,user agent,sends,mail message
+131,mail server,has_part,queue
+131,mail server,receives,email
+131,mail server,receives,mail message
+132,smtp server,is_a,server
+132,smtp client,communicates_with,smtp server
+132,smtp client,is_a,client
+133,smtp,provides,email service
+133,smtp,runs_on,tcp
+134,tcp,provides,congestion control
+134,tcp,provides,reliable data transfer
+135,smtp client,communicates_with,smtp server
+135,smtp client,is_a,client
+136,smtp client,communicates_with,smtp server
+136,smtp client,is_a,client
+136,smtp server,is_a,server
+137,smtp,provides,email service
+137,smtp,runs_on,tcp
+138,telnet,runs_on,tcp
+138,smtp server,is_a,server
+139,user agent,communicates_with,mail server
+139,user agent,sends,email
+139,user agent,sends,mail message
+139,smtp,provides,email service
+139,smtp,runs_on,tcp
+140,http,enables,cookie
+140,http,enables,streaming
+140,http,operates_at,application layer
+140,http,provides,conditional get
+140,http,runs_on,tcp
+140,http,supports,persistent connection
+140,http,supports,pipelining
+141,telnet,runs_on,tcp
+142,smtp,provides,email service
+142,smtp,runs_on,tcp
+142,user agent,communicates_with,mail server
+142,user agent,sends,email
+142,user agent,sends,mail message
+143,mail server,has_part,queue
+143,mail server,receives,email
+143,mail server,receives,mail message
+143,smtp,provides,email service
+143,smtp,runs_on,tcp
+143,user agent,communicates_with,mail server
+143,user agent,sends,email
+143,user agent,sends,mail message
+144,smtp,provides,email service
+144,smtp,runs_on,tcp
+144,http,enables,cookie
+144,http,enables,streaming
+144,http,operates_at,application layer
+144,http,provides,conditional get
+144,http,runs_on,tcp
+144,http,supports,persistent connection
+144,http,supports,pipelining
+145,smtp client,communicates_with,smtp server
+145,smtp client,is_a,client
+146,user agent,communicates_with,mail server
+146,user agent,sends,email
+146,user agent,sends,mail message
+146,smtp,provides,email service
+146,smtp,runs_on,tcp
+146,mail server,has_part,queue
+146,mail server,receives,email
+146,mail server,receives,mail message
+147,http,enables,cookie
+147,http,enables,streaming
+147,http,operates_at,application layer
+147,http,provides,conditional get
+147,http,runs_on,tcp
+147,http,supports,persistent connection
+147,http,supports,pipelining
+147,imap,provides,email service
+149,hostname,identifies,host
+149,hostname,maps_to,ip address
+150,ip address,identifies,host
+150,ip address,identifies,server
+150,ip address,identifies,web server
+151,ip address,identifies,host
+151,ip address,identifies,server
+151,ip address,identifies,web server
+152,udp,provides,unreliable data transfer service
+152,http,enables,cookie
+152,http,enables,streaming
+152,http,operates_at,application layer
+152,http,provides,conditional get
+152,http,runs_on,tcp
+152,http,supports,persistent connection
+152,http,supports,pipelining
+153,http client,communicates_with,http server
+153,url,has_part,hostname
+153,url,has_part,path name
+154,dns server,communicates_with,dns client
+154,dns server,contains,mapping
+154,dns server,forwards,dns query
+154,dns server,has_part,cache
+154,dns server,has_part,ns record
+154,dns server,provides,hostname-to-ip-address translation service
+154,dns server,provides,ip address
+154,dns server,receives,dns query message
+154,dns server,receives,hostname
+154,dns server,sends,dns reply message
+154,dns server,sends,ip address
+154,dns server,supports,recursion
+155,alias hostname,maps_to,canonical hostname
+155,dns,has_part,dns server
+155,dns,maps_to,ip address
+155,dns,operates_at,application layer
+155,dns,provides,directory service
+155,dns,provides,host aliasing
+155,dns,provides,hostname-to-ip-address translation service
+155,dns,provides,load distribution
+155,dns,provides,mail server aliasing
+155,dns,runs_on,udp
+157,mx record,maps_to,canonical hostname
+158,dns,has_part,dns server
+158,dns,maps_to,ip address
+158,dns,operates_at,application layer
+158,dns,provides,directory service
+158,dns,provides,host aliasing
+158,dns,provides,hostname-to-ip-address translation service
+158,dns,provides,load distribution
+158,dns,provides,mail server aliasing
+158,dns,runs_on,udp
+158,dns rotation,provides,load distribution
+158,dns query,contains,hostname
+158,alias hostname,maps_to,canonical hostname
+158,http,enables,cookie
+158,http,enables,streaming
+158,http,operates_at,application layer
+158,http,provides,conditional get
+158,http,runs_on,tcp
+158,http,supports,persistent connection
+158,http,supports,pipelining
+159,dns,has_part,dns server
+159,dns,maps_to,ip address
+159,dns,operates_at,application layer
+159,dns,provides,directory service
+159,dns,provides,host aliasing
+159,dns,provides,hostname-to-ip-address translation service
+159,dns,provides,load distribution
+159,dns,provides,mail server aliasing
+159,dns,runs_on,udp
+160,dns,has_part,dns server
+160,dns,maps_to,ip address
+160,dns,operates_at,application layer
+160,dns,provides,directory service
+160,dns,provides,host aliasing
+160,dns,provides,hostname-to-ip-address translation service
+160,dns,provides,load distribution
+160,dns,provides,mail server aliasing
+160,dns,runs_on,udp
+161,dns query,contains,hostname
+162,dns server,communicates_with,dns client
+162,dns server,contains,mapping
+162,dns server,forwards,dns query
+162,dns server,has_part,cache
+162,dns server,has_part,ns record
+162,dns server,provides,hostname-to-ip-address translation service
+162,dns server,provides,ip address
+162,dns server,receives,dns query message
+162,dns server,receives,hostname
+162,dns server,sends,dns reply message
+162,dns server,sends,ip address
+162,dns server,supports,recursion
+163,dns server,communicates_with,dns client
+163,dns server,contains,mapping
+163,dns server,forwards,dns query
+163,dns server,has_part,cache
+163,dns server,has_part,ns record
+163,dns server,provides,hostname-to-ip-address translation service
+163,dns server,provides,ip address
+163,dns server,receives,dns query message
+163,dns server,receives,hostname
+163,dns server,sends,dns reply message
+163,dns server,sends,ip address
+163,dns server,supports,recursion
+164,dns server,communicates_with,dns client
+164,dns server,contains,mapping
+164,dns server,forwards,dns query
+164,dns server,has_part,cache
+164,dns server,has_part,ns record
+164,dns server,provides,hostname-to-ip-address translation service
+164,dns server,provides,ip address
+164,dns server,receives,dns query message
+164,dns server,receives,hostname
+164,dns server,sends,dns reply message
+164,dns server,sends,ip address
+164,dns server,supports,recursion
+169,authoritative dns server,has_part,dns record
+169,authoritative dns server,part_of,hierarchical architecture
+169,authoritative dns server,provides,ip address
+170,local dns server,communicates_with,authoritative dns server
+170,local dns server,communicates_with,departmental dns server
+170,local dns server,communicates_with,intermediate dns server
+170,local dns server,communicates_with,root dns server
+170,local dns server,communicates_with,tld server
+170,local dns server,forwards,authoritative dns server
+170,local dns server,forwards,authoritative server
+170,local dns server,forwards,tld server
+170,local dns server,receives,dns query
+170,local dns server,sends,dns response
+170,isp,provides,ip address
+170,isp,provides,web cache
+170,dhcp,provides,ip address
+171,local dns server,communicates_with,authoritative dns server
+171,local dns server,communicates_with,departmental dns server
+171,local dns server,communicates_with,intermediate dns server
+171,local dns server,communicates_with,root dns server
+171,local dns server,communicates_with,tld server
+171,local dns server,forwards,authoritative dns server
+171,local dns server,forwards,authoritative server
+171,local dns server,forwards,tld server
+171,local dns server,receives,dns query
+171,local dns server,sends,dns response
+171,dns query,contains,hostname
+172,local dns server,communicates_with,authoritative dns server
+172,local dns server,communicates_with,departmental dns server
+172,local dns server,communicates_with,intermediate dns server
+172,local dns server,communicates_with,root dns server
+172,local dns server,communicates_with,tld server
+172,local dns server,forwards,authoritative dns server
+172,local dns server,forwards,authoritative server
+172,local dns server,forwards,tld server
+172,local dns server,receives,dns query
+172,local dns server,sends,dns response
+172,authoritative dns server,has_part,dns record
+172,authoritative dns server,part_of,hierarchical architecture
+172,authoritative dns server,provides,ip address
+172,root dns server,part_of,hierarchical architecture
+172,root dns server,provides,ip address
+173,tld server,is_a,dns server
+173,tld server,provides,ip address
+173,authoritative dns server,has_part,dns record
+173,authoritative dns server,part_of,hierarchical architecture
+173,authoritative dns server,provides,ip address
+173,dns caching,decreases,delay
+174,intermediate dns server,communicates_with,authoritative dns server
+174,authoritative dns server,has_part,dns record
+174,authoritative dns server,part_of,hierarchical architecture
+174,authoritative dns server,provides,ip address
+175,local dns server,communicates_with,authoritative dns server
+175,local dns server,communicates_with,departmental dns server
+175,local dns server,communicates_with,intermediate dns server
+175,local dns server,communicates_with,root dns server
+175,local dns server,communicates_with,tld server
+175,local dns server,forwards,authoritative dns server
+175,local dns server,forwards,authoritative server
+175,local dns server,forwards,tld server
+175,local dns server,receives,dns query
+175,local dns server,sends,dns response
+175,authoritative dns server,has_part,dns record
+175,authoritative dns server,part_of,hierarchical architecture
+175,authoritative dns server,provides,ip address
+176,dns caching,decreases,delay
+176,dns query,contains,hostname
+177,dns caching,decreases,delay
+177,dns server,communicates_with,dns client
+177,dns server,contains,mapping
+177,dns server,forwards,dns query
+177,dns server,has_part,cache
+177,dns server,has_part,ns record
+177,dns server,provides,hostname-to-ip-address translation service
+177,dns server,provides,ip address
+177,dns server,receives,dns query message
+177,dns server,receives,hostname
+177,dns server,sends,dns reply message
+177,dns server,sends,ip address
+177,dns server,supports,recursion
+177,hostname,identifies,host
+177,hostname,maps_to,ip address
+177,ip address,identifies,host
+177,ip address,identifies,server
+177,ip address,identifies,web server
+178,dns server,communicates_with,dns client
+178,dns server,contains,mapping
+178,dns server,forwards,dns query
+178,dns server,has_part,cache
+178,dns server,has_part,ns record
+178,dns server,provides,hostname-to-ip-address translation service
+178,dns server,provides,ip address
+178,dns server,receives,dns query message
+178,dns server,receives,hostname
+178,dns server,sends,dns reply message
+178,dns server,sends,ip address
+178,dns server,supports,recursion
+178,ip address,identifies,host
+178,ip address,identifies,server
+178,ip address,identifies,web server
+179,local dns server,communicates_with,authoritative dns server
+179,local dns server,communicates_with,departmental dns server
+179,local dns server,communicates_with,intermediate dns server
+179,local dns server,communicates_with,root dns server
+179,local dns server,communicates_with,tld server
+179,local dns server,forwards,authoritative dns server
+179,local dns server,forwards,authoritative server
+179,local dns server,forwards,tld server
+179,local dns server,receives,dns query
+179,local dns server,sends,dns response
+182,cname record,maps_to,canonical hostname
+182,mx record,maps_to,canonical hostname
+185,authoritative flag,identifies,authoritative server
+187,answer section,contains,resource record
+188,dns query,contains,hostname
+188,dns server,communicates_with,dns client
+188,dns server,contains,mapping
+188,dns server,forwards,dns query
+188,dns server,has_part,cache
+188,dns server,has_part,ns record
+188,dns server,provides,hostname-to-ip-address translation service
+188,dns server,provides,ip address
+188,dns server,receives,dns query message
+188,dns server,receives,hostname
+188,dns server,sends,dns reply message
+188,dns server,sends,ip address
+188,dns server,supports,recursion
+189,dns query,contains,hostname
+189,dns server,communicates_with,dns client
+189,dns server,contains,mapping
+189,dns server,forwards,dns query
+189,dns server,has_part,cache
+189,dns server,has_part,ns record
+189,dns server,provides,hostname-to-ip-address translation service
+189,dns server,provides,ip address
+189,dns server,receives,dns query message
+189,dns server,receives,hostname
+189,dns server,sends,dns reply message
+189,dns server,sends,ip address
+189,dns server,supports,recursion
+193,dns server,communicates_with,dns client
+193,dns server,contains,mapping
+193,dns server,forwards,dns query
+193,dns server,has_part,cache
+193,dns server,has_part,ns record
+193,dns server,provides,hostname-to-ip-address translation service
+193,dns server,provides,ip address
+193,dns server,receives,dns query message
+193,dns server,receives,hostname
+193,dns server,sends,dns reply message
+193,dns server,sends,ip address
+193,dns server,supports,recursion
+193,dns protocol,provides,hostname resolution
+194,local dns server,communicates_with,authoritative dns server
+194,local dns server,communicates_with,departmental dns server
+194,local dns server,communicates_with,intermediate dns server
+194,local dns server,communicates_with,root dns server
+194,local dns server,communicates_with,tld server
+194,local dns server,forwards,authoritative dns server
+194,local dns server,forwards,authoritative server
+194,local dns server,forwards,tld server
+194,local dns server,receives,dns query
+194,local dns server,sends,dns response
+194,tld server,is_a,dns server
+194,tld server,provides,ip address
+194,root dns server,part_of,hierarchical architecture
+194,root dns server,provides,ip address
+195,local dns server,communicates_with,authoritative dns server
+195,local dns server,communicates_with,departmental dns server
+195,local dns server,communicates_with,intermediate dns server
+195,local dns server,communicates_with,root dns server
+195,local dns server,communicates_with,tld server
+195,local dns server,forwards,authoritative dns server
+195,local dns server,forwards,authoritative server
+195,local dns server,forwards,tld server
+195,local dns server,receives,dns query
+195,local dns server,sends,dns response
+195,http request,contains,cookie header line
+195,dns query,contains,hostname
+196,p2p architecture,enables,self-scaling
+198,bittorrent,provides,file distribution
+198,bittorrent,implements,p2p architecture
+199,server,communicates_with,client
+199,server,controls,timeout interval
+199,server,has_part,storage
+199,server,implements,http
+199,server,is_a,host
+199,server,operates_at,application layer
+199,server,provides,email service
+199,server,receives,packet
+199,server,receives,request message
+199,server,receives,udp packet
+199,server,sends,file
+199,server,sends,frame
+199,server,sends,html file
+199,server,sends,packet
+199,server,sends,response message
+199,server,sends,tcp segment
+199,server,sends,udp packet
+201,server,communicates_with,client
+201,server,controls,timeout interval
+201,server,has_part,storage
+201,server,implements,http
+201,server,is_a,host
+201,server,operates_at,application layer
+201,server,provides,email service
+201,server,receives,packet
+201,server,receives,request message
+201,server,receives,udp packet
+201,server,sends,file
+201,server,sends,frame
+201,server,sends,html file
+201,server,sends,packet
+201,server,sends,response message
+201,server,sends,tcp segment
+201,server,sends,udp packet
+203,p2p architecture,enables,self-scaling
+203,peer,connects_to,neighboring peer
+203,peer,receives,chunk
+203,peer,receives,file
+203,peer,sends,bit
+203,peer,sends,chunk
+203,peer,sends,file
+203,server,communicates_with,client
+203,server,controls,timeout interval
+203,server,has_part,storage
+203,server,implements,http
+203,server,is_a,host
+203,server,operates_at,application layer
+203,server,provides,email service
+203,server,receives,packet
+203,server,receives,request message
+203,server,receives,udp packet
+203,server,sends,file
+203,server,sends,frame
+203,server,sends,html file
+203,server,sends,packet
+203,server,sends,response message
+203,server,sends,tcp segment
+203,server,sends,udp packet
+205,server,communicates_with,client
+205,server,controls,timeout interval
+205,server,has_part,storage
+205,server,implements,http
+205,server,is_a,host
+205,server,operates_at,application layer
+205,server,provides,email service
+205,server,receives,packet
+205,server,receives,request message
+205,server,receives,udp packet
+205,server,sends,file
+205,server,sends,frame
+205,server,sends,html file
+205,server,sends,packet
+205,server,sends,response message
+205,server,sends,tcp segment
+205,server,sends,udp packet
+208,p2p architecture,enables,self-scaling
+209,bittorrent,provides,file distribution
+209,bittorrent,implements,p2p architecture
+209,torrent,has_part,chunk
+209,p2p architecture,enables,self-scaling
+210,bittorrent,provides,file distribution
+210,bittorrent,implements,p2p architecture
+211,tracker,sends,ip address
+211,torrent,has_part,chunk
+212,tracker,sends,ip address
+216,bittorrent,provides,file distribution
+216,bittorrent,implements,p2p architecture
+218,bittorrent,provides,file distribution
+218,bittorrent,implements,p2p architecture
+219,bittorrent,provides,file distribution
+219,bittorrent,implements,p2p architecture
+225,http request,contains,cookie header line
+227,dash,provides,streaming
+227,dash,runs_on,http
+228,dash,provides,streaming
+228,dash,runs_on,http
+231,data center,contains,host
+231,data center,enables,streaming video service
+231,data center,provides,web-based email
+238,cdn,provides,streaming
+238,browser,communicates_with,http server
+238,browser,communicates_with,origin server
+238,browser,communicates_with,web cache
+238,browser,communicates_with,web proxy
+238,browser,communicates_with,web server
+238,browser,connects_to,web cache
+238,browser,is_a,client
+238,browser,manages,cookie file
+238,browser,receives,http response
+238,browser,sends,cookie
+238,browser,sends,cookie header line
+238,browser,sends,header line
+238,browser,sends,http request
+238,url,has_part,hostname
+238,url,has_part,path name
+239,dns,has_part,dns server
+239,dns,maps_to,ip address
+239,dns,operates_at,application layer
+239,dns,provides,directory service
+239,dns,provides,host aliasing
+239,dns,provides,hostname-to-ip-address translation service
+239,dns,provides,load distribution
+239,dns,provides,mail server aliasing
+239,dns,runs_on,udp
+240,http,enables,cookie
+240,http,enables,streaming
+240,http,operates_at,application layer
+240,http,provides,conditional get
+240,http,runs_on,tcp
+240,http,supports,persistent connection
+240,http,supports,pipelining
+240,dns query,contains,hostname
+241,local dns server,communicates_with,authoritative dns server
+241,local dns server,communicates_with,departmental dns server
+241,local dns server,communicates_with,intermediate dns server
+241,local dns server,communicates_with,root dns server
+241,local dns server,communicates_with,tld server
+241,local dns server,forwards,authoritative dns server
+241,local dns server,forwards,authoritative server
+241,local dns server,forwards,tld server
+241,local dns server,receives,dns query
+241,local dns server,sends,dns response
+241,authoritative dns server,has_part,dns record
+241,authoritative dns server,part_of,hierarchical architecture
+241,authoritative dns server,provides,ip address
+248,content processing,enables,streaming
+249,http,enables,cookie
+249,http,enables,streaming
+249,http,operates_at,application layer
+249,http,provides,conditional get
+249,http,runs_on,tcp
+249,http,supports,persistent connection
+249,http,supports,pipelining
+249,dash,provides,streaming
+249,dash,runs_on,http
+251,dash,provides,streaming
+251,dash,runs_on,http
+253,ip address,identifies,host
+253,ip address,identifies,server
+253,ip address,identifies,web server
+254,dash,provides,streaming
+254,dash,runs_on,http
+258,dash,provides,streaming
+258,dash,runs_on,http
+259,http,enables,cookie
+259,http,enables,streaming
+259,http,operates_at,application layer
+259,http,provides,conditional get
+259,http,runs_on,tcp
+259,http,supports,persistent connection
+259,http,supports,pipelining
+263,tcp,provides,congestion control
+263,tcp,provides,reliable data transfer
+263,udp,provides,unreliable data transfer service
+264,udp,provides,unreliable data transfer service
+264,tcp,provides,congestion control
+264,tcp,provides,reliable data transfer
+266,udp,provides,unreliable data transfer service
+266,tcp,provides,congestion control
+266,tcp,provides,reliable data transfer
+268,packet,contains,client address
+268,ip address,identifies,host
+268,ip address,identifies,server
+268,ip address,identifies,web server
+268,socket,connects_to,transport layer
+268,socket,part_of,host
+268,socket,sends,packet
+269,port number,identifies,mail server
+269,port number,identifies,welcoming socket
+269,socket,connects_to,transport layer
+269,socket,part_of,host
+269,socket,sends,packet
+270,ip address,identifies,host
+270,ip address,identifies,server
+270,ip address,identifies,web server
+270,udp,provides,unreliable data transfer service
+271,client,communicates_with,cdn
+271,client,communicates_with,dns server
+271,client,communicates_with,server
+271,client,connects_to,isp
+271,client,connects_to,mail server
+271,client,connects_to,server
+271,client,connects_to,web cache
+271,client,has_part,buffer
+271,client,implements,http
+271,client,implements,rate determination algorithm
+271,client,measures,rtt
+271,client,measures,throughput
+271,client,receives,header line
+271,client,receives,http response
+271,client,receives,ip address
+271,client,receives,manifest file
+271,client,receives,packet
+271,client,receives,response message
+271,client,requires,smtp
+271,client,sends,hostname
+271,client,sends,http request message
+271,client,sends,packet
+271,client,sends,request message
+271,client,sends,tcp segment
+271,client,sends,udp packet
+271,server,communicates_with,client
+271,server,controls,timeout interval
+271,server,has_part,storage
+271,server,implements,http
+271,server,is_a,host
+271,server,operates_at,application layer
+271,server,provides,email service
+271,server,receives,packet
+271,server,receives,request message
+271,server,receives,udp packet
+271,server,sends,file
+271,server,sends,frame
+271,server,sends,html file
+271,server,sends,packet
+271,server,sends,response message
+271,server,sends,tcp segment
+271,server,sends,udp packet
+271,socket,connects_to,transport layer
+271,socket,part_of,host
+271,socket,sends,packet
+272,client,communicates_with,cdn
+272,client,communicates_with,dns server
+272,client,communicates_with,server
+272,client,connects_to,isp
+272,client,connects_to,mail server
+272,client,connects_to,server
+272,client,connects_to,web cache
+272,client,has_part,buffer
+272,client,implements,http
+272,client,implements,rate determination algorithm
+272,client,measures,rtt
+272,client,measures,throughput
+272,client,receives,header line
+272,client,receives,http response
+272,client,receives,ip address
+272,client,receives,manifest file
+272,client,receives,packet
+272,client,receives,response message
+272,client,requires,smtp
+272,client,sends,hostname
+272,client,sends,http request message
+272,client,sends,packet
+272,client,sends,request message
+272,client,sends,tcp segment
+272,client,sends,udp packet
+272,server,communicates_with,client
+272,server,controls,timeout interval
+272,server,has_part,storage
+272,server,implements,http
+272,server,is_a,host
+272,server,operates_at,application layer
+272,server,provides,email service
+272,server,receives,packet
+272,server,receives,request message
+272,server,receives,udp packet
+272,server,sends,file
+272,server,sends,frame
+272,server,sends,html file
+272,server,sends,packet
+272,server,sends,response message
+272,server,sends,tcp segment
+272,server,sends,udp packet
+273,hostname,identifies,host
+273,hostname,maps_to,ip address
+273,ip address,identifies,host
+273,ip address,identifies,server
+273,ip address,identifies,web server
+274,tcp,provides,congestion control
+274,tcp,provides,reliable data transfer
+275,socket,connects_to,transport layer
+275,socket,part_of,host
+275,socket,sends,packet
+275,client socket,requires,port number
+277,udpclient,runs_on,host
+282,udpclient,runs_on,host
+283,udp,provides,unreliable data transfer service
+283,tcp,provides,congestion control
+283,tcp,provides,reliable data transfer
+284,client socket,requires,port number
+284,server socket,is_a,tcp socket
+284,server socket,requires,port number
+285,tcp,provides,congestion control
+285,tcp,provides,reliable data transfer
+286,ip address,identifies,host
+286,ip address,identifies,server
+286,ip address,identifies,web server
+286,port number,identifies,mail server
+286,port number,identifies,welcoming socket
+288,welcoming socket,is_a,tcp socket
+289,tcp,provides,congestion control
+289,tcp,provides,reliable data transfer
+294,welcoming socket,is_a,tcp socket
+296,tcp,provides,congestion control
+296,tcp,provides,reliable data transfer
+296,udp,provides,unreliable data transfer service
+297,p2p architecture,enables,self-scaling
+297,http,enables,cookie
+297,http,enables,streaming
+297,http,operates_at,application layer
+297,http,provides,conditional get
+297,http,runs_on,tcp
+297,http,supports,persistent connection
+297,http,supports,pipelining
+297,smtp,provides,email service
+297,smtp,runs_on,tcp
+297,dns,has_part,dns server
+297,dns,maps_to,ip address
+297,dns,operates_at,application layer
+297,dns,provides,directory service
+297,dns,provides,host aliasing
+297,dns,provides,hostname-to-ip-address translation service
+297,dns,provides,load distribution
+297,dns,provides,mail server aliasing
+297,dns,runs_on,udp
+298,tcp,provides,congestion control
+298,tcp,provides,reliable data transfer
+298,udp,provides,unreliable data transfer service
+299,http,enables,cookie
+299,http,enables,streaming
+299,http,operates_at,application layer
+299,http,provides,conditional get
+299,http,runs_on,tcp
+299,http,supports,persistent connection
+299,http,supports,pipelining
+299,smtp,provides,email service
+299,smtp,runs_on,tcp
+299,dns,has_part,dns server
+299,dns,maps_to,ip address
+299,dns,operates_at,application layer
+299,dns,provides,directory service
+299,dns,provides,host aliasing
+299,dns,provides,hostname-to-ip-address translation service
+299,dns,provides,load distribution
+299,dns,provides,mail server aliasing
+299,dns,runs_on,udp
+299,tcp,provides,congestion control
+299,tcp,provides,reliable data transfer
+299,udp,provides,unreliable data transfer service
+300,tcp,provides,congestion control
+300,tcp,provides,reliable data transfer
+301,telnet,runs_on,tcp
+301,web server,implements,http
+301,web server,provides,web service
+301,web server,sends,header line
+301,web server,sends,http response
+301,imap,provides,email service
+302,web server,implements,http
+302,web server,provides,web service
+302,web server,sends,header line
+302,web server,sends,http response
+302,mail server,has_part,queue
+302,mail server,receives,email
+302,mail server,receives,mail message
+303,tcp,provides,congestion control
+303,tcp,provides,reliable data transfer
+304,persistent connection,supports,pipelining
+304,tcp segment,contains,http request message
+304,tcp segment,part_of,three-way handshake
+304,http request,contains,cookie header line
+305,http client,communicates_with,http server
+305,ip address,identifies,host
+305,ip address,identifies,server
+305,ip address,identifies,web server
+306,url,has_part,hostname
+306,url,has_part,path name
+307,persistent connection,supports,pipelining
+307,ip address,identifies,host
+307,ip address,identifies,server
+307,ip address,identifies,web server
+308,persistent connection,supports,pipelining
+309,url,has_part,hostname
+309,url,has_part,path name
+311,institutional network,connects_to,internet
+311,institutional network,has_part,cache
+313,parallel connections,enables,parallel downloads
+317,smtp,provides,email service
+317,smtp,runs_on,tcp
+317,http,enables,cookie
+317,http,enables,streaming
+317,http,operates_at,application layer
+317,http,provides,conditional get
+317,http,runs_on,tcp
+317,http,supports,persistent connection
+317,http,supports,pipelining
+318,whois database,enables,reconnaissance
+318,nslookup,communicates_with,dns server
+318,nslookup,enables,reconnaissance
+318,nslookup,sends,dns query
+319,nslookup,communicates_with,dns server
+319,nslookup,enables,reconnaissance
+319,nslookup,sends,dns query
+319,web server,implements,http
+319,web server,provides,web service
+319,web server,sends,header line
+319,web server,sends,http response
+320,dig,communicates_with,dns server
+320,root dns server,part_of,hierarchical architecture
+320,root dns server,provides,ip address
+321,local dns server,communicates_with,authoritative dns server
+321,local dns server,communicates_with,departmental dns server
+321,local dns server,communicates_with,intermediate dns server
+321,local dns server,communicates_with,root dns server
+321,local dns server,communicates_with,tld server
+321,local dns server,forwards,authoritative dns server
+321,local dns server,forwards,authoritative server
+321,local dns server,forwards,tld server
+321,local dns server,receives,dns query
+321,local dns server,sends,dns response
+324,p2p architecture,enables,self-scaling
+327,tcpclient,runs_on,host
+327,udpclient,runs_on,host
+327,tcpserver,runs_on,host
+328,tcpclient,runs_on,host
+328,tcpserver,runs_on,host
+328,udpclient,runs_on,host
+330,web server,implements,http
+330,web server,provides,web service
+330,web server,sends,header line
+330,web server,sends,http response
+331,http request,contains,cookie header line
+332,web server,implements,http
+332,web server,provides,web service
+332,web server,sends,header line
+332,web server,sends,http response
+335,mail server,has_part,queue
+335,mail server,receives,email
+335,mail server,receives,mail message
+336,web proxy,receives,http request
+336,web proxy,receives,http response
+336,web proxy,sends,http request
+336,web proxy,sends,http response
+336,http request,contains,cookie header line
+336,origin server,receives,http request
+336,origin server,sends,http response
+336,browser,communicates_with,http server
+336,browser,communicates_with,origin server
+336,browser,communicates_with,web cache
+336,browser,communicates_with,web proxy
+336,browser,communicates_with,web server
+336,browser,connects_to,web cache
+336,browser,is_a,client
+336,browser,manages,cookie file
+336,browser,receives,http response
+336,browser,sends,cookie
+336,browser,sends,cookie header line
+336,browser,sends,header line
+336,browser,sends,http request
+338,dns,has_part,dns server
+338,dns,maps_to,ip address
+338,dns,operates_at,application layer
+338,dns,provides,directory service
+338,dns,provides,host aliasing
+338,dns,provides,hostname-to-ip-address translation service
+338,dns,provides,load distribution
+338,dns,provides,mail server aliasing
+338,dns,runs_on,udp
+338,local dns server,communicates_with,authoritative dns server
+338,local dns server,communicates_with,departmental dns server
+338,local dns server,communicates_with,intermediate dns server
+338,local dns server,communicates_with,root dns server
+338,local dns server,communicates_with,tld server
+338,local dns server,forwards,authoritative dns server
+338,local dns server,forwards,authoritative server
+338,local dns server,forwards,tld server
+338,local dns server,receives,dns query
+338,local dns server,sends,dns response

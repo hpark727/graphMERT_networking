@@ -1,0 +1,802 @@
+id,head,relation_type,tail
+3,physical media,connects_to,host
+11,wifi,operates_at,data link layer
+15,tcp,implements,congestion control
+15,tcp,provides,congestion-control mechanism
+15,tcp,provides,reliable delivery
+15,http,operates_at,application layer
+15,http,provides,web service
+15,smtp,operates_at,application layer
+15,smtp,provides,email service
+15,ethernet,has_part,copper wire
+15,ethernet,operates_at,data link layer
+15,wifi,operates_at,data link layer
+22,packet switching,provides,efficiency
+22,packet switching,provides,sharing of transmission capacity
+28,router,communicates_with,host
+28,router,connects_to,base station
+28,router,connects_to,client
+28,router,connects_to,end system
+28,router,connects_to,pc
+28,router,connects_to,server
+28,router,forwards,datagram
+28,router,has_part,buffer
+28,router,has_part,forwarding table
+28,router,has_part,output buffer
+28,router,is_a,packet switch
+28,router,mitigates,ddos attack
+28,router,part_of,point of presence
+28,router,receives,packet
+28,router,receives,special packet
+28,router,sends,message
+29,web server,is_a,server
+30,web server,is_a,server
+35,access network,connects_to,host
+35,access network,controls,throughput
+36,dsl modem,connects_to,dslam
+38,dsl modem,connects_to,dslam
+40,dsl,requires,telephone line
+40,dsl,supports,frequency-division multiplexing
+40,cable internet access,requires,cable
+40,cable internet access,requires,cable modem
+41,fiber optics,connects_to,cable head end
+41,cable head end,has_part,cable modem termination system
+41,dsl modem,connects_to,dslam
+42,ethernet,has_part,copper wire
+42,ethernet,operates_at,data link layer
+42,cable head end,has_part,cable modem termination system
+43,cable internet access,requires,cable
+43,cable internet access,requires,cable modem
+44,dsl,requires,telephone line
+44,dsl,supports,frequency-division multiplexing
+47,home router,connects_to,optical network terminator
+47,cable head end,has_part,cable modem termination system
+48,base station,communicates_with,laptop
+48,wifi wireless router,connects_to,modem
+49,ethernet,has_part,copper wire
+49,ethernet,operates_at,data link layer
+49,ethernet switch,connects_to,edge router
+50,ethernet switch,connects_to,edge router
+50,access point,connects_to,ethernet switch
+51,wifi,operates_at,data link layer
+51,dsl,requires,telephone line
+51,dsl,supports,frequency-division multiplexing
+52,home router,connects_to,optical network terminator
+52,base station,communicates_with,laptop
+53,base station,communicates_with,laptop
+53,wifi,operates_at,data link layer
+54,wifi,operates_at,data link layer
+54,hfc,has_part,coaxial cable
+54,hfc,has_part,fiber cable
+54,dsl,requires,telephone line
+54,dsl,supports,frequency-division multiplexing
+54,ethernet,has_part,copper wire
+54,ethernet,operates_at,data link layer
+55,end system,connects_to,communication link
+55,end system,connects_to,isp
+55,end system,connects_to,router
+55,end system,sends,packet
+55,end system,sends,segment
+55,router,communicates_with,host
+55,router,connects_to,base station
+55,router,connects_to,client
+55,router,connects_to,end system
+55,router,connects_to,pc
+55,router,connects_to,server
+55,router,forwards,datagram
+55,router,has_part,buffer
+55,router,has_part,forwarding table
+55,router,has_part,output buffer
+55,router,is_a,packet switch
+55,router,mitigates,ddos attack
+55,router,part_of,point of presence
+55,router,receives,packet
+55,router,receives,special packet
+55,router,sends,message
+64,fiber optics,connects_to,cable head end
+70,end system,connects_to,communication link
+70,end system,connects_to,isp
+70,end system,connects_to,router
+70,end system,sends,packet
+70,end system,sends,segment
+71,packet switch,connects_to,end system
+71,packet switch,forwards,packet
+71,router,communicates_with,host
+71,router,connects_to,base station
+71,router,connects_to,client
+71,router,connects_to,end system
+71,router,connects_to,pc
+71,router,connects_to,server
+71,router,forwards,datagram
+71,router,has_part,buffer
+71,router,has_part,forwarding table
+71,router,has_part,output buffer
+71,router,is_a,packet switch
+71,router,mitigates,ddos attack
+71,router,part_of,point of presence
+71,router,receives,packet
+71,router,receives,special packet
+71,router,sends,message
+72,router,communicates_with,host
+72,router,connects_to,base station
+72,router,connects_to,client
+72,router,connects_to,end system
+72,router,connects_to,pc
+72,router,connects_to,server
+72,router,forwards,datagram
+72,router,has_part,buffer
+72,router,has_part,forwarding table
+72,router,has_part,output buffer
+72,router,is_a,packet switch
+72,router,mitigates,ddos attack
+72,router,part_of,point of presence
+72,router,receives,packet
+72,router,receives,special packet
+72,router,sends,message
+73,router,communicates_with,host
+73,router,connects_to,base station
+73,router,connects_to,client
+73,router,connects_to,end system
+73,router,connects_to,pc
+73,router,connects_to,server
+73,router,forwards,datagram
+73,router,has_part,buffer
+73,router,has_part,forwarding table
+73,router,has_part,output buffer
+73,router,is_a,packet switch
+73,router,mitigates,ddos attack
+73,router,part_of,point of presence
+73,router,receives,packet
+73,router,receives,special packet
+73,router,sends,message
+73,propagation delay,increases,delay
+73,propagation delay,increases,round-trip delay
+74,router,communicates_with,host
+74,router,connects_to,base station
+74,router,connects_to,client
+74,router,connects_to,end system
+74,router,connects_to,pc
+74,router,connects_to,server
+74,router,forwards,datagram
+74,router,has_part,buffer
+74,router,has_part,forwarding table
+74,router,has_part,output buffer
+74,router,is_a,packet switch
+74,router,mitigates,ddos attack
+74,router,part_of,point of presence
+74,router,receives,packet
+74,router,receives,special packet
+74,router,sends,message
+74,packet,contains,destination address
+74,packet,contains,segment
+74,packet,contains,source address
+74,packet,has_part,header fields
+74,packet,has_part,payload field
+75,router,communicates_with,host
+75,router,connects_to,base station
+75,router,connects_to,client
+75,router,connects_to,end system
+75,router,connects_to,pc
+75,router,connects_to,server
+75,router,forwards,datagram
+75,router,has_part,buffer
+75,router,has_part,forwarding table
+75,router,has_part,output buffer
+75,router,is_a,packet switch
+75,router,mitigates,ddos attack
+75,router,part_of,point of presence
+75,router,receives,packet
+75,router,receives,special packet
+75,router,sends,message
+75,packet,contains,destination address
+75,packet,contains,segment
+75,packet,contains,source address
+75,packet,has_part,header fields
+75,packet,has_part,payload field
+76,router,communicates_with,host
+76,router,connects_to,base station
+76,router,connects_to,client
+76,router,connects_to,end system
+76,router,connects_to,pc
+76,router,connects_to,server
+76,router,forwards,datagram
+76,router,has_part,buffer
+76,router,has_part,forwarding table
+76,router,has_part,output buffer
+76,router,is_a,packet switch
+76,router,mitigates,ddos attack
+76,router,part_of,point of presence
+76,router,receives,packet
+76,router,receives,special packet
+76,router,sends,message
+76,packet,contains,destination address
+76,packet,contains,segment
+76,packet,contains,source address
+76,packet,has_part,header fields
+76,packet,has_part,payload field
+77,link,part_of,core
+77,link,provides,throughput
+77,link,supports,circuit switching
+77,link,supports,packet switching
+77,link,supports,time division multiplexing
+77,router,communicates_with,host
+77,router,connects_to,base station
+77,router,connects_to,client
+77,router,connects_to,end system
+77,router,connects_to,pc
+77,router,connects_to,server
+77,router,forwards,datagram
+77,router,has_part,buffer
+77,router,has_part,forwarding table
+77,router,has_part,output buffer
+77,router,is_a,packet switch
+77,router,mitigates,ddos attack
+77,router,part_of,point of presence
+77,router,receives,packet
+77,router,receives,special packet
+77,router,sends,message
+77,output buffer,causes,packet loss
+77,output buffer,part_of,router
+77,packet switch,connects_to,end system
+77,packet switch,forwards,packet
+78,output buffer,causes,packet loss
+78,output buffer,part_of,router
+78,congestion,causes,delay
+78,congestion,causes,packet loss
+78,congestion,increases,queuing delay
+79,router,communicates_with,host
+79,router,connects_to,base station
+79,router,connects_to,client
+79,router,connects_to,end system
+79,router,connects_to,pc
+79,router,connects_to,server
+79,router,forwards,datagram
+79,router,has_part,buffer
+79,router,has_part,forwarding table
+79,router,has_part,output buffer
+79,router,is_a,packet switch
+79,router,mitigates,ddos attack
+79,router,part_of,point of presence
+79,router,receives,packet
+79,router,receives,special packet
+79,router,sends,message
+80,router,communicates_with,host
+80,router,connects_to,base station
+80,router,connects_to,client
+80,router,connects_to,end system
+80,router,connects_to,pc
+80,router,connects_to,server
+80,router,forwards,datagram
+80,router,has_part,buffer
+80,router,has_part,forwarding table
+80,router,has_part,output buffer
+80,router,is_a,packet switch
+80,router,mitigates,ddos attack
+80,router,part_of,point of presence
+80,router,receives,packet
+80,router,receives,special packet
+80,router,sends,message
+80,output buffer,causes,packet loss
+80,output buffer,part_of,router
+80,queuing delay,increases,delay
+80,queuing delay,increases,end-to-end delay
+80,queuing delay,part_of,nodal delay
+81,router,communicates_with,host
+81,router,connects_to,base station
+81,router,connects_to,client
+81,router,connects_to,end system
+81,router,connects_to,pc
+81,router,connects_to,server
+81,router,forwards,datagram
+81,router,has_part,buffer
+81,router,has_part,forwarding table
+81,router,has_part,output buffer
+81,router,is_a,packet switch
+81,router,mitigates,ddos attack
+81,router,part_of,point of presence
+81,router,receives,packet
+81,router,receives,special packet
+81,router,sends,message
+81,ip address,identifies,end system
+82,router,communicates_with,host
+82,router,connects_to,base station
+82,router,connects_to,client
+82,router,connects_to,end system
+82,router,connects_to,pc
+82,router,connects_to,server
+82,router,forwards,datagram
+82,router,has_part,buffer
+82,router,has_part,forwarding table
+82,router,has_part,output buffer
+82,router,is_a,packet switch
+82,router,mitigates,ddos attack
+82,router,part_of,point of presence
+82,router,receives,packet
+82,router,receives,special packet
+82,router,sends,message
+82,forwarding table,maps_to,outbound link
+82,forwarding table,part_of,router
+85,router,communicates_with,host
+85,router,connects_to,base station
+85,router,connects_to,client
+85,router,connects_to,end system
+85,router,connects_to,pc
+85,router,connects_to,server
+85,router,forwards,datagram
+85,router,has_part,buffer
+85,router,has_part,forwarding table
+85,router,has_part,output buffer
+85,router,is_a,packet switch
+85,router,mitigates,ddos attack
+85,router,part_of,point of presence
+85,router,receives,packet
+85,router,receives,special packet
+85,router,sends,message
+85,forwarding table,maps_to,outbound link
+85,forwarding table,part_of,router
+86,routing protocol,enables,forwarding table
+86,routing protocol,enables,shortest path
+86,circuit switching,causes,idle network resources
+86,packet switching,provides,efficiency
+86,packet switching,provides,sharing of transmission capacity
+89,circuit,implements,time-division multiplexing
+89,circuit,requires,time slot
+91,internet,supports,mission critical services
+92,circuit switching,causes,idle network resources
+95,circuit switching,causes,idle network resources
+95,packet switching,provides,efficiency
+95,packet switching,provides,sharing of transmission capacity
+97,circuit switching,causes,idle network resources
+99,packet switching,provides,efficiency
+99,packet switching,provides,sharing of transmission capacity
+99,circuit switching,causes,idle network resources
+100,packet switching,provides,efficiency
+100,packet switching,provides,sharing of transmission capacity
+100,circuit switching,causes,idle network resources
+101,circuit switching,causes,idle network resources
+103,packet switching,provides,efficiency
+103,packet switching,provides,sharing of transmission capacity
+103,circuit switching,causes,idle network resources
+104,packet switching,provides,efficiency
+104,packet switching,provides,sharing of transmission capacity
+105,packet switching,provides,efficiency
+105,packet switching,provides,sharing of transmission capacity
+105,circuit switching,causes,idle network resources
+106,packet switching,provides,efficiency
+106,packet switching,provides,sharing of transmission capacity
+106,circuit switching,causes,idle network resources
+106,access isp,connects_to,global transit isp
+106,access isp,connects_to,host
+106,access isp,connects_to,regional isp
+106,access isp,connects_to,tier-1 isp
+106,access isp,part_of,network of networks
+107,access isp,connects_to,global transit isp
+107,access isp,connects_to,host
+107,access isp,connects_to,regional isp
+107,access isp,connects_to,tier-1 isp
+107,access isp,part_of,network of networks
+107,dsl,requires,telephone line
+107,dsl,supports,frequency-division multiplexing
+109,global transit isp,has_part,router
+110,global transit isp,has_part,router
+112,regional isp,connects_to,tier-1 isp
+113,regional isp,connects_to,tier-1 isp
+113,global transit isp,has_part,router
+114,access isp,connects_to,global transit isp
+114,access isp,connects_to,host
+114,access isp,connects_to,regional isp
+114,access isp,connects_to,tier-1 isp
+114,access isp,part_of,network of networks
+115,larger regional isp,connects_to,tier-1 isp
+117,router,communicates_with,host
+117,router,connects_to,base station
+117,router,connects_to,client
+117,router,connects_to,end system
+117,router,connects_to,pc
+117,router,connects_to,server
+117,router,forwards,datagram
+117,router,has_part,buffer
+117,router,has_part,forwarding table
+117,router,has_part,output buffer
+117,router,is_a,packet switch
+117,router,mitigates,ddos attack
+117,router,part_of,point of presence
+117,router,receives,packet
+117,router,receives,special packet
+117,router,sends,message
+117,access isp,connects_to,global transit isp
+117,access isp,connects_to,host
+117,access isp,connects_to,regional isp
+117,access isp,connects_to,tier-1 isp
+117,access isp,part_of,network of networks
+117,regional isp,connects_to,tier-1 isp
+125,packet,contains,destination address
+125,packet,contains,segment
+125,packet,contains,source address
+125,packet,has_part,header fields
+125,packet,has_part,payload field
+125,host,connects_to,circuit switch
+125,host,connects_to,imp
+125,host,is_a,end system
+125,host,is_a,network component
+125,host,provides,socket interface
+125,host,sends,segment
+126,queuing delay,increases,delay
+126,queuing delay,increases,end-to-end delay
+126,queuing delay,part_of,nodal delay
+126,transmission delay,increases,delay
+126,propagation delay,increases,delay
+126,propagation delay,increases,round-trip delay
+127,packet switching,provides,efficiency
+127,packet switching,provides,sharing of transmission capacity
+127,queue,causes,packet loss
+127,queue,connects_to,link
+127,queue,part_of,router
+127,queue,receives,packet
+127,buffer,receives,packet
+128,queue,causes,packet loss
+128,queue,connects_to,link
+128,queue,part_of,router
+128,queue,receives,packet
+129,processing delay,increases,delay
+129,processing delay,part_of,nodal delay
+130,queuing delay,increases,delay
+130,queuing delay,increases,end-to-end delay
+130,queuing delay,part_of,nodal delay
+130,packet,contains,destination address
+130,packet,contains,segment
+130,packet,contains,source address
+130,packet,has_part,header fields
+130,packet,has_part,payload field
+132,transmission delay,increases,delay
+132,propagation delay,increases,delay
+132,propagation delay,increases,round-trip delay
+133,propagation delay,increases,delay
+133,propagation delay,increases,round-trip delay
+134,transmission delay,increases,delay
+134,propagation delay,increases,delay
+134,propagation delay,increases,round-trip delay
+135,router,communicates_with,host
+135,router,connects_to,base station
+135,router,connects_to,client
+135,router,connects_to,end system
+135,router,connects_to,pc
+135,router,connects_to,server
+135,router,forwards,datagram
+135,router,has_part,buffer
+135,router,has_part,forwarding table
+135,router,has_part,output buffer
+135,router,is_a,packet switch
+135,router,mitigates,ddos attack
+135,router,part_of,point of presence
+135,router,receives,packet
+135,router,receives,special packet
+135,router,sends,message
+135,link,part_of,core
+135,link,provides,throughput
+135,link,supports,circuit switching
+135,link,supports,packet switching
+135,link,supports,time division multiplexing
+136,packet,contains,destination address
+136,packet,contains,segment
+136,packet,contains,source address
+136,packet,has_part,header fields
+136,packet,has_part,payload field
+137,transmission delay,increases,delay
+138,propagation delay,increases,delay
+138,propagation delay,increases,round-trip delay
+138,transmission delay,increases,delay
+139,router,communicates_with,host
+139,router,connects_to,base station
+139,router,connects_to,client
+139,router,connects_to,end system
+139,router,connects_to,pc
+139,router,connects_to,server
+139,router,forwards,datagram
+139,router,has_part,buffer
+139,router,has_part,forwarding table
+139,router,has_part,output buffer
+139,router,is_a,packet switch
+139,router,mitigates,ddos attack
+139,router,part_of,point of presence
+139,router,receives,packet
+139,router,receives,special packet
+139,router,sends,message
+140,transmission delay,increases,delay
+140,propagation delay,increases,delay
+140,propagation delay,increases,round-trip delay
+142,queuing delay,increases,delay
+142,queuing delay,increases,end-to-end delay
+142,queuing delay,part_of,nodal delay
+145,traffic intensity,increases,average queue length
+145,traffic intensity,increases,average queuing delay
+145,traffic intensity,increases,packet loss
+145,traffic intensity,increases,queuing delay
+147,queue,causes,packet loss
+147,queue,connects_to,link
+147,queue,part_of,router
+147,queue,receives,packet
+148,queuing delay,increases,delay
+148,queuing delay,increases,end-to-end delay
+148,queuing delay,part_of,nodal delay
+148,traffic intensity,increases,average queue length
+148,traffic intensity,increases,average queuing delay
+148,traffic intensity,increases,packet loss
+148,traffic intensity,increases,queuing delay
+149,traffic intensity,increases,average queue length
+149,traffic intensity,increases,average queuing delay
+149,traffic intensity,increases,packet loss
+149,traffic intensity,increases,queuing delay
+150,packet arrival rate,increases,traffic intensity
+150,traffic intensity,increases,average queue length
+150,traffic intensity,increases,average queuing delay
+150,traffic intensity,increases,packet loss
+150,traffic intensity,increases,queuing delay
+151,router,communicates_with,host
+151,router,connects_to,base station
+151,router,connects_to,client
+151,router,connects_to,end system
+151,router,connects_to,pc
+151,router,connects_to,server
+151,router,forwards,datagram
+151,router,has_part,buffer
+151,router,has_part,forwarding table
+151,router,has_part,output buffer
+151,router,is_a,packet switch
+151,router,mitigates,ddos attack
+151,router,part_of,point of presence
+151,router,receives,packet
+151,router,receives,special packet
+151,router,sends,message
+152,nodal delay,contains,processing delay
+152,nodal delay,contains,queuing delay
+153,processing delay,increases,delay
+153,processing delay,part_of,nodal delay
+159,router,communicates_with,host
+159,router,connects_to,base station
+159,router,connects_to,client
+159,router,connects_to,end system
+159,router,connects_to,pc
+159,router,connects_to,server
+159,router,forwards,datagram
+159,router,has_part,buffer
+159,router,has_part,forwarding table
+159,router,has_part,output buffer
+159,router,is_a,packet switch
+159,router,mitigates,ddos attack
+159,router,part_of,point of presence
+159,router,receives,packet
+159,router,receives,special packet
+159,router,sends,message
+160,queuing delay,increases,delay
+160,queuing delay,increases,end-to-end delay
+160,queuing delay,part_of,nodal delay
+161,propagation delay,increases,delay
+161,propagation delay,increases,round-trip delay
+161,wifi,operates_at,data link layer
+165,server,connects_to,access link
+165,server,connects_to,core
+165,server,connects_to,ethernet switch
+165,server,connects_to,router
+165,server,is_a,host
+165,server,is_a,network component
+165,server,provides,email service
+165,server,provides,web service
+165,client,communicates_with,server
+165,client,connects_to,access link
+165,client,connects_to,router
+165,client,is_a,host
+165,router,communicates_with,host
+165,router,connects_to,base station
+165,router,connects_to,client
+165,router,connects_to,end system
+165,router,connects_to,pc
+165,router,connects_to,server
+165,router,forwards,datagram
+165,router,has_part,buffer
+165,router,has_part,forwarding table
+165,router,has_part,output buffer
+165,router,is_a,packet switch
+165,router,mitigates,ddos attack
+165,router,part_of,point of presence
+165,router,receives,packet
+165,router,receives,special packet
+165,router,sends,message
+166,router,communicates_with,host
+166,router,connects_to,base station
+166,router,connects_to,client
+166,router,connects_to,end system
+166,router,connects_to,pc
+166,router,connects_to,server
+166,router,forwards,datagram
+166,router,has_part,buffer
+166,router,has_part,forwarding table
+166,router,has_part,output buffer
+166,router,is_a,packet switch
+166,router,mitigates,ddos attack
+166,router,part_of,point of presence
+166,router,receives,packet
+166,router,receives,special packet
+166,router,sends,message
+166,server,connects_to,access link
+166,server,connects_to,core
+166,server,connects_to,ethernet switch
+166,server,connects_to,router
+166,server,is_a,host
+166,server,is_a,network component
+166,server,provides,email service
+166,server,provides,web service
+168,server,connects_to,access link
+168,server,connects_to,core
+168,server,connects_to,ethernet switch
+168,server,connects_to,router
+168,server,is_a,host
+168,server,is_a,network component
+168,server,provides,email service
+168,server,provides,web service
+168,client,communicates_with,server
+168,client,connects_to,access link
+168,client,connects_to,router
+168,client,is_a,host
+169,server,connects_to,access link
+169,server,connects_to,core
+169,server,connects_to,ethernet switch
+169,server,connects_to,router
+169,server,is_a,host
+169,server,is_a,network component
+169,server,provides,email service
+169,server,provides,web service
+169,client,communicates_with,server
+169,client,connects_to,access link
+169,client,connects_to,router
+169,client,is_a,host
+170,server,connects_to,access link
+170,server,connects_to,core
+170,server,connects_to,ethernet switch
+170,server,connects_to,router
+170,server,is_a,host
+170,server,is_a,network component
+170,server,provides,email service
+170,server,provides,web service
+170,client,communicates_with,server
+170,client,connects_to,access link
+170,client,connects_to,router
+170,client,is_a,host
+171,access network,connects_to,host
+171,access network,controls,throughput
+177,packet,contains,destination address
+177,packet,contains,segment
+177,packet,contains,source address
+177,packet,has_part,header fields
+177,packet,has_part,payload field
+177,source host,sends,special packet
+184,http,operates_at,application layer
+184,http,provides,web service
+184,smtp,operates_at,application layer
+184,smtp,provides,email service
+184,network interface card,implements,data link layer
+184,network interface card,supports,data link layer
+184,network interface card,supports,physical layer
+184,ethernet,has_part,copper wire
+184,ethernet,operates_at,data link layer
+184,wifi,operates_at,data link layer
+185,network layer,forwards,datagram
+185,network layer,receives,transport-layer segment
+185,network layer,requires,ip
+185,network layer,requires,link layer
+187,internet protocol stack,has_part,application layer
+187,internet protocol stack,has_part,link layer
+187,internet protocol stack,has_part,network layer
+187,internet protocol stack,has_part,physical layer
+187,internet protocol stack,has_part,transport layer
+187,application layer,has_part,dns
+187,application layer,has_part,ftp
+187,smtp,operates_at,application layer
+187,smtp,provides,email service
+188,ftp,provides,file transfer
+189,transport layer,sends,transport-layer segment
+189,transport layer,provides,reliable delivery service
+189,transport layer,requires,unreliable channel
+189,tcp,implements,congestion control
+189,tcp,provides,congestion-control mechanism
+189,tcp,provides,reliable delivery
+189,udp,provides,connectionless service
+189,end system,connects_to,communication link
+189,end system,connects_to,isp
+189,end system,connects_to,router
+189,end system,sends,packet
+189,end system,sends,segment
+190,network layer,forwards,datagram
+190,network layer,receives,transport-layer segment
+190,network layer,requires,ip
+190,network layer,requires,link layer
+190,segment,contains,header
+190,tcp,implements,congestion control
+190,tcp,provides,congestion-control mechanism
+190,tcp,provides,reliable delivery
+191,network layer,forwards,datagram
+191,network layer,receives,transport-layer segment
+191,network layer,requires,ip
+191,network layer,requires,link layer
+192,network layer,forwards,datagram
+192,network layer,receives,transport-layer segment
+192,network layer,requires,ip
+192,network layer,requires,link layer
+192,router,communicates_with,host
+192,router,connects_to,base station
+192,router,connects_to,client
+192,router,connects_to,end system
+192,router,connects_to,pc
+192,router,connects_to,server
+192,router,forwards,datagram
+192,router,has_part,buffer
+192,router,has_part,forwarding table
+192,router,has_part,output buffer
+192,router,is_a,packet switch
+192,router,mitigates,ddos attack
+192,router,part_of,point of presence
+192,router,receives,packet
+192,router,receives,special packet
+192,router,sends,message
+193,link layer,sends,link-layer frame
+193,network layer,forwards,datagram
+193,network layer,receives,transport-layer segment
+193,network layer,requires,ip
+193,network layer,requires,link layer
+193,tcp,implements,congestion control
+193,tcp,provides,congestion-control mechanism
+193,tcp,provides,reliable delivery
+194,ethernet,has_part,copper wire
+194,ethernet,operates_at,data link layer
+194,wifi,operates_at,data link layer
+195,link layer,sends,link-layer frame
+196,router,communicates_with,host
+196,router,connects_to,base station
+196,router,connects_to,client
+196,router,connects_to,end system
+196,router,connects_to,pc
+196,router,connects_to,server
+196,router,forwards,datagram
+196,router,has_part,buffer
+196,router,has_part,forwarding table
+196,router,has_part,output buffer
+196,router,is_a,packet switch
+196,router,mitigates,ddos attack
+196,router,part_of,point of presence
+196,router,receives,packet
+196,router,receives,special packet
+196,router,sends,message
+198,transport layer,sends,transport-layer segment
+198,transport layer,provides,reliable delivery service
+198,transport layer,requires,unreliable channel
+199,link layer,sends,link-layer frame
+203,network security,mitigates,denial-of-service attack
+203,network security,mitigates,distributed denial-of-service attack
+204,network security,mitigates,denial-of-service attack
+204,network security,mitigates,distributed denial-of-service attack
+209,connection flooding,is_a,dos attack
+212,packet sniffer,receives,packet
+214,packet sniffer,receives,packet
+220,circuit switching,causes,idle network resources
+221,packet switching,provides,efficiency
+221,packet switching,provides,sharing of transmission capacity
+221,circuit switching,causes,idle network resources
+222,packet switching,provides,efficiency
+222,packet switching,provides,sharing of transmission capacity
+223,packet switch,connects_to,end system
+223,packet switch,forwards,packet
+227,tcp,implements,congestion control
+227,tcp,provides,congestion-control mechanism
+227,tcp,provides,reliable delivery
+228,tcp,implements,congestion control
+228,tcp,provides,congestion-control mechanism
+228,tcp,provides,reliable delivery
+232,dns,maps_to,ip address
+236,http,operates_at,application layer
+236,http,provides,web service
+236,web server,is_a,server
+240,dsl,requires,telephone line
+240,dsl,supports,frequency-division multiplexing
+245,packet switching,provides,efficiency
+245,packet switching,provides,sharing of transmission capacity
+245,circuit switching,causes,idle network resources

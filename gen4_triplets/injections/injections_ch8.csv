@@ -1,0 +1,817 @@
+id,head,relation_type,tail
+12,web server,receives,packet
+12,web server,sends,packet
+13,cryptography,provides,authentication
+13,cryptography,provides,confidentiality
+13,cryptography,provides,message integrity
+13,cryptography,provides,nonrepudiation
+14,cryptography,provides,authentication
+14,cryptography,provides,confidentiality
+14,cryptography,provides,message integrity
+14,cryptography,provides,nonrepudiation
+15,cryptography,provides,authentication
+15,cryptography,provides,confidentiality
+15,cryptography,provides,message integrity
+15,cryptography,provides,nonrepudiation
+16,encryption algorithm,requires,key
+18,encryption algorithm,requires,key
+18,decryption algorithm,requires,key
+18,decryption algorithm,requires,private key
+30,pgp,provides,authentication
+30,pgp,provides,confidentiality
+30,pgp,provides,data integrity
+30,pgp,provides,digital signature
+30,pgp,supports,block cipher
+30,tls,provides,confidentiality
+30,tls,provides,data integrity
+30,tls,provides,end-point authentication
+30,tls,requires,public key certification
+30,tls,requires,session key
+30,tls,runs_on,tcp
+30,tls,supports,block cipher
+30,ipsec,contains,transport mode
+30,ipsec,has_part,ah
+30,ipsec,has_part,esp
+30,ipsec,has_part,tunnel mode
+30,ipsec,operates_at,network layer
+30,ipsec,provides,authentication
+30,ipsec,provides,confidentiality
+30,ipsec,provides,integrity
+30,ipsec,supports,block cipher
+30,block cipher,implements,one-to-one mapping
+30,block cipher,implements,permutation
+30,block cipher,requires,key
+31,block cipher,implements,one-to-one mapping
+31,block cipher,implements,permutation
+31,block cipher,requires,key
+32,block cipher,implements,one-to-one mapping
+32,block cipher,implements,permutation
+32,block cipher,requires,key
+35,block cipher,implements,one-to-one mapping
+35,block cipher,implements,permutation
+35,block cipher,requires,key
+37,des,is_a,block cipher
+37,des,provides,confidentiality
+37,des,requires,key
+37,3des,is_a,block cipher
+37,aes,is_a,block cipher
+37,aes,provides,confidentiality
+37,aes,requires,key
+37,block cipher,implements,one-to-one mapping
+37,block cipher,implements,permutation
+37,block cipher,requires,key
+38,des,is_a,block cipher
+38,des,provides,confidentiality
+38,des,requires,key
+38,aes,is_a,block cipher
+38,aes,provides,confidentiality
+38,aes,requires,key
+39,block cipher,implements,one-to-one mapping
+39,block cipher,implements,permutation
+39,block cipher,requires,key
+40,block cipher,implements,one-to-one mapping
+40,block cipher,implements,permutation
+40,block cipher,requires,key
+49,block cipher,implements,one-to-one mapping
+49,block cipher,implements,permutation
+49,block cipher,requires,key
+52,public key cryptography,provides,authentication
+52,public key cryptography,provides,digital signature
+52,public key cryptography,requires,private key
+52,public key cryptography,requires,public key
+53,rsa,has_part,public key
+53,rsa,implements,public-key cryptography
+53,rsa,requires,exponentiation
+53,rsa,requires,large prime numbers
+53,rsa,requires,modular arithmetic
+53,rsa,requires,prime p
+53,rsa,requires,prime q
+53,rsa,requires,private key
+53,rsa,requires,public key
+53,public key cryptography,provides,authentication
+53,public key cryptography,provides,digital signature
+53,public key cryptography,requires,private key
+53,public key cryptography,requires,public key
+57,digital signature,enables,public key certification
+57,digital signature,provides,message integrity
+57,digital signature,requires,hash algorithm
+57,digital signature,requires,private key
+57,digital signature,requires,public key
+57,public key cryptography,provides,authentication
+57,public key cryptography,provides,digital signature
+57,public key cryptography,requires,private key
+57,public key cryptography,requires,public key
+60,rsa,has_part,public key
+60,rsa,implements,public-key cryptography
+60,rsa,requires,exponentiation
+60,rsa,requires,large prime numbers
+60,rsa,requires,modular arithmetic
+60,rsa,requires,prime p
+60,rsa,requires,prime q
+60,rsa,requires,private key
+60,rsa,requires,public key
+61,rsa,has_part,public key
+61,rsa,implements,public-key cryptography
+61,rsa,requires,exponentiation
+61,rsa,requires,large prime numbers
+61,rsa,requires,modular arithmetic
+61,rsa,requires,prime p
+61,rsa,requires,prime q
+61,rsa,requires,private key
+61,rsa,requires,public key
+61,decryption algorithm,requires,key
+61,decryption algorithm,requires,private key
+64,rsa,has_part,public key
+64,rsa,implements,public-key cryptography
+64,rsa,requires,exponentiation
+64,rsa,requires,large prime numbers
+64,rsa,requires,modular arithmetic
+64,rsa,requires,prime p
+64,rsa,requires,prime q
+64,rsa,requires,private key
+64,rsa,requires,public key
+66,rsa,has_part,public key
+66,rsa,implements,public-key cryptography
+66,rsa,requires,exponentiation
+66,rsa,requires,large prime numbers
+66,rsa,requires,modular arithmetic
+66,rsa,requires,prime p
+66,rsa,requires,prime q
+66,rsa,requires,private key
+66,rsa,requires,public key
+67,rsa,has_part,public key
+67,rsa,implements,public-key cryptography
+67,rsa,requires,exponentiation
+67,rsa,requires,large prime numbers
+67,rsa,requires,modular arithmetic
+67,rsa,requires,prime p
+67,rsa,requires,prime q
+67,rsa,requires,private key
+67,rsa,requires,public key
+68,rsa,has_part,public key
+68,rsa,implements,public-key cryptography
+68,rsa,requires,exponentiation
+68,rsa,requires,large prime numbers
+68,rsa,requires,modular arithmetic
+68,rsa,requires,prime p
+68,rsa,requires,prime q
+68,rsa,requires,private key
+68,rsa,requires,public key
+68,des,is_a,block cipher
+68,des,provides,confidentiality
+68,des,requires,key
+68,aes,is_a,block cipher
+68,aes,provides,confidentiality
+68,aes,requires,key
+69,rsa,has_part,public key
+69,rsa,implements,public-key cryptography
+69,rsa,requires,exponentiation
+69,rsa,requires,large prime numbers
+69,rsa,requires,modular arithmetic
+69,rsa,requires,prime p
+69,rsa,requires,prime q
+69,rsa,requires,private key
+69,rsa,requires,public key
+70,rsa,has_part,public key
+70,rsa,implements,public-key cryptography
+70,rsa,requires,exponentiation
+70,rsa,requires,large prime numbers
+70,rsa,requires,modular arithmetic
+70,rsa,requires,prime p
+70,rsa,requires,prime q
+70,rsa,requires,private key
+70,rsa,requires,public key
+73,rsa,has_part,public key
+73,rsa,implements,public-key cryptography
+73,rsa,requires,exponentiation
+73,rsa,requires,large prime numbers
+73,rsa,requires,modular arithmetic
+73,rsa,requires,prime p
+73,rsa,requires,prime q
+73,rsa,requires,private key
+73,rsa,requires,public key
+82,md5,implements,hash function
+82,md4,implements,hash function
+85,authentication key,is_a,shared secret
+85,message authentication code,provides,message integrity
+86,message authentication code,provides,message integrity
+87,hmac,provides,message authentication code
+87,hmac,supports,sha-1
+87,md5,implements,hash function
+88,authentication key,is_a,shared secret
+90,digital signature,enables,public key certification
+90,digital signature,provides,message integrity
+90,digital signature,requires,hash algorithm
+90,digital signature,requires,private key
+90,digital signature,requires,public key
+93,rsa,has_part,public key
+93,rsa,implements,public-key cryptography
+93,rsa,requires,exponentiation
+93,rsa,requires,large prime numbers
+93,rsa,requires,modular arithmetic
+93,rsa,requires,prime p
+93,rsa,requires,prime q
+93,rsa,requires,private key
+93,rsa,requires,public key
+93,digital signature,enables,public key certification
+93,digital signature,provides,message integrity
+93,digital signature,requires,hash algorithm
+93,digital signature,requires,private key
+93,digital signature,requires,public key
+94,digital signature,enables,public key certification
+94,digital signature,provides,message integrity
+94,digital signature,requires,hash algorithm
+94,digital signature,requires,private key
+94,digital signature,requires,public key
+95,rsa,has_part,public key
+95,rsa,implements,public-key cryptography
+95,rsa,requires,exponentiation
+95,rsa,requires,large prime numbers
+95,rsa,requires,modular arithmetic
+95,rsa,requires,prime p
+95,rsa,requires,prime q
+95,rsa,requires,private key
+95,rsa,requires,public key
+97,hash function,enables,fingerprint
+97,hash function,enables,message integrity
+97,digital signature,enables,public key certification
+97,digital signature,provides,message integrity
+97,digital signature,requires,hash algorithm
+97,digital signature,requires,private key
+97,digital signature,requires,public key
+98,digital signature,enables,public key certification
+98,digital signature,provides,message integrity
+98,digital signature,requires,hash algorithm
+98,digital signature,requires,private key
+98,digital signature,requires,public key
+98,hash function,enables,fingerprint
+98,hash function,enables,message integrity
+98,message digest,enables,message integrity
+99,symmetric key encryption,requires,shared session key
+100,public key cryptography,provides,authentication
+100,public key cryptography,provides,digital signature
+100,public key cryptography,requires,private key
+100,public key cryptography,requires,public key
+100,digital signature,enables,public key certification
+100,digital signature,provides,message integrity
+100,digital signature,requires,hash algorithm
+100,digital signature,requires,private key
+100,digital signature,requires,public key
+100,pgp,provides,authentication
+100,pgp,provides,confidentiality
+100,pgp,provides,data integrity
+100,pgp,provides,digital signature
+100,pgp,supports,block cipher
+101,ipsec,contains,transport mode
+101,ipsec,has_part,ah
+101,ipsec,has_part,esp
+101,ipsec,has_part,tunnel mode
+101,ipsec,operates_at,network layer
+101,ipsec,provides,authentication
+101,ipsec,provides,confidentiality
+101,ipsec,provides,integrity
+101,ipsec,supports,block cipher
+101,tls,provides,confidentiality
+101,tls,provides,data integrity
+101,tls,provides,end-point authentication
+101,tls,requires,public key certification
+101,tls,requires,session key
+101,tls,runs_on,tcp
+101,tls,supports,block cipher
+102,public key server,provides,public key
+102,digital signature,enables,public key certification
+102,digital signature,provides,message integrity
+102,digital signature,requires,hash algorithm
+102,digital signature,requires,private key
+102,digital signature,requires,public key
+103,digital signature,enables,public key certification
+103,digital signature,provides,message integrity
+103,digital signature,requires,hash algorithm
+103,digital signature,requires,private key
+103,digital signature,requires,public key
+106,certificate,contains,public key
+106,certificate,identifies,server
+106,ip address,identifies,application gateway
+107,certificate,contains,public key
+107,certificate,identifies,server
+108,certificate,contains,public key
+108,certificate,identifies,server
+112,ip address,identifies,application gateway
+121,nonce,prevents,connection replay attack
+121,nonce,prevents,replay attack
+122,nonce,prevents,connection replay attack
+122,nonce,prevents,replay attack
+123,public key cryptography,provides,authentication
+123,public key cryptography,provides,digital signature
+123,public key cryptography,requires,private key
+123,public key cryptography,requires,public key
+124,public key cryptography,provides,authentication
+124,public key cryptography,provides,digital signature
+124,public key cryptography,requires,private key
+124,public key cryptography,requires,public key
+126,ipsec,contains,transport mode
+126,ipsec,has_part,ah
+126,ipsec,has_part,esp
+126,ipsec,has_part,tunnel mode
+126,ipsec,operates_at,network layer
+126,ipsec,provides,authentication
+126,ipsec,provides,confidentiality
+126,ipsec,provides,integrity
+126,ipsec,supports,block cipher
+131,des,is_a,block cipher
+131,des,provides,confidentiality
+131,des,requires,key
+131,aes,is_a,block cipher
+131,aes,provides,confidentiality
+131,aes,requires,key
+132,public key cryptography,provides,authentication
+132,public key cryptography,provides,digital signature
+132,public key cryptography,requires,private key
+132,public key cryptography,requires,public key
+132,rsa,has_part,public key
+132,rsa,implements,public-key cryptography
+132,rsa,requires,exponentiation
+132,rsa,requires,large prime numbers
+132,rsa,requires,modular arithmetic
+132,rsa,requires,prime p
+132,rsa,requires,prime q
+132,rsa,requires,private key
+132,rsa,requires,public key
+132,public key server,provides,public key
+135,hash function,enables,fingerprint
+135,hash function,enables,message integrity
+136,digital signature,enables,public key certification
+136,digital signature,provides,message integrity
+136,digital signature,requires,hash algorithm
+136,digital signature,requires,private key
+136,digital signature,requires,public key
+136,message digest,enables,message integrity
+136,md5,implements,hash function
+138,public key cryptography,provides,authentication
+138,public key cryptography,provides,digital signature
+138,public key cryptography,requires,private key
+138,public key cryptography,requires,public key
+139,public key cryptography,provides,authentication
+139,public key cryptography,provides,digital signature
+139,public key cryptography,requires,private key
+139,public key cryptography,requires,public key
+140,pgp,provides,authentication
+140,pgp,provides,confidentiality
+140,pgp,provides,data integrity
+140,pgp,provides,digital signature
+140,pgp,supports,block cipher
+140,md5,implements,hash function
+141,symmetric key encryption,requires,shared session key
+141,rsa,has_part,public key
+141,rsa,implements,public-key cryptography
+141,rsa,requires,exponentiation
+141,rsa,requires,large prime numbers
+141,rsa,requires,modular arithmetic
+141,rsa,requires,prime p
+141,rsa,requires,prime q
+141,rsa,requires,private key
+141,rsa,requires,public key
+141,public key server,provides,public key
+142,message digest,enables,message integrity
+143,web of trust,supports,public key
+144,tls,provides,confidentiality
+144,tls,provides,data integrity
+144,tls,provides,end-point authentication
+144,tls,requires,public key certification
+144,tls,requires,session key
+144,tls,runs_on,tcp
+144,tls,supports,block cipher
+145,tls,provides,confidentiality
+145,tls,provides,data integrity
+145,tls,provides,end-point authentication
+145,tls,requires,public key certification
+145,tls,requires,session key
+145,tls,runs_on,tcp
+145,tls,supports,block cipher
+146,tls,provides,confidentiality
+146,tls,provides,data integrity
+146,tls,provides,end-point authentication
+146,tls,requires,public key certification
+146,tls,requires,session key
+146,tls,runs_on,tcp
+146,tls,supports,block cipher
+147,encryption,provides,confidentiality
+148,tls,provides,confidentiality
+148,tls,provides,data integrity
+148,tls,provides,end-point authentication
+148,tls,requires,public key certification
+148,tls,requires,session key
+148,tls,runs_on,tcp
+148,tls,supports,block cipher
+149,tls,provides,confidentiality
+149,tls,provides,data integrity
+149,tls,provides,end-point authentication
+149,tls,requires,public key certification
+149,tls,requires,session key
+149,tls,runs_on,tcp
+149,tls,supports,block cipher
+150,tls,provides,confidentiality
+150,tls,provides,data integrity
+150,tls,provides,end-point authentication
+150,tls,requires,public key certification
+150,tls,requires,session key
+150,tls,runs_on,tcp
+150,tls,supports,block cipher
+150,certificate,contains,public key
+150,certificate,identifies,server
+151,master secret,enables,session encryption key
+151,master secret,enables,session hmac key
+151,certificate,contains,public key
+151,certificate,identifies,server
+152,master secret,enables,session encryption key
+152,master secret,enables,session hmac key
+155,hmac,provides,message authentication code
+155,hmac,supports,sha-1
+156,hash function,enables,fingerprint
+156,hash function,enables,message integrity
+157,sequence numbers,prevents,replay attack
+158,tls,provides,confidentiality
+158,tls,provides,data integrity
+158,tls,provides,end-point authentication
+158,tls,requires,public key certification
+158,tls,requires,session key
+158,tls,runs_on,tcp
+158,tls,supports,block cipher
+158,hmac,provides,message authentication code
+158,hmac,supports,sha-1
+158,sequence numbers,prevents,replay attack
+159,tls,provides,confidentiality
+159,tls,provides,data integrity
+159,tls,provides,end-point authentication
+159,tls,requires,public key certification
+159,tls,requires,session key
+159,tls,runs_on,tcp
+159,tls,supports,block cipher
+159,hmac,provides,message authentication code
+159,hmac,supports,sha-1
+159,sequence number,prevents,replay attack
+162,tls,provides,confidentiality
+162,tls,provides,data integrity
+162,tls,provides,end-point authentication
+162,tls,requires,public key certification
+162,tls,requires,session key
+162,tls,runs_on,tcp
+162,tls,supports,block cipher
+163,aes,is_a,block cipher
+163,aes,provides,confidentiality
+163,aes,requires,key
+163,rsa,has_part,public key
+163,rsa,implements,public-key cryptography
+163,rsa,requires,exponentiation
+163,rsa,requires,large prime numbers
+163,rsa,requires,modular arithmetic
+163,rsa,requires,prime p
+163,rsa,requires,prime q
+163,rsa,requires,private key
+163,rsa,requires,public key
+163,md5,implements,hash function
+163,certificate,contains,public key
+163,certificate,identifies,server
+164,master secret,enables,session encryption key
+164,master secret,enables,session hmac key
+164,3des,is_a,block cipher
+164,aes,is_a,block cipher
+164,aes,provides,confidentiality
+164,aes,requires,key
+165,hmac,provides,message authentication code
+165,hmac,supports,sha-1
+166,hmac,provides,message authentication code
+166,hmac,supports,sha-1
+168,tls,provides,confidentiality
+168,tls,provides,data integrity
+168,tls,provides,end-point authentication
+168,tls,requires,public key certification
+168,tls,requires,session key
+168,tls,runs_on,tcp
+168,tls,supports,block cipher
+168,nonce,prevents,connection replay attack
+168,nonce,prevents,replay attack
+170,hmac,provides,message authentication code
+170,hmac,supports,sha-1
+171,ipsec,contains,transport mode
+171,ipsec,has_part,ah
+171,ipsec,has_part,esp
+171,ipsec,has_part,tunnel mode
+171,ipsec,operates_at,network layer
+171,ipsec,provides,authentication
+171,ipsec,provides,confidentiality
+171,ipsec,provides,integrity
+171,ipsec,supports,block cipher
+174,ipsec,contains,transport mode
+174,ipsec,has_part,ah
+174,ipsec,has_part,esp
+174,ipsec,has_part,tunnel mode
+174,ipsec,operates_at,network layer
+174,ipsec,provides,authentication
+174,ipsec,provides,confidentiality
+174,ipsec,provides,integrity
+174,ipsec,supports,block cipher
+177,ipsec datagram,contains,esp authentication field
+177,ipsec datagram,contains,esp header
+177,ipsec datagram,contains,esp trailer
+177,ipsec datagram,contains,ipv4 datagram
+177,gateway router,connects_to,isp
+177,gateway router,forwards,packet
+177,gateway router,forwards,telnet
+177,gateway router,implements,firewall
+178,ipsec datagram,contains,esp authentication field
+178,ipsec datagram,contains,esp header
+178,ipsec datagram,contains,esp trailer
+178,ipsec datagram,contains,ipv4 datagram
+179,ipsec,contains,transport mode
+179,ipsec,has_part,ah
+179,ipsec,has_part,esp
+179,ipsec,has_part,tunnel mode
+179,ipsec,operates_at,network layer
+179,ipsec,provides,authentication
+179,ipsec,provides,confidentiality
+179,ipsec,provides,integrity
+179,ipsec,supports,block cipher
+181,ipsec,contains,transport mode
+181,ipsec,has_part,ah
+181,ipsec,has_part,esp
+181,ipsec,has_part,tunnel mode
+181,ipsec,operates_at,network layer
+181,ipsec,provides,authentication
+181,ipsec,provides,confidentiality
+181,ipsec,provides,integrity
+181,ipsec,supports,block cipher
+182,security association,has_part,authentication key
+182,security association,has_part,encryption key
+184,gateway router,connects_to,isp
+184,gateway router,forwards,packet
+184,gateway router,forwards,telnet
+184,gateway router,implements,firewall
+186,ipsec datagram,contains,esp authentication field
+186,ipsec datagram,contains,esp header
+186,ipsec datagram,contains,esp trailer
+186,ipsec datagram,contains,ipv4 datagram
+187,ipsec datagram,contains,esp authentication field
+187,ipsec datagram,contains,esp header
+187,ipsec datagram,contains,esp trailer
+187,ipsec datagram,contains,ipv4 datagram
+188,ipsec,contains,transport mode
+188,ipsec,has_part,ah
+188,ipsec,has_part,esp
+188,ipsec,has_part,tunnel mode
+188,ipsec,operates_at,network layer
+188,ipsec,provides,authentication
+188,ipsec,provides,confidentiality
+188,ipsec,provides,integrity
+188,ipsec,supports,block cipher
+188,ipsec datagram,contains,esp authentication field
+188,ipsec datagram,contains,esp header
+188,ipsec datagram,contains,esp trailer
+188,ipsec datagram,contains,ipv4 datagram
+189,ipsec datagram,contains,esp authentication field
+189,ipsec datagram,contains,esp header
+189,ipsec datagram,contains,esp trailer
+189,ipsec datagram,contains,ipv4 datagram
+189,router,connects_to,isp
+189,router,forwards,ip datagram
+189,router,forwards,ipsec datagram
+189,router,has_part,forwarding table
+189,router,implements,access control list
+189,router,implements,least-cost routing algorithm
+189,router,implements,packet filter
+189,router,receives,encrypted authentication key
+189,router,receives,ipv4 datagram
+189,router,receives,link-state message
+189,router,sends,ipsec datagram
+189,router,sends,link-state message
+191,ipsec datagram,contains,esp authentication field
+191,ipsec datagram,contains,esp header
+191,ipsec datagram,contains,esp trailer
+191,ipsec datagram,contains,ipv4 datagram
+192,ipsec datagram,contains,esp authentication field
+192,ipsec datagram,contains,esp header
+192,ipsec datagram,contains,esp trailer
+192,ipsec datagram,contains,ipv4 datagram
+193,ipsec datagram,contains,esp authentication field
+193,ipsec datagram,contains,esp header
+193,ipsec datagram,contains,esp trailer
+193,ipsec datagram,contains,ipv4 datagram
+197,ipsec datagram,contains,esp authentication field
+197,ipsec datagram,contains,esp header
+197,ipsec datagram,contains,esp trailer
+197,ipsec datagram,contains,ipv4 datagram
+199,decryption algorithm,requires,key
+199,decryption algorithm,requires,private key
+200,ipsec datagram,contains,esp authentication field
+200,ipsec datagram,contains,esp header
+200,ipsec datagram,contains,esp trailer
+200,ipsec datagram,contains,ipv4 datagram
+203,ipsec datagram,contains,esp authentication field
+203,ipsec datagram,contains,esp header
+203,ipsec datagram,contains,esp trailer
+203,ipsec datagram,contains,ipv4 datagram
+206,certificate,contains,public key
+206,certificate,identifies,server
+207,master secret,enables,session encryption key
+207,master secret,enables,session hmac key
+207,rsa,has_part,public key
+207,rsa,implements,public-key cryptography
+207,rsa,requires,exponentiation
+207,rsa,requires,large prime numbers
+207,rsa,requires,modular arithmetic
+207,rsa,requires,prime p
+207,rsa,requires,prime q
+207,rsa,requires,private key
+207,rsa,requires,public key
+208,ike,enables,security association
+208,ipsec,contains,transport mode
+208,ipsec,has_part,ah
+208,ipsec,has_part,esp
+208,ipsec,has_part,tunnel mode
+208,ipsec,operates_at,network layer
+208,ipsec,provides,authentication
+208,ipsec,provides,confidentiality
+208,ipsec,provides,integrity
+208,ipsec,supports,block cipher
+209,ike,enables,security association
+209,ipsec,contains,transport mode
+209,ipsec,has_part,ah
+209,ipsec,has_part,esp
+209,ipsec,has_part,tunnel mode
+209,ipsec,operates_at,network layer
+209,ipsec,provides,authentication
+209,ipsec,provides,confidentiality
+209,ipsec,provides,integrity
+209,ipsec,supports,block cipher
+210,cryptographic hashing,provides,message integrity
+213,symmetric key encryption,requires,shared session key
+213,access point,receives,link-level frame
+214,authentication server,provides,authentication services
+214,authentication server,provides,shared session key
+214,authentication server,sends,nonce
+216,cryptographic hashing,provides,message integrity
+217,authentication server,provides,authentication services
+217,authentication server,provides,shared session key
+217,authentication server,sends,nonce
+220,wpa2,requires,aes
+222,nonce,prevents,connection replay attack
+222,nonce,prevents,replay attack
+222,mobile device,communicates_with,ap
+222,mobile device,communicates_with,remote host
+222,mobile device,connects_to,access point
+222,mobile device,connects_to,base station
+222,mobile device,receives,authentication token
+222,mobile device,receives,nonce
+222,mobile device,sends,attach message
+222,mobile device,sends,link-level frame
+223,hmac,provides,message authentication code
+223,hmac,supports,sha-1
+223,nonce,prevents,connection replay attack
+223,nonce,prevents,replay attack
+223,authentication server,provides,authentication services
+223,authentication server,provides,shared session key
+223,authentication server,sends,nonce
+224,mobile device,communicates_with,ap
+224,mobile device,communicates_with,remote host
+224,mobile device,connects_to,access point
+224,mobile device,connects_to,base station
+224,mobile device,receives,authentication token
+224,mobile device,receives,nonce
+224,mobile device,sends,attach message
+224,mobile device,sends,link-level frame
+225,wpa2,requires,aes
+226,wpa2,requires,aes
+227,access point,receives,link-level frame
+229,base station,forwards,attach message
+229,mobile device,communicates_with,ap
+229,mobile device,communicates_with,remote host
+229,mobile device,connects_to,access point
+229,mobile device,connects_to,base station
+229,mobile device,receives,authentication token
+229,mobile device,receives,nonce
+229,mobile device,sends,attach message
+229,mobile device,sends,link-level frame
+230,mobility management entity,communicates_with,home subscriber service
+230,mobility management entity,provides,base station keys
+230,mobility management entity,sends,international mobile subscriber identity
+231,mme,sends,key
+232,sim card,contains,secret key
+232,base station,forwards,attach message
+233,mme,sends,key
+235,mme,sends,key
+236,mme,sends,key
+237,mme,sends,key
+237,base station,forwards,attach message
+238,mme,sends,key
+240,public key cryptography,provides,authentication
+240,public key cryptography,provides,digital signature
+240,public key cryptography,requires,private key
+240,public key cryptography,requires,public key
+243,firewall,controls,malformed packet
+243,firewall,controls,packet
+243,firewall,forwards,packet
+243,firewall,has_part,connection table
+243,firewall,receives,datagram
+243,firewall,supports,icmp
+243,firewall,supports,operational security
+243,firewall,supports,port
+243,firewall,supports,tcp
+243,firewall,supports,udp
+244,firewall,controls,malformed packet
+244,firewall,controls,packet
+244,firewall,forwards,packet
+244,firewall,has_part,connection table
+244,firewall,receives,datagram
+244,firewall,supports,icmp
+244,firewall,supports,operational security
+244,firewall,supports,port
+244,firewall,supports,tcp
+244,firewall,supports,udp
+245,packet filter,identifies,udp
+245,packet filter,is_a,firewall
+245,packet filter,prevents,telnet
+246,application gateway,connects_to,external server
+246,application gateway,is_a,firewall
+246,application gateway,is_a,server
+246,application gateway,supports,deep packet inspection
+246,gateway router,connects_to,isp
+246,gateway router,forwards,packet
+246,gateway router,forwards,telnet
+246,gateway router,implements,firewall
+248,packet filter,identifies,udp
+248,packet filter,is_a,firewall
+248,packet filter,prevents,telnet
+251,router interface,has_part,access control list
+254,connection table,part_of,firewall
+255,firewall,controls,malformed packet
+255,firewall,controls,packet
+255,firewall,forwards,packet
+255,firewall,has_part,connection table
+255,firewall,receives,datagram
+255,firewall,supports,icmp
+255,firewall,supports,operational security
+255,firewall,supports,port
+255,firewall,supports,tcp
+255,firewall,supports,udp
+255,connection table,part_of,firewall
+256,stateful filter,has_part,access control list
+256,stateful filter,is_a,firewall
+256,connection table,part_of,firewall
+257,firewall,controls,malformed packet
+257,firewall,controls,packet
+257,firewall,forwards,packet
+257,firewall,has_part,connection table
+257,firewall,receives,datagram
+257,firewall,supports,icmp
+257,firewall,supports,operational security
+257,firewall,supports,port
+257,firewall,supports,tcp
+257,firewall,supports,udp
+257,connection table,part_of,firewall
+260,application gateway,connects_to,external server
+260,application gateway,is_a,firewall
+260,application gateway,is_a,server
+260,application gateway,supports,deep packet inspection
+260,packet filter,identifies,udp
+260,packet filter,is_a,firewall
+260,packet filter,prevents,telnet
+260,router,connects_to,isp
+260,router,forwards,ip datagram
+260,router,forwards,ipsec datagram
+260,router,has_part,forwarding table
+260,router,implements,access control list
+260,router,implements,least-cost routing algorithm
+260,router,implements,packet filter
+260,router,receives,encrypted authentication key
+260,router,receives,ipv4 datagram
+260,router,receives,link-state message
+260,router,sends,ipsec datagram
+260,router,sends,link-state message
+261,application gateway,connects_to,external server
+261,application gateway,is_a,firewall
+261,application gateway,is_a,server
+261,application gateway,supports,deep packet inspection
+264,packet filter,identifies,udp
+264,packet filter,is_a,firewall
+264,packet filter,prevents,telnet
+265,packet filter,identifies,udp
+265,packet filter,is_a,firewall
+265,packet filter,prevents,telnet
+266,intrusion detection system,supports,operational security
+269,packet filter,identifies,udp
+269,packet filter,is_a,firewall
+269,packet filter,prevents,telnet
+269,application gateway,connects_to,external server
+269,application gateway,is_a,firewall
+269,application gateway,is_a,server
+269,application gateway,supports,deep packet inspection
+274,snort,is_a,ids
+274,snort,is_a,intrusion detection system
+274,snort,provides,alert
+274,snort,provides,attack signature
+274,snort,requires,libpcap
+276,snort,is_a,ids
+276,snort,is_a,intrusion detection system
+276,snort,provides,alert
+276,snort,provides,attack signature
+276,snort,requires,libpcap

@@ -2,7 +2,7 @@
 Create the injection CSV for GraphMERT training from the validated gen4 KG.
 
 Reads:
-  - gen4_triplets/validated_both/validated_ch{N}.csv  (head, relation_type, tail)
+  - gen4_triplets/filtered_and_validated/validated_ch{N}.csv  (head, relation_type, tail)
   - head_positions dataset for chapter N
 
 Outputs:
@@ -39,7 +39,7 @@ _REPO = Path(__file__).resolve().parents[1]
 
 
 def main(chapter: int) -> None:
-    seed_csv = _REPO / f"gen4_triplets/validated_both/validated_ch{chapter}.csv"
+    seed_csv = _REPO / f"gen4_triplets/filtered_and_validated/validated_ch{chapter}.csv"
     if not seed_csv.exists():
         raise FileNotFoundError(f"Validated KG not found: {seed_csv}")
 
@@ -48,7 +48,8 @@ def main(chapter: int) -> None:
     else:
         heads_path = _REPO / f"json_data/entity_discovery_output/ch{chapter}_gpt-oss-120b_all"
 
-    out_dir = _REPO / "gen4_triplets/validated_both"
+    out_dir = _REPO / "gen4_triplets/injections"
+    out_dir.mkdir(parents=True, exist_ok=True)
     out_csv = out_dir / f"injections_ch{chapter}.csv"
 
     # Load seed KG — index by head entity

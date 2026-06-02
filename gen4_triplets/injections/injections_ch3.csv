@@ -1,0 +1,4805 @@
+id,head,relation_type,tail
+0,transport layer,implements,demultiplexing
+0,transport layer,implements,multiplexing
+0,transport layer,provides,error checking
+0,transport layer,provides,port number
+0,transport layer,receives,segment
+0,transport layer,sends,transport-level segment
+0,tcp,controls,send rate
+0,tcp,has_part,congestion avoidance
+0,tcp,has_part,congestion control mechanism
+0,tcp,has_part,connection state
+0,tcp,has_part,fast recovery
+0,tcp,has_part,receive buffer
+0,tcp,has_part,send buffer
+0,tcp,has_part,slow start
+0,tcp,has_part,tcp state
+0,tcp,has_part,window behavior
+0,tcp,implements,aimd
+0,tcp,implements,aimd algorithm
+0,tcp,implements,congestion avoidance
+0,tcp,implements,congestion control
+0,tcp,implements,demultiplexing
+0,tcp,implements,fast recovery
+0,tcp,implements,fast retransmit
+0,tcp,implements,reliable data transfer service
+0,tcp,implements,retransmit mechanism
+0,tcp,implements,slow start
+0,tcp,implements,three-way handshake
+0,tcp,is_a,transport-layer protocol
+0,tcp,operates_at,transport layer
+0,tcp,provides,congestion control
+0,tcp,provides,cumulative acknowledgments
+0,tcp,provides,error detection
+0,tcp,provides,flow control
+0,tcp,provides,flow control service
+0,tcp,provides,full-duplex service
+0,tcp,provides,point-to-point
+0,tcp,provides,reliable connection-oriented service
+0,tcp,provides,reliable data transfer
+0,tcp,provides,retransmissions
+0,tcp,provides,round-trip time estimation
+0,tcp,provides,timers
+0,tcp,receives,ack
+0,tcp,requires,acknowledgments
+0,tcp,requires,checksum
+0,tcp,requires,flow control
+0,tcp,requires,sequence numbers
+0,tcp,requires,timers
+0,tcp,runs_on,ip
+0,tcp,sends,segment
+0,tcp,supports,full-duplex
+0,udp,implements,checksum calculation
+0,udp,implements,demultiplexing
+0,udp,operates_at,transport layer
+0,udp,provides,error checking
+0,udp,provides,error detection
+0,udp,provides,process-to-process data delivery
+0,udp,provides,unreliable connectionless service
+0,udp,requires,checksum
+0,udp,supports,multimedia applications
+1,udp,implements,checksum calculation
+1,udp,implements,demultiplexing
+1,udp,operates_at,transport layer
+1,udp,provides,error checking
+1,udp,provides,error detection
+1,udp,provides,process-to-process data delivery
+1,udp,provides,unreliable connectionless service
+1,udp,requires,checksum
+1,udp,supports,multimedia applications
+2,tcp,controls,send rate
+2,tcp,has_part,congestion avoidance
+2,tcp,has_part,congestion control mechanism
+2,tcp,has_part,connection state
+2,tcp,has_part,fast recovery
+2,tcp,has_part,receive buffer
+2,tcp,has_part,send buffer
+2,tcp,has_part,slow start
+2,tcp,has_part,tcp state
+2,tcp,has_part,window behavior
+2,tcp,implements,aimd
+2,tcp,implements,aimd algorithm
+2,tcp,implements,congestion avoidance
+2,tcp,implements,congestion control
+2,tcp,implements,demultiplexing
+2,tcp,implements,fast recovery
+2,tcp,implements,fast retransmit
+2,tcp,implements,reliable data transfer service
+2,tcp,implements,retransmit mechanism
+2,tcp,implements,slow start
+2,tcp,implements,three-way handshake
+2,tcp,is_a,transport-layer protocol
+2,tcp,operates_at,transport layer
+2,tcp,provides,congestion control
+2,tcp,provides,cumulative acknowledgments
+2,tcp,provides,error detection
+2,tcp,provides,flow control
+2,tcp,provides,flow control service
+2,tcp,provides,full-duplex service
+2,tcp,provides,point-to-point
+2,tcp,provides,reliable connection-oriented service
+2,tcp,provides,reliable data transfer
+2,tcp,provides,retransmissions
+2,tcp,provides,round-trip time estimation
+2,tcp,provides,timers
+2,tcp,receives,ack
+2,tcp,requires,acknowledgments
+2,tcp,requires,checksum
+2,tcp,requires,flow control
+2,tcp,requires,sequence numbers
+2,tcp,requires,timers
+2,tcp,runs_on,ip
+2,tcp,sends,segment
+2,tcp,supports,full-duplex
+2,congestion control,controls,transmission rate
+2,congestion control,decreases,transmission rate
+2,congestion control,requires,congestion window
+2,congestion control,supports,delay-based approach
+2,transport layer,implements,demultiplexing
+2,transport layer,implements,multiplexing
+2,transport layer,provides,error checking
+2,transport layer,provides,port number
+2,transport layer,receives,segment
+2,transport layer,sends,transport-level segment
+3,transport layer,implements,demultiplexing
+3,transport layer,implements,multiplexing
+3,transport layer,provides,error checking
+3,transport layer,provides,port number
+3,transport layer,receives,segment
+3,transport layer,sends,transport-level segment
+4,network layer,enables,explicit congestion indication
+4,network layer,sends,datagram
+5,datagram,contains,segment
+5,network layer,enables,explicit congestion indication
+5,network layer,sends,datagram
+6,tcp,controls,send rate
+6,tcp,has_part,congestion avoidance
+6,tcp,has_part,congestion control mechanism
+6,tcp,has_part,connection state
+6,tcp,has_part,fast recovery
+6,tcp,has_part,receive buffer
+6,tcp,has_part,send buffer
+6,tcp,has_part,slow start
+6,tcp,has_part,tcp state
+6,tcp,has_part,window behavior
+6,tcp,implements,aimd
+6,tcp,implements,aimd algorithm
+6,tcp,implements,congestion avoidance
+6,tcp,implements,congestion control
+6,tcp,implements,demultiplexing
+6,tcp,implements,fast recovery
+6,tcp,implements,fast retransmit
+6,tcp,implements,reliable data transfer service
+6,tcp,implements,retransmit mechanism
+6,tcp,implements,slow start
+6,tcp,implements,three-way handshake
+6,tcp,is_a,transport-layer protocol
+6,tcp,operates_at,transport layer
+6,tcp,provides,congestion control
+6,tcp,provides,cumulative acknowledgments
+6,tcp,provides,error detection
+6,tcp,provides,flow control
+6,tcp,provides,flow control service
+6,tcp,provides,full-duplex service
+6,tcp,provides,point-to-point
+6,tcp,provides,reliable connection-oriented service
+6,tcp,provides,reliable data transfer
+6,tcp,provides,retransmissions
+6,tcp,provides,round-trip time estimation
+6,tcp,provides,timers
+6,tcp,receives,ack
+6,tcp,requires,acknowledgments
+6,tcp,requires,checksum
+6,tcp,requires,flow control
+6,tcp,requires,sequence numbers
+6,tcp,requires,timers
+6,tcp,runs_on,ip
+6,tcp,sends,segment
+6,tcp,supports,full-duplex
+6,udp,implements,checksum calculation
+6,udp,implements,demultiplexing
+6,udp,operates_at,transport layer
+6,udp,provides,error checking
+6,udp,provides,error detection
+6,udp,provides,process-to-process data delivery
+6,udp,provides,unreliable connectionless service
+6,udp,requires,checksum
+6,udp,supports,multimedia applications
+6,transport layer,implements,demultiplexing
+6,transport layer,implements,multiplexing
+6,transport layer,provides,error checking
+6,transport layer,provides,port number
+6,transport layer,receives,segment
+6,transport layer,sends,transport-level segment
+6,network layer,enables,explicit congestion indication
+6,network layer,sends,datagram
+10,transport protocol,operates_at,transport layer
+10,transport protocol,provides,reliable data transfer service
+10,transport protocol,runs_on,host
+10,network layer,enables,explicit congestion indication
+10,network layer,sends,datagram
+12,transport protocol,operates_at,transport layer
+12,transport protocol,provides,reliable data transfer service
+12,transport protocol,runs_on,host
+13,transport protocol,operates_at,transport layer
+13,transport protocol,provides,reliable data transfer service
+13,transport protocol,runs_on,host
+14,transport protocol,operates_at,transport layer
+14,transport protocol,provides,reliable data transfer service
+14,transport protocol,runs_on,host
+14,network layer,enables,explicit congestion indication
+14,network layer,sends,datagram
+15,udp,implements,checksum calculation
+15,udp,implements,demultiplexing
+15,udp,operates_at,transport layer
+15,udp,provides,error checking
+15,udp,provides,error detection
+15,udp,provides,process-to-process data delivery
+15,udp,provides,unreliable connectionless service
+15,udp,requires,checksum
+15,udp,supports,multimedia applications
+15,tcp,controls,send rate
+15,tcp,has_part,congestion avoidance
+15,tcp,has_part,congestion control mechanism
+15,tcp,has_part,connection state
+15,tcp,has_part,fast recovery
+15,tcp,has_part,receive buffer
+15,tcp,has_part,send buffer
+15,tcp,has_part,slow start
+15,tcp,has_part,tcp state
+15,tcp,has_part,window behavior
+15,tcp,implements,aimd
+15,tcp,implements,aimd algorithm
+15,tcp,implements,congestion avoidance
+15,tcp,implements,congestion control
+15,tcp,implements,demultiplexing
+15,tcp,implements,fast recovery
+15,tcp,implements,fast retransmit
+15,tcp,implements,reliable data transfer service
+15,tcp,implements,retransmit mechanism
+15,tcp,implements,slow start
+15,tcp,implements,three-way handshake
+15,tcp,is_a,transport-layer protocol
+15,tcp,operates_at,transport layer
+15,tcp,provides,congestion control
+15,tcp,provides,cumulative acknowledgments
+15,tcp,provides,error detection
+15,tcp,provides,flow control
+15,tcp,provides,flow control service
+15,tcp,provides,full-duplex service
+15,tcp,provides,point-to-point
+15,tcp,provides,reliable connection-oriented service
+15,tcp,provides,reliable data transfer
+15,tcp,provides,retransmissions
+15,tcp,provides,round-trip time estimation
+15,tcp,provides,timers
+15,tcp,receives,ack
+15,tcp,requires,acknowledgments
+15,tcp,requires,checksum
+15,tcp,requires,flow control
+15,tcp,requires,sequence numbers
+15,tcp,requires,timers
+15,tcp,runs_on,ip
+15,tcp,sends,segment
+15,tcp,supports,full-duplex
+15,segment,contains,destination port number
+15,segment,contains,port
+15,segment,contains,source port number
+15,segment,has_part,sequence number
+15,datagram,contains,segment
+16,tcp,controls,send rate
+16,tcp,has_part,congestion avoidance
+16,tcp,has_part,congestion control mechanism
+16,tcp,has_part,connection state
+16,tcp,has_part,fast recovery
+16,tcp,has_part,receive buffer
+16,tcp,has_part,send buffer
+16,tcp,has_part,slow start
+16,tcp,has_part,tcp state
+16,tcp,has_part,window behavior
+16,tcp,implements,aimd
+16,tcp,implements,aimd algorithm
+16,tcp,implements,congestion avoidance
+16,tcp,implements,congestion control
+16,tcp,implements,demultiplexing
+16,tcp,implements,fast recovery
+16,tcp,implements,fast retransmit
+16,tcp,implements,reliable data transfer service
+16,tcp,implements,retransmit mechanism
+16,tcp,implements,slow start
+16,tcp,implements,three-way handshake
+16,tcp,is_a,transport-layer protocol
+16,tcp,operates_at,transport layer
+16,tcp,provides,congestion control
+16,tcp,provides,cumulative acknowledgments
+16,tcp,provides,error detection
+16,tcp,provides,flow control
+16,tcp,provides,flow control service
+16,tcp,provides,full-duplex service
+16,tcp,provides,point-to-point
+16,tcp,provides,reliable connection-oriented service
+16,tcp,provides,reliable data transfer
+16,tcp,provides,retransmissions
+16,tcp,provides,round-trip time estimation
+16,tcp,provides,timers
+16,tcp,receives,ack
+16,tcp,requires,acknowledgments
+16,tcp,requires,checksum
+16,tcp,requires,flow control
+16,tcp,requires,sequence numbers
+16,tcp,requires,timers
+16,tcp,runs_on,ip
+16,tcp,sends,segment
+16,tcp,supports,full-duplex
+16,udp,implements,checksum calculation
+16,udp,implements,demultiplexing
+16,udp,operates_at,transport layer
+16,udp,provides,error checking
+16,udp,provides,error detection
+16,udp,provides,process-to-process data delivery
+16,udp,provides,unreliable connectionless service
+16,udp,requires,checksum
+16,udp,supports,multimedia applications
+16,datagram,contains,segment
+16,ip,operates_at,network layer
+16,ip,provides,network-layer service
+16,ip,runs_on,link layer
+17,ip,operates_at,network layer
+17,ip,provides,network-layer service
+17,ip,runs_on,link layer
+17,ip address,identifies,client
+17,ip address,identifies,host
+18,udp,implements,checksum calculation
+18,udp,implements,demultiplexing
+18,udp,operates_at,transport layer
+18,udp,provides,error checking
+18,udp,provides,error detection
+18,udp,provides,process-to-process data delivery
+18,udp,provides,unreliable connectionless service
+18,udp,requires,checksum
+18,udp,supports,multimedia applications
+18,tcp,controls,send rate
+18,tcp,has_part,congestion avoidance
+18,tcp,has_part,congestion control mechanism
+18,tcp,has_part,connection state
+18,tcp,has_part,fast recovery
+18,tcp,has_part,receive buffer
+18,tcp,has_part,send buffer
+18,tcp,has_part,slow start
+18,tcp,has_part,tcp state
+18,tcp,has_part,window behavior
+18,tcp,implements,aimd
+18,tcp,implements,aimd algorithm
+18,tcp,implements,congestion avoidance
+18,tcp,implements,congestion control
+18,tcp,implements,demultiplexing
+18,tcp,implements,fast recovery
+18,tcp,implements,fast retransmit
+18,tcp,implements,reliable data transfer service
+18,tcp,implements,retransmit mechanism
+18,tcp,implements,slow start
+18,tcp,implements,three-way handshake
+18,tcp,is_a,transport-layer protocol
+18,tcp,operates_at,transport layer
+18,tcp,provides,congestion control
+18,tcp,provides,cumulative acknowledgments
+18,tcp,provides,error detection
+18,tcp,provides,flow control
+18,tcp,provides,flow control service
+18,tcp,provides,full-duplex service
+18,tcp,provides,point-to-point
+18,tcp,provides,reliable connection-oriented service
+18,tcp,provides,reliable data transfer
+18,tcp,provides,retransmissions
+18,tcp,provides,round-trip time estimation
+18,tcp,provides,timers
+18,tcp,receives,ack
+18,tcp,requires,acknowledgments
+18,tcp,requires,checksum
+18,tcp,requires,flow control
+18,tcp,requires,sequence numbers
+18,tcp,requires,timers
+18,tcp,runs_on,ip
+18,tcp,sends,segment
+18,tcp,supports,full-duplex
+18,ip,operates_at,network layer
+18,ip,provides,network-layer service
+18,ip,runs_on,link layer
+19,udp,implements,checksum calculation
+19,udp,implements,demultiplexing
+19,udp,operates_at,transport layer
+19,udp,provides,error checking
+19,udp,provides,error detection
+19,udp,provides,process-to-process data delivery
+19,udp,provides,unreliable connectionless service
+19,udp,requires,checksum
+19,udp,supports,multimedia applications
+19,ip,operates_at,network layer
+19,ip,provides,network-layer service
+19,ip,runs_on,link layer
+19,tcp,controls,send rate
+19,tcp,has_part,congestion avoidance
+19,tcp,has_part,congestion control mechanism
+19,tcp,has_part,connection state
+19,tcp,has_part,fast recovery
+19,tcp,has_part,receive buffer
+19,tcp,has_part,send buffer
+19,tcp,has_part,slow start
+19,tcp,has_part,tcp state
+19,tcp,has_part,window behavior
+19,tcp,implements,aimd
+19,tcp,implements,aimd algorithm
+19,tcp,implements,congestion avoidance
+19,tcp,implements,congestion control
+19,tcp,implements,demultiplexing
+19,tcp,implements,fast recovery
+19,tcp,implements,fast retransmit
+19,tcp,implements,reliable data transfer service
+19,tcp,implements,retransmit mechanism
+19,tcp,implements,slow start
+19,tcp,implements,three-way handshake
+19,tcp,is_a,transport-layer protocol
+19,tcp,operates_at,transport layer
+19,tcp,provides,congestion control
+19,tcp,provides,cumulative acknowledgments
+19,tcp,provides,error detection
+19,tcp,provides,flow control
+19,tcp,provides,flow control service
+19,tcp,provides,full-duplex service
+19,tcp,provides,point-to-point
+19,tcp,provides,reliable connection-oriented service
+19,tcp,provides,reliable data transfer
+19,tcp,provides,retransmissions
+19,tcp,provides,round-trip time estimation
+19,tcp,provides,timers
+19,tcp,receives,ack
+19,tcp,requires,acknowledgments
+19,tcp,requires,checksum
+19,tcp,requires,flow control
+19,tcp,requires,sequence numbers
+19,tcp,requires,timers
+19,tcp,runs_on,ip
+19,tcp,sends,segment
+19,tcp,supports,full-duplex
+20,tcp,controls,send rate
+20,tcp,has_part,congestion avoidance
+20,tcp,has_part,congestion control mechanism
+20,tcp,has_part,connection state
+20,tcp,has_part,fast recovery
+20,tcp,has_part,receive buffer
+20,tcp,has_part,send buffer
+20,tcp,has_part,slow start
+20,tcp,has_part,tcp state
+20,tcp,has_part,window behavior
+20,tcp,implements,aimd
+20,tcp,implements,aimd algorithm
+20,tcp,implements,congestion avoidance
+20,tcp,implements,congestion control
+20,tcp,implements,demultiplexing
+20,tcp,implements,fast recovery
+20,tcp,implements,fast retransmit
+20,tcp,implements,reliable data transfer service
+20,tcp,implements,retransmit mechanism
+20,tcp,implements,slow start
+20,tcp,implements,three-way handshake
+20,tcp,is_a,transport-layer protocol
+20,tcp,operates_at,transport layer
+20,tcp,provides,congestion control
+20,tcp,provides,cumulative acknowledgments
+20,tcp,provides,error detection
+20,tcp,provides,flow control
+20,tcp,provides,flow control service
+20,tcp,provides,full-duplex service
+20,tcp,provides,point-to-point
+20,tcp,provides,reliable connection-oriented service
+20,tcp,provides,reliable data transfer
+20,tcp,provides,retransmissions
+20,tcp,provides,round-trip time estimation
+20,tcp,provides,timers
+20,tcp,receives,ack
+20,tcp,requires,acknowledgments
+20,tcp,requires,checksum
+20,tcp,requires,flow control
+20,tcp,requires,sequence numbers
+20,tcp,requires,timers
+20,tcp,runs_on,ip
+20,tcp,sends,segment
+20,tcp,supports,full-duplex
+20,ip,operates_at,network layer
+20,ip,provides,network-layer service
+20,ip,runs_on,link layer
+20,congestion control,controls,transmission rate
+20,congestion control,decreases,transmission rate
+20,congestion control,requires,congestion window
+20,congestion control,supports,delay-based approach
+20,tcp congestion control,controls,sending rate
+21,congestion control,controls,transmission rate
+21,congestion control,decreases,transmission rate
+21,congestion control,requires,congestion window
+21,congestion control,supports,delay-based approach
+23,network layer,enables,explicit congestion indication
+23,network layer,sends,datagram
+23,transport layer,implements,demultiplexing
+23,transport layer,implements,multiplexing
+23,transport layer,provides,error checking
+23,transport layer,provides,port number
+23,transport layer,receives,segment
+23,transport layer,sends,transport-level segment
+24,ftp,requires,well-known port number
+24,telnet,operates_at,application layer
+24,telnet,runs_on,tcp
+24,http,operates_at,application layer
+24,http,runs_on,tcp
+27,transport layer,implements,demultiplexing
+27,transport layer,implements,multiplexing
+27,transport layer,provides,error checking
+27,transport layer,provides,port number
+27,transport layer,receives,segment
+27,transport layer,sends,transport-level segment
+29,source port number field,part_of,segment
+29,destination port number field,part_of,segment
+29,port number,enables,demultiplexing
+29,port number,enables,multiplexing
+29,udp,implements,checksum calculation
+29,udp,implements,demultiplexing
+29,udp,operates_at,transport layer
+29,udp,provides,error checking
+29,udp,provides,error detection
+29,udp,provides,process-to-process data delivery
+29,udp,provides,unreliable connectionless service
+29,udp,requires,checksum
+29,udp,supports,multimedia applications
+30,http,operates_at,application layer
+30,http,runs_on,tcp
+30,ftp,requires,well-known port number
+30,transport layer,implements,demultiplexing
+30,transport layer,implements,multiplexing
+30,transport layer,provides,error checking
+30,transport layer,provides,port number
+30,transport layer,receives,segment
+30,transport layer,sends,transport-level segment
+31,udp,implements,checksum calculation
+31,udp,implements,demultiplexing
+31,udp,operates_at,transport layer
+31,udp,provides,error checking
+31,udp,provides,error detection
+31,udp,provides,process-to-process data delivery
+31,udp,provides,unreliable connectionless service
+31,udp,requires,checksum
+31,udp,supports,multimedia applications
+31,tcp,controls,send rate
+31,tcp,has_part,congestion avoidance
+31,tcp,has_part,congestion control mechanism
+31,tcp,has_part,connection state
+31,tcp,has_part,fast recovery
+31,tcp,has_part,receive buffer
+31,tcp,has_part,send buffer
+31,tcp,has_part,slow start
+31,tcp,has_part,tcp state
+31,tcp,has_part,window behavior
+31,tcp,implements,aimd
+31,tcp,implements,aimd algorithm
+31,tcp,implements,congestion avoidance
+31,tcp,implements,congestion control
+31,tcp,implements,demultiplexing
+31,tcp,implements,fast recovery
+31,tcp,implements,fast retransmit
+31,tcp,implements,reliable data transfer service
+31,tcp,implements,retransmit mechanism
+31,tcp,implements,slow start
+31,tcp,implements,three-way handshake
+31,tcp,is_a,transport-layer protocol
+31,tcp,operates_at,transport layer
+31,tcp,provides,congestion control
+31,tcp,provides,cumulative acknowledgments
+31,tcp,provides,error detection
+31,tcp,provides,flow control
+31,tcp,provides,flow control service
+31,tcp,provides,full-duplex service
+31,tcp,provides,point-to-point
+31,tcp,provides,reliable connection-oriented service
+31,tcp,provides,reliable data transfer
+31,tcp,provides,retransmissions
+31,tcp,provides,round-trip time estimation
+31,tcp,provides,timers
+31,tcp,receives,ack
+31,tcp,requires,acknowledgments
+31,tcp,requires,checksum
+31,tcp,requires,flow control
+31,tcp,requires,sequence numbers
+31,tcp,requires,timers
+31,tcp,runs_on,ip
+31,tcp,sends,segment
+31,tcp,supports,full-duplex
+32,port number,enables,demultiplexing
+32,port number,enables,multiplexing
+33,udp,implements,checksum calculation
+33,udp,implements,demultiplexing
+33,udp,operates_at,transport layer
+33,udp,provides,error checking
+33,udp,provides,error detection
+33,udp,provides,process-to-process data delivery
+33,udp,provides,unreliable connectionless service
+33,udp,requires,checksum
+33,udp,supports,multimedia applications
+34,network layer,enables,explicit congestion indication
+34,network layer,sends,datagram
+37,tcp connection establishment,increases,end-to-end delay
+38,tcp segment,contains,destination port number
+38,tcp segment,provides,acknowledgment
+38,tcp,controls,send rate
+38,tcp,has_part,congestion avoidance
+38,tcp,has_part,congestion control mechanism
+38,tcp,has_part,connection state
+38,tcp,has_part,fast recovery
+38,tcp,has_part,receive buffer
+38,tcp,has_part,send buffer
+38,tcp,has_part,slow start
+38,tcp,has_part,tcp state
+38,tcp,has_part,window behavior
+38,tcp,implements,aimd
+38,tcp,implements,aimd algorithm
+38,tcp,implements,congestion avoidance
+38,tcp,implements,congestion control
+38,tcp,implements,demultiplexing
+38,tcp,implements,fast recovery
+38,tcp,implements,fast retransmit
+38,tcp,implements,reliable data transfer service
+38,tcp,implements,retransmit mechanism
+38,tcp,implements,slow start
+38,tcp,implements,three-way handshake
+38,tcp,is_a,transport-layer protocol
+38,tcp,operates_at,transport layer
+38,tcp,provides,congestion control
+38,tcp,provides,cumulative acknowledgments
+38,tcp,provides,error detection
+38,tcp,provides,flow control
+38,tcp,provides,flow control service
+38,tcp,provides,full-duplex service
+38,tcp,provides,point-to-point
+38,tcp,provides,reliable connection-oriented service
+38,tcp,provides,reliable data transfer
+38,tcp,provides,retransmissions
+38,tcp,provides,round-trip time estimation
+38,tcp,provides,timers
+38,tcp,receives,ack
+38,tcp,requires,acknowledgments
+38,tcp,requires,checksum
+38,tcp,requires,flow control
+38,tcp,requires,sequence numbers
+38,tcp,requires,timers
+38,tcp,runs_on,ip
+38,tcp,sends,segment
+38,tcp,supports,full-duplex
+40,socket,receives,segment
+40,transport layer,implements,demultiplexing
+40,transport layer,implements,multiplexing
+40,transport layer,provides,error checking
+40,transport layer,provides,port number
+40,transport layer,receives,segment
+40,transport layer,sends,transport-level segment
+42,ip address,identifies,client
+42,ip address,identifies,host
+46,udp,implements,checksum calculation
+46,udp,implements,demultiplexing
+46,udp,operates_at,transport layer
+46,udp,provides,error checking
+46,udp,provides,error detection
+46,udp,provides,process-to-process data delivery
+46,udp,provides,unreliable connectionless service
+46,udp,requires,checksum
+46,udp,supports,multimedia applications
+47,udp,implements,checksum calculation
+47,udp,implements,demultiplexing
+47,udp,operates_at,transport layer
+47,udp,provides,error checking
+47,udp,provides,error detection
+47,udp,provides,process-to-process data delivery
+47,udp,provides,unreliable connectionless service
+47,udp,requires,checksum
+47,udp,supports,multimedia applications
+48,udp,implements,checksum calculation
+48,udp,implements,demultiplexing
+48,udp,operates_at,transport layer
+48,udp,provides,error checking
+48,udp,provides,error detection
+48,udp,provides,process-to-process data delivery
+48,udp,provides,unreliable connectionless service
+48,udp,requires,checksum
+48,udp,supports,multimedia applications
+49,udp,implements,checksum calculation
+49,udp,implements,demultiplexing
+49,udp,operates_at,transport layer
+49,udp,provides,error checking
+49,udp,provides,error detection
+49,udp,provides,process-to-process data delivery
+49,udp,provides,unreliable connectionless service
+49,udp,requires,checksum
+49,udp,supports,multimedia applications
+49,ip,operates_at,network layer
+49,ip,provides,network-layer service
+49,ip,runs_on,link layer
+50,udp,implements,checksum calculation
+50,udp,implements,demultiplexing
+50,udp,operates_at,transport layer
+50,udp,provides,error checking
+50,udp,provides,error detection
+50,udp,provides,process-to-process data delivery
+50,udp,provides,unreliable connectionless service
+50,udp,requires,checksum
+50,udp,supports,multimedia applications
+50,dns,runs_on,udp
+51,udp,implements,checksum calculation
+51,udp,implements,demultiplexing
+51,udp,operates_at,transport layer
+51,udp,provides,error checking
+51,udp,provides,error detection
+51,udp,provides,process-to-process data delivery
+51,udp,provides,unreliable connectionless service
+51,udp,requires,checksum
+51,udp,supports,multimedia applications
+51,network layer,enables,explicit congestion indication
+51,network layer,sends,datagram
+51,udp segment,contains,checksum
+51,udp segment,contains,header fields
+51,udp segment,has_part,checksum field
+51,datagram,contains,segment
+51,name server,receives,datagram
+51,dns,runs_on,udp
+52,udp,implements,checksum calculation
+52,udp,implements,demultiplexing
+52,udp,operates_at,transport layer
+52,udp,provides,error checking
+52,udp,provides,error detection
+52,udp,provides,process-to-process data delivery
+52,udp,provides,unreliable connectionless service
+52,udp,requires,checksum
+52,udp,supports,multimedia applications
+52,tcp,controls,send rate
+52,tcp,has_part,congestion avoidance
+52,tcp,has_part,congestion control mechanism
+52,tcp,has_part,connection state
+52,tcp,has_part,fast recovery
+52,tcp,has_part,receive buffer
+52,tcp,has_part,send buffer
+52,tcp,has_part,slow start
+52,tcp,has_part,tcp state
+52,tcp,has_part,window behavior
+52,tcp,implements,aimd
+52,tcp,implements,aimd algorithm
+52,tcp,implements,congestion avoidance
+52,tcp,implements,congestion control
+52,tcp,implements,demultiplexing
+52,tcp,implements,fast recovery
+52,tcp,implements,fast retransmit
+52,tcp,implements,reliable data transfer service
+52,tcp,implements,retransmit mechanism
+52,tcp,implements,slow start
+52,tcp,implements,three-way handshake
+52,tcp,is_a,transport-layer protocol
+52,tcp,operates_at,transport layer
+52,tcp,provides,congestion control
+52,tcp,provides,cumulative acknowledgments
+52,tcp,provides,error detection
+52,tcp,provides,flow control
+52,tcp,provides,flow control service
+52,tcp,provides,full-duplex service
+52,tcp,provides,point-to-point
+52,tcp,provides,reliable connection-oriented service
+52,tcp,provides,reliable data transfer
+52,tcp,provides,retransmissions
+52,tcp,provides,round-trip time estimation
+52,tcp,provides,timers
+52,tcp,receives,ack
+52,tcp,requires,acknowledgments
+52,tcp,requires,checksum
+52,tcp,requires,flow control
+52,tcp,requires,sequence numbers
+52,tcp,requires,timers
+52,tcp,runs_on,ip
+52,tcp,sends,segment
+52,tcp,supports,full-duplex
+52,udp segment,contains,checksum
+52,udp segment,contains,header fields
+52,udp segment,has_part,checksum field
+52,network layer,enables,explicit congestion indication
+52,network layer,sends,datagram
+53,tcp,controls,send rate
+53,tcp,has_part,congestion avoidance
+53,tcp,has_part,congestion control mechanism
+53,tcp,has_part,connection state
+53,tcp,has_part,fast recovery
+53,tcp,has_part,receive buffer
+53,tcp,has_part,send buffer
+53,tcp,has_part,slow start
+53,tcp,has_part,tcp state
+53,tcp,has_part,window behavior
+53,tcp,implements,aimd
+53,tcp,implements,aimd algorithm
+53,tcp,implements,congestion avoidance
+53,tcp,implements,congestion control
+53,tcp,implements,demultiplexing
+53,tcp,implements,fast recovery
+53,tcp,implements,fast retransmit
+53,tcp,implements,reliable data transfer service
+53,tcp,implements,retransmit mechanism
+53,tcp,implements,slow start
+53,tcp,implements,three-way handshake
+53,tcp,is_a,transport-layer protocol
+53,tcp,operates_at,transport layer
+53,tcp,provides,congestion control
+53,tcp,provides,cumulative acknowledgments
+53,tcp,provides,error detection
+53,tcp,provides,flow control
+53,tcp,provides,flow control service
+53,tcp,provides,full-duplex service
+53,tcp,provides,point-to-point
+53,tcp,provides,reliable connection-oriented service
+53,tcp,provides,reliable data transfer
+53,tcp,provides,retransmissions
+53,tcp,provides,round-trip time estimation
+53,tcp,provides,timers
+53,tcp,receives,ack
+53,tcp,requires,acknowledgments
+53,tcp,requires,checksum
+53,tcp,requires,flow control
+53,tcp,requires,sequence numbers
+53,tcp,requires,timers
+53,tcp,runs_on,ip
+53,tcp,sends,segment
+53,tcp,supports,full-duplex
+53,udp,implements,checksum calculation
+53,udp,implements,demultiplexing
+53,udp,operates_at,transport layer
+53,udp,provides,error checking
+53,udp,provides,error detection
+53,udp,provides,process-to-process data delivery
+53,udp,provides,unreliable connectionless service
+53,udp,requires,checksum
+53,udp,supports,multimedia applications
+54,tcp,controls,send rate
+54,tcp,has_part,congestion avoidance
+54,tcp,has_part,congestion control mechanism
+54,tcp,has_part,connection state
+54,tcp,has_part,fast recovery
+54,tcp,has_part,receive buffer
+54,tcp,has_part,send buffer
+54,tcp,has_part,slow start
+54,tcp,has_part,tcp state
+54,tcp,has_part,window behavior
+54,tcp,implements,aimd
+54,tcp,implements,aimd algorithm
+54,tcp,implements,congestion avoidance
+54,tcp,implements,congestion control
+54,tcp,implements,demultiplexing
+54,tcp,implements,fast recovery
+54,tcp,implements,fast retransmit
+54,tcp,implements,reliable data transfer service
+54,tcp,implements,retransmit mechanism
+54,tcp,implements,slow start
+54,tcp,implements,three-way handshake
+54,tcp,is_a,transport-layer protocol
+54,tcp,operates_at,transport layer
+54,tcp,provides,congestion control
+54,tcp,provides,cumulative acknowledgments
+54,tcp,provides,error detection
+54,tcp,provides,flow control
+54,tcp,provides,flow control service
+54,tcp,provides,full-duplex service
+54,tcp,provides,point-to-point
+54,tcp,provides,reliable connection-oriented service
+54,tcp,provides,reliable data transfer
+54,tcp,provides,retransmissions
+54,tcp,provides,round-trip time estimation
+54,tcp,provides,timers
+54,tcp,receives,ack
+54,tcp,requires,acknowledgments
+54,tcp,requires,checksum
+54,tcp,requires,flow control
+54,tcp,requires,sequence numbers
+54,tcp,requires,timers
+54,tcp,runs_on,ip
+54,tcp,sends,segment
+54,tcp,supports,full-duplex
+54,udp,implements,checksum calculation
+54,udp,implements,demultiplexing
+54,udp,operates_at,transport layer
+54,udp,provides,error checking
+54,udp,provides,error detection
+54,udp,provides,process-to-process data delivery
+54,udp,provides,unreliable connectionless service
+54,udp,requires,checksum
+54,udp,supports,multimedia applications
+54,dns,runs_on,udp
+54,http,operates_at,application layer
+54,http,runs_on,tcp
+55,udp,implements,checksum calculation
+55,udp,implements,demultiplexing
+55,udp,operates_at,transport layer
+55,udp,provides,error checking
+55,udp,provides,error detection
+55,udp,provides,process-to-process data delivery
+55,udp,provides,unreliable connectionless service
+55,udp,requires,checksum
+55,udp,supports,multimedia applications
+55,tcp,controls,send rate
+55,tcp,has_part,congestion avoidance
+55,tcp,has_part,congestion control mechanism
+55,tcp,has_part,connection state
+55,tcp,has_part,fast recovery
+55,tcp,has_part,receive buffer
+55,tcp,has_part,send buffer
+55,tcp,has_part,slow start
+55,tcp,has_part,tcp state
+55,tcp,has_part,window behavior
+55,tcp,implements,aimd
+55,tcp,implements,aimd algorithm
+55,tcp,implements,congestion avoidance
+55,tcp,implements,congestion control
+55,tcp,implements,demultiplexing
+55,tcp,implements,fast recovery
+55,tcp,implements,fast retransmit
+55,tcp,implements,reliable data transfer service
+55,tcp,implements,retransmit mechanism
+55,tcp,implements,slow start
+55,tcp,implements,three-way handshake
+55,tcp,is_a,transport-layer protocol
+55,tcp,operates_at,transport layer
+55,tcp,provides,congestion control
+55,tcp,provides,cumulative acknowledgments
+55,tcp,provides,error detection
+55,tcp,provides,flow control
+55,tcp,provides,flow control service
+55,tcp,provides,full-duplex service
+55,tcp,provides,point-to-point
+55,tcp,provides,reliable connection-oriented service
+55,tcp,provides,reliable data transfer
+55,tcp,provides,retransmissions
+55,tcp,provides,round-trip time estimation
+55,tcp,provides,timers
+55,tcp,receives,ack
+55,tcp,requires,acknowledgments
+55,tcp,requires,checksum
+55,tcp,requires,flow control
+55,tcp,requires,sequence numbers
+55,tcp,requires,timers
+55,tcp,runs_on,ip
+55,tcp,sends,segment
+55,tcp,supports,full-duplex
+56,tcp,controls,send rate
+56,tcp,has_part,congestion avoidance
+56,tcp,has_part,congestion control mechanism
+56,tcp,has_part,connection state
+56,tcp,has_part,fast recovery
+56,tcp,has_part,receive buffer
+56,tcp,has_part,send buffer
+56,tcp,has_part,slow start
+56,tcp,has_part,tcp state
+56,tcp,has_part,window behavior
+56,tcp,implements,aimd
+56,tcp,implements,aimd algorithm
+56,tcp,implements,congestion avoidance
+56,tcp,implements,congestion control
+56,tcp,implements,demultiplexing
+56,tcp,implements,fast recovery
+56,tcp,implements,fast retransmit
+56,tcp,implements,reliable data transfer service
+56,tcp,implements,retransmit mechanism
+56,tcp,implements,slow start
+56,tcp,implements,three-way handshake
+56,tcp,is_a,transport-layer protocol
+56,tcp,operates_at,transport layer
+56,tcp,provides,congestion control
+56,tcp,provides,cumulative acknowledgments
+56,tcp,provides,error detection
+56,tcp,provides,flow control
+56,tcp,provides,flow control service
+56,tcp,provides,full-duplex service
+56,tcp,provides,point-to-point
+56,tcp,provides,reliable connection-oriented service
+56,tcp,provides,reliable data transfer
+56,tcp,provides,retransmissions
+56,tcp,provides,round-trip time estimation
+56,tcp,provides,timers
+56,tcp,receives,ack
+56,tcp,requires,acknowledgments
+56,tcp,requires,checksum
+56,tcp,requires,flow control
+56,tcp,requires,sequence numbers
+56,tcp,requires,timers
+56,tcp,runs_on,ip
+56,tcp,sends,segment
+56,tcp,supports,full-duplex
+56,udp,implements,checksum calculation
+56,udp,implements,demultiplexing
+56,udp,operates_at,transport layer
+56,udp,provides,error checking
+56,udp,provides,error detection
+56,udp,provides,process-to-process data delivery
+56,udp,provides,unreliable connectionless service
+56,udp,requires,checksum
+56,udp,supports,multimedia applications
+57,tcp,controls,send rate
+57,tcp,has_part,congestion avoidance
+57,tcp,has_part,congestion control mechanism
+57,tcp,has_part,connection state
+57,tcp,has_part,fast recovery
+57,tcp,has_part,receive buffer
+57,tcp,has_part,send buffer
+57,tcp,has_part,slow start
+57,tcp,has_part,tcp state
+57,tcp,has_part,window behavior
+57,tcp,implements,aimd
+57,tcp,implements,aimd algorithm
+57,tcp,implements,congestion avoidance
+57,tcp,implements,congestion control
+57,tcp,implements,demultiplexing
+57,tcp,implements,fast recovery
+57,tcp,implements,fast retransmit
+57,tcp,implements,reliable data transfer service
+57,tcp,implements,retransmit mechanism
+57,tcp,implements,slow start
+57,tcp,implements,three-way handshake
+57,tcp,is_a,transport-layer protocol
+57,tcp,operates_at,transport layer
+57,tcp,provides,congestion control
+57,tcp,provides,cumulative acknowledgments
+57,tcp,provides,error detection
+57,tcp,provides,flow control
+57,tcp,provides,flow control service
+57,tcp,provides,full-duplex service
+57,tcp,provides,point-to-point
+57,tcp,provides,reliable connection-oriented service
+57,tcp,provides,reliable data transfer
+57,tcp,provides,retransmissions
+57,tcp,provides,round-trip time estimation
+57,tcp,provides,timers
+57,tcp,receives,ack
+57,tcp,requires,acknowledgments
+57,tcp,requires,checksum
+57,tcp,requires,flow control
+57,tcp,requires,sequence numbers
+57,tcp,requires,timers
+57,tcp,runs_on,ip
+57,tcp,sends,segment
+57,tcp,supports,full-duplex
+57,http,operates_at,application layer
+57,http,runs_on,tcp
+57,udp,implements,checksum calculation
+57,udp,implements,demultiplexing
+57,udp,operates_at,transport layer
+57,udp,provides,error checking
+57,udp,provides,error detection
+57,udp,provides,process-to-process data delivery
+57,udp,provides,unreliable connectionless service
+57,udp,requires,checksum
+57,udp,supports,multimedia applications
+58,dns,runs_on,udp
+58,udp,implements,checksum calculation
+58,udp,implements,demultiplexing
+58,udp,operates_at,transport layer
+58,udp,provides,error checking
+58,udp,provides,error detection
+58,udp,provides,process-to-process data delivery
+58,udp,provides,unreliable connectionless service
+58,udp,requires,checksum
+58,udp,supports,multimedia applications
+58,tcp,controls,send rate
+58,tcp,has_part,congestion avoidance
+58,tcp,has_part,congestion control mechanism
+58,tcp,has_part,connection state
+58,tcp,has_part,fast recovery
+58,tcp,has_part,receive buffer
+58,tcp,has_part,send buffer
+58,tcp,has_part,slow start
+58,tcp,has_part,tcp state
+58,tcp,has_part,window behavior
+58,tcp,implements,aimd
+58,tcp,implements,aimd algorithm
+58,tcp,implements,congestion avoidance
+58,tcp,implements,congestion control
+58,tcp,implements,demultiplexing
+58,tcp,implements,fast recovery
+58,tcp,implements,fast retransmit
+58,tcp,implements,reliable data transfer service
+58,tcp,implements,retransmit mechanism
+58,tcp,implements,slow start
+58,tcp,implements,three-way handshake
+58,tcp,is_a,transport-layer protocol
+58,tcp,operates_at,transport layer
+58,tcp,provides,congestion control
+58,tcp,provides,cumulative acknowledgments
+58,tcp,provides,error detection
+58,tcp,provides,flow control
+58,tcp,provides,flow control service
+58,tcp,provides,full-duplex service
+58,tcp,provides,point-to-point
+58,tcp,provides,reliable connection-oriented service
+58,tcp,provides,reliable data transfer
+58,tcp,provides,retransmissions
+58,tcp,provides,round-trip time estimation
+58,tcp,provides,timers
+58,tcp,receives,ack
+58,tcp,requires,acknowledgments
+58,tcp,requires,checksum
+58,tcp,requires,flow control
+58,tcp,requires,sequence numbers
+58,tcp,requires,timers
+58,tcp,runs_on,ip
+58,tcp,sends,segment
+58,tcp,supports,full-duplex
+58,internet phone,runs_on,udp
+59,internet phone,runs_on,udp
+59,udp,implements,checksum calculation
+59,udp,implements,demultiplexing
+59,udp,operates_at,transport layer
+59,udp,provides,error checking
+59,udp,provides,error detection
+59,udp,provides,process-to-process data delivery
+59,udp,provides,unreliable connectionless service
+59,udp,requires,checksum
+59,udp,supports,multimedia applications
+59,tcp,controls,send rate
+59,tcp,has_part,congestion avoidance
+59,tcp,has_part,congestion control mechanism
+59,tcp,has_part,connection state
+59,tcp,has_part,fast recovery
+59,tcp,has_part,receive buffer
+59,tcp,has_part,send buffer
+59,tcp,has_part,slow start
+59,tcp,has_part,tcp state
+59,tcp,has_part,window behavior
+59,tcp,implements,aimd
+59,tcp,implements,aimd algorithm
+59,tcp,implements,congestion avoidance
+59,tcp,implements,congestion control
+59,tcp,implements,demultiplexing
+59,tcp,implements,fast recovery
+59,tcp,implements,fast retransmit
+59,tcp,implements,reliable data transfer service
+59,tcp,implements,retransmit mechanism
+59,tcp,implements,slow start
+59,tcp,implements,three-way handshake
+59,tcp,is_a,transport-layer protocol
+59,tcp,operates_at,transport layer
+59,tcp,provides,congestion control
+59,tcp,provides,cumulative acknowledgments
+59,tcp,provides,error detection
+59,tcp,provides,flow control
+59,tcp,provides,flow control service
+59,tcp,provides,full-duplex service
+59,tcp,provides,point-to-point
+59,tcp,provides,reliable connection-oriented service
+59,tcp,provides,reliable data transfer
+59,tcp,provides,retransmissions
+59,tcp,provides,round-trip time estimation
+59,tcp,provides,timers
+59,tcp,receives,ack
+59,tcp,requires,acknowledgments
+59,tcp,requires,checksum
+59,tcp,requires,flow control
+59,tcp,requires,sequence numbers
+59,tcp,requires,timers
+59,tcp,runs_on,ip
+59,tcp,sends,segment
+59,tcp,supports,full-duplex
+60,congestion control,controls,transmission rate
+60,congestion control,decreases,transmission rate
+60,congestion control,requires,congestion window
+60,congestion control,supports,delay-based approach
+60,tcp,controls,send rate
+60,tcp,has_part,congestion avoidance
+60,tcp,has_part,congestion control mechanism
+60,tcp,has_part,connection state
+60,tcp,has_part,fast recovery
+60,tcp,has_part,receive buffer
+60,tcp,has_part,send buffer
+60,tcp,has_part,slow start
+60,tcp,has_part,tcp state
+60,tcp,has_part,window behavior
+60,tcp,implements,aimd
+60,tcp,implements,aimd algorithm
+60,tcp,implements,congestion avoidance
+60,tcp,implements,congestion control
+60,tcp,implements,demultiplexing
+60,tcp,implements,fast recovery
+60,tcp,implements,fast retransmit
+60,tcp,implements,reliable data transfer service
+60,tcp,implements,retransmit mechanism
+60,tcp,implements,slow start
+60,tcp,implements,three-way handshake
+60,tcp,is_a,transport-layer protocol
+60,tcp,operates_at,transport layer
+60,tcp,provides,congestion control
+60,tcp,provides,cumulative acknowledgments
+60,tcp,provides,error detection
+60,tcp,provides,flow control
+60,tcp,provides,flow control service
+60,tcp,provides,full-duplex service
+60,tcp,provides,point-to-point
+60,tcp,provides,reliable connection-oriented service
+60,tcp,provides,reliable data transfer
+60,tcp,provides,retransmissions
+60,tcp,provides,round-trip time estimation
+60,tcp,provides,timers
+60,tcp,receives,ack
+60,tcp,requires,acknowledgments
+60,tcp,requires,checksum
+60,tcp,requires,flow control
+60,tcp,requires,sequence numbers
+60,tcp,requires,timers
+60,tcp,runs_on,ip
+60,tcp,sends,segment
+60,tcp,supports,full-duplex
+61,congestion control,controls,transmission rate
+61,congestion control,decreases,transmission rate
+61,congestion control,requires,congestion window
+61,congestion control,supports,delay-based approach
+65,udp checksum,provides,error detection
+66,checksum calculation,requires,1s complement
+67,ethernet,implements,csma/cd
+67,ethernet,provides,error detection
+68,transport layer,implements,demultiplexing
+68,transport layer,implements,multiplexing
+68,transport layer,provides,error checking
+68,transport layer,provides,port number
+68,transport layer,receives,segment
+68,transport layer,sends,transport-level segment
+69,ip,operates_at,network layer
+69,ip,provides,network-layer service
+69,ip,runs_on,link layer
+69,transport layer,implements,demultiplexing
+69,transport layer,implements,multiplexing
+69,transport layer,provides,error checking
+69,transport layer,provides,port number
+69,transport layer,receives,segment
+69,transport layer,sends,transport-level segment
+70,udp,implements,checksum calculation
+70,udp,implements,demultiplexing
+70,udp,operates_at,transport layer
+70,udp,provides,error checking
+70,udp,provides,error detection
+70,udp,provides,process-to-process data delivery
+70,udp,provides,unreliable connectionless service
+70,udp,requires,checksum
+70,udp,supports,multimedia applications
+70,tcp,controls,send rate
+70,tcp,has_part,congestion avoidance
+70,tcp,has_part,congestion control mechanism
+70,tcp,has_part,connection state
+70,tcp,has_part,fast recovery
+70,tcp,has_part,receive buffer
+70,tcp,has_part,send buffer
+70,tcp,has_part,slow start
+70,tcp,has_part,tcp state
+70,tcp,has_part,window behavior
+70,tcp,implements,aimd
+70,tcp,implements,aimd algorithm
+70,tcp,implements,congestion avoidance
+70,tcp,implements,congestion control
+70,tcp,implements,demultiplexing
+70,tcp,implements,fast recovery
+70,tcp,implements,fast retransmit
+70,tcp,implements,reliable data transfer service
+70,tcp,implements,retransmit mechanism
+70,tcp,implements,slow start
+70,tcp,implements,three-way handshake
+70,tcp,is_a,transport-layer protocol
+70,tcp,operates_at,transport layer
+70,tcp,provides,congestion control
+70,tcp,provides,cumulative acknowledgments
+70,tcp,provides,error detection
+70,tcp,provides,flow control
+70,tcp,provides,flow control service
+70,tcp,provides,full-duplex service
+70,tcp,provides,point-to-point
+70,tcp,provides,reliable connection-oriented service
+70,tcp,provides,reliable data transfer
+70,tcp,provides,retransmissions
+70,tcp,provides,round-trip time estimation
+70,tcp,provides,timers
+70,tcp,receives,ack
+70,tcp,requires,acknowledgments
+70,tcp,requires,checksum
+70,tcp,requires,flow control
+70,tcp,requires,sequence numbers
+70,tcp,requires,timers
+70,tcp,runs_on,ip
+70,tcp,sends,segment
+70,tcp,supports,full-duplex
+71,transport layer,implements,demultiplexing
+71,transport layer,implements,multiplexing
+71,transport layer,provides,error checking
+71,transport layer,provides,port number
+71,transport layer,receives,segment
+71,transport layer,sends,transport-level segment
+71,link layer,provides,error detection
+71,tcp,controls,send rate
+71,tcp,has_part,congestion avoidance
+71,tcp,has_part,congestion control mechanism
+71,tcp,has_part,connection state
+71,tcp,has_part,fast recovery
+71,tcp,has_part,receive buffer
+71,tcp,has_part,send buffer
+71,tcp,has_part,slow start
+71,tcp,has_part,tcp state
+71,tcp,has_part,window behavior
+71,tcp,implements,aimd
+71,tcp,implements,aimd algorithm
+71,tcp,implements,congestion avoidance
+71,tcp,implements,congestion control
+71,tcp,implements,demultiplexing
+71,tcp,implements,fast recovery
+71,tcp,implements,fast retransmit
+71,tcp,implements,reliable data transfer service
+71,tcp,implements,retransmit mechanism
+71,tcp,implements,slow start
+71,tcp,implements,three-way handshake
+71,tcp,is_a,transport-layer protocol
+71,tcp,operates_at,transport layer
+71,tcp,provides,congestion control
+71,tcp,provides,cumulative acknowledgments
+71,tcp,provides,error detection
+71,tcp,provides,flow control
+71,tcp,provides,flow control service
+71,tcp,provides,full-duplex service
+71,tcp,provides,point-to-point
+71,tcp,provides,reliable connection-oriented service
+71,tcp,provides,reliable data transfer
+71,tcp,provides,retransmissions
+71,tcp,provides,round-trip time estimation
+71,tcp,provides,timers
+71,tcp,receives,ack
+71,tcp,requires,acknowledgments
+71,tcp,requires,checksum
+71,tcp,requires,flow control
+71,tcp,requires,sequence numbers
+71,tcp,requires,timers
+71,tcp,runs_on,ip
+71,tcp,sends,segment
+71,tcp,supports,full-duplex
+72,tcp,controls,send rate
+72,tcp,has_part,congestion avoidance
+72,tcp,has_part,congestion control mechanism
+72,tcp,has_part,connection state
+72,tcp,has_part,fast recovery
+72,tcp,has_part,receive buffer
+72,tcp,has_part,send buffer
+72,tcp,has_part,slow start
+72,tcp,has_part,tcp state
+72,tcp,has_part,window behavior
+72,tcp,implements,aimd
+72,tcp,implements,aimd algorithm
+72,tcp,implements,congestion avoidance
+72,tcp,implements,congestion control
+72,tcp,implements,demultiplexing
+72,tcp,implements,fast recovery
+72,tcp,implements,fast retransmit
+72,tcp,implements,reliable data transfer service
+72,tcp,implements,retransmit mechanism
+72,tcp,implements,slow start
+72,tcp,implements,three-way handshake
+72,tcp,is_a,transport-layer protocol
+72,tcp,operates_at,transport layer
+72,tcp,provides,congestion control
+72,tcp,provides,cumulative acknowledgments
+72,tcp,provides,error detection
+72,tcp,provides,flow control
+72,tcp,provides,flow control service
+72,tcp,provides,full-duplex service
+72,tcp,provides,point-to-point
+72,tcp,provides,reliable connection-oriented service
+72,tcp,provides,reliable data transfer
+72,tcp,provides,retransmissions
+72,tcp,provides,round-trip time estimation
+72,tcp,provides,timers
+72,tcp,receives,ack
+72,tcp,requires,acknowledgments
+72,tcp,requires,checksum
+72,tcp,requires,flow control
+72,tcp,requires,sequence numbers
+72,tcp,requires,timers
+72,tcp,runs_on,ip
+72,tcp,sends,segment
+72,tcp,supports,full-duplex
+72,reliable data transfer protocol,has_part,sender
+72,reliable data transfer protocol,implements,finite-state machine
+72,reliable data transfer protocol,requires,positive acknowledgment
+72,reliable data transfer protocol,requires,unreliable channel
+73,ip,operates_at,network layer
+73,ip,provides,network-layer service
+73,ip,runs_on,link layer
+74,reliable data transfer protocol,has_part,sender
+74,reliable data transfer protocol,implements,finite-state machine
+74,reliable data transfer protocol,requires,positive acknowledgment
+74,reliable data transfer protocol,requires,unreliable channel
+75,packet,contains,checksum
+75,packet,contains,packet checksum field
+75,packet,has_part,sequence number
+75,segment,contains,destination port number
+75,segment,contains,port
+75,segment,contains,source port number
+75,segment,has_part,sequence number
+77,reliable data transfer protocol,has_part,sender
+77,reliable data transfer protocol,implements,finite-state machine
+77,reliable data transfer protocol,requires,positive acknowledgment
+77,reliable data transfer protocol,requires,unreliable channel
+80,rdt,receives,packet
+80,rdt,sends,packet
+80,packet,contains,checksum
+80,packet,contains,packet checksum field
+80,packet,has_part,sequence number
+82,packet,contains,checksum
+82,packet,contains,packet checksum field
+82,packet,has_part,sequence number
+84,udp,implements,checksum calculation
+84,udp,implements,demultiplexing
+84,udp,operates_at,transport layer
+84,udp,provides,error checking
+84,udp,provides,error detection
+84,udp,provides,process-to-process data delivery
+84,udp,provides,unreliable connectionless service
+84,udp,requires,checksum
+84,udp,supports,multimedia applications
+84,packet checksum field,part_of,packet
+85,ack,increases,congestion window size
+85,ack,is_a,positive acknowledgment
+85,nak,is_a,negative acknowledgment
+87,udp segment,contains,checksum
+87,udp segment,contains,header fields
+87,udp segment,has_part,checksum field
+88,nak,is_a,negative acknowledgment
+88,ack,increases,congestion window size
+88,ack,is_a,positive acknowledgment
+89,ack,increases,congestion window size
+89,ack,is_a,positive acknowledgment
+89,nak,is_a,negative acknowledgment
+93,sequence number,identifies,packet
+95,sequence number,identifies,packet
+98,packet loss,increases,end-to-end delay
+101,packet loss,increases,end-to-end delay
+111,pipelining,increases,utilization
+111,pipelining,requires,buffer
+111,pipelining,requires,sequence numbers
+111,pipelining,requires,window
+112,selective repeat,provides,reliable data transfer
+112,selective repeat,receives,ack
+112,selective repeat,requires,ack
+112,selective repeat,requires,logical timer
+112,selective repeat,requires,timer
+112,selective repeat,requires,window
+116,tcp congestion control,controls,sending rate
+120,cumulative acknowledgment,is_a,ack
+121,timer,supports,retransmit mechanism
+122,sequence number,identifies,packet
+125,sequence number,identifies,packet
+128,tcp,controls,send rate
+128,tcp,has_part,congestion avoidance
+128,tcp,has_part,congestion control mechanism
+128,tcp,has_part,connection state
+128,tcp,has_part,fast recovery
+128,tcp,has_part,receive buffer
+128,tcp,has_part,send buffer
+128,tcp,has_part,slow start
+128,tcp,has_part,tcp state
+128,tcp,has_part,window behavior
+128,tcp,implements,aimd
+128,tcp,implements,aimd algorithm
+128,tcp,implements,congestion avoidance
+128,tcp,implements,congestion control
+128,tcp,implements,demultiplexing
+128,tcp,implements,fast recovery
+128,tcp,implements,fast retransmit
+128,tcp,implements,reliable data transfer service
+128,tcp,implements,retransmit mechanism
+128,tcp,implements,slow start
+128,tcp,implements,three-way handshake
+128,tcp,is_a,transport-layer protocol
+128,tcp,operates_at,transport layer
+128,tcp,provides,congestion control
+128,tcp,provides,cumulative acknowledgments
+128,tcp,provides,error detection
+128,tcp,provides,flow control
+128,tcp,provides,flow control service
+128,tcp,provides,full-duplex service
+128,tcp,provides,point-to-point
+128,tcp,provides,reliable connection-oriented service
+128,tcp,provides,reliable data transfer
+128,tcp,provides,retransmissions
+128,tcp,provides,round-trip time estimation
+128,tcp,provides,timers
+128,tcp,receives,ack
+128,tcp,requires,acknowledgments
+128,tcp,requires,checksum
+128,tcp,requires,flow control
+128,tcp,requires,sequence numbers
+128,tcp,requires,timers
+128,tcp,runs_on,ip
+128,tcp,sends,segment
+128,tcp,supports,full-duplex
+134,sequence number,identifies,packet
+135,receive window,enables,flow control
+135,sequence number,identifies,packet
+136,sequence number,identifies,packet
+141,gbn,requires,sequence number
+144,tcp,controls,send rate
+144,tcp,has_part,congestion avoidance
+144,tcp,has_part,congestion control mechanism
+144,tcp,has_part,connection state
+144,tcp,has_part,fast recovery
+144,tcp,has_part,receive buffer
+144,tcp,has_part,send buffer
+144,tcp,has_part,slow start
+144,tcp,has_part,tcp state
+144,tcp,has_part,window behavior
+144,tcp,implements,aimd
+144,tcp,implements,aimd algorithm
+144,tcp,implements,congestion avoidance
+144,tcp,implements,congestion control
+144,tcp,implements,demultiplexing
+144,tcp,implements,fast recovery
+144,tcp,implements,fast retransmit
+144,tcp,implements,reliable data transfer service
+144,tcp,implements,retransmit mechanism
+144,tcp,implements,slow start
+144,tcp,implements,three-way handshake
+144,tcp,is_a,transport-layer protocol
+144,tcp,operates_at,transport layer
+144,tcp,provides,congestion control
+144,tcp,provides,cumulative acknowledgments
+144,tcp,provides,error detection
+144,tcp,provides,flow control
+144,tcp,provides,flow control service
+144,tcp,provides,full-duplex service
+144,tcp,provides,point-to-point
+144,tcp,provides,reliable connection-oriented service
+144,tcp,provides,reliable data transfer
+144,tcp,provides,retransmissions
+144,tcp,provides,round-trip time estimation
+144,tcp,provides,timers
+144,tcp,receives,ack
+144,tcp,requires,acknowledgments
+144,tcp,requires,checksum
+144,tcp,requires,flow control
+144,tcp,requires,sequence numbers
+144,tcp,requires,timers
+144,tcp,runs_on,ip
+144,tcp,sends,segment
+144,tcp,supports,full-duplex
+145,tcp,controls,send rate
+145,tcp,has_part,congestion avoidance
+145,tcp,has_part,congestion control mechanism
+145,tcp,has_part,connection state
+145,tcp,has_part,fast recovery
+145,tcp,has_part,receive buffer
+145,tcp,has_part,send buffer
+145,tcp,has_part,slow start
+145,tcp,has_part,tcp state
+145,tcp,has_part,window behavior
+145,tcp,implements,aimd
+145,tcp,implements,aimd algorithm
+145,tcp,implements,congestion avoidance
+145,tcp,implements,congestion control
+145,tcp,implements,demultiplexing
+145,tcp,implements,fast recovery
+145,tcp,implements,fast retransmit
+145,tcp,implements,reliable data transfer service
+145,tcp,implements,retransmit mechanism
+145,tcp,implements,slow start
+145,tcp,implements,three-way handshake
+145,tcp,is_a,transport-layer protocol
+145,tcp,operates_at,transport layer
+145,tcp,provides,congestion control
+145,tcp,provides,cumulative acknowledgments
+145,tcp,provides,error detection
+145,tcp,provides,flow control
+145,tcp,provides,flow control service
+145,tcp,provides,full-duplex service
+145,tcp,provides,point-to-point
+145,tcp,provides,reliable connection-oriented service
+145,tcp,provides,reliable data transfer
+145,tcp,provides,retransmissions
+145,tcp,provides,round-trip time estimation
+145,tcp,provides,timers
+145,tcp,receives,ack
+145,tcp,requires,acknowledgments
+145,tcp,requires,checksum
+145,tcp,requires,flow control
+145,tcp,requires,sequence numbers
+145,tcp,requires,timers
+145,tcp,runs_on,ip
+145,tcp,sends,segment
+145,tcp,supports,full-duplex
+148,tcp,controls,send rate
+148,tcp,has_part,congestion avoidance
+148,tcp,has_part,congestion control mechanism
+148,tcp,has_part,connection state
+148,tcp,has_part,fast recovery
+148,tcp,has_part,receive buffer
+148,tcp,has_part,send buffer
+148,tcp,has_part,slow start
+148,tcp,has_part,tcp state
+148,tcp,has_part,window behavior
+148,tcp,implements,aimd
+148,tcp,implements,aimd algorithm
+148,tcp,implements,congestion avoidance
+148,tcp,implements,congestion control
+148,tcp,implements,demultiplexing
+148,tcp,implements,fast recovery
+148,tcp,implements,fast retransmit
+148,tcp,implements,reliable data transfer service
+148,tcp,implements,retransmit mechanism
+148,tcp,implements,slow start
+148,tcp,implements,three-way handshake
+148,tcp,is_a,transport-layer protocol
+148,tcp,operates_at,transport layer
+148,tcp,provides,congestion control
+148,tcp,provides,cumulative acknowledgments
+148,tcp,provides,error detection
+148,tcp,provides,flow control
+148,tcp,provides,flow control service
+148,tcp,provides,full-duplex service
+148,tcp,provides,point-to-point
+148,tcp,provides,reliable connection-oriented service
+148,tcp,provides,reliable data transfer
+148,tcp,provides,retransmissions
+148,tcp,provides,round-trip time estimation
+148,tcp,provides,timers
+148,tcp,receives,ack
+148,tcp,requires,acknowledgments
+148,tcp,requires,checksum
+148,tcp,requires,flow control
+148,tcp,requires,sequence numbers
+148,tcp,requires,timers
+148,tcp,runs_on,ip
+148,tcp,sends,segment
+148,tcp,supports,full-duplex
+149,tcp,controls,send rate
+149,tcp,has_part,congestion avoidance
+149,tcp,has_part,congestion control mechanism
+149,tcp,has_part,connection state
+149,tcp,has_part,fast recovery
+149,tcp,has_part,receive buffer
+149,tcp,has_part,send buffer
+149,tcp,has_part,slow start
+149,tcp,has_part,tcp state
+149,tcp,has_part,window behavior
+149,tcp,implements,aimd
+149,tcp,implements,aimd algorithm
+149,tcp,implements,congestion avoidance
+149,tcp,implements,congestion control
+149,tcp,implements,demultiplexing
+149,tcp,implements,fast recovery
+149,tcp,implements,fast retransmit
+149,tcp,implements,reliable data transfer service
+149,tcp,implements,retransmit mechanism
+149,tcp,implements,slow start
+149,tcp,implements,three-way handshake
+149,tcp,is_a,transport-layer protocol
+149,tcp,operates_at,transport layer
+149,tcp,provides,congestion control
+149,tcp,provides,cumulative acknowledgments
+149,tcp,provides,error detection
+149,tcp,provides,flow control
+149,tcp,provides,flow control service
+149,tcp,provides,full-duplex service
+149,tcp,provides,point-to-point
+149,tcp,provides,reliable connection-oriented service
+149,tcp,provides,reliable data transfer
+149,tcp,provides,retransmissions
+149,tcp,provides,round-trip time estimation
+149,tcp,provides,timers
+149,tcp,receives,ack
+149,tcp,requires,acknowledgments
+149,tcp,requires,checksum
+149,tcp,requires,flow control
+149,tcp,requires,sequence numbers
+149,tcp,requires,timers
+149,tcp,runs_on,ip
+149,tcp,sends,segment
+149,tcp,supports,full-duplex
+149,transport layer,implements,demultiplexing
+149,transport layer,implements,multiplexing
+149,transport layer,provides,error checking
+149,transport layer,provides,port number
+149,transport layer,receives,segment
+149,transport layer,sends,transport-level segment
+149,tcp segment,contains,destination port number
+149,tcp segment,provides,acknowledgment
+150,socket,receives,segment
+151,network layer,enables,explicit congestion indication
+151,network layer,sends,datagram
+151,tcp,controls,send rate
+151,tcp,has_part,congestion avoidance
+151,tcp,has_part,congestion control mechanism
+151,tcp,has_part,connection state
+151,tcp,has_part,fast recovery
+151,tcp,has_part,receive buffer
+151,tcp,has_part,send buffer
+151,tcp,has_part,slow start
+151,tcp,has_part,tcp state
+151,tcp,has_part,window behavior
+151,tcp,implements,aimd
+151,tcp,implements,aimd algorithm
+151,tcp,implements,congestion avoidance
+151,tcp,implements,congestion control
+151,tcp,implements,demultiplexing
+151,tcp,implements,fast recovery
+151,tcp,implements,fast retransmit
+151,tcp,implements,reliable data transfer service
+151,tcp,implements,retransmit mechanism
+151,tcp,implements,slow start
+151,tcp,implements,three-way handshake
+151,tcp,is_a,transport-layer protocol
+151,tcp,operates_at,transport layer
+151,tcp,provides,congestion control
+151,tcp,provides,cumulative acknowledgments
+151,tcp,provides,error detection
+151,tcp,provides,flow control
+151,tcp,provides,flow control service
+151,tcp,provides,full-duplex service
+151,tcp,provides,point-to-point
+151,tcp,provides,reliable connection-oriented service
+151,tcp,provides,reliable data transfer
+151,tcp,provides,retransmissions
+151,tcp,provides,round-trip time estimation
+151,tcp,provides,timers
+151,tcp,receives,ack
+151,tcp,requires,acknowledgments
+151,tcp,requires,checksum
+151,tcp,requires,flow control
+151,tcp,requires,sequence numbers
+151,tcp,requires,timers
+151,tcp,runs_on,ip
+151,tcp,sends,segment
+151,tcp,supports,full-duplex
+152,ethernet,implements,csma/cd
+152,ethernet,provides,error detection
+156,tcp segment,contains,destination port number
+156,tcp segment,provides,acknowledgment
+157,telnet,operates_at,application layer
+157,telnet,runs_on,tcp
+157,checksum field,contains,udp checksum
+158,tcp segment header,has_part,acknowledgment number field
+158,tcp segment header,has_part,sequence number field
+158,tcp,controls,send rate
+158,tcp,has_part,congestion avoidance
+158,tcp,has_part,congestion control mechanism
+158,tcp,has_part,connection state
+158,tcp,has_part,fast recovery
+158,tcp,has_part,receive buffer
+158,tcp,has_part,send buffer
+158,tcp,has_part,slow start
+158,tcp,has_part,tcp state
+158,tcp,has_part,window behavior
+158,tcp,implements,aimd
+158,tcp,implements,aimd algorithm
+158,tcp,implements,congestion avoidance
+158,tcp,implements,congestion control
+158,tcp,implements,demultiplexing
+158,tcp,implements,fast recovery
+158,tcp,implements,fast retransmit
+158,tcp,implements,reliable data transfer service
+158,tcp,implements,retransmit mechanism
+158,tcp,implements,slow start
+158,tcp,implements,three-way handshake
+158,tcp,is_a,transport-layer protocol
+158,tcp,operates_at,transport layer
+158,tcp,provides,congestion control
+158,tcp,provides,cumulative acknowledgments
+158,tcp,provides,error detection
+158,tcp,provides,flow control
+158,tcp,provides,flow control service
+158,tcp,provides,full-duplex service
+158,tcp,provides,point-to-point
+158,tcp,provides,reliable connection-oriented service
+158,tcp,provides,reliable data transfer
+158,tcp,provides,retransmissions
+158,tcp,provides,round-trip time estimation
+158,tcp,provides,timers
+158,tcp,receives,ack
+158,tcp,requires,acknowledgments
+158,tcp,requires,checksum
+158,tcp,requires,flow control
+158,tcp,requires,sequence numbers
+158,tcp,requires,timers
+158,tcp,runs_on,ip
+158,tcp,sends,segment
+158,tcp,supports,full-duplex
+165,sequence number,identifies,packet
+166,tcp,controls,send rate
+166,tcp,has_part,congestion avoidance
+166,tcp,has_part,congestion control mechanism
+166,tcp,has_part,connection state
+166,tcp,has_part,fast recovery
+166,tcp,has_part,receive buffer
+166,tcp,has_part,send buffer
+166,tcp,has_part,slow start
+166,tcp,has_part,tcp state
+166,tcp,has_part,window behavior
+166,tcp,implements,aimd
+166,tcp,implements,aimd algorithm
+166,tcp,implements,congestion avoidance
+166,tcp,implements,congestion control
+166,tcp,implements,demultiplexing
+166,tcp,implements,fast recovery
+166,tcp,implements,fast retransmit
+166,tcp,implements,reliable data transfer service
+166,tcp,implements,retransmit mechanism
+166,tcp,implements,slow start
+166,tcp,implements,three-way handshake
+166,tcp,is_a,transport-layer protocol
+166,tcp,operates_at,transport layer
+166,tcp,provides,congestion control
+166,tcp,provides,cumulative acknowledgments
+166,tcp,provides,error detection
+166,tcp,provides,flow control
+166,tcp,provides,flow control service
+166,tcp,provides,full-duplex service
+166,tcp,provides,point-to-point
+166,tcp,provides,reliable connection-oriented service
+166,tcp,provides,reliable data transfer
+166,tcp,provides,retransmissions
+166,tcp,provides,round-trip time estimation
+166,tcp,provides,timers
+166,tcp,receives,ack
+166,tcp,requires,acknowledgments
+166,tcp,requires,checksum
+166,tcp,requires,flow control
+166,tcp,requires,sequence numbers
+166,tcp,requires,timers
+166,tcp,runs_on,ip
+166,tcp,sends,segment
+166,tcp,supports,full-duplex
+167,tcp,controls,send rate
+167,tcp,has_part,congestion avoidance
+167,tcp,has_part,congestion control mechanism
+167,tcp,has_part,connection state
+167,tcp,has_part,fast recovery
+167,tcp,has_part,receive buffer
+167,tcp,has_part,send buffer
+167,tcp,has_part,slow start
+167,tcp,has_part,tcp state
+167,tcp,has_part,window behavior
+167,tcp,implements,aimd
+167,tcp,implements,aimd algorithm
+167,tcp,implements,congestion avoidance
+167,tcp,implements,congestion control
+167,tcp,implements,demultiplexing
+167,tcp,implements,fast recovery
+167,tcp,implements,fast retransmit
+167,tcp,implements,reliable data transfer service
+167,tcp,implements,retransmit mechanism
+167,tcp,implements,slow start
+167,tcp,implements,three-way handshake
+167,tcp,is_a,transport-layer protocol
+167,tcp,operates_at,transport layer
+167,tcp,provides,congestion control
+167,tcp,provides,cumulative acknowledgments
+167,tcp,provides,error detection
+167,tcp,provides,flow control
+167,tcp,provides,flow control service
+167,tcp,provides,full-duplex service
+167,tcp,provides,point-to-point
+167,tcp,provides,reliable connection-oriented service
+167,tcp,provides,reliable data transfer
+167,tcp,provides,retransmissions
+167,tcp,provides,round-trip time estimation
+167,tcp,provides,timers
+167,tcp,receives,ack
+167,tcp,requires,acknowledgments
+167,tcp,requires,checksum
+167,tcp,requires,flow control
+167,tcp,requires,sequence numbers
+167,tcp,requires,timers
+167,tcp,runs_on,ip
+167,tcp,sends,segment
+167,tcp,supports,full-duplex
+169,telnet,operates_at,application layer
+169,telnet,runs_on,tcp
+169,tcp,controls,send rate
+169,tcp,has_part,congestion avoidance
+169,tcp,has_part,congestion control mechanism
+169,tcp,has_part,connection state
+169,tcp,has_part,fast recovery
+169,tcp,has_part,receive buffer
+169,tcp,has_part,send buffer
+169,tcp,has_part,slow start
+169,tcp,has_part,tcp state
+169,tcp,has_part,window behavior
+169,tcp,implements,aimd
+169,tcp,implements,aimd algorithm
+169,tcp,implements,congestion avoidance
+169,tcp,implements,congestion control
+169,tcp,implements,demultiplexing
+169,tcp,implements,fast recovery
+169,tcp,implements,fast retransmit
+169,tcp,implements,reliable data transfer service
+169,tcp,implements,retransmit mechanism
+169,tcp,implements,slow start
+169,tcp,implements,three-way handshake
+169,tcp,is_a,transport-layer protocol
+169,tcp,operates_at,transport layer
+169,tcp,provides,congestion control
+169,tcp,provides,cumulative acknowledgments
+169,tcp,provides,error detection
+169,tcp,provides,flow control
+169,tcp,provides,flow control service
+169,tcp,provides,full-duplex service
+169,tcp,provides,point-to-point
+169,tcp,provides,reliable connection-oriented service
+169,tcp,provides,reliable data transfer
+169,tcp,provides,retransmissions
+169,tcp,provides,round-trip time estimation
+169,tcp,provides,timers
+169,tcp,receives,ack
+169,tcp,requires,acknowledgments
+169,tcp,requires,checksum
+169,tcp,requires,flow control
+169,tcp,requires,sequence numbers
+169,tcp,requires,timers
+169,tcp,runs_on,ip
+169,tcp,sends,segment
+169,tcp,supports,full-duplex
+170,telnet,operates_at,application layer
+170,telnet,runs_on,tcp
+172,sequence number,identifies,packet
+173,segment,contains,destination port number
+173,segment,contains,port
+173,segment,contains,source port number
+173,segment,has_part,sequence number
+174,sequence number,identifies,packet
+175,segment,contains,destination port number
+175,segment,contains,port
+175,segment,contains,source port number
+175,segment,has_part,sequence number
+176,tcp,controls,send rate
+176,tcp,has_part,congestion avoidance
+176,tcp,has_part,congestion control mechanism
+176,tcp,has_part,connection state
+176,tcp,has_part,fast recovery
+176,tcp,has_part,receive buffer
+176,tcp,has_part,send buffer
+176,tcp,has_part,slow start
+176,tcp,has_part,tcp state
+176,tcp,has_part,window behavior
+176,tcp,implements,aimd
+176,tcp,implements,aimd algorithm
+176,tcp,implements,congestion avoidance
+176,tcp,implements,congestion control
+176,tcp,implements,demultiplexing
+176,tcp,implements,fast recovery
+176,tcp,implements,fast retransmit
+176,tcp,implements,reliable data transfer service
+176,tcp,implements,retransmit mechanism
+176,tcp,implements,slow start
+176,tcp,implements,three-way handshake
+176,tcp,is_a,transport-layer protocol
+176,tcp,operates_at,transport layer
+176,tcp,provides,congestion control
+176,tcp,provides,cumulative acknowledgments
+176,tcp,provides,error detection
+176,tcp,provides,flow control
+176,tcp,provides,flow control service
+176,tcp,provides,full-duplex service
+176,tcp,provides,point-to-point
+176,tcp,provides,reliable connection-oriented service
+176,tcp,provides,reliable data transfer
+176,tcp,provides,retransmissions
+176,tcp,provides,round-trip time estimation
+176,tcp,provides,timers
+176,tcp,receives,ack
+176,tcp,requires,acknowledgments
+176,tcp,requires,checksum
+176,tcp,requires,flow control
+176,tcp,requires,sequence numbers
+176,tcp,requires,timers
+176,tcp,runs_on,ip
+176,tcp,sends,segment
+176,tcp,supports,full-duplex
+177,timer,supports,retransmit mechanism
+177,tcp,controls,send rate
+177,tcp,has_part,congestion avoidance
+177,tcp,has_part,congestion control mechanism
+177,tcp,has_part,connection state
+177,tcp,has_part,fast recovery
+177,tcp,has_part,receive buffer
+177,tcp,has_part,send buffer
+177,tcp,has_part,slow start
+177,tcp,has_part,tcp state
+177,tcp,has_part,window behavior
+177,tcp,implements,aimd
+177,tcp,implements,aimd algorithm
+177,tcp,implements,congestion avoidance
+177,tcp,implements,congestion control
+177,tcp,implements,demultiplexing
+177,tcp,implements,fast recovery
+177,tcp,implements,fast retransmit
+177,tcp,implements,reliable data transfer service
+177,tcp,implements,retransmit mechanism
+177,tcp,implements,slow start
+177,tcp,implements,three-way handshake
+177,tcp,is_a,transport-layer protocol
+177,tcp,operates_at,transport layer
+177,tcp,provides,congestion control
+177,tcp,provides,cumulative acknowledgments
+177,tcp,provides,error detection
+177,tcp,provides,flow control
+177,tcp,provides,flow control service
+177,tcp,provides,full-duplex service
+177,tcp,provides,point-to-point
+177,tcp,provides,reliable connection-oriented service
+177,tcp,provides,reliable data transfer
+177,tcp,provides,retransmissions
+177,tcp,provides,round-trip time estimation
+177,tcp,provides,timers
+177,tcp,receives,ack
+177,tcp,requires,acknowledgments
+177,tcp,requires,checksum
+177,tcp,requires,flow control
+177,tcp,requires,sequence numbers
+177,tcp,requires,timers
+177,tcp,runs_on,ip
+177,tcp,sends,segment
+177,tcp,supports,full-duplex
+178,sample rtt,measures,round-trip time
+178,ip,operates_at,network layer
+178,ip,provides,network-layer service
+178,ip,runs_on,link layer
+178,acknowledgment,enables,self-clocking
+178,acknowledgment,increases,cwnd
+179,congestion,causes,congestion collapse
+179,congestion,causes,delay
+179,congestion,causes,end-to-end delay
+179,congestion,causes,packet loss
+179,congestion,increases,queuing delay
+179,congestion,increases,round-trip time
+179,congestion,increases,rtt
+183,timeout interval,requires,devrtt
+183,timeout interval,requires,estimatedrtt
+185,datagram,contains,segment
+189,tcp,controls,send rate
+189,tcp,has_part,congestion avoidance
+189,tcp,has_part,congestion control mechanism
+189,tcp,has_part,connection state
+189,tcp,has_part,fast recovery
+189,tcp,has_part,receive buffer
+189,tcp,has_part,send buffer
+189,tcp,has_part,slow start
+189,tcp,has_part,tcp state
+189,tcp,has_part,window behavior
+189,tcp,implements,aimd
+189,tcp,implements,aimd algorithm
+189,tcp,implements,congestion avoidance
+189,tcp,implements,congestion control
+189,tcp,implements,demultiplexing
+189,tcp,implements,fast recovery
+189,tcp,implements,fast retransmit
+189,tcp,implements,reliable data transfer service
+189,tcp,implements,retransmit mechanism
+189,tcp,implements,slow start
+189,tcp,implements,three-way handshake
+189,tcp,is_a,transport-layer protocol
+189,tcp,operates_at,transport layer
+189,tcp,provides,congestion control
+189,tcp,provides,cumulative acknowledgments
+189,tcp,provides,error detection
+189,tcp,provides,flow control
+189,tcp,provides,flow control service
+189,tcp,provides,full-duplex service
+189,tcp,provides,point-to-point
+189,tcp,provides,reliable connection-oriented service
+189,tcp,provides,reliable data transfer
+189,tcp,provides,retransmissions
+189,tcp,provides,round-trip time estimation
+189,tcp,provides,timers
+189,tcp,receives,ack
+189,tcp,requires,acknowledgments
+189,tcp,requires,checksum
+189,tcp,requires,flow control
+189,tcp,requires,sequence numbers
+189,tcp,requires,timers
+189,tcp,runs_on,ip
+189,tcp,sends,segment
+189,tcp,supports,full-duplex
+189,ip,operates_at,network layer
+189,ip,provides,network-layer service
+189,ip,runs_on,link layer
+189,sequence number,identifies,packet
+190,timeout,causes,multiplicative decrease
+190,acknowledgment segment,contains,acknowledgment number
+190,acknowledgment segment,contains,sequence number
+192,sequence number,identifies,packet
+193,sequence number,identifies,packet
+194,timeout,causes,multiplicative decrease
+195,timeout interval,requires,devrtt
+195,timeout interval,requires,estimatedrtt
+196,timeout interval,requires,devrtt
+196,timeout interval,requires,estimatedrtt
+197,congestion control,controls,transmission rate
+197,congestion control,decreases,transmission rate
+197,congestion control,requires,congestion window
+197,congestion control,supports,delay-based approach
+198,congestion,causes,congestion collapse
+198,congestion,causes,delay
+198,congestion,causes,end-to-end delay
+198,congestion,causes,packet loss
+198,congestion,increases,queuing delay
+198,congestion,increases,round-trip time
+198,congestion,increases,rtt
+198,tcp,controls,send rate
+198,tcp,has_part,congestion avoidance
+198,tcp,has_part,congestion control mechanism
+198,tcp,has_part,connection state
+198,tcp,has_part,fast recovery
+198,tcp,has_part,receive buffer
+198,tcp,has_part,send buffer
+198,tcp,has_part,slow start
+198,tcp,has_part,tcp state
+198,tcp,has_part,window behavior
+198,tcp,implements,aimd
+198,tcp,implements,aimd algorithm
+198,tcp,implements,congestion avoidance
+198,tcp,implements,congestion control
+198,tcp,implements,demultiplexing
+198,tcp,implements,fast recovery
+198,tcp,implements,fast retransmit
+198,tcp,implements,reliable data transfer service
+198,tcp,implements,retransmit mechanism
+198,tcp,implements,slow start
+198,tcp,implements,three-way handshake
+198,tcp,is_a,transport-layer protocol
+198,tcp,operates_at,transport layer
+198,tcp,provides,congestion control
+198,tcp,provides,cumulative acknowledgments
+198,tcp,provides,error detection
+198,tcp,provides,flow control
+198,tcp,provides,flow control service
+198,tcp,provides,full-duplex service
+198,tcp,provides,point-to-point
+198,tcp,provides,reliable connection-oriented service
+198,tcp,provides,reliable data transfer
+198,tcp,provides,retransmissions
+198,tcp,provides,round-trip time estimation
+198,tcp,provides,timers
+198,tcp,receives,ack
+198,tcp,requires,acknowledgments
+198,tcp,requires,checksum
+198,tcp,requires,flow control
+198,tcp,requires,sequence numbers
+198,tcp,requires,timers
+198,tcp,runs_on,ip
+198,tcp,sends,segment
+198,tcp,supports,full-duplex
+198,ethernet,implements,csma/cd
+198,ethernet,provides,error detection
+201,duplicate ack,identifies,packet loss
+201,duplicate ack,is_a,ack
+203,gbn,requires,sequence number
+208,tcp,controls,send rate
+208,tcp,has_part,congestion avoidance
+208,tcp,has_part,congestion control mechanism
+208,tcp,has_part,connection state
+208,tcp,has_part,fast recovery
+208,tcp,has_part,receive buffer
+208,tcp,has_part,send buffer
+208,tcp,has_part,slow start
+208,tcp,has_part,tcp state
+208,tcp,has_part,window behavior
+208,tcp,implements,aimd
+208,tcp,implements,aimd algorithm
+208,tcp,implements,congestion avoidance
+208,tcp,implements,congestion control
+208,tcp,implements,demultiplexing
+208,tcp,implements,fast recovery
+208,tcp,implements,fast retransmit
+208,tcp,implements,reliable data transfer service
+208,tcp,implements,retransmit mechanism
+208,tcp,implements,slow start
+208,tcp,implements,three-way handshake
+208,tcp,is_a,transport-layer protocol
+208,tcp,operates_at,transport layer
+208,tcp,provides,congestion control
+208,tcp,provides,cumulative acknowledgments
+208,tcp,provides,error detection
+208,tcp,provides,flow control
+208,tcp,provides,flow control service
+208,tcp,provides,full-duplex service
+208,tcp,provides,point-to-point
+208,tcp,provides,reliable connection-oriented service
+208,tcp,provides,reliable data transfer
+208,tcp,provides,retransmissions
+208,tcp,provides,round-trip time estimation
+208,tcp,provides,timers
+208,tcp,receives,ack
+208,tcp,requires,acknowledgments
+208,tcp,requires,checksum
+208,tcp,requires,flow control
+208,tcp,requires,sequence numbers
+208,tcp,requires,timers
+208,tcp,runs_on,ip
+208,tcp,sends,segment
+208,tcp,supports,full-duplex
+209,congestion control,controls,transmission rate
+209,congestion control,decreases,transmission rate
+209,congestion control,requires,congestion window
+209,congestion control,supports,delay-based approach
+209,tcp,controls,send rate
+209,tcp,has_part,congestion avoidance
+209,tcp,has_part,congestion control mechanism
+209,tcp,has_part,connection state
+209,tcp,has_part,fast recovery
+209,tcp,has_part,receive buffer
+209,tcp,has_part,send buffer
+209,tcp,has_part,slow start
+209,tcp,has_part,tcp state
+209,tcp,has_part,window behavior
+209,tcp,implements,aimd
+209,tcp,implements,aimd algorithm
+209,tcp,implements,congestion avoidance
+209,tcp,implements,congestion control
+209,tcp,implements,demultiplexing
+209,tcp,implements,fast recovery
+209,tcp,implements,fast retransmit
+209,tcp,implements,reliable data transfer service
+209,tcp,implements,retransmit mechanism
+209,tcp,implements,slow start
+209,tcp,implements,three-way handshake
+209,tcp,is_a,transport-layer protocol
+209,tcp,operates_at,transport layer
+209,tcp,provides,congestion control
+209,tcp,provides,cumulative acknowledgments
+209,tcp,provides,error detection
+209,tcp,provides,flow control
+209,tcp,provides,flow control service
+209,tcp,provides,full-duplex service
+209,tcp,provides,point-to-point
+209,tcp,provides,reliable connection-oriented service
+209,tcp,provides,reliable data transfer
+209,tcp,provides,retransmissions
+209,tcp,provides,round-trip time estimation
+209,tcp,provides,timers
+209,tcp,receives,ack
+209,tcp,requires,acknowledgments
+209,tcp,requires,checksum
+209,tcp,requires,flow control
+209,tcp,requires,sequence numbers
+209,tcp,requires,timers
+209,tcp,runs_on,ip
+209,tcp,sends,segment
+209,tcp,supports,full-duplex
+210,receive window,enables,flow control
+210,tcp,controls,send rate
+210,tcp,has_part,congestion avoidance
+210,tcp,has_part,congestion control mechanism
+210,tcp,has_part,connection state
+210,tcp,has_part,fast recovery
+210,tcp,has_part,receive buffer
+210,tcp,has_part,send buffer
+210,tcp,has_part,slow start
+210,tcp,has_part,tcp state
+210,tcp,has_part,window behavior
+210,tcp,implements,aimd
+210,tcp,implements,aimd algorithm
+210,tcp,implements,congestion avoidance
+210,tcp,implements,congestion control
+210,tcp,implements,demultiplexing
+210,tcp,implements,fast recovery
+210,tcp,implements,fast retransmit
+210,tcp,implements,reliable data transfer service
+210,tcp,implements,retransmit mechanism
+210,tcp,implements,slow start
+210,tcp,implements,three-way handshake
+210,tcp,is_a,transport-layer protocol
+210,tcp,operates_at,transport layer
+210,tcp,provides,congestion control
+210,tcp,provides,cumulative acknowledgments
+210,tcp,provides,error detection
+210,tcp,provides,flow control
+210,tcp,provides,flow control service
+210,tcp,provides,full-duplex service
+210,tcp,provides,point-to-point
+210,tcp,provides,reliable connection-oriented service
+210,tcp,provides,reliable data transfer
+210,tcp,provides,retransmissions
+210,tcp,provides,round-trip time estimation
+210,tcp,provides,timers
+210,tcp,receives,ack
+210,tcp,requires,acknowledgments
+210,tcp,requires,checksum
+210,tcp,requires,flow control
+210,tcp,requires,sequence numbers
+210,tcp,requires,timers
+210,tcp,runs_on,ip
+210,tcp,sends,segment
+210,tcp,supports,full-duplex
+211,receive window,enables,flow control
+214,receive window,enables,flow control
+214,acknowledgment,enables,self-clocking
+214,acknowledgment,increases,cwnd
+215,udp,implements,checksum calculation
+215,udp,implements,demultiplexing
+215,udp,operates_at,transport layer
+215,udp,provides,error checking
+215,udp,provides,error detection
+215,udp,provides,process-to-process data delivery
+215,udp,provides,unreliable connectionless service
+215,udp,requires,checksum
+215,udp,supports,multimedia applications
+215,socket,receives,segment
+216,tcp connection establishment,increases,end-to-end delay
+216,syn flood attack,is_a,denial-of-service attack
+216,tcp,controls,send rate
+216,tcp,has_part,congestion avoidance
+216,tcp,has_part,congestion control mechanism
+216,tcp,has_part,connection state
+216,tcp,has_part,fast recovery
+216,tcp,has_part,receive buffer
+216,tcp,has_part,send buffer
+216,tcp,has_part,slow start
+216,tcp,has_part,tcp state
+216,tcp,has_part,window behavior
+216,tcp,implements,aimd
+216,tcp,implements,aimd algorithm
+216,tcp,implements,congestion avoidance
+216,tcp,implements,congestion control
+216,tcp,implements,demultiplexing
+216,tcp,implements,fast recovery
+216,tcp,implements,fast retransmit
+216,tcp,implements,reliable data transfer service
+216,tcp,implements,retransmit mechanism
+216,tcp,implements,slow start
+216,tcp,implements,three-way handshake
+216,tcp,is_a,transport-layer protocol
+216,tcp,operates_at,transport layer
+216,tcp,provides,congestion control
+216,tcp,provides,cumulative acknowledgments
+216,tcp,provides,error detection
+216,tcp,provides,flow control
+216,tcp,provides,flow control service
+216,tcp,provides,full-duplex service
+216,tcp,provides,point-to-point
+216,tcp,provides,reliable connection-oriented service
+216,tcp,provides,reliable data transfer
+216,tcp,provides,retransmissions
+216,tcp,provides,round-trip time estimation
+216,tcp,provides,timers
+216,tcp,receives,ack
+216,tcp,requires,acknowledgments
+216,tcp,requires,checksum
+216,tcp,requires,flow control
+216,tcp,requires,sequence numbers
+216,tcp,requires,timers
+216,tcp,runs_on,ip
+216,tcp,sends,segment
+216,tcp,supports,full-duplex
+217,tcp segment,contains,destination port number
+217,tcp segment,provides,acknowledgment
+224,acknowledgment segment,contains,acknowledgment number
+224,acknowledgment segment,contains,sequence number
+229,tcp,controls,send rate
+229,tcp,has_part,congestion avoidance
+229,tcp,has_part,congestion control mechanism
+229,tcp,has_part,connection state
+229,tcp,has_part,fast recovery
+229,tcp,has_part,receive buffer
+229,tcp,has_part,send buffer
+229,tcp,has_part,slow start
+229,tcp,has_part,tcp state
+229,tcp,has_part,window behavior
+229,tcp,implements,aimd
+229,tcp,implements,aimd algorithm
+229,tcp,implements,congestion avoidance
+229,tcp,implements,congestion control
+229,tcp,implements,demultiplexing
+229,tcp,implements,fast recovery
+229,tcp,implements,fast retransmit
+229,tcp,implements,reliable data transfer service
+229,tcp,implements,retransmit mechanism
+229,tcp,implements,slow start
+229,tcp,implements,three-way handshake
+229,tcp,is_a,transport-layer protocol
+229,tcp,operates_at,transport layer
+229,tcp,provides,congestion control
+229,tcp,provides,cumulative acknowledgments
+229,tcp,provides,error detection
+229,tcp,provides,flow control
+229,tcp,provides,flow control service
+229,tcp,provides,full-duplex service
+229,tcp,provides,point-to-point
+229,tcp,provides,reliable connection-oriented service
+229,tcp,provides,reliable data transfer
+229,tcp,provides,retransmissions
+229,tcp,provides,round-trip time estimation
+229,tcp,provides,timers
+229,tcp,receives,ack
+229,tcp,requires,acknowledgments
+229,tcp,requires,checksum
+229,tcp,requires,flow control
+229,tcp,requires,sequence numbers
+229,tcp,requires,timers
+229,tcp,runs_on,ip
+229,tcp,sends,segment
+229,tcp,supports,full-duplex
+230,tcp segment,contains,destination port number
+230,tcp segment,provides,acknowledgment
+232,firewall,prevents,syn segment
+233,firewall,prevents,syn segment
+234,congestion control,controls,transmission rate
+234,congestion control,decreases,transmission rate
+234,congestion control,requires,congestion window
+234,congestion control,supports,delay-based approach
+234,tcp congestion control,controls,sending rate
+235,congestion control,controls,transmission rate
+235,congestion control,decreases,transmission rate
+235,congestion control,requires,congestion window
+235,congestion control,supports,delay-based approach
+237,socket,receives,segment
+238,router,causes,retransmission
+238,router,enables,congestion indication bit
+238,router,enables,network-assisted congestion control
+238,router,forwards,datagram
+238,router,has_part,buffer
+238,router,receives,datagram
+239,router,causes,retransmission
+239,router,enables,congestion indication bit
+239,router,enables,network-assisted congestion control
+239,router,forwards,datagram
+239,router,has_part,buffer
+239,router,receives,datagram
+241,router,causes,retransmission
+241,router,enables,congestion indication bit
+241,router,enables,network-assisted congestion control
+241,router,forwards,datagram
+241,router,has_part,buffer
+241,router,receives,datagram
+243,transport layer,implements,demultiplexing
+243,transport layer,implements,multiplexing
+243,transport layer,provides,error checking
+243,transport layer,provides,port number
+243,transport layer,receives,segment
+243,transport layer,sends,transport-level segment
+243,socket,receives,segment
+243,offered load,decreases,throughput
+244,router,causes,retransmission
+244,router,enables,congestion indication bit
+244,router,enables,network-assisted congestion control
+244,router,forwards,datagram
+244,router,has_part,buffer
+244,router,receives,datagram
+244,buffer,causes,packet loss
+244,buffer,contains,packet
+244,buffer,increases,end-to-end delay
+244,buffer,part_of,host
+244,buffer,part_of,router
+245,packet loss,increases,end-to-end delay
+245,timeout,causes,multiplicative decrease
+246,offered load,decreases,throughput
+247,router,causes,retransmission
+247,router,enables,congestion indication bit
+247,router,enables,network-assisted congestion control
+247,router,forwards,datagram
+247,router,has_part,buffer
+247,router,receives,datagram
+247,packet,contains,checksum
+247,packet,contains,packet checksum field
+247,packet,has_part,sequence number
+248,router,causes,retransmission
+248,router,enables,congestion indication bit
+248,router,enables,network-assisted congestion control
+248,router,forwards,datagram
+248,router,has_part,buffer
+248,router,receives,datagram
+248,packet,contains,checksum
+248,packet,contains,packet checksum field
+248,packet,has_part,sequence number
+248,offered load,decreases,throughput
+250,offered load,decreases,throughput
+252,offered load,decreases,throughput
+253,offered load,decreases,throughput
+254,congestion,causes,congestion collapse
+254,congestion,causes,delay
+254,congestion,causes,end-to-end delay
+254,congestion,causes,packet loss
+254,congestion,increases,queuing delay
+254,congestion,increases,round-trip time
+254,congestion,increases,rtt
+254,tcp,controls,send rate
+254,tcp,has_part,congestion avoidance
+254,tcp,has_part,congestion control mechanism
+254,tcp,has_part,connection state
+254,tcp,has_part,fast recovery
+254,tcp,has_part,receive buffer
+254,tcp,has_part,send buffer
+254,tcp,has_part,slow start
+254,tcp,has_part,tcp state
+254,tcp,has_part,window behavior
+254,tcp,implements,aimd
+254,tcp,implements,aimd algorithm
+254,tcp,implements,congestion avoidance
+254,tcp,implements,congestion control
+254,tcp,implements,demultiplexing
+254,tcp,implements,fast recovery
+254,tcp,implements,fast retransmit
+254,tcp,implements,reliable data transfer service
+254,tcp,implements,retransmit mechanism
+254,tcp,implements,slow start
+254,tcp,implements,three-way handshake
+254,tcp,is_a,transport-layer protocol
+254,tcp,operates_at,transport layer
+254,tcp,provides,congestion control
+254,tcp,provides,cumulative acknowledgments
+254,tcp,provides,error detection
+254,tcp,provides,flow control
+254,tcp,provides,flow control service
+254,tcp,provides,full-duplex service
+254,tcp,provides,point-to-point
+254,tcp,provides,reliable connection-oriented service
+254,tcp,provides,reliable data transfer
+254,tcp,provides,retransmissions
+254,tcp,provides,round-trip time estimation
+254,tcp,provides,timers
+254,tcp,receives,ack
+254,tcp,requires,acknowledgments
+254,tcp,requires,checksum
+254,tcp,requires,flow control
+254,tcp,requires,sequence numbers
+254,tcp,requires,timers
+254,tcp,runs_on,ip
+254,tcp,sends,segment
+254,tcp,supports,full-duplex
+255,congestion control,controls,transmission rate
+255,congestion control,decreases,transmission rate
+255,congestion control,requires,congestion window
+255,congestion control,supports,delay-based approach
+255,network layer,enables,explicit congestion indication
+255,network layer,sends,datagram
+255,transport layer,implements,demultiplexing
+255,transport layer,implements,multiplexing
+255,transport layer,provides,error checking
+255,transport layer,provides,port number
+255,transport layer,receives,segment
+255,transport layer,sends,transport-level segment
+256,tcp,controls,send rate
+256,tcp,has_part,congestion avoidance
+256,tcp,has_part,congestion control mechanism
+256,tcp,has_part,connection state
+256,tcp,has_part,fast recovery
+256,tcp,has_part,receive buffer
+256,tcp,has_part,send buffer
+256,tcp,has_part,slow start
+256,tcp,has_part,tcp state
+256,tcp,has_part,window behavior
+256,tcp,implements,aimd
+256,tcp,implements,aimd algorithm
+256,tcp,implements,congestion avoidance
+256,tcp,implements,congestion control
+256,tcp,implements,demultiplexing
+256,tcp,implements,fast recovery
+256,tcp,implements,fast retransmit
+256,tcp,implements,reliable data transfer service
+256,tcp,implements,retransmit mechanism
+256,tcp,implements,slow start
+256,tcp,implements,three-way handshake
+256,tcp,is_a,transport-layer protocol
+256,tcp,operates_at,transport layer
+256,tcp,provides,congestion control
+256,tcp,provides,cumulative acknowledgments
+256,tcp,provides,error detection
+256,tcp,provides,flow control
+256,tcp,provides,flow control service
+256,tcp,provides,full-duplex service
+256,tcp,provides,point-to-point
+256,tcp,provides,reliable connection-oriented service
+256,tcp,provides,reliable data transfer
+256,tcp,provides,retransmissions
+256,tcp,provides,round-trip time estimation
+256,tcp,provides,timers
+256,tcp,receives,ack
+256,tcp,requires,acknowledgments
+256,tcp,requires,checksum
+256,tcp,requires,flow control
+256,tcp,requires,sequence numbers
+256,tcp,requires,timers
+256,tcp,runs_on,ip
+256,tcp,sends,segment
+256,tcp,supports,full-duplex
+256,tcp congestion control,controls,sending rate
+258,ip,operates_at,network layer
+258,ip,provides,network-layer service
+258,ip,runs_on,link layer
+258,tcp,controls,send rate
+258,tcp,has_part,congestion avoidance
+258,tcp,has_part,congestion control mechanism
+258,tcp,has_part,connection state
+258,tcp,has_part,fast recovery
+258,tcp,has_part,receive buffer
+258,tcp,has_part,send buffer
+258,tcp,has_part,slow start
+258,tcp,has_part,tcp state
+258,tcp,has_part,window behavior
+258,tcp,implements,aimd
+258,tcp,implements,aimd algorithm
+258,tcp,implements,congestion avoidance
+258,tcp,implements,congestion control
+258,tcp,implements,demultiplexing
+258,tcp,implements,fast recovery
+258,tcp,implements,fast retransmit
+258,tcp,implements,reliable data transfer service
+258,tcp,implements,retransmit mechanism
+258,tcp,implements,slow start
+258,tcp,implements,three-way handshake
+258,tcp,is_a,transport-layer protocol
+258,tcp,operates_at,transport layer
+258,tcp,provides,congestion control
+258,tcp,provides,cumulative acknowledgments
+258,tcp,provides,error detection
+258,tcp,provides,flow control
+258,tcp,provides,flow control service
+258,tcp,provides,full-duplex service
+258,tcp,provides,point-to-point
+258,tcp,provides,reliable connection-oriented service
+258,tcp,provides,reliable data transfer
+258,tcp,provides,retransmissions
+258,tcp,provides,round-trip time estimation
+258,tcp,provides,timers
+258,tcp,receives,ack
+258,tcp,requires,acknowledgments
+258,tcp,requires,checksum
+258,tcp,requires,flow control
+258,tcp,requires,sequence numbers
+258,tcp,requires,timers
+258,tcp,runs_on,ip
+258,tcp,sends,segment
+258,tcp,supports,full-duplex
+259,tcp,controls,send rate
+259,tcp,has_part,congestion avoidance
+259,tcp,has_part,congestion control mechanism
+259,tcp,has_part,connection state
+259,tcp,has_part,fast recovery
+259,tcp,has_part,receive buffer
+259,tcp,has_part,send buffer
+259,tcp,has_part,slow start
+259,tcp,has_part,tcp state
+259,tcp,has_part,window behavior
+259,tcp,implements,aimd
+259,tcp,implements,aimd algorithm
+259,tcp,implements,congestion avoidance
+259,tcp,implements,congestion control
+259,tcp,implements,demultiplexing
+259,tcp,implements,fast recovery
+259,tcp,implements,fast retransmit
+259,tcp,implements,reliable data transfer service
+259,tcp,implements,retransmit mechanism
+259,tcp,implements,slow start
+259,tcp,implements,three-way handshake
+259,tcp,is_a,transport-layer protocol
+259,tcp,operates_at,transport layer
+259,tcp,provides,congestion control
+259,tcp,provides,cumulative acknowledgments
+259,tcp,provides,error detection
+259,tcp,provides,flow control
+259,tcp,provides,flow control service
+259,tcp,provides,full-duplex service
+259,tcp,provides,point-to-point
+259,tcp,provides,reliable connection-oriented service
+259,tcp,provides,reliable data transfer
+259,tcp,provides,retransmissions
+259,tcp,provides,round-trip time estimation
+259,tcp,provides,timers
+259,tcp,receives,ack
+259,tcp,requires,acknowledgments
+259,tcp,requires,checksum
+259,tcp,requires,flow control
+259,tcp,requires,sequence numbers
+259,tcp,requires,timers
+259,tcp,runs_on,ip
+259,tcp,sends,segment
+259,tcp,supports,full-duplex
+261,network layer,enables,explicit congestion indication
+261,network layer,sends,datagram
+261,tcp,controls,send rate
+261,tcp,has_part,congestion avoidance
+261,tcp,has_part,congestion control mechanism
+261,tcp,has_part,connection state
+261,tcp,has_part,fast recovery
+261,tcp,has_part,receive buffer
+261,tcp,has_part,send buffer
+261,tcp,has_part,slow start
+261,tcp,has_part,tcp state
+261,tcp,has_part,window behavior
+261,tcp,implements,aimd
+261,tcp,implements,aimd algorithm
+261,tcp,implements,congestion avoidance
+261,tcp,implements,congestion control
+261,tcp,implements,demultiplexing
+261,tcp,implements,fast recovery
+261,tcp,implements,fast retransmit
+261,tcp,implements,reliable data transfer service
+261,tcp,implements,retransmit mechanism
+261,tcp,implements,slow start
+261,tcp,implements,three-way handshake
+261,tcp,is_a,transport-layer protocol
+261,tcp,operates_at,transport layer
+261,tcp,provides,congestion control
+261,tcp,provides,cumulative acknowledgments
+261,tcp,provides,error detection
+261,tcp,provides,flow control
+261,tcp,provides,flow control service
+261,tcp,provides,full-duplex service
+261,tcp,provides,point-to-point
+261,tcp,provides,reliable connection-oriented service
+261,tcp,provides,reliable data transfer
+261,tcp,provides,retransmissions
+261,tcp,provides,round-trip time estimation
+261,tcp,provides,timers
+261,tcp,receives,ack
+261,tcp,requires,acknowledgments
+261,tcp,requires,checksum
+261,tcp,requires,flow control
+261,tcp,requires,sequence numbers
+261,tcp,requires,timers
+261,tcp,runs_on,ip
+261,tcp,sends,segment
+261,tcp,supports,full-duplex
+263,congestion window,controls,send rate
+263,congestion window,controls,unacknowledged data
+265,cwnd,controls,send rate
+265,loss event,decreases,congestion window size
+265,timeout,causes,multiplicative decrease
+266,datagram,contains,segment
+266,tcp segment,contains,destination port number
+266,tcp segment,provides,acknowledgment
+266,timeout,causes,multiplicative decrease
+267,tcp,controls,send rate
+267,tcp,has_part,congestion avoidance
+267,tcp,has_part,congestion control mechanism
+267,tcp,has_part,connection state
+267,tcp,has_part,fast recovery
+267,tcp,has_part,receive buffer
+267,tcp,has_part,send buffer
+267,tcp,has_part,slow start
+267,tcp,has_part,tcp state
+267,tcp,has_part,window behavior
+267,tcp,implements,aimd
+267,tcp,implements,aimd algorithm
+267,tcp,implements,congestion avoidance
+267,tcp,implements,congestion control
+267,tcp,implements,demultiplexing
+267,tcp,implements,fast recovery
+267,tcp,implements,fast retransmit
+267,tcp,implements,reliable data transfer service
+267,tcp,implements,retransmit mechanism
+267,tcp,implements,slow start
+267,tcp,implements,three-way handshake
+267,tcp,is_a,transport-layer protocol
+267,tcp,operates_at,transport layer
+267,tcp,provides,congestion control
+267,tcp,provides,cumulative acknowledgments
+267,tcp,provides,error detection
+267,tcp,provides,flow control
+267,tcp,provides,flow control service
+267,tcp,provides,full-duplex service
+267,tcp,provides,point-to-point
+267,tcp,provides,reliable connection-oriented service
+267,tcp,provides,reliable data transfer
+267,tcp,provides,retransmissions
+267,tcp,provides,round-trip time estimation
+267,tcp,provides,timers
+267,tcp,receives,ack
+267,tcp,requires,acknowledgments
+267,tcp,requires,checksum
+267,tcp,requires,flow control
+267,tcp,requires,sequence numbers
+267,tcp,requires,timers
+267,tcp,runs_on,ip
+267,tcp,sends,segment
+267,tcp,supports,full-duplex
+268,congestion window,controls,send rate
+268,congestion window,controls,unacknowledged data
+269,tcp,controls,send rate
+269,tcp,has_part,congestion avoidance
+269,tcp,has_part,congestion control mechanism
+269,tcp,has_part,connection state
+269,tcp,has_part,fast recovery
+269,tcp,has_part,receive buffer
+269,tcp,has_part,send buffer
+269,tcp,has_part,slow start
+269,tcp,has_part,tcp state
+269,tcp,has_part,window behavior
+269,tcp,implements,aimd
+269,tcp,implements,aimd algorithm
+269,tcp,implements,congestion avoidance
+269,tcp,implements,congestion control
+269,tcp,implements,demultiplexing
+269,tcp,implements,fast recovery
+269,tcp,implements,fast retransmit
+269,tcp,implements,reliable data transfer service
+269,tcp,implements,retransmit mechanism
+269,tcp,implements,slow start
+269,tcp,implements,three-way handshake
+269,tcp,is_a,transport-layer protocol
+269,tcp,operates_at,transport layer
+269,tcp,provides,congestion control
+269,tcp,provides,cumulative acknowledgments
+269,tcp,provides,error detection
+269,tcp,provides,flow control
+269,tcp,provides,flow control service
+269,tcp,provides,full-duplex service
+269,tcp,provides,point-to-point
+269,tcp,provides,reliable connection-oriented service
+269,tcp,provides,reliable data transfer
+269,tcp,provides,retransmissions
+269,tcp,provides,round-trip time estimation
+269,tcp,provides,timers
+269,tcp,receives,ack
+269,tcp,requires,acknowledgments
+269,tcp,requires,checksum
+269,tcp,requires,flow control
+269,tcp,requires,sequence numbers
+269,tcp,requires,timers
+269,tcp,runs_on,ip
+269,tcp,sends,segment
+269,tcp,supports,full-duplex
+270,tcp,controls,send rate
+270,tcp,has_part,congestion avoidance
+270,tcp,has_part,congestion control mechanism
+270,tcp,has_part,connection state
+270,tcp,has_part,fast recovery
+270,tcp,has_part,receive buffer
+270,tcp,has_part,send buffer
+270,tcp,has_part,slow start
+270,tcp,has_part,tcp state
+270,tcp,has_part,window behavior
+270,tcp,implements,aimd
+270,tcp,implements,aimd algorithm
+270,tcp,implements,congestion avoidance
+270,tcp,implements,congestion control
+270,tcp,implements,demultiplexing
+270,tcp,implements,fast recovery
+270,tcp,implements,fast retransmit
+270,tcp,implements,reliable data transfer service
+270,tcp,implements,retransmit mechanism
+270,tcp,implements,slow start
+270,tcp,implements,three-way handshake
+270,tcp,is_a,transport-layer protocol
+270,tcp,operates_at,transport layer
+270,tcp,provides,congestion control
+270,tcp,provides,cumulative acknowledgments
+270,tcp,provides,error detection
+270,tcp,provides,flow control
+270,tcp,provides,flow control service
+270,tcp,provides,full-duplex service
+270,tcp,provides,point-to-point
+270,tcp,provides,reliable connection-oriented service
+270,tcp,provides,reliable data transfer
+270,tcp,provides,retransmissions
+270,tcp,provides,round-trip time estimation
+270,tcp,provides,timers
+270,tcp,receives,ack
+270,tcp,requires,acknowledgments
+270,tcp,requires,checksum
+270,tcp,requires,flow control
+270,tcp,requires,sequence numbers
+270,tcp,requires,timers
+270,tcp,runs_on,ip
+270,tcp,sends,segment
+270,tcp,supports,full-duplex
+272,congestion window,controls,send rate
+272,congestion window,controls,unacknowledged data
+273,loss event,decreases,congestion window size
+275,slow start,increases,congestion window
+275,slow start,increases,congestion window size
+275,slow start,part_of,congestion control
+275,congestion avoidance,increases,congestion window
+275,congestion avoidance,increases,congestion window size
+276,tcp,controls,send rate
+276,tcp,has_part,congestion avoidance
+276,tcp,has_part,congestion control mechanism
+276,tcp,has_part,connection state
+276,tcp,has_part,fast recovery
+276,tcp,has_part,receive buffer
+276,tcp,has_part,send buffer
+276,tcp,has_part,slow start
+276,tcp,has_part,tcp state
+276,tcp,has_part,window behavior
+276,tcp,implements,aimd
+276,tcp,implements,aimd algorithm
+276,tcp,implements,congestion avoidance
+276,tcp,implements,congestion control
+276,tcp,implements,demultiplexing
+276,tcp,implements,fast recovery
+276,tcp,implements,fast retransmit
+276,tcp,implements,reliable data transfer service
+276,tcp,implements,retransmit mechanism
+276,tcp,implements,slow start
+276,tcp,implements,three-way handshake
+276,tcp,is_a,transport-layer protocol
+276,tcp,operates_at,transport layer
+276,tcp,provides,congestion control
+276,tcp,provides,cumulative acknowledgments
+276,tcp,provides,error detection
+276,tcp,provides,flow control
+276,tcp,provides,flow control service
+276,tcp,provides,full-duplex service
+276,tcp,provides,point-to-point
+276,tcp,provides,reliable connection-oriented service
+276,tcp,provides,reliable data transfer
+276,tcp,provides,retransmissions
+276,tcp,provides,round-trip time estimation
+276,tcp,provides,timers
+276,tcp,receives,ack
+276,tcp,requires,acknowledgments
+276,tcp,requires,checksum
+276,tcp,requires,flow control
+276,tcp,requires,sequence numbers
+276,tcp,requires,timers
+276,tcp,runs_on,ip
+276,tcp,sends,segment
+276,tcp,supports,full-duplex
+277,congestion window,controls,send rate
+277,congestion window,controls,unacknowledged data
+277,slow start,increases,congestion window
+277,slow start,increases,congestion window size
+277,slow start,part_of,congestion control
+277,loss event,decreases,congestion window size
+277,tcp,controls,send rate
+277,tcp,has_part,congestion avoidance
+277,tcp,has_part,congestion control mechanism
+277,tcp,has_part,connection state
+277,tcp,has_part,fast recovery
+277,tcp,has_part,receive buffer
+277,tcp,has_part,send buffer
+277,tcp,has_part,slow start
+277,tcp,has_part,tcp state
+277,tcp,has_part,window behavior
+277,tcp,implements,aimd
+277,tcp,implements,aimd algorithm
+277,tcp,implements,congestion avoidance
+277,tcp,implements,congestion control
+277,tcp,implements,demultiplexing
+277,tcp,implements,fast recovery
+277,tcp,implements,fast retransmit
+277,tcp,implements,reliable data transfer service
+277,tcp,implements,retransmit mechanism
+277,tcp,implements,slow start
+277,tcp,implements,three-way handshake
+277,tcp,is_a,transport-layer protocol
+277,tcp,operates_at,transport layer
+277,tcp,provides,congestion control
+277,tcp,provides,cumulative acknowledgments
+277,tcp,provides,error detection
+277,tcp,provides,flow control
+277,tcp,provides,flow control service
+277,tcp,provides,full-duplex service
+277,tcp,provides,point-to-point
+277,tcp,provides,reliable connection-oriented service
+277,tcp,provides,reliable data transfer
+277,tcp,provides,retransmissions
+277,tcp,provides,round-trip time estimation
+277,tcp,provides,timers
+277,tcp,receives,ack
+277,tcp,requires,acknowledgments
+277,tcp,requires,checksum
+277,tcp,requires,flow control
+277,tcp,requires,sequence numbers
+277,tcp,requires,timers
+277,tcp,runs_on,ip
+277,tcp,sends,segment
+277,tcp,supports,full-duplex
+278,congestion window,controls,send rate
+278,congestion window,controls,unacknowledged data
+278,timeout,causes,multiplicative decrease
+278,tcp,controls,send rate
+278,tcp,has_part,congestion avoidance
+278,tcp,has_part,congestion control mechanism
+278,tcp,has_part,connection state
+278,tcp,has_part,fast recovery
+278,tcp,has_part,receive buffer
+278,tcp,has_part,send buffer
+278,tcp,has_part,slow start
+278,tcp,has_part,tcp state
+278,tcp,has_part,window behavior
+278,tcp,implements,aimd
+278,tcp,implements,aimd algorithm
+278,tcp,implements,congestion avoidance
+278,tcp,implements,congestion control
+278,tcp,implements,demultiplexing
+278,tcp,implements,fast recovery
+278,tcp,implements,fast retransmit
+278,tcp,implements,reliable data transfer service
+278,tcp,implements,retransmit mechanism
+278,tcp,implements,slow start
+278,tcp,implements,three-way handshake
+278,tcp,is_a,transport-layer protocol
+278,tcp,operates_at,transport layer
+278,tcp,provides,congestion control
+278,tcp,provides,cumulative acknowledgments
+278,tcp,provides,error detection
+278,tcp,provides,flow control
+278,tcp,provides,flow control service
+278,tcp,provides,full-duplex service
+278,tcp,provides,point-to-point
+278,tcp,provides,reliable connection-oriented service
+278,tcp,provides,reliable data transfer
+278,tcp,provides,retransmissions
+278,tcp,provides,round-trip time estimation
+278,tcp,provides,timers
+278,tcp,receives,ack
+278,tcp,requires,acknowledgments
+278,tcp,requires,checksum
+278,tcp,requires,flow control
+278,tcp,requires,sequence numbers
+278,tcp,requires,timers
+278,tcp,runs_on,ip
+278,tcp,sends,segment
+278,tcp,supports,full-duplex
+278,slow start,increases,congestion window
+278,slow start,increases,congestion window size
+278,slow start,part_of,congestion control
+279,tcp congestion control,controls,sending rate
+279,tcp,controls,send rate
+279,tcp,has_part,congestion avoidance
+279,tcp,has_part,congestion control mechanism
+279,tcp,has_part,connection state
+279,tcp,has_part,fast recovery
+279,tcp,has_part,receive buffer
+279,tcp,has_part,send buffer
+279,tcp,has_part,slow start
+279,tcp,has_part,tcp state
+279,tcp,has_part,window behavior
+279,tcp,implements,aimd
+279,tcp,implements,aimd algorithm
+279,tcp,implements,congestion avoidance
+279,tcp,implements,congestion control
+279,tcp,implements,demultiplexing
+279,tcp,implements,fast recovery
+279,tcp,implements,fast retransmit
+279,tcp,implements,reliable data transfer service
+279,tcp,implements,retransmit mechanism
+279,tcp,implements,slow start
+279,tcp,implements,three-way handshake
+279,tcp,is_a,transport-layer protocol
+279,tcp,operates_at,transport layer
+279,tcp,provides,congestion control
+279,tcp,provides,cumulative acknowledgments
+279,tcp,provides,error detection
+279,tcp,provides,flow control
+279,tcp,provides,flow control service
+279,tcp,provides,full-duplex service
+279,tcp,provides,point-to-point
+279,tcp,provides,reliable connection-oriented service
+279,tcp,provides,reliable data transfer
+279,tcp,provides,retransmissions
+279,tcp,provides,round-trip time estimation
+279,tcp,provides,timers
+279,tcp,receives,ack
+279,tcp,requires,acknowledgments
+279,tcp,requires,checksum
+279,tcp,requires,flow control
+279,tcp,requires,sequence numbers
+279,tcp,requires,timers
+279,tcp,runs_on,ip
+279,tcp,sends,segment
+279,tcp,supports,full-duplex
+281,congestion window,controls,send rate
+281,congestion window,controls,unacknowledged data
+281,congestion avoidance,increases,congestion window
+281,congestion avoidance,increases,congestion window size
+281,timeout,causes,multiplicative decrease
+281,tcp,controls,send rate
+281,tcp,has_part,congestion avoidance
+281,tcp,has_part,congestion control mechanism
+281,tcp,has_part,connection state
+281,tcp,has_part,fast recovery
+281,tcp,has_part,receive buffer
+281,tcp,has_part,send buffer
+281,tcp,has_part,slow start
+281,tcp,has_part,tcp state
+281,tcp,has_part,window behavior
+281,tcp,implements,aimd
+281,tcp,implements,aimd algorithm
+281,tcp,implements,congestion avoidance
+281,tcp,implements,congestion control
+281,tcp,implements,demultiplexing
+281,tcp,implements,fast recovery
+281,tcp,implements,fast retransmit
+281,tcp,implements,reliable data transfer service
+281,tcp,implements,retransmit mechanism
+281,tcp,implements,slow start
+281,tcp,implements,three-way handshake
+281,tcp,is_a,transport-layer protocol
+281,tcp,operates_at,transport layer
+281,tcp,provides,congestion control
+281,tcp,provides,cumulative acknowledgments
+281,tcp,provides,error detection
+281,tcp,provides,flow control
+281,tcp,provides,flow control service
+281,tcp,provides,full-duplex service
+281,tcp,provides,point-to-point
+281,tcp,provides,reliable connection-oriented service
+281,tcp,provides,reliable data transfer
+281,tcp,provides,retransmissions
+281,tcp,provides,round-trip time estimation
+281,tcp,provides,timers
+281,tcp,receives,ack
+281,tcp,requires,acknowledgments
+281,tcp,requires,checksum
+281,tcp,requires,flow control
+281,tcp,requires,sequence numbers
+281,tcp,requires,timers
+281,tcp,runs_on,ip
+281,tcp,sends,segment
+281,tcp,supports,full-duplex
+282,triple duplicate ack,causes,multiplicative decrease
+282,tcp,controls,send rate
+282,tcp,has_part,congestion avoidance
+282,tcp,has_part,congestion control mechanism
+282,tcp,has_part,connection state
+282,tcp,has_part,fast recovery
+282,tcp,has_part,receive buffer
+282,tcp,has_part,send buffer
+282,tcp,has_part,slow start
+282,tcp,has_part,tcp state
+282,tcp,has_part,window behavior
+282,tcp,implements,aimd
+282,tcp,implements,aimd algorithm
+282,tcp,implements,congestion avoidance
+282,tcp,implements,congestion control
+282,tcp,implements,demultiplexing
+282,tcp,implements,fast recovery
+282,tcp,implements,fast retransmit
+282,tcp,implements,reliable data transfer service
+282,tcp,implements,retransmit mechanism
+282,tcp,implements,slow start
+282,tcp,implements,three-way handshake
+282,tcp,is_a,transport-layer protocol
+282,tcp,operates_at,transport layer
+282,tcp,provides,congestion control
+282,tcp,provides,cumulative acknowledgments
+282,tcp,provides,error detection
+282,tcp,provides,flow control
+282,tcp,provides,flow control service
+282,tcp,provides,full-duplex service
+282,tcp,provides,point-to-point
+282,tcp,provides,reliable connection-oriented service
+282,tcp,provides,reliable data transfer
+282,tcp,provides,retransmissions
+282,tcp,provides,round-trip time estimation
+282,tcp,provides,timers
+282,tcp,receives,ack
+282,tcp,requires,acknowledgments
+282,tcp,requires,checksum
+282,tcp,requires,flow control
+282,tcp,requires,sequence numbers
+282,tcp,requires,timers
+282,tcp,runs_on,ip
+282,tcp,sends,segment
+282,tcp,supports,full-duplex
+283,duplicate ack,identifies,packet loss
+283,duplicate ack,is_a,ack
+283,timeout,causes,multiplicative decrease
+283,tcp,controls,send rate
+283,tcp,has_part,congestion avoidance
+283,tcp,has_part,congestion control mechanism
+283,tcp,has_part,connection state
+283,tcp,has_part,fast recovery
+283,tcp,has_part,receive buffer
+283,tcp,has_part,send buffer
+283,tcp,has_part,slow start
+283,tcp,has_part,tcp state
+283,tcp,has_part,window behavior
+283,tcp,implements,aimd
+283,tcp,implements,aimd algorithm
+283,tcp,implements,congestion avoidance
+283,tcp,implements,congestion control
+283,tcp,implements,demultiplexing
+283,tcp,implements,fast recovery
+283,tcp,implements,fast retransmit
+283,tcp,implements,reliable data transfer service
+283,tcp,implements,retransmit mechanism
+283,tcp,implements,slow start
+283,tcp,implements,three-way handshake
+283,tcp,is_a,transport-layer protocol
+283,tcp,operates_at,transport layer
+283,tcp,provides,congestion control
+283,tcp,provides,cumulative acknowledgments
+283,tcp,provides,error detection
+283,tcp,provides,flow control
+283,tcp,provides,flow control service
+283,tcp,provides,full-duplex service
+283,tcp,provides,point-to-point
+283,tcp,provides,reliable connection-oriented service
+283,tcp,provides,reliable data transfer
+283,tcp,provides,retransmissions
+283,tcp,provides,round-trip time estimation
+283,tcp,provides,timers
+283,tcp,receives,ack
+283,tcp,requires,acknowledgments
+283,tcp,requires,checksum
+283,tcp,requires,flow control
+283,tcp,requires,sequence numbers
+283,tcp,requires,timers
+283,tcp,runs_on,ip
+283,tcp,sends,segment
+283,tcp,supports,full-duplex
+284,tcp reno,implements,aimd
+284,tcp reno,implements,fast recovery
+284,tcp,controls,send rate
+284,tcp,has_part,congestion avoidance
+284,tcp,has_part,congestion control mechanism
+284,tcp,has_part,connection state
+284,tcp,has_part,fast recovery
+284,tcp,has_part,receive buffer
+284,tcp,has_part,send buffer
+284,tcp,has_part,slow start
+284,tcp,has_part,tcp state
+284,tcp,has_part,window behavior
+284,tcp,implements,aimd
+284,tcp,implements,aimd algorithm
+284,tcp,implements,congestion avoidance
+284,tcp,implements,congestion control
+284,tcp,implements,demultiplexing
+284,tcp,implements,fast recovery
+284,tcp,implements,fast retransmit
+284,tcp,implements,reliable data transfer service
+284,tcp,implements,retransmit mechanism
+284,tcp,implements,slow start
+284,tcp,implements,three-way handshake
+284,tcp,is_a,transport-layer protocol
+284,tcp,operates_at,transport layer
+284,tcp,provides,congestion control
+284,tcp,provides,cumulative acknowledgments
+284,tcp,provides,error detection
+284,tcp,provides,flow control
+284,tcp,provides,flow control service
+284,tcp,provides,full-duplex service
+284,tcp,provides,point-to-point
+284,tcp,provides,reliable connection-oriented service
+284,tcp,provides,reliable data transfer
+284,tcp,provides,retransmissions
+284,tcp,provides,round-trip time estimation
+284,tcp,provides,timers
+284,tcp,receives,ack
+284,tcp,requires,acknowledgments
+284,tcp,requires,checksum
+284,tcp,requires,flow control
+284,tcp,requires,sequence numbers
+284,tcp,requires,timers
+284,tcp,runs_on,ip
+284,tcp,sends,segment
+284,tcp,supports,full-duplex
+285,slow start,increases,congestion window
+285,slow start,increases,congestion window size
+285,slow start,part_of,congestion control
+285,congestion window,controls,send rate
+285,congestion window,controls,unacknowledged data
+285,tcp reno,implements,aimd
+285,tcp reno,implements,fast recovery
+286,tcp,controls,send rate
+286,tcp,has_part,congestion avoidance
+286,tcp,has_part,congestion control mechanism
+286,tcp,has_part,connection state
+286,tcp,has_part,fast recovery
+286,tcp,has_part,receive buffer
+286,tcp,has_part,send buffer
+286,tcp,has_part,slow start
+286,tcp,has_part,tcp state
+286,tcp,has_part,window behavior
+286,tcp,implements,aimd
+286,tcp,implements,aimd algorithm
+286,tcp,implements,congestion avoidance
+286,tcp,implements,congestion control
+286,tcp,implements,demultiplexing
+286,tcp,implements,fast recovery
+286,tcp,implements,fast retransmit
+286,tcp,implements,reliable data transfer service
+286,tcp,implements,retransmit mechanism
+286,tcp,implements,slow start
+286,tcp,implements,three-way handshake
+286,tcp,is_a,transport-layer protocol
+286,tcp,operates_at,transport layer
+286,tcp,provides,congestion control
+286,tcp,provides,cumulative acknowledgments
+286,tcp,provides,error detection
+286,tcp,provides,flow control
+286,tcp,provides,flow control service
+286,tcp,provides,full-duplex service
+286,tcp,provides,point-to-point
+286,tcp,provides,reliable connection-oriented service
+286,tcp,provides,reliable data transfer
+286,tcp,provides,retransmissions
+286,tcp,provides,round-trip time estimation
+286,tcp,provides,timers
+286,tcp,receives,ack
+286,tcp,requires,acknowledgments
+286,tcp,requires,checksum
+286,tcp,requires,flow control
+286,tcp,requires,sequence numbers
+286,tcp,requires,timers
+286,tcp,runs_on,ip
+286,tcp,sends,segment
+286,tcp,supports,full-duplex
+286,tcp congestion control,controls,sending rate
+286,slow start,increases,congestion window
+286,slow start,increases,congestion window size
+286,slow start,part_of,congestion control
+286,congestion avoidance,increases,congestion window
+286,congestion avoidance,increases,congestion window size
+287,tcp,controls,send rate
+287,tcp,has_part,congestion avoidance
+287,tcp,has_part,congestion control mechanism
+287,tcp,has_part,connection state
+287,tcp,has_part,fast recovery
+287,tcp,has_part,receive buffer
+287,tcp,has_part,send buffer
+287,tcp,has_part,slow start
+287,tcp,has_part,tcp state
+287,tcp,has_part,window behavior
+287,tcp,implements,aimd
+287,tcp,implements,aimd algorithm
+287,tcp,implements,congestion avoidance
+287,tcp,implements,congestion control
+287,tcp,implements,demultiplexing
+287,tcp,implements,fast recovery
+287,tcp,implements,fast retransmit
+287,tcp,implements,reliable data transfer service
+287,tcp,implements,retransmit mechanism
+287,tcp,implements,slow start
+287,tcp,implements,three-way handshake
+287,tcp,is_a,transport-layer protocol
+287,tcp,operates_at,transport layer
+287,tcp,provides,congestion control
+287,tcp,provides,cumulative acknowledgments
+287,tcp,provides,error detection
+287,tcp,provides,flow control
+287,tcp,provides,flow control service
+287,tcp,provides,full-duplex service
+287,tcp,provides,point-to-point
+287,tcp,provides,reliable connection-oriented service
+287,tcp,provides,reliable data transfer
+287,tcp,provides,retransmissions
+287,tcp,provides,round-trip time estimation
+287,tcp,provides,timers
+287,tcp,receives,ack
+287,tcp,requires,acknowledgments
+287,tcp,requires,checksum
+287,tcp,requires,flow control
+287,tcp,requires,sequence numbers
+287,tcp,requires,timers
+287,tcp,runs_on,ip
+287,tcp,sends,segment
+287,tcp,supports,full-duplex
+287,multiplicative decrease,decreases,congestion window
+288,tcp,controls,send rate
+288,tcp,has_part,congestion avoidance
+288,tcp,has_part,congestion control mechanism
+288,tcp,has_part,connection state
+288,tcp,has_part,fast recovery
+288,tcp,has_part,receive buffer
+288,tcp,has_part,send buffer
+288,tcp,has_part,slow start
+288,tcp,has_part,tcp state
+288,tcp,has_part,window behavior
+288,tcp,implements,aimd
+288,tcp,implements,aimd algorithm
+288,tcp,implements,congestion avoidance
+288,tcp,implements,congestion control
+288,tcp,implements,demultiplexing
+288,tcp,implements,fast recovery
+288,tcp,implements,fast retransmit
+288,tcp,implements,reliable data transfer service
+288,tcp,implements,retransmit mechanism
+288,tcp,implements,slow start
+288,tcp,implements,three-way handshake
+288,tcp,is_a,transport-layer protocol
+288,tcp,operates_at,transport layer
+288,tcp,provides,congestion control
+288,tcp,provides,cumulative acknowledgments
+288,tcp,provides,error detection
+288,tcp,provides,flow control
+288,tcp,provides,flow control service
+288,tcp,provides,full-duplex service
+288,tcp,provides,point-to-point
+288,tcp,provides,reliable connection-oriented service
+288,tcp,provides,reliable data transfer
+288,tcp,provides,retransmissions
+288,tcp,provides,round-trip time estimation
+288,tcp,provides,timers
+288,tcp,receives,ack
+288,tcp,requires,acknowledgments
+288,tcp,requires,checksum
+288,tcp,requires,flow control
+288,tcp,requires,sequence numbers
+288,tcp,requires,timers
+288,tcp,runs_on,ip
+288,tcp,sends,segment
+288,tcp,supports,full-duplex
+288,congestion window,controls,send rate
+288,congestion window,controls,unacknowledged data
+289,tcp reno,implements,aimd
+289,tcp reno,implements,fast recovery
+290,tcp cubic,implements,congestion avoidance
+290,tcp cubic,increases,congestion window
+290,tcp cubic,increases,sending rate
+290,tcp cubic,provides,throughput
+290,tcp reno,implements,aimd
+290,tcp reno,implements,fast recovery
+291,tcp cubic,implements,congestion avoidance
+291,tcp cubic,increases,congestion window
+291,tcp cubic,increases,sending rate
+291,tcp cubic,provides,throughput
+291,congestion window,controls,send rate
+291,congestion window,controls,unacknowledged data
+292,congestion window,controls,send rate
+292,congestion window,controls,unacknowledged data
+293,tcp reno,implements,aimd
+293,tcp reno,implements,fast recovery
+293,tcp cubic,implements,congestion avoidance
+293,tcp cubic,increases,congestion window
+293,tcp cubic,increases,sending rate
+293,tcp cubic,provides,throughput
+294,tcp reno,implements,aimd
+294,tcp reno,implements,fast recovery
+294,tcp cubic,implements,congestion avoidance
+294,tcp cubic,increases,congestion window
+294,tcp cubic,increases,sending rate
+294,tcp cubic,provides,throughput
+295,tcp reno,implements,aimd
+295,tcp reno,implements,fast recovery
+295,congestion window,controls,send rate
+295,congestion window,controls,unacknowledged data
+296,tcp,controls,send rate
+296,tcp,has_part,congestion avoidance
+296,tcp,has_part,congestion control mechanism
+296,tcp,has_part,connection state
+296,tcp,has_part,fast recovery
+296,tcp,has_part,receive buffer
+296,tcp,has_part,send buffer
+296,tcp,has_part,slow start
+296,tcp,has_part,tcp state
+296,tcp,has_part,window behavior
+296,tcp,implements,aimd
+296,tcp,implements,aimd algorithm
+296,tcp,implements,congestion avoidance
+296,tcp,implements,congestion control
+296,tcp,implements,demultiplexing
+296,tcp,implements,fast recovery
+296,tcp,implements,fast retransmit
+296,tcp,implements,reliable data transfer service
+296,tcp,implements,retransmit mechanism
+296,tcp,implements,slow start
+296,tcp,implements,three-way handshake
+296,tcp,is_a,transport-layer protocol
+296,tcp,operates_at,transport layer
+296,tcp,provides,congestion control
+296,tcp,provides,cumulative acknowledgments
+296,tcp,provides,error detection
+296,tcp,provides,flow control
+296,tcp,provides,flow control service
+296,tcp,provides,full-duplex service
+296,tcp,provides,point-to-point
+296,tcp,provides,reliable connection-oriented service
+296,tcp,provides,reliable data transfer
+296,tcp,provides,retransmissions
+296,tcp,provides,round-trip time estimation
+296,tcp,provides,timers
+296,tcp,receives,ack
+296,tcp,requires,acknowledgments
+296,tcp,requires,checksum
+296,tcp,requires,flow control
+296,tcp,requires,sequence numbers
+296,tcp,requires,timers
+296,tcp,runs_on,ip
+296,tcp,sends,segment
+296,tcp,supports,full-duplex
+297,tcp,controls,send rate
+297,tcp,has_part,congestion avoidance
+297,tcp,has_part,congestion control mechanism
+297,tcp,has_part,connection state
+297,tcp,has_part,fast recovery
+297,tcp,has_part,receive buffer
+297,tcp,has_part,send buffer
+297,tcp,has_part,slow start
+297,tcp,has_part,tcp state
+297,tcp,has_part,window behavior
+297,tcp,implements,aimd
+297,tcp,implements,aimd algorithm
+297,tcp,implements,congestion avoidance
+297,tcp,implements,congestion control
+297,tcp,implements,demultiplexing
+297,tcp,implements,fast recovery
+297,tcp,implements,fast retransmit
+297,tcp,implements,reliable data transfer service
+297,tcp,implements,retransmit mechanism
+297,tcp,implements,slow start
+297,tcp,implements,three-way handshake
+297,tcp,is_a,transport-layer protocol
+297,tcp,operates_at,transport layer
+297,tcp,provides,congestion control
+297,tcp,provides,cumulative acknowledgments
+297,tcp,provides,error detection
+297,tcp,provides,flow control
+297,tcp,provides,flow control service
+297,tcp,provides,full-duplex service
+297,tcp,provides,point-to-point
+297,tcp,provides,reliable connection-oriented service
+297,tcp,provides,reliable data transfer
+297,tcp,provides,retransmissions
+297,tcp,provides,round-trip time estimation
+297,tcp,provides,timers
+297,tcp,receives,ack
+297,tcp,requires,acknowledgments
+297,tcp,requires,checksum
+297,tcp,requires,flow control
+297,tcp,requires,sequence numbers
+297,tcp,requires,timers
+297,tcp,runs_on,ip
+297,tcp,sends,segment
+297,tcp,supports,full-duplex
+298,slow start,increases,congestion window
+298,slow start,increases,congestion window size
+298,slow start,part_of,congestion control
+298,congestion avoidance,increases,congestion window
+298,congestion avoidance,increases,congestion window size
+298,tcp,controls,send rate
+298,tcp,has_part,congestion avoidance
+298,tcp,has_part,congestion control mechanism
+298,tcp,has_part,connection state
+298,tcp,has_part,fast recovery
+298,tcp,has_part,receive buffer
+298,tcp,has_part,send buffer
+298,tcp,has_part,slow start
+298,tcp,has_part,tcp state
+298,tcp,has_part,window behavior
+298,tcp,implements,aimd
+298,tcp,implements,aimd algorithm
+298,tcp,implements,congestion avoidance
+298,tcp,implements,congestion control
+298,tcp,implements,demultiplexing
+298,tcp,implements,fast recovery
+298,tcp,implements,fast retransmit
+298,tcp,implements,reliable data transfer service
+298,tcp,implements,retransmit mechanism
+298,tcp,implements,slow start
+298,tcp,implements,three-way handshake
+298,tcp,is_a,transport-layer protocol
+298,tcp,operates_at,transport layer
+298,tcp,provides,congestion control
+298,tcp,provides,cumulative acknowledgments
+298,tcp,provides,error detection
+298,tcp,provides,flow control
+298,tcp,provides,flow control service
+298,tcp,provides,full-duplex service
+298,tcp,provides,point-to-point
+298,tcp,provides,reliable connection-oriented service
+298,tcp,provides,reliable data transfer
+298,tcp,provides,retransmissions
+298,tcp,provides,round-trip time estimation
+298,tcp,provides,timers
+298,tcp,receives,ack
+298,tcp,requires,acknowledgments
+298,tcp,requires,checksum
+298,tcp,requires,flow control
+298,tcp,requires,sequence numbers
+298,tcp,requires,timers
+298,tcp,runs_on,ip
+298,tcp,sends,segment
+298,tcp,supports,full-duplex
+299,tcp,controls,send rate
+299,tcp,has_part,congestion avoidance
+299,tcp,has_part,congestion control mechanism
+299,tcp,has_part,connection state
+299,tcp,has_part,fast recovery
+299,tcp,has_part,receive buffer
+299,tcp,has_part,send buffer
+299,tcp,has_part,slow start
+299,tcp,has_part,tcp state
+299,tcp,has_part,window behavior
+299,tcp,implements,aimd
+299,tcp,implements,aimd algorithm
+299,tcp,implements,congestion avoidance
+299,tcp,implements,congestion control
+299,tcp,implements,demultiplexing
+299,tcp,implements,fast recovery
+299,tcp,implements,fast retransmit
+299,tcp,implements,reliable data transfer service
+299,tcp,implements,retransmit mechanism
+299,tcp,implements,slow start
+299,tcp,implements,three-way handshake
+299,tcp,is_a,transport-layer protocol
+299,tcp,operates_at,transport layer
+299,tcp,provides,congestion control
+299,tcp,provides,cumulative acknowledgments
+299,tcp,provides,error detection
+299,tcp,provides,flow control
+299,tcp,provides,flow control service
+299,tcp,provides,full-duplex service
+299,tcp,provides,point-to-point
+299,tcp,provides,reliable connection-oriented service
+299,tcp,provides,reliable data transfer
+299,tcp,provides,retransmissions
+299,tcp,provides,round-trip time estimation
+299,tcp,provides,timers
+299,tcp,receives,ack
+299,tcp,requires,acknowledgments
+299,tcp,requires,checksum
+299,tcp,requires,flow control
+299,tcp,requires,sequence numbers
+299,tcp,requires,timers
+299,tcp,runs_on,ip
+299,tcp,sends,segment
+299,tcp,supports,full-duplex
+299,ip,operates_at,network layer
+299,ip,provides,network-layer service
+299,ip,runs_on,link layer
+302,tcp,controls,send rate
+302,tcp,has_part,congestion avoidance
+302,tcp,has_part,congestion control mechanism
+302,tcp,has_part,connection state
+302,tcp,has_part,fast recovery
+302,tcp,has_part,receive buffer
+302,tcp,has_part,send buffer
+302,tcp,has_part,slow start
+302,tcp,has_part,tcp state
+302,tcp,has_part,window behavior
+302,tcp,implements,aimd
+302,tcp,implements,aimd algorithm
+302,tcp,implements,congestion avoidance
+302,tcp,implements,congestion control
+302,tcp,implements,demultiplexing
+302,tcp,implements,fast recovery
+302,tcp,implements,fast retransmit
+302,tcp,implements,reliable data transfer service
+302,tcp,implements,retransmit mechanism
+302,tcp,implements,slow start
+302,tcp,implements,three-way handshake
+302,tcp,is_a,transport-layer protocol
+302,tcp,operates_at,transport layer
+302,tcp,provides,congestion control
+302,tcp,provides,cumulative acknowledgments
+302,tcp,provides,error detection
+302,tcp,provides,flow control
+302,tcp,provides,flow control service
+302,tcp,provides,full-duplex service
+302,tcp,provides,point-to-point
+302,tcp,provides,reliable connection-oriented service
+302,tcp,provides,reliable data transfer
+302,tcp,provides,retransmissions
+302,tcp,provides,round-trip time estimation
+302,tcp,provides,timers
+302,tcp,receives,ack
+302,tcp,requires,acknowledgments
+302,tcp,requires,checksum
+302,tcp,requires,flow control
+302,tcp,requires,sequence numbers
+302,tcp,requires,timers
+302,tcp,runs_on,ip
+302,tcp,sends,segment
+302,tcp,supports,full-duplex
+304,tcp vegas,measures,rtt
+304,congestion window,controls,send rate
+304,congestion window,controls,unacknowledged data
+305,tcp vegas,measures,rtt
+306,tcp vegas,measures,rtt
+306,tcp,controls,send rate
+306,tcp,has_part,congestion avoidance
+306,tcp,has_part,congestion control mechanism
+306,tcp,has_part,connection state
+306,tcp,has_part,fast recovery
+306,tcp,has_part,receive buffer
+306,tcp,has_part,send buffer
+306,tcp,has_part,slow start
+306,tcp,has_part,tcp state
+306,tcp,has_part,window behavior
+306,tcp,implements,aimd
+306,tcp,implements,aimd algorithm
+306,tcp,implements,congestion avoidance
+306,tcp,implements,congestion control
+306,tcp,implements,demultiplexing
+306,tcp,implements,fast recovery
+306,tcp,implements,fast retransmit
+306,tcp,implements,reliable data transfer service
+306,tcp,implements,retransmit mechanism
+306,tcp,implements,slow start
+306,tcp,implements,three-way handshake
+306,tcp,is_a,transport-layer protocol
+306,tcp,operates_at,transport layer
+306,tcp,provides,congestion control
+306,tcp,provides,cumulative acknowledgments
+306,tcp,provides,error detection
+306,tcp,provides,flow control
+306,tcp,provides,flow control service
+306,tcp,provides,full-duplex service
+306,tcp,provides,point-to-point
+306,tcp,provides,reliable connection-oriented service
+306,tcp,provides,reliable data transfer
+306,tcp,provides,retransmissions
+306,tcp,provides,round-trip time estimation
+306,tcp,provides,timers
+306,tcp,receives,ack
+306,tcp,requires,acknowledgments
+306,tcp,requires,checksum
+306,tcp,requires,flow control
+306,tcp,requires,sequence numbers
+306,tcp,requires,timers
+306,tcp,runs_on,ip
+306,tcp,sends,segment
+306,tcp,supports,full-duplex
+308,tcp,controls,send rate
+308,tcp,has_part,congestion avoidance
+308,tcp,has_part,congestion control mechanism
+308,tcp,has_part,connection state
+308,tcp,has_part,fast recovery
+308,tcp,has_part,receive buffer
+308,tcp,has_part,send buffer
+308,tcp,has_part,slow start
+308,tcp,has_part,tcp state
+308,tcp,has_part,window behavior
+308,tcp,implements,aimd
+308,tcp,implements,aimd algorithm
+308,tcp,implements,congestion avoidance
+308,tcp,implements,congestion control
+308,tcp,implements,demultiplexing
+308,tcp,implements,fast recovery
+308,tcp,implements,fast retransmit
+308,tcp,implements,reliable data transfer service
+308,tcp,implements,retransmit mechanism
+308,tcp,implements,slow start
+308,tcp,implements,three-way handshake
+308,tcp,is_a,transport-layer protocol
+308,tcp,operates_at,transport layer
+308,tcp,provides,congestion control
+308,tcp,provides,cumulative acknowledgments
+308,tcp,provides,error detection
+308,tcp,provides,flow control
+308,tcp,provides,flow control service
+308,tcp,provides,full-duplex service
+308,tcp,provides,point-to-point
+308,tcp,provides,reliable connection-oriented service
+308,tcp,provides,reliable data transfer
+308,tcp,provides,retransmissions
+308,tcp,provides,round-trip time estimation
+308,tcp,provides,timers
+308,tcp,receives,ack
+308,tcp,requires,acknowledgments
+308,tcp,requires,checksum
+308,tcp,requires,flow control
+308,tcp,requires,sequence numbers
+308,tcp,requires,timers
+308,tcp,runs_on,ip
+308,tcp,sends,segment
+308,tcp,supports,full-duplex
+309,congestion window,controls,send rate
+309,congestion window,controls,unacknowledged data
+309,tcp,controls,send rate
+309,tcp,has_part,congestion avoidance
+309,tcp,has_part,congestion control mechanism
+309,tcp,has_part,connection state
+309,tcp,has_part,fast recovery
+309,tcp,has_part,receive buffer
+309,tcp,has_part,send buffer
+309,tcp,has_part,slow start
+309,tcp,has_part,tcp state
+309,tcp,has_part,window behavior
+309,tcp,implements,aimd
+309,tcp,implements,aimd algorithm
+309,tcp,implements,congestion avoidance
+309,tcp,implements,congestion control
+309,tcp,implements,demultiplexing
+309,tcp,implements,fast recovery
+309,tcp,implements,fast retransmit
+309,tcp,implements,reliable data transfer service
+309,tcp,implements,retransmit mechanism
+309,tcp,implements,slow start
+309,tcp,implements,three-way handshake
+309,tcp,is_a,transport-layer protocol
+309,tcp,operates_at,transport layer
+309,tcp,provides,congestion control
+309,tcp,provides,cumulative acknowledgments
+309,tcp,provides,error detection
+309,tcp,provides,flow control
+309,tcp,provides,flow control service
+309,tcp,provides,full-duplex service
+309,tcp,provides,point-to-point
+309,tcp,provides,reliable connection-oriented service
+309,tcp,provides,reliable data transfer
+309,tcp,provides,retransmissions
+309,tcp,provides,round-trip time estimation
+309,tcp,provides,timers
+309,tcp,receives,ack
+309,tcp,requires,acknowledgments
+309,tcp,requires,checksum
+309,tcp,requires,flow control
+309,tcp,requires,sequence numbers
+309,tcp,requires,timers
+309,tcp,runs_on,ip
+309,tcp,sends,segment
+309,tcp,supports,full-duplex
+312,packet loss,increases,end-to-end delay
+315,udp,implements,checksum calculation
+315,udp,implements,demultiplexing
+315,udp,operates_at,transport layer
+315,udp,provides,error checking
+315,udp,provides,error detection
+315,udp,provides,process-to-process data delivery
+315,udp,provides,unreliable connectionless service
+315,udp,requires,checksum
+315,udp,supports,multimedia applications
+315,internet phone,runs_on,udp
+316,congestion control,controls,transmission rate
+316,congestion control,decreases,transmission rate
+316,congestion control,requires,congestion window
+316,congestion control,supports,delay-based approach
+316,udp,implements,checksum calculation
+316,udp,implements,demultiplexing
+316,udp,operates_at,transport layer
+316,udp,provides,error checking
+316,udp,provides,error detection
+316,udp,provides,process-to-process data delivery
+316,udp,provides,unreliable connectionless service
+316,udp,requires,checksum
+316,udp,supports,multimedia applications
+316,tcp,controls,send rate
+316,tcp,has_part,congestion avoidance
+316,tcp,has_part,congestion control mechanism
+316,tcp,has_part,connection state
+316,tcp,has_part,fast recovery
+316,tcp,has_part,receive buffer
+316,tcp,has_part,send buffer
+316,tcp,has_part,slow start
+316,tcp,has_part,tcp state
+316,tcp,has_part,window behavior
+316,tcp,implements,aimd
+316,tcp,implements,aimd algorithm
+316,tcp,implements,congestion avoidance
+316,tcp,implements,congestion control
+316,tcp,implements,demultiplexing
+316,tcp,implements,fast recovery
+316,tcp,implements,fast retransmit
+316,tcp,implements,reliable data transfer service
+316,tcp,implements,retransmit mechanism
+316,tcp,implements,slow start
+316,tcp,implements,three-way handshake
+316,tcp,is_a,transport-layer protocol
+316,tcp,operates_at,transport layer
+316,tcp,provides,congestion control
+316,tcp,provides,cumulative acknowledgments
+316,tcp,provides,error detection
+316,tcp,provides,flow control
+316,tcp,provides,flow control service
+316,tcp,provides,full-duplex service
+316,tcp,provides,point-to-point
+316,tcp,provides,reliable connection-oriented service
+316,tcp,provides,reliable data transfer
+316,tcp,provides,retransmissions
+316,tcp,provides,round-trip time estimation
+316,tcp,provides,timers
+316,tcp,receives,ack
+316,tcp,requires,acknowledgments
+316,tcp,requires,checksum
+316,tcp,requires,flow control
+316,tcp,requires,sequence numbers
+316,tcp,requires,timers
+316,tcp,runs_on,ip
+316,tcp,sends,segment
+316,tcp,supports,full-duplex
+316,tcp congestion control,controls,sending rate
+319,udp,implements,checksum calculation
+319,udp,implements,demultiplexing
+319,udp,operates_at,transport layer
+319,udp,provides,error checking
+319,udp,provides,error detection
+319,udp,provides,process-to-process data delivery
+319,udp,provides,unreliable connectionless service
+319,udp,requires,checksum
+319,udp,supports,multimedia applications
+319,tcp,controls,send rate
+319,tcp,has_part,congestion avoidance
+319,tcp,has_part,congestion control mechanism
+319,tcp,has_part,connection state
+319,tcp,has_part,fast recovery
+319,tcp,has_part,receive buffer
+319,tcp,has_part,send buffer
+319,tcp,has_part,slow start
+319,tcp,has_part,tcp state
+319,tcp,has_part,window behavior
+319,tcp,implements,aimd
+319,tcp,implements,aimd algorithm
+319,tcp,implements,congestion avoidance
+319,tcp,implements,congestion control
+319,tcp,implements,demultiplexing
+319,tcp,implements,fast recovery
+319,tcp,implements,fast retransmit
+319,tcp,implements,reliable data transfer service
+319,tcp,implements,retransmit mechanism
+319,tcp,implements,slow start
+319,tcp,implements,three-way handshake
+319,tcp,is_a,transport-layer protocol
+319,tcp,operates_at,transport layer
+319,tcp,provides,congestion control
+319,tcp,provides,cumulative acknowledgments
+319,tcp,provides,error detection
+319,tcp,provides,flow control
+319,tcp,provides,flow control service
+319,tcp,provides,full-duplex service
+319,tcp,provides,point-to-point
+319,tcp,provides,reliable connection-oriented service
+319,tcp,provides,reliable data transfer
+319,tcp,provides,retransmissions
+319,tcp,provides,round-trip time estimation
+319,tcp,provides,timers
+319,tcp,receives,ack
+319,tcp,requires,acknowledgments
+319,tcp,requires,checksum
+319,tcp,requires,flow control
+319,tcp,requires,sequence numbers
+319,tcp,requires,timers
+319,tcp,runs_on,ip
+319,tcp,sends,segment
+319,tcp,supports,full-duplex
+319,transport layer,implements,demultiplexing
+319,transport layer,implements,multiplexing
+319,transport layer,provides,error checking
+319,transport layer,provides,port number
+319,transport layer,receives,segment
+319,transport layer,sends,transport-level segment
+320,tcp cubic,implements,congestion avoidance
+320,tcp cubic,increases,congestion window
+320,tcp cubic,increases,sending rate
+320,tcp cubic,provides,throughput
+324,quic,implements,congestion control
+324,quic,implements,reliable data transfer
+324,quic,operates_at,transport layer
+324,quic,runs_on,udp
+324,quic,supports,congestion control
+324,congestion control,controls,transmission rate
+324,congestion control,decreases,transmission rate
+324,congestion control,requires,congestion window
+324,congestion control,supports,delay-based approach
+325,udp,implements,checksum calculation
+325,udp,implements,demultiplexing
+325,udp,operates_at,transport layer
+325,udp,provides,error checking
+325,udp,provides,error detection
+325,udp,provides,process-to-process data delivery
+325,udp,provides,unreliable connectionless service
+325,udp,requires,checksum
+325,udp,supports,multimedia applications
+325,quic,implements,congestion control
+325,quic,implements,reliable data transfer
+325,quic,operates_at,transport layer
+325,quic,runs_on,udp
+325,quic,supports,congestion control
+326,quic,implements,congestion control
+326,quic,implements,reliable data transfer
+326,quic,operates_at,transport layer
+326,quic,runs_on,udp
+326,quic,supports,congestion control
+326,tcp,controls,send rate
+326,tcp,has_part,congestion avoidance
+326,tcp,has_part,congestion control mechanism
+326,tcp,has_part,connection state
+326,tcp,has_part,fast recovery
+326,tcp,has_part,receive buffer
+326,tcp,has_part,send buffer
+326,tcp,has_part,slow start
+326,tcp,has_part,tcp state
+326,tcp,has_part,window behavior
+326,tcp,implements,aimd
+326,tcp,implements,aimd algorithm
+326,tcp,implements,congestion avoidance
+326,tcp,implements,congestion control
+326,tcp,implements,demultiplexing
+326,tcp,implements,fast recovery
+326,tcp,implements,fast retransmit
+326,tcp,implements,reliable data transfer service
+326,tcp,implements,retransmit mechanism
+326,tcp,implements,slow start
+326,tcp,implements,three-way handshake
+326,tcp,is_a,transport-layer protocol
+326,tcp,operates_at,transport layer
+326,tcp,provides,congestion control
+326,tcp,provides,cumulative acknowledgments
+326,tcp,provides,error detection
+326,tcp,provides,flow control
+326,tcp,provides,flow control service
+326,tcp,provides,full-duplex service
+326,tcp,provides,point-to-point
+326,tcp,provides,reliable connection-oriented service
+326,tcp,provides,reliable data transfer
+326,tcp,provides,retransmissions
+326,tcp,provides,round-trip time estimation
+326,tcp,provides,timers
+326,tcp,receives,ack
+326,tcp,requires,acknowledgments
+326,tcp,requires,checksum
+326,tcp,requires,flow control
+326,tcp,requires,sequence numbers
+326,tcp,requires,timers
+326,tcp,runs_on,ip
+326,tcp,sends,segment
+326,tcp,supports,full-duplex
+326,tls,runs_on,tcp
+327,quic,implements,congestion control
+327,quic,implements,reliable data transfer
+327,quic,operates_at,transport layer
+327,quic,runs_on,udp
+327,quic,supports,congestion control
+327,quic packet header,contains,connection id
+327,udp,implements,checksum calculation
+327,udp,implements,demultiplexing
+327,udp,operates_at,transport layer
+327,udp,provides,error checking
+327,udp,provides,error detection
+327,udp,provides,process-to-process data delivery
+327,udp,provides,unreliable connectionless service
+327,udp,requires,checksum
+327,udp,supports,multimedia applications
+328,quic,implements,congestion control
+328,quic,implements,reliable data transfer
+328,quic,operates_at,transport layer
+328,quic,runs_on,udp
+328,quic,supports,congestion control
+328,tcp,controls,send rate
+328,tcp,has_part,congestion avoidance
+328,tcp,has_part,congestion control mechanism
+328,tcp,has_part,connection state
+328,tcp,has_part,fast recovery
+328,tcp,has_part,receive buffer
+328,tcp,has_part,send buffer
+328,tcp,has_part,slow start
+328,tcp,has_part,tcp state
+328,tcp,has_part,window behavior
+328,tcp,implements,aimd
+328,tcp,implements,aimd algorithm
+328,tcp,implements,congestion avoidance
+328,tcp,implements,congestion control
+328,tcp,implements,demultiplexing
+328,tcp,implements,fast recovery
+328,tcp,implements,fast retransmit
+328,tcp,implements,reliable data transfer service
+328,tcp,implements,retransmit mechanism
+328,tcp,implements,slow start
+328,tcp,implements,three-way handshake
+328,tcp,is_a,transport-layer protocol
+328,tcp,operates_at,transport layer
+328,tcp,provides,congestion control
+328,tcp,provides,cumulative acknowledgments
+328,tcp,provides,error detection
+328,tcp,provides,flow control
+328,tcp,provides,flow control service
+328,tcp,provides,full-duplex service
+328,tcp,provides,point-to-point
+328,tcp,provides,reliable connection-oriented service
+328,tcp,provides,reliable data transfer
+328,tcp,provides,retransmissions
+328,tcp,provides,round-trip time estimation
+328,tcp,provides,timers
+328,tcp,receives,ack
+328,tcp,requires,acknowledgments
+328,tcp,requires,checksum
+328,tcp,requires,flow control
+328,tcp,requires,sequence numbers
+328,tcp,requires,timers
+328,tcp,runs_on,ip
+328,tcp,sends,segment
+328,tcp,supports,full-duplex
+329,http,operates_at,application layer
+329,http,runs_on,tcp
+329,quic,implements,congestion control
+329,quic,implements,reliable data transfer
+329,quic,operates_at,transport layer
+329,quic,runs_on,udp
+329,quic,supports,congestion control
+329,udp segment,contains,checksum
+329,udp segment,contains,header fields
+329,udp segment,has_part,checksum field
+330,tcp,controls,send rate
+330,tcp,has_part,congestion avoidance
+330,tcp,has_part,congestion control mechanism
+330,tcp,has_part,connection state
+330,tcp,has_part,fast recovery
+330,tcp,has_part,receive buffer
+330,tcp,has_part,send buffer
+330,tcp,has_part,slow start
+330,tcp,has_part,tcp state
+330,tcp,has_part,window behavior
+330,tcp,implements,aimd
+330,tcp,implements,aimd algorithm
+330,tcp,implements,congestion avoidance
+330,tcp,implements,congestion control
+330,tcp,implements,demultiplexing
+330,tcp,implements,fast recovery
+330,tcp,implements,fast retransmit
+330,tcp,implements,reliable data transfer service
+330,tcp,implements,retransmit mechanism
+330,tcp,implements,slow start
+330,tcp,implements,three-way handshake
+330,tcp,is_a,transport-layer protocol
+330,tcp,operates_at,transport layer
+330,tcp,provides,congestion control
+330,tcp,provides,cumulative acknowledgments
+330,tcp,provides,error detection
+330,tcp,provides,flow control
+330,tcp,provides,flow control service
+330,tcp,provides,full-duplex service
+330,tcp,provides,point-to-point
+330,tcp,provides,reliable connection-oriented service
+330,tcp,provides,reliable data transfer
+330,tcp,provides,retransmissions
+330,tcp,provides,round-trip time estimation
+330,tcp,provides,timers
+330,tcp,receives,ack
+330,tcp,requires,acknowledgments
+330,tcp,requires,checksum
+330,tcp,requires,flow control
+330,tcp,requires,sequence numbers
+330,tcp,requires,timers
+330,tcp,runs_on,ip
+330,tcp,sends,segment
+330,tcp,supports,full-duplex
+330,quic,implements,congestion control
+330,quic,implements,reliable data transfer
+330,quic,operates_at,transport layer
+330,quic,runs_on,udp
+330,quic,supports,congestion control
+330,tcp reno,implements,aimd
+330,tcp reno,implements,fast recovery
+331,tcp,controls,send rate
+331,tcp,has_part,congestion avoidance
+331,tcp,has_part,congestion control mechanism
+331,tcp,has_part,connection state
+331,tcp,has_part,fast recovery
+331,tcp,has_part,receive buffer
+331,tcp,has_part,send buffer
+331,tcp,has_part,slow start
+331,tcp,has_part,tcp state
+331,tcp,has_part,window behavior
+331,tcp,implements,aimd
+331,tcp,implements,aimd algorithm
+331,tcp,implements,congestion avoidance
+331,tcp,implements,congestion control
+331,tcp,implements,demultiplexing
+331,tcp,implements,fast recovery
+331,tcp,implements,fast retransmit
+331,tcp,implements,reliable data transfer service
+331,tcp,implements,retransmit mechanism
+331,tcp,implements,slow start
+331,tcp,implements,three-way handshake
+331,tcp,is_a,transport-layer protocol
+331,tcp,operates_at,transport layer
+331,tcp,provides,congestion control
+331,tcp,provides,cumulative acknowledgments
+331,tcp,provides,error detection
+331,tcp,provides,flow control
+331,tcp,provides,flow control service
+331,tcp,provides,full-duplex service
+331,tcp,provides,point-to-point
+331,tcp,provides,reliable connection-oriented service
+331,tcp,provides,reliable data transfer
+331,tcp,provides,retransmissions
+331,tcp,provides,round-trip time estimation
+331,tcp,provides,timers
+331,tcp,receives,ack
+331,tcp,requires,acknowledgments
+331,tcp,requires,checksum
+331,tcp,requires,flow control
+331,tcp,requires,sequence numbers
+331,tcp,requires,timers
+331,tcp,runs_on,ip
+331,tcp,sends,segment
+331,tcp,supports,full-duplex
+331,quic,implements,congestion control
+331,quic,implements,reliable data transfer
+331,quic,operates_at,transport layer
+331,quic,runs_on,udp
+331,quic,supports,congestion control
+335,tcp,controls,send rate
+335,tcp,has_part,congestion avoidance
+335,tcp,has_part,congestion control mechanism
+335,tcp,has_part,connection state
+335,tcp,has_part,fast recovery
+335,tcp,has_part,receive buffer
+335,tcp,has_part,send buffer
+335,tcp,has_part,slow start
+335,tcp,has_part,tcp state
+335,tcp,has_part,window behavior
+335,tcp,implements,aimd
+335,tcp,implements,aimd algorithm
+335,tcp,implements,congestion avoidance
+335,tcp,implements,congestion control
+335,tcp,implements,demultiplexing
+335,tcp,implements,fast recovery
+335,tcp,implements,fast retransmit
+335,tcp,implements,reliable data transfer service
+335,tcp,implements,retransmit mechanism
+335,tcp,implements,slow start
+335,tcp,implements,three-way handshake
+335,tcp,is_a,transport-layer protocol
+335,tcp,operates_at,transport layer
+335,tcp,provides,congestion control
+335,tcp,provides,cumulative acknowledgments
+335,tcp,provides,error detection
+335,tcp,provides,flow control
+335,tcp,provides,flow control service
+335,tcp,provides,full-duplex service
+335,tcp,provides,point-to-point
+335,tcp,provides,reliable connection-oriented service
+335,tcp,provides,reliable data transfer
+335,tcp,provides,retransmissions
+335,tcp,provides,round-trip time estimation
+335,tcp,provides,timers
+335,tcp,receives,ack
+335,tcp,requires,acknowledgments
+335,tcp,requires,checksum
+335,tcp,requires,flow control
+335,tcp,requires,sequence numbers
+335,tcp,requires,timers
+335,tcp,runs_on,ip
+335,tcp,sends,segment
+335,tcp,supports,full-duplex
+336,congestion control,controls,transmission rate
+336,congestion control,decreases,transmission rate
+336,congestion control,requires,congestion window
+336,congestion control,supports,delay-based approach
+337,tcp congestion control,controls,sending rate
+338,tcp connection establishment,increases,end-to-end delay
+338,slow start,increases,congestion window
+338,slow start,increases,congestion window size
+338,slow start,part_of,congestion control
+338,transport layer,implements,demultiplexing
+338,transport layer,implements,multiplexing
+338,transport layer,provides,error checking
+338,transport layer,provides,port number
+338,transport layer,receives,segment
+338,transport layer,sends,transport-level segment
+339,network layer,enables,explicit congestion indication
+339,network layer,sends,datagram
+339,link layer,provides,error detection
+341,udp,implements,checksum calculation
+341,udp,implements,demultiplexing
+341,udp,operates_at,transport layer
+341,udp,provides,error checking
+341,udp,provides,error detection
+341,udp,provides,process-to-process data delivery
+341,udp,provides,unreliable connectionless service
+341,udp,requires,checksum
+341,udp,supports,multimedia applications
+342,tcp,controls,send rate
+342,tcp,has_part,congestion avoidance
+342,tcp,has_part,congestion control mechanism
+342,tcp,has_part,connection state
+342,tcp,has_part,fast recovery
+342,tcp,has_part,receive buffer
+342,tcp,has_part,send buffer
+342,tcp,has_part,slow start
+342,tcp,has_part,tcp state
+342,tcp,has_part,window behavior
+342,tcp,implements,aimd
+342,tcp,implements,aimd algorithm
+342,tcp,implements,congestion avoidance
+342,tcp,implements,congestion control
+342,tcp,implements,demultiplexing
+342,tcp,implements,fast recovery
+342,tcp,implements,fast retransmit
+342,tcp,implements,reliable data transfer service
+342,tcp,implements,retransmit mechanism
+342,tcp,implements,slow start
+342,tcp,implements,three-way handshake
+342,tcp,is_a,transport-layer protocol
+342,tcp,operates_at,transport layer
+342,tcp,provides,congestion control
+342,tcp,provides,cumulative acknowledgments
+342,tcp,provides,error detection
+342,tcp,provides,flow control
+342,tcp,provides,flow control service
+342,tcp,provides,full-duplex service
+342,tcp,provides,point-to-point
+342,tcp,provides,reliable connection-oriented service
+342,tcp,provides,reliable data transfer
+342,tcp,provides,retransmissions
+342,tcp,provides,round-trip time estimation
+342,tcp,provides,timers
+342,tcp,receives,ack
+342,tcp,requires,acknowledgments
+342,tcp,requires,checksum
+342,tcp,requires,flow control
+342,tcp,requires,sequence numbers
+342,tcp,requires,timers
+342,tcp,runs_on,ip
+342,tcp,sends,segment
+342,tcp,supports,full-duplex
+342,udp,implements,checksum calculation
+342,udp,implements,demultiplexing
+342,udp,operates_at,transport layer
+342,udp,provides,error checking
+342,udp,provides,error detection
+342,udp,provides,process-to-process data delivery
+342,udp,provides,unreliable connectionless service
+342,udp,requires,checksum
+342,udp,supports,multimedia applications
+343,socket,receives,segment
+345,telnet,operates_at,application layer
+345,telnet,runs_on,tcp
+345,sequence number,identifies,packet
+347,udp,implements,checksum calculation
+347,udp,implements,demultiplexing
+347,udp,operates_at,transport layer
+347,udp,provides,error checking
+347,udp,provides,error detection
+347,udp,provides,process-to-process data delivery
+347,udp,provides,unreliable connectionless service
+347,udp,requires,checksum
+347,udp,supports,multimedia applications
+347,tcp,controls,send rate
+347,tcp,has_part,congestion avoidance
+347,tcp,has_part,congestion control mechanism
+347,tcp,has_part,connection state
+347,tcp,has_part,fast recovery
+347,tcp,has_part,receive buffer
+347,tcp,has_part,send buffer
+347,tcp,has_part,slow start
+347,tcp,has_part,tcp state
+347,tcp,has_part,window behavior
+347,tcp,implements,aimd
+347,tcp,implements,aimd algorithm
+347,tcp,implements,congestion avoidance
+347,tcp,implements,congestion control
+347,tcp,implements,demultiplexing
+347,tcp,implements,fast recovery
+347,tcp,implements,fast retransmit
+347,tcp,implements,reliable data transfer service
+347,tcp,implements,retransmit mechanism
+347,tcp,implements,slow start
+347,tcp,implements,three-way handshake
+347,tcp,is_a,transport-layer protocol
+347,tcp,operates_at,transport layer
+347,tcp,provides,congestion control
+347,tcp,provides,cumulative acknowledgments
+347,tcp,provides,error detection
+347,tcp,provides,flow control
+347,tcp,provides,flow control service
+347,tcp,provides,full-duplex service
+347,tcp,provides,point-to-point
+347,tcp,provides,reliable connection-oriented service
+347,tcp,provides,reliable data transfer
+347,tcp,provides,retransmissions
+347,tcp,provides,round-trip time estimation
+347,tcp,provides,timers
+347,tcp,receives,ack
+347,tcp,requires,acknowledgments
+347,tcp,requires,checksum
+347,tcp,requires,flow control
+347,tcp,requires,sequence numbers
+347,tcp,requires,timers
+347,tcp,runs_on,ip
+347,tcp,sends,segment
+347,tcp,supports,full-duplex
+349,udp segment,contains,checksum
+349,udp segment,contains,header fields
+349,udp segment,has_part,checksum field
+354,reliable data transfer protocol,has_part,sender
+354,reliable data transfer protocol,implements,finite-state machine
+354,reliable data transfer protocol,requires,positive acknowledgment
+354,reliable data transfer protocol,requires,unreliable channel
+362,transport layer,implements,demultiplexing
+362,transport layer,implements,multiplexing
+362,transport layer,provides,error checking
+362,transport layer,provides,port number
+362,transport layer,receives,segment
+362,transport layer,sends,transport-level segment
+366,gbn,requires,sequence number
+367,gbn,requires,sequence number
+368,udp,implements,checksum calculation
+368,udp,implements,demultiplexing
+368,udp,operates_at,transport layer
+368,udp,provides,error checking
+368,udp,provides,error detection
+368,udp,provides,process-to-process data delivery
+368,udp,provides,unreliable connectionless service
+368,udp,requires,checksum
+368,udp,supports,multimedia applications
+368,tcp,controls,send rate
+368,tcp,has_part,congestion avoidance
+368,tcp,has_part,congestion control mechanism
+368,tcp,has_part,connection state
+368,tcp,has_part,fast recovery
+368,tcp,has_part,receive buffer
+368,tcp,has_part,send buffer
+368,tcp,has_part,slow start
+368,tcp,has_part,tcp state
+368,tcp,has_part,window behavior
+368,tcp,implements,aimd
+368,tcp,implements,aimd algorithm
+368,tcp,implements,congestion avoidance
+368,tcp,implements,congestion control
+368,tcp,implements,demultiplexing
+368,tcp,implements,fast recovery
+368,tcp,implements,fast retransmit
+368,tcp,implements,reliable data transfer service
+368,tcp,implements,retransmit mechanism
+368,tcp,implements,slow start
+368,tcp,implements,three-way handshake
+368,tcp,is_a,transport-layer protocol
+368,tcp,operates_at,transport layer
+368,tcp,provides,congestion control
+368,tcp,provides,cumulative acknowledgments
+368,tcp,provides,error detection
+368,tcp,provides,flow control
+368,tcp,provides,flow control service
+368,tcp,provides,full-duplex service
+368,tcp,provides,point-to-point
+368,tcp,provides,reliable connection-oriented service
+368,tcp,provides,reliable data transfer
+368,tcp,provides,retransmissions
+368,tcp,provides,round-trip time estimation
+368,tcp,provides,timers
+368,tcp,receives,ack
+368,tcp,requires,acknowledgments
+368,tcp,requires,checksum
+368,tcp,requires,flow control
+368,tcp,requires,sequence numbers
+368,tcp,requires,timers
+368,tcp,runs_on,ip
+368,tcp,sends,segment
+368,tcp,supports,full-duplex
+374,tcp,controls,send rate
+374,tcp,has_part,congestion avoidance
+374,tcp,has_part,congestion control mechanism
+374,tcp,has_part,connection state
+374,tcp,has_part,fast recovery
+374,tcp,has_part,receive buffer
+374,tcp,has_part,send buffer
+374,tcp,has_part,slow start
+374,tcp,has_part,tcp state
+374,tcp,has_part,window behavior
+374,tcp,implements,aimd
+374,tcp,implements,aimd algorithm
+374,tcp,implements,congestion avoidance
+374,tcp,implements,congestion control
+374,tcp,implements,demultiplexing
+374,tcp,implements,fast recovery
+374,tcp,implements,fast retransmit
+374,tcp,implements,reliable data transfer service
+374,tcp,implements,retransmit mechanism
+374,tcp,implements,slow start
+374,tcp,implements,three-way handshake
+374,tcp,is_a,transport-layer protocol
+374,tcp,operates_at,transport layer
+374,tcp,provides,congestion control
+374,tcp,provides,cumulative acknowledgments
+374,tcp,provides,error detection
+374,tcp,provides,flow control
+374,tcp,provides,flow control service
+374,tcp,provides,full-duplex service
+374,tcp,provides,point-to-point
+374,tcp,provides,reliable connection-oriented service
+374,tcp,provides,reliable data transfer
+374,tcp,provides,retransmissions
+374,tcp,provides,round-trip time estimation
+374,tcp,provides,timers
+374,tcp,receives,ack
+374,tcp,requires,acknowledgments
+374,tcp,requires,checksum
+374,tcp,requires,flow control
+374,tcp,requires,sequence numbers
+374,tcp,requires,timers
+374,tcp,runs_on,ip
+374,tcp,sends,segment
+374,tcp,supports,full-duplex
+376,sample rtt,measures,round-trip time
+378,gbn,requires,sequence number
+378,tcp,controls,send rate
+378,tcp,has_part,congestion avoidance
+378,tcp,has_part,congestion control mechanism
+378,tcp,has_part,connection state
+378,tcp,has_part,fast recovery
+378,tcp,has_part,receive buffer
+378,tcp,has_part,send buffer
+378,tcp,has_part,slow start
+378,tcp,has_part,tcp state
+378,tcp,has_part,window behavior
+378,tcp,implements,aimd
+378,tcp,implements,aimd algorithm
+378,tcp,implements,congestion avoidance
+378,tcp,implements,congestion control
+378,tcp,implements,demultiplexing
+378,tcp,implements,fast recovery
+378,tcp,implements,fast retransmit
+378,tcp,implements,reliable data transfer service
+378,tcp,implements,retransmit mechanism
+378,tcp,implements,slow start
+378,tcp,implements,three-way handshake
+378,tcp,is_a,transport-layer protocol
+378,tcp,operates_at,transport layer
+378,tcp,provides,congestion control
+378,tcp,provides,cumulative acknowledgments
+378,tcp,provides,error detection
+378,tcp,provides,flow control
+378,tcp,provides,flow control service
+378,tcp,provides,full-duplex service
+378,tcp,provides,point-to-point
+378,tcp,provides,reliable connection-oriented service
+378,tcp,provides,reliable data transfer
+378,tcp,provides,retransmissions
+378,tcp,provides,round-trip time estimation
+378,tcp,provides,timers
+378,tcp,receives,ack
+378,tcp,requires,acknowledgments
+378,tcp,requires,checksum
+378,tcp,requires,flow control
+378,tcp,requires,sequence numbers
+378,tcp,requires,timers
+378,tcp,runs_on,ip
+378,tcp,sends,segment
+378,tcp,supports,full-duplex
+380,tcp reno,implements,aimd
+380,tcp reno,implements,fast recovery
+381,triple duplicate ack,causes,multiplicative decrease
+381,timeout,causes,multiplicative decrease
+382,tcp reno,implements,aimd
+382,tcp reno,implements,fast recovery
+382,congestion window,controls,send rate
+382,congestion window,controls,unacknowledged data
+382,triple duplicate ack,causes,multiplicative decrease
+382,timeout,causes,multiplicative decrease
+383,multiplicative decrease,decreases,congestion window
+383,tcp,controls,send rate
+383,tcp,has_part,congestion avoidance
+383,tcp,has_part,congestion control mechanism
+383,tcp,has_part,connection state
+383,tcp,has_part,fast recovery
+383,tcp,has_part,receive buffer
+383,tcp,has_part,send buffer
+383,tcp,has_part,slow start
+383,tcp,has_part,tcp state
+383,tcp,has_part,window behavior
+383,tcp,implements,aimd
+383,tcp,implements,aimd algorithm
+383,tcp,implements,congestion avoidance
+383,tcp,implements,congestion control
+383,tcp,implements,demultiplexing
+383,tcp,implements,fast recovery
+383,tcp,implements,fast retransmit
+383,tcp,implements,reliable data transfer service
+383,tcp,implements,retransmit mechanism
+383,tcp,implements,slow start
+383,tcp,implements,three-way handshake
+383,tcp,is_a,transport-layer protocol
+383,tcp,operates_at,transport layer
+383,tcp,provides,congestion control
+383,tcp,provides,cumulative acknowledgments
+383,tcp,provides,error detection
+383,tcp,provides,flow control
+383,tcp,provides,flow control service
+383,tcp,provides,full-duplex service
+383,tcp,provides,point-to-point
+383,tcp,provides,reliable connection-oriented service
+383,tcp,provides,reliable data transfer
+383,tcp,provides,retransmissions
+383,tcp,provides,round-trip time estimation
+383,tcp,provides,timers
+383,tcp,receives,ack
+383,tcp,requires,acknowledgments
+383,tcp,requires,checksum
+383,tcp,requires,flow control
+383,tcp,requires,sequence numbers
+383,tcp,requires,timers
+383,tcp,runs_on,ip
+383,tcp,sends,segment
+383,tcp,supports,full-duplex
+385,tcp congestion control,controls,sending rate
+385,slow start,increases,congestion window
+385,slow start,increases,congestion window size
+385,slow start,part_of,congestion control
+386,tcp reno,implements,aimd
+386,tcp reno,implements,fast recovery
+386,tcp cubic,implements,congestion avoidance
+386,tcp cubic,increases,congestion window
+386,tcp cubic,increases,sending rate
+386,tcp cubic,provides,throughput
+387,tcp reno,implements,aimd
+387,tcp reno,implements,fast recovery
+388,congestion window,controls,send rate
+388,congestion window,controls,unacknowledged data
+390,congestion window,controls,send rate
+390,congestion window,controls,unacknowledged data
+391,additive increase,increases,congestion window
+391,multiplicative decrease,decreases,congestion window
+391,congestion window,controls,send rate
+391,congestion window,controls,unacknowledged data
+392,congestion window,controls,send rate
+392,congestion window,controls,unacknowledged data
+393,congestion window,controls,send rate
+393,congestion window,controls,unacknowledged data
+394,tcp,controls,send rate
+394,tcp,has_part,congestion avoidance
+394,tcp,has_part,congestion control mechanism
+394,tcp,has_part,connection state
+394,tcp,has_part,fast recovery
+394,tcp,has_part,receive buffer
+394,tcp,has_part,send buffer
+394,tcp,has_part,slow start
+394,tcp,has_part,tcp state
+394,tcp,has_part,window behavior
+394,tcp,implements,aimd
+394,tcp,implements,aimd algorithm
+394,tcp,implements,congestion avoidance
+394,tcp,implements,congestion control
+394,tcp,implements,demultiplexing
+394,tcp,implements,fast recovery
+394,tcp,implements,fast retransmit
+394,tcp,implements,reliable data transfer service
+394,tcp,implements,retransmit mechanism
+394,tcp,implements,slow start
+394,tcp,implements,three-way handshake
+394,tcp,is_a,transport-layer protocol
+394,tcp,operates_at,transport layer
+394,tcp,provides,congestion control
+394,tcp,provides,cumulative acknowledgments
+394,tcp,provides,error detection
+394,tcp,provides,flow control
+394,tcp,provides,flow control service
+394,tcp,provides,full-duplex service
+394,tcp,provides,point-to-point
+394,tcp,provides,reliable connection-oriented service
+394,tcp,provides,reliable data transfer
+394,tcp,provides,retransmissions
+394,tcp,provides,round-trip time estimation
+394,tcp,provides,timers
+394,tcp,receives,ack
+394,tcp,requires,acknowledgments
+394,tcp,requires,checksum
+394,tcp,requires,flow control
+394,tcp,requires,sequence numbers
+394,tcp,requires,timers
+394,tcp,runs_on,ip
+394,tcp,sends,segment
+394,tcp,supports,full-duplex
+394,additive increase,increases,congestion window
+395,tcp,controls,send rate
+395,tcp,has_part,congestion avoidance
+395,tcp,has_part,congestion control mechanism
+395,tcp,has_part,connection state
+395,tcp,has_part,fast recovery
+395,tcp,has_part,receive buffer
+395,tcp,has_part,send buffer
+395,tcp,has_part,slow start
+395,tcp,has_part,tcp state
+395,tcp,has_part,window behavior
+395,tcp,implements,aimd
+395,tcp,implements,aimd algorithm
+395,tcp,implements,congestion avoidance
+395,tcp,implements,congestion control
+395,tcp,implements,demultiplexing
+395,tcp,implements,fast recovery
+395,tcp,implements,fast retransmit
+395,tcp,implements,reliable data transfer service
+395,tcp,implements,retransmit mechanism
+395,tcp,implements,slow start
+395,tcp,implements,three-way handshake
+395,tcp,is_a,transport-layer protocol
+395,tcp,operates_at,transport layer
+395,tcp,provides,congestion control
+395,tcp,provides,cumulative acknowledgments
+395,tcp,provides,error detection
+395,tcp,provides,flow control
+395,tcp,provides,flow control service
+395,tcp,provides,full-duplex service
+395,tcp,provides,point-to-point
+395,tcp,provides,reliable connection-oriented service
+395,tcp,provides,reliable data transfer
+395,tcp,provides,retransmissions
+395,tcp,provides,round-trip time estimation
+395,tcp,provides,timers
+395,tcp,receives,ack
+395,tcp,requires,acknowledgments
+395,tcp,requires,checksum
+395,tcp,requires,flow control
+395,tcp,requires,sequence numbers
+395,tcp,requires,timers
+395,tcp,runs_on,ip
+395,tcp,sends,segment
+395,tcp,supports,full-duplex
+395,congestion window,controls,send rate
+395,congestion window,controls,unacknowledged data
+395,loss rate,measures,packet loss
+396,tcp,controls,send rate
+396,tcp,has_part,congestion avoidance
+396,tcp,has_part,congestion control mechanism
+396,tcp,has_part,connection state
+396,tcp,has_part,fast recovery
+396,tcp,has_part,receive buffer
+396,tcp,has_part,send buffer
+396,tcp,has_part,slow start
+396,tcp,has_part,tcp state
+396,tcp,has_part,window behavior
+396,tcp,implements,aimd
+396,tcp,implements,aimd algorithm
+396,tcp,implements,congestion avoidance
+396,tcp,implements,congestion control
+396,tcp,implements,demultiplexing
+396,tcp,implements,fast recovery
+396,tcp,implements,fast retransmit
+396,tcp,implements,reliable data transfer service
+396,tcp,implements,retransmit mechanism
+396,tcp,implements,slow start
+396,tcp,implements,three-way handshake
+396,tcp,is_a,transport-layer protocol
+396,tcp,operates_at,transport layer
+396,tcp,provides,congestion control
+396,tcp,provides,cumulative acknowledgments
+396,tcp,provides,error detection
+396,tcp,provides,flow control
+396,tcp,provides,flow control service
+396,tcp,provides,full-duplex service
+396,tcp,provides,point-to-point
+396,tcp,provides,reliable connection-oriented service
+396,tcp,provides,reliable data transfer
+396,tcp,provides,retransmissions
+396,tcp,provides,round-trip time estimation
+396,tcp,provides,timers
+396,tcp,receives,ack
+396,tcp,requires,acknowledgments
+396,tcp,requires,checksum
+396,tcp,requires,flow control
+396,tcp,requires,sequence numbers
+396,tcp,requires,timers
+396,tcp,runs_on,ip
+396,tcp,sends,segment
+396,tcp,supports,full-duplex
+397,udp,implements,checksum calculation
+397,udp,implements,demultiplexing
+397,udp,operates_at,transport layer
+397,udp,provides,error checking
+397,udp,provides,error detection
+397,udp,provides,process-to-process data delivery
+397,udp,provides,unreliable connectionless service
+397,udp,requires,checksum
+397,udp,supports,multimedia applications
+397,tcp,controls,send rate
+397,tcp,has_part,congestion avoidance
+397,tcp,has_part,congestion control mechanism
+397,tcp,has_part,connection state
+397,tcp,has_part,fast recovery
+397,tcp,has_part,receive buffer
+397,tcp,has_part,send buffer
+397,tcp,has_part,slow start
+397,tcp,has_part,tcp state
+397,tcp,has_part,window behavior
+397,tcp,implements,aimd
+397,tcp,implements,aimd algorithm
+397,tcp,implements,congestion avoidance
+397,tcp,implements,congestion control
+397,tcp,implements,demultiplexing
+397,tcp,implements,fast recovery
+397,tcp,implements,fast retransmit
+397,tcp,implements,reliable data transfer service
+397,tcp,implements,retransmit mechanism
+397,tcp,implements,slow start
+397,tcp,implements,three-way handshake
+397,tcp,is_a,transport-layer protocol
+397,tcp,operates_at,transport layer
+397,tcp,provides,congestion control
+397,tcp,provides,cumulative acknowledgments
+397,tcp,provides,error detection
+397,tcp,provides,flow control
+397,tcp,provides,flow control service
+397,tcp,provides,full-duplex service
+397,tcp,provides,point-to-point
+397,tcp,provides,reliable connection-oriented service
+397,tcp,provides,reliable data transfer
+397,tcp,provides,retransmissions
+397,tcp,provides,round-trip time estimation
+397,tcp,provides,timers
+397,tcp,receives,ack
+397,tcp,requires,acknowledgments
+397,tcp,requires,checksum
+397,tcp,requires,flow control
+397,tcp,requires,sequence numbers
+397,tcp,requires,timers
+397,tcp,runs_on,ip
+397,tcp,sends,segment
+397,tcp,supports,full-duplex
+398,ack,increases,congestion window size
+398,ack,is_a,positive acknowledgment
+399,tcp connection establishment,increases,end-to-end delay
+400,reliable data transfer protocol,has_part,sender
+400,reliable data transfer protocol,implements,finite-state machine
+400,reliable data transfer protocol,requires,positive acknowledgment
+400,reliable data transfer protocol,requires,unreliable channel
+403,udp,implements,checksum calculation
+403,udp,implements,demultiplexing
+403,udp,operates_at,transport layer
+403,udp,provides,error checking
+403,udp,provides,error detection
+403,udp,provides,process-to-process data delivery
+403,udp,provides,unreliable connectionless service
+403,udp,requires,checksum
+403,udp,supports,multimedia applications
+403,packet loss,increases,end-to-end delay
+403,congestion control,controls,transmission rate
+403,congestion control,decreases,transmission rate
+403,congestion control,requires,congestion window
+403,congestion control,supports,delay-based approach

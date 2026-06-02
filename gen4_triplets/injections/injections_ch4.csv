@@ -1,0 +1,1276 @@
+id,head,relation_type,tail
+0,transport layer,provides,process-to-process communication
+0,network layer,contains,data plane
+0,network layer,has_part,data plane
+0,network layer,implements,forwarding
+0,network layer,implements,routing
+0,network layer,provides,best-effort service
+0,network layer,provides,network service model
+0,network layer,provides,network-layer service model
+0,network layer,receives,datagram
+0,network layer,sends,datagram
+1,network layer,contains,data plane
+1,network layer,has_part,data plane
+1,network layer,implements,forwarding
+1,network layer,implements,routing
+1,network layer,provides,best-effort service
+1,network layer,provides,network service model
+1,network layer,provides,network-layer service model
+1,network layer,receives,datagram
+1,network layer,sends,datagram
+1,data plane,implements,forwarding
+1,control plane,controls,routing
+1,control plane,implements,routing
+1,router,decreases,time-to-live
+1,router,forwards,ip datagram
+1,router,forwards,packet
+1,router,has_part,forwarding table
+1,router,has_part,input port
+1,router,has_part,interface
+1,router,has_part,line card
+1,router,has_part,output port
+1,router,has_part,packet queue
+1,router,has_part,queue
+1,router,has_part,routing processor
+1,router,has_part,switching fabric
+1,router,implements,dhcp relay agent
+1,router,implements,forwarding
+1,router,implements,ip forwarding
+1,router,implements,longest prefix matching
+1,router,implements,longest prefix matching rule
+1,router,operates_at,network layer
+1,router,receives,ip datagram
+1,router,receives,packet
+1,router,requires,forwarding table
+1,router,sends,packet too big icmp error message
+1,host,contains,application layer
+1,host,contains,transport layer
+1,host,has_part,network layer
+1,host,receives,datagram
+1,host,receives,segment
+1,host,sends,datagram
+1,host,sends,ip datagram
+1,host,sends,segment
+2,data plane,implements,forwarding
+2,ipv4,operates_at,network layer
+2,ipv6,enables,anycast address
+2,ipv6,has_part,destination address
+2,ipv6,has_part,flow label
+2,ipv6,has_part,hop limit
+2,ipv6,has_part,next header
+2,ipv6,has_part,payload length
+2,ipv6,has_part,source address
+2,ipv6,has_part,traffic class
+2,ipv6,has_part,version
+2,ipv6,operates_at,network layer
+2,ipv6,prevents,fragmentation
+2,ipv6,prevents,ip fragmentation
+2,ipv6,provides,flow labeling
+4,data plane,implements,forwarding
+4,control plane,controls,routing
+4,control plane,implements,routing
+4,network layer,contains,data plane
+4,network layer,has_part,data plane
+4,network layer,implements,forwarding
+4,network layer,implements,routing
+4,network layer,provides,best-effort service
+4,network layer,provides,network service model
+4,network layer,provides,network-layer service model
+4,network layer,receives,datagram
+4,network layer,sends,datagram
+5,network layer,contains,data plane
+5,network layer,has_part,data plane
+5,network layer,implements,forwarding
+5,network layer,implements,routing
+5,network layer,provides,best-effort service
+5,network layer,provides,network service model
+5,network layer,provides,network-layer service model
+5,network layer,receives,datagram
+5,network layer,sends,datagram
+5,transport layer,provides,process-to-process communication
+6,router,decreases,time-to-live
+6,router,forwards,ip datagram
+6,router,forwards,packet
+6,router,has_part,forwarding table
+6,router,has_part,input port
+6,router,has_part,interface
+6,router,has_part,line card
+6,router,has_part,output port
+6,router,has_part,packet queue
+6,router,has_part,queue
+6,router,has_part,routing processor
+6,router,has_part,switching fabric
+6,router,implements,dhcp relay agent
+6,router,implements,forwarding
+6,router,implements,ip forwarding
+6,router,implements,longest prefix matching
+6,router,implements,longest prefix matching rule
+6,router,operates_at,network layer
+6,router,receives,ip datagram
+6,router,receives,packet
+6,router,requires,forwarding table
+6,router,sends,packet too big icmp error message
+6,network layer,contains,data plane
+6,network layer,has_part,data plane
+6,network layer,implements,forwarding
+6,network layer,implements,routing
+6,network layer,provides,best-effort service
+6,network layer,provides,network service model
+6,network layer,provides,network-layer service model
+6,network layer,receives,datagram
+6,network layer,sends,datagram
+7,forwarding,operates_at,network layer
+7,packet,contains,destination address
+7,data plane,implements,forwarding
+8,routing algorithm,manages,forwarding table
+8,packet,contains,destination address
+9,forwarding,operates_at,network layer
+9,control plane,controls,routing
+9,control plane,implements,routing
+9,network layer,contains,data plane
+9,network layer,has_part,data plane
+9,network layer,implements,forwarding
+9,network layer,implements,routing
+9,network layer,provides,best-effort service
+9,network layer,provides,network service model
+9,network layer,provides,network-layer service model
+9,network layer,receives,datagram
+9,network layer,sends,datagram
+11,router,decreases,time-to-live
+11,router,forwards,ip datagram
+11,router,forwards,packet
+11,router,has_part,forwarding table
+11,router,has_part,input port
+11,router,has_part,interface
+11,router,has_part,line card
+11,router,has_part,output port
+11,router,has_part,packet queue
+11,router,has_part,queue
+11,router,has_part,routing processor
+11,router,has_part,switching fabric
+11,router,implements,dhcp relay agent
+11,router,implements,forwarding
+11,router,implements,ip forwarding
+11,router,implements,longest prefix matching
+11,router,implements,longest prefix matching rule
+11,router,operates_at,network layer
+11,router,receives,ip datagram
+11,router,receives,packet
+11,router,requires,forwarding table
+11,router,sends,packet too big icmp error message
+11,forwarding table,contains,prefix
+11,forwarding table,maps_to,output port
+11,forwarding table,part_of,router
+12,network layer,contains,data plane
+12,network layer,has_part,data plane
+12,network layer,implements,forwarding
+12,network layer,implements,routing
+12,network layer,provides,best-effort service
+12,network layer,provides,network service model
+12,network layer,provides,network-layer service model
+12,network layer,receives,datagram
+12,network layer,sends,datagram
+13,control plane,controls,routing
+13,control plane,implements,routing
+13,routing algorithm,manages,forwarding table
+13,routing messages,contains,routing information
+14,routing protocol,enables,routing messages
+16,remote controller,provides,forwarding table
+16,data plane,implements,forwarding
+17,remote controller,provides,forwarding table
+18,network layer,contains,data plane
+18,network layer,has_part,data plane
+18,network layer,implements,forwarding
+18,network layer,implements,routing
+18,network layer,provides,best-effort service
+18,network layer,provides,network service model
+18,network layer,provides,network-layer service model
+18,network layer,receives,datagram
+18,network layer,sends,datagram
+18,transport layer,provides,process-to-process communication
+21,network layer,contains,data plane
+21,network layer,has_part,data plane
+21,network layer,implements,forwarding
+21,network layer,implements,routing
+21,network layer,provides,best-effort service
+21,network layer,provides,network service model
+21,network layer,provides,network-layer service model
+21,network layer,receives,datagram
+21,network layer,sends,datagram
+22,atm network architecture,provides,guaranteed delivery with bounded delay
+22,atm network architecture,provides,guaranteed minimal bandwidth
+22,atm network architecture,provides,in-order packet delivery
+23,intserv architecture,provides,congestion-free communication
+23,intserv architecture,provides,guaranteed delivery with bounded delay
+24,router,decreases,time-to-live
+24,router,forwards,ip datagram
+24,router,forwards,packet
+24,router,has_part,forwarding table
+24,router,has_part,input port
+24,router,has_part,interface
+24,router,has_part,line card
+24,router,has_part,output port
+24,router,has_part,packet queue
+24,router,has_part,queue
+24,router,has_part,routing processor
+24,router,has_part,switching fabric
+24,router,implements,dhcp relay agent
+24,router,implements,forwarding
+24,router,implements,ip forwarding
+24,router,implements,longest prefix matching
+24,router,implements,longest prefix matching rule
+24,router,operates_at,network layer
+24,router,receives,ip datagram
+24,router,receives,packet
+24,router,requires,forwarding table
+24,router,sends,packet too big icmp error message
+24,ipv4,operates_at,network layer
+24,ipv6,enables,anycast address
+24,ipv6,has_part,destination address
+24,ipv6,has_part,flow label
+24,ipv6,has_part,hop limit
+24,ipv6,has_part,next header
+24,ipv6,has_part,payload length
+24,ipv6,has_part,source address
+24,ipv6,has_part,traffic class
+24,ipv6,has_part,version
+24,ipv6,operates_at,network layer
+24,ipv6,prevents,fragmentation
+24,ipv6,prevents,ip fragmentation
+24,ipv6,provides,flow labeling
+26,packet switch,has_part,flow table
+29,input port,connects_to,crossbar switch
+29,input port,connects_to,switch fabric
+29,input port,connects_to,switching fabric
+29,input port,has_part,queue
+29,input port,part_of,router
+29,input port,requires,forwarding table
+29,input port,supports,link layer
+30,forwarding table,contains,prefix
+30,forwarding table,maps_to,output port
+30,forwarding table,part_of,router
+30,switching fabric,connects_to,input port
+30,switching fabric,connects_to,output port
+30,switching fabric,part_of,router
+30,input port,connects_to,crossbar switch
+30,input port,connects_to,switch fabric
+30,input port,connects_to,switching fabric
+30,input port,has_part,queue
+30,input port,part_of,router
+30,input port,requires,forwarding table
+30,input port,supports,link layer
+30,routing processor,communicates_with,remote controller
+30,routing processor,part_of,router
+30,routing processor,receives,control packet
+30,routing processor,requires,routing protocol
+30,routing protocol,enables,routing messages
+31,switching fabric,connects_to,input port
+31,switching fabric,connects_to,output port
+31,switching fabric,part_of,router
+32,output port,connects_to,crossbar switch
+32,output port,connects_to,output link
+32,output port,connects_to,switch fabric
+32,output port,connects_to,switching fabric
+32,output port,forwards,packet
+32,output port,has_part,queue
+32,output port,part_of,router
+32,output port,receives,packet
+32,output port,sends,packet
+32,input port,connects_to,crossbar switch
+32,input port,connects_to,switch fabric
+32,input port,connects_to,switching fabric
+32,input port,has_part,queue
+32,input port,part_of,router
+32,input port,requires,forwarding table
+32,input port,supports,link layer
+32,line card,contains,input port
+32,line card,contains,output port
+32,line card,part_of,router
+32,routing processor,communicates_with,remote controller
+32,routing processor,part_of,router
+32,routing processor,receives,control packet
+32,routing processor,requires,routing protocol
+32,forwarding table,contains,prefix
+32,forwarding table,maps_to,output port
+32,forwarding table,part_of,router
+33,remote controller,provides,forwarding table
+33,routing processor,communicates_with,remote controller
+33,routing processor,part_of,router
+33,routing processor,receives,control packet
+33,routing processor,requires,routing protocol
+33,switching fabric,connects_to,input port
+33,switching fabric,connects_to,output port
+33,switching fabric,part_of,router
+34,line card,contains,input port
+34,line card,contains,output port
+34,line card,part_of,router
+34,data plane,implements,forwarding
+35,routing processor,communicates_with,remote controller
+35,routing processor,part_of,router
+35,routing processor,receives,control packet
+35,routing processor,requires,routing protocol
+38,input port,connects_to,crossbar switch
+38,input port,connects_to,switch fabric
+38,input port,connects_to,switching fabric
+38,input port,has_part,queue
+38,input port,part_of,router
+38,input port,requires,forwarding table
+38,input port,supports,link layer
+38,switch fabric,forwards,packet
+38,output port,connects_to,crossbar switch
+38,output port,connects_to,output link
+38,output port,connects_to,switch fabric
+38,output port,connects_to,switching fabric
+38,output port,forwards,packet
+38,output port,has_part,queue
+38,output port,part_of,router
+38,output port,receives,packet
+38,output port,sends,packet
+40,router,decreases,time-to-live
+40,router,forwards,ip datagram
+40,router,forwards,packet
+40,router,has_part,forwarding table
+40,router,has_part,input port
+40,router,has_part,interface
+40,router,has_part,line card
+40,router,has_part,output port
+40,router,has_part,packet queue
+40,router,has_part,queue
+40,router,has_part,routing processor
+40,router,has_part,switching fabric
+40,router,implements,dhcp relay agent
+40,router,implements,forwarding
+40,router,implements,ip forwarding
+40,router,implements,longest prefix matching
+40,router,implements,longest prefix matching rule
+40,router,operates_at,network layer
+40,router,receives,ip datagram
+40,router,receives,packet
+40,router,requires,forwarding table
+40,router,sends,packet too big icmp error message
+40,switch,connects_to,interface
+40,switch,forwards,frame
+40,switch,forwards,packet
+40,switch,has_part,flow table
+40,switch,has_part,forwarding table
+40,switch,has_part,input port
+40,switch,has_part,output port
+40,switch,has_part,switch fabric
+41,input port,connects_to,crossbar switch
+41,input port,connects_to,switch fabric
+41,input port,connects_to,switching fabric
+41,input port,has_part,queue
+41,input port,part_of,router
+41,input port,requires,forwarding table
+41,input port,supports,link layer
+41,forwarding table,contains,prefix
+41,forwarding table,maps_to,output port
+41,forwarding table,part_of,router
+41,routing processor,communicates_with,remote controller
+41,routing processor,part_of,router
+41,routing processor,receives,control packet
+41,routing processor,requires,routing protocol
+41,output port,connects_to,crossbar switch
+41,output port,connects_to,output link
+41,output port,connects_to,switch fabric
+41,output port,connects_to,switching fabric
+41,output port,forwards,packet
+41,output port,has_part,queue
+41,output port,part_of,router
+41,output port,receives,packet
+41,output port,sends,packet
+41,switching fabric,connects_to,input port
+41,switching fabric,connects_to,output port
+41,switching fabric,part_of,router
+42,routing protocol,enables,routing messages
+42,routing processor,communicates_with,remote controller
+42,routing processor,part_of,router
+42,routing processor,receives,control packet
+42,routing processor,requires,routing protocol
+43,output port,connects_to,crossbar switch
+43,output port,connects_to,output link
+43,output port,connects_to,switch fabric
+43,output port,connects_to,switching fabric
+43,output port,forwards,packet
+43,output port,has_part,queue
+43,output port,part_of,router
+43,output port,receives,packet
+43,output port,sends,packet
+43,forwarding table,contains,prefix
+43,forwarding table,maps_to,output port
+43,forwarding table,part_of,router
+43,router,decreases,time-to-live
+43,router,forwards,ip datagram
+43,router,forwards,packet
+43,router,has_part,forwarding table
+43,router,has_part,input port
+43,router,has_part,interface
+43,router,has_part,line card
+43,router,has_part,output port
+43,router,has_part,packet queue
+43,router,has_part,queue
+43,router,has_part,routing processor
+43,router,has_part,switching fabric
+43,router,implements,dhcp relay agent
+43,router,implements,forwarding
+43,router,implements,ip forwarding
+43,router,implements,longest prefix matching
+43,router,implements,longest prefix matching rule
+43,router,operates_at,network layer
+43,router,receives,ip datagram
+43,router,receives,packet
+43,router,requires,forwarding table
+43,router,sends,packet too big icmp error message
+44,forwarding table,contains,prefix
+44,forwarding table,maps_to,output port
+44,forwarding table,part_of,router
+45,router,decreases,time-to-live
+45,router,forwards,ip datagram
+45,router,forwards,packet
+45,router,has_part,forwarding table
+45,router,has_part,input port
+45,router,has_part,interface
+45,router,has_part,line card
+45,router,has_part,output port
+45,router,has_part,packet queue
+45,router,has_part,queue
+45,router,has_part,routing processor
+45,router,has_part,switching fabric
+45,router,implements,dhcp relay agent
+45,router,implements,forwarding
+45,router,implements,ip forwarding
+45,router,implements,longest prefix matching
+45,router,implements,longest prefix matching rule
+45,router,operates_at,network layer
+45,router,receives,ip datagram
+45,router,receives,packet
+45,router,requires,forwarding table
+45,router,sends,packet too big icmp error message
+46,forwarding table,contains,prefix
+46,forwarding table,maps_to,output port
+46,forwarding table,part_of,router
+48,switching fabric,connects_to,input port
+48,switching fabric,connects_to,output port
+48,switching fabric,part_of,router
+49,ip datagram,contains,icmp
+49,ip datagram,contains,tcp segment
+49,ip datagram,contains,udp segment
+50,input port,connects_to,crossbar switch
+50,input port,connects_to,switch fabric
+50,input port,connects_to,switching fabric
+50,input port,has_part,queue
+50,input port,part_of,router
+50,input port,requires,forwarding table
+50,input port,supports,link layer
+50,switching fabric,connects_to,input port
+50,switching fabric,connects_to,output port
+50,switching fabric,part_of,router
+50,output port,connects_to,crossbar switch
+50,output port,connects_to,output link
+50,output port,connects_to,switch fabric
+50,output port,connects_to,switching fabric
+50,output port,forwards,packet
+50,output port,has_part,queue
+50,output port,part_of,router
+50,output port,receives,packet
+50,output port,sends,packet
+52,switching fabric,connects_to,input port
+52,switching fabric,connects_to,output port
+52,switching fabric,part_of,router
+52,router,decreases,time-to-live
+52,router,forwards,ip datagram
+52,router,forwards,packet
+52,router,has_part,forwarding table
+52,router,has_part,input port
+52,router,has_part,interface
+52,router,has_part,line card
+52,router,has_part,output port
+52,router,has_part,packet queue
+52,router,has_part,queue
+52,router,has_part,routing processor
+52,router,has_part,switching fabric
+52,router,implements,dhcp relay agent
+52,router,implements,forwarding
+52,router,implements,ip forwarding
+52,router,implements,longest prefix matching
+52,router,implements,longest prefix matching rule
+52,router,operates_at,network layer
+52,router,receives,ip datagram
+52,router,receives,packet
+52,router,requires,forwarding table
+52,router,sends,packet too big icmp error message
+52,input port,connects_to,crossbar switch
+52,input port,connects_to,switch fabric
+52,input port,connects_to,switching fabric
+52,input port,has_part,queue
+52,input port,part_of,router
+52,input port,requires,forwarding table
+52,input port,supports,link layer
+52,output port,connects_to,crossbar switch
+52,output port,connects_to,output link
+52,output port,connects_to,switch fabric
+52,output port,connects_to,switching fabric
+52,output port,forwards,packet
+52,output port,has_part,queue
+52,output port,part_of,router
+52,output port,receives,packet
+52,output port,sends,packet
+52,routing processor,communicates_with,remote controller
+52,routing processor,part_of,router
+52,routing processor,receives,control packet
+52,routing processor,requires,routing protocol
+53,routing processor,communicates_with,remote controller
+53,routing processor,part_of,router
+53,routing processor,receives,control packet
+53,routing processor,requires,routing protocol
+53,forwarding table,contains,prefix
+53,forwarding table,maps_to,output port
+53,forwarding table,part_of,router
+53,forwarding throughput,is_a,throughput
+54,line card,contains,input port
+54,line card,contains,output port
+54,line card,part_of,router
+55,shared bus,connects_to,output port
+56,input port,connects_to,crossbar switch
+56,input port,connects_to,switch fabric
+56,input port,connects_to,switching fabric
+56,input port,has_part,queue
+56,input port,part_of,router
+56,input port,requires,forwarding table
+56,input port,supports,link layer
+57,crossbar switch,has_part,crosspoint
+58,crosspoint,part_of,crossbar switch
+58,switching fabric,connects_to,input port
+58,switching fabric,connects_to,output port
+58,switching fabric,part_of,router
+60,crossbar switch,has_part,crosspoint
+60,switching fabric,connects_to,input port
+60,switching fabric,connects_to,output port
+60,switching fabric,part_of,router
+61,input port,connects_to,crossbar switch
+61,input port,connects_to,switch fabric
+61,input port,connects_to,switching fabric
+61,input port,has_part,queue
+61,input port,part_of,router
+61,input port,requires,forwarding table
+61,input port,supports,link layer
+61,output port,connects_to,crossbar switch
+61,output port,connects_to,output link
+61,output port,connects_to,switch fabric
+61,output port,connects_to,switching fabric
+61,output port,forwards,packet
+61,output port,has_part,queue
+61,output port,part_of,router
+61,output port,receives,packet
+61,output port,sends,packet
+65,crossbar switching fabric,forwards,packet
+65,output port,connects_to,crossbar switch
+65,output port,connects_to,output link
+65,output port,connects_to,switch fabric
+65,output port,connects_to,switching fabric
+65,output port,forwards,packet
+65,output port,has_part,queue
+65,output port,part_of,router
+65,output port,receives,packet
+65,output port,sends,packet
+69,output port,connects_to,crossbar switch
+69,output port,connects_to,output link
+69,output port,connects_to,switch fabric
+69,output port,connects_to,switching fabric
+69,output port,forwards,packet
+69,output port,has_part,queue
+69,output port,part_of,router
+69,output port,receives,packet
+69,output port,sends,packet
+70,switching fabric,connects_to,input port
+70,switching fabric,connects_to,output port
+70,switching fabric,part_of,router
+71,explicit congestion notification,part_of,ipv4 datagram
+72,random early detection,is_a,active queue management algorithm
+72,codel,is_a,active queue management algorithm
+73,output port,connects_to,crossbar switch
+73,output port,connects_to,output link
+73,output port,connects_to,switch fabric
+73,output port,connects_to,switching fabric
+73,output port,forwards,packet
+73,output port,has_part,queue
+73,output port,part_of,router
+73,output port,receives,packet
+73,output port,sends,packet
+73,packet queue,part_of,router
+78,buffering,increases,delay
+78,buffering,increases,end-to-end delay
+78,buffering,increases,queueing delay
+79,home router,has_part,queue
+80,home router,has_part,queue
+81,bufferbloat,increases,queuing delay
+82,aqm mechanism,mitigates,bufferbloat
+95,network layer,contains,data plane
+95,network layer,has_part,data plane
+95,network layer,implements,forwarding
+95,network layer,implements,routing
+95,network layer,provides,best-effort service
+95,network layer,provides,network service model
+95,network layer,provides,network-layer service model
+95,network layer,receives,datagram
+95,network layer,sends,datagram
+95,control plane,controls,routing
+95,control plane,implements,routing
+95,forwarding,operates_at,network layer
+96,ipv4,operates_at,network layer
+98,version number,part_of,ipv4 datagram
+98,router,decreases,time-to-live
+98,router,forwards,ip datagram
+98,router,forwards,packet
+98,router,has_part,forwarding table
+98,router,has_part,input port
+98,router,has_part,interface
+98,router,has_part,line card
+98,router,has_part,output port
+98,router,has_part,packet queue
+98,router,has_part,queue
+98,router,has_part,routing processor
+98,router,has_part,switching fabric
+98,router,implements,dhcp relay agent
+98,router,implements,forwarding
+98,router,implements,ip forwarding
+98,router,implements,longest prefix matching
+98,router,implements,longest prefix matching rule
+98,router,operates_at,network layer
+98,router,receives,ip datagram
+98,router,receives,packet
+98,router,requires,forwarding table
+98,router,sends,packet too big icmp error message
+99,header length,part_of,ipv4 datagram
+99,type of service,part_of,ipv4 datagram
+100,ipv4 header,contains,header checksum
+100,ipv4 header,contains,ttl
+100,explicit congestion notification,part_of,ipv4 datagram
+100,datagram length,part_of,ipv4 datagram
+100,ip datagram,contains,icmp
+100,ip datagram,contains,tcp segment
+100,ip datagram,contains,udp segment
+101,ip datagram,contains,icmp
+101,ip datagram,contains,tcp segment
+101,ip datagram,contains,udp segment
+101,ethernet frame,contains,ip datagram
+101,identifier,part_of,ipv4 datagram
+101,flags,part_of,ipv4 datagram
+101,fragmentation offset,part_of,ipv4 datagram
+102,ipv6,enables,anycast address
+102,ipv6,has_part,destination address
+102,ipv6,has_part,flow label
+102,ipv6,has_part,hop limit
+102,ipv6,has_part,next header
+102,ipv6,has_part,payload length
+102,ipv6,has_part,source address
+102,ipv6,has_part,traffic class
+102,ipv6,has_part,version
+102,ipv6,operates_at,network layer
+102,ipv6,prevents,fragmentation
+102,ipv6,prevents,ip fragmentation
+102,ipv6,provides,flow labeling
+103,udp,supports,checksum
+109,ipv6 header,contains,hop limit
+109,ipv6 header,contains,next header
+109,udp,supports,checksum
+110,ip datagram,contains,icmp
+110,ip datagram,contains,tcp segment
+110,ip datagram,contains,udp segment
+111,host,contains,application layer
+111,host,contains,transport layer
+111,host,has_part,network layer
+111,host,receives,datagram
+111,host,receives,segment
+111,host,sends,datagram
+111,host,sends,ip datagram
+111,host,sends,segment
+111,router,decreases,time-to-live
+111,router,forwards,ip datagram
+111,router,forwards,packet
+111,router,has_part,forwarding table
+111,router,has_part,input port
+111,router,has_part,interface
+111,router,has_part,line card
+111,router,has_part,output port
+111,router,has_part,packet queue
+111,router,has_part,queue
+111,router,has_part,routing processor
+111,router,has_part,switching fabric
+111,router,implements,dhcp relay agent
+111,router,implements,forwarding
+111,router,implements,ip forwarding
+111,router,implements,longest prefix matching
+111,router,implements,longest prefix matching rule
+111,router,operates_at,network layer
+111,router,receives,ip datagram
+111,router,receives,packet
+111,router,requires,forwarding table
+111,router,sends,packet too big icmp error message
+111,interface,part_of,subnet
+112,ip address,identifies,host
+112,router interface,part_of,subnet
+112,ip datagram,contains,icmp
+112,ip datagram,contains,tcp segment
+112,ip datagram,contains,udp segment
+113,ip address,identifies,host
+114,subnet,has_part,host interface
+116,subnet,has_part,host interface
+118,router interface,part_of,subnet
+119,broadcast link,connects_to,host
+119,broadcast link,connects_to,router
+120,subnet,has_part,host interface
+120,router,decreases,time-to-live
+120,router,forwards,ip datagram
+120,router,forwards,packet
+120,router,has_part,forwarding table
+120,router,has_part,input port
+120,router,has_part,interface
+120,router,has_part,line card
+120,router,has_part,output port
+120,router,has_part,packet queue
+120,router,has_part,queue
+120,router,has_part,routing processor
+120,router,has_part,switching fabric
+120,router,implements,dhcp relay agent
+120,router,implements,forwarding
+120,router,implements,ip forwarding
+120,router,implements,longest prefix matching
+120,router,implements,longest prefix matching rule
+120,router,operates_at,network layer
+120,router,receives,ip datagram
+120,router,receives,packet
+120,router,requires,forwarding table
+120,router,sends,packet too big icmp error message
+120,host,contains,application layer
+120,host,contains,transport layer
+120,host,has_part,network layer
+120,host,receives,datagram
+120,host,receives,segment
+120,host,sends,datagram
+120,host,sends,ip datagram
+120,host,sends,segment
+122,cidr,supports,subnet
+122,ip address,identifies,host
+123,router,decreases,time-to-live
+123,router,forwards,ip datagram
+123,router,forwards,packet
+123,router,has_part,forwarding table
+123,router,has_part,input port
+123,router,has_part,interface
+123,router,has_part,line card
+123,router,has_part,output port
+123,router,has_part,packet queue
+123,router,has_part,queue
+123,router,has_part,routing processor
+123,router,has_part,switching fabric
+123,router,implements,dhcp relay agent
+123,router,implements,forwarding
+123,router,implements,ip forwarding
+123,router,implements,longest prefix matching
+123,router,implements,longest prefix matching rule
+123,router,operates_at,network layer
+123,router,receives,ip datagram
+123,router,receives,packet
+123,router,requires,forwarding table
+123,router,sends,packet too big icmp error message
+124,forwarding table,contains,prefix
+124,forwarding table,maps_to,output port
+124,forwarding table,part_of,router
+126,classful addressing,decreases,utilization
+128,ip broadcast address,is_a,ip address
+128,subnet,has_part,host interface
+129,isp,has_part,address block
+129,isp,provides,address allocation
+129,isp,provides,address block
+131,icann,manages,dns root server
+131,icann,provides,ip address
+131,arin,part_of,address supporting organization
+131,ripe,part_of,address supporting organization
+131,apnic,part_of,address supporting organization
+131,lacnic,part_of,address supporting organization
+132,dhcp,enables,ip address
+132,dhcp,provides,default gateway
+132,dhcp,provides,ip address
+132,dhcp,provides,lease renewal
+132,dhcp,provides,subnet mask
+132,dhcp,runs_on,udp
+133,dhcp,enables,ip address
+133,dhcp,provides,default gateway
+133,dhcp,provides,ip address
+133,dhcp,provides,lease renewal
+133,dhcp,provides,subnet mask
+133,dhcp,runs_on,udp
+134,dhcp,enables,ip address
+134,dhcp,provides,default gateway
+134,dhcp,provides,ip address
+134,dhcp,provides,lease renewal
+134,dhcp,provides,subnet mask
+134,dhcp,runs_on,udp
+135,dhcp,enables,ip address
+135,dhcp,provides,default gateway
+135,dhcp,provides,ip address
+135,dhcp,provides,lease renewal
+135,dhcp,provides,subnet mask
+135,dhcp,runs_on,udp
+136,dhcp server,receives,dhcp discover message
+136,dhcp server,sends,dhcp ack
+136,dhcp server,sends,dhcp offer message
+137,dhcp discover message,part_of,udp packet
+137,ip datagram,contains,icmp
+137,ip datagram,contains,tcp segment
+137,ip datagram,contains,udp segment
+138,ip datagram,contains,icmp
+138,ip datagram,contains,tcp segment
+138,ip datagram,contains,udp segment
+138,dhcp discover message,part_of,udp packet
+139,dhcp server,receives,dhcp discover message
+139,dhcp server,sends,dhcp ack
+139,dhcp server,sends,dhcp offer message
+139,dhcp offer message,contains,ip address
+139,dhcp offer message,contains,lease time
+139,dhcp offer message,contains,network mask
+139,dhcp offer message,contains,transaction id
+148,dhcp server,receives,dhcp discover message
+148,dhcp server,sends,dhcp ack
+148,dhcp server,sends,dhcp offer message
+148,nat router,has_part,nat translation table
+148,nat router,manages,nat translation table
+148,isp,has_part,address block
+148,isp,provides,address allocation
+148,isp,provides,address block
+150,nat router,has_part,nat translation table
+150,nat router,manages,nat translation table
+151,nat router,has_part,nat translation table
+151,nat router,manages,nat translation table
+153,network layer,contains,data plane
+153,network layer,has_part,data plane
+153,network layer,implements,forwarding
+153,network layer,implements,routing
+153,network layer,provides,best-effort service
+153,network layer,provides,network service model
+153,network layer,provides,network-layer service model
+153,network layer,receives,datagram
+153,network layer,sends,datagram
+154,ipv4,operates_at,network layer
+154,ipv6,enables,anycast address
+154,ipv6,has_part,destination address
+154,ipv6,has_part,flow label
+154,ipv6,has_part,hop limit
+154,ipv6,has_part,next header
+154,ipv6,has_part,payload length
+154,ipv6,has_part,source address
+154,ipv6,has_part,traffic class
+154,ipv6,has_part,version
+154,ipv6,operates_at,network layer
+154,ipv6,prevents,fragmentation
+154,ipv6,prevents,ip fragmentation
+154,ipv6,provides,flow labeling
+157,ipv6,enables,anycast address
+157,ipv6,has_part,destination address
+157,ipv6,has_part,flow label
+157,ipv6,has_part,hop limit
+157,ipv6,has_part,next header
+157,ipv6,has_part,payload length
+157,ipv6,has_part,source address
+157,ipv6,has_part,traffic class
+157,ipv6,has_part,version
+157,ipv6,operates_at,network layer
+157,ipv6,prevents,fragmentation
+157,ipv6,prevents,ip fragmentation
+157,ipv6,provides,flow labeling
+157,ipv6 datagram,contains,data
+158,ipv6,enables,anycast address
+158,ipv6,has_part,destination address
+158,ipv6,has_part,flow label
+158,ipv6,has_part,hop limit
+158,ipv6,has_part,next header
+158,ipv6,has_part,payload length
+158,ipv6,has_part,source address
+158,ipv6,has_part,traffic class
+158,ipv6,has_part,version
+158,ipv6,operates_at,network layer
+158,ipv6,prevents,fragmentation
+158,ipv6,prevents,ip fragmentation
+158,ipv6,provides,flow labeling
+158,ip address,identifies,host
+159,ipv4,operates_at,network layer
+159,ipv6,enables,anycast address
+159,ipv6,has_part,destination address
+159,ipv6,has_part,flow label
+159,ipv6,has_part,hop limit
+159,ipv6,has_part,next header
+159,ipv6,has_part,payload length
+159,ipv6,has_part,source address
+159,ipv6,has_part,traffic class
+159,ipv6,has_part,version
+159,ipv6,operates_at,network layer
+159,ipv6,prevents,fragmentation
+159,ipv6,prevents,ip fragmentation
+159,ipv6,provides,flow labeling
+160,ipv6,enables,anycast address
+160,ipv6,has_part,destination address
+160,ipv6,has_part,flow label
+160,ipv6,has_part,hop limit
+160,ipv6,has_part,next header
+160,ipv6,has_part,payload length
+160,ipv6,has_part,source address
+160,ipv6,has_part,traffic class
+160,ipv6,has_part,version
+160,ipv6,operates_at,network layer
+160,ipv6,prevents,fragmentation
+160,ipv6,prevents,ip fragmentation
+160,ipv6,provides,flow labeling
+161,ipv6 datagram,contains,data
+161,traffic class,part_of,ipv6
+162,payload length,part_of,ipv6
+162,next header,identifies,tcp
+162,next header,part_of,ipv6
+163,ipv4 header,contains,header checksum
+163,ipv4 header,contains,ttl
+163,udp,supports,checksum
+164,ipv6,enables,anycast address
+164,ipv6,has_part,destination address
+164,ipv6,has_part,flow label
+164,ipv6,has_part,hop limit
+164,ipv6,has_part,next header
+164,ipv6,has_part,payload length
+164,ipv6,has_part,source address
+164,ipv6,has_part,traffic class
+164,ipv6,has_part,version
+164,ipv6,operates_at,network layer
+164,ipv6,prevents,fragmentation
+164,ipv6,prevents,ip fragmentation
+164,ipv6,provides,flow labeling
+164,ipv4,operates_at,network layer
+165,ipv6,enables,anycast address
+165,ipv6,has_part,destination address
+165,ipv6,has_part,flow label
+165,ipv6,has_part,hop limit
+165,ipv6,has_part,next header
+165,ipv6,has_part,payload length
+165,ipv6,has_part,source address
+165,ipv6,has_part,traffic class
+165,ipv6,has_part,version
+165,ipv6,operates_at,network layer
+165,ipv6,prevents,fragmentation
+165,ipv6,prevents,ip fragmentation
+165,ipv6,provides,flow labeling
+166,hop limit,part_of,ipv6
+167,next header,identifies,tcp
+167,next header,part_of,ipv6
+167,ipv6,enables,anycast address
+167,ipv6,has_part,destination address
+167,ipv6,has_part,flow label
+167,ipv6,has_part,hop limit
+167,ipv6,has_part,next header
+167,ipv6,has_part,payload length
+167,ipv6,has_part,source address
+167,ipv6,has_part,traffic class
+167,ipv6,has_part,version
+167,ipv6,operates_at,network layer
+167,ipv6,prevents,fragmentation
+167,ipv6,prevents,ip fragmentation
+167,ipv6,provides,flow labeling
+168,ipv6,enables,anycast address
+168,ipv6,has_part,destination address
+168,ipv6,has_part,flow label
+168,ipv6,has_part,hop limit
+168,ipv6,has_part,next header
+168,ipv6,has_part,payload length
+168,ipv6,has_part,source address
+168,ipv6,has_part,traffic class
+168,ipv6,has_part,version
+168,ipv6,operates_at,network layer
+168,ipv6,prevents,fragmentation
+168,ipv6,prevents,ip fragmentation
+168,ipv6,provides,flow labeling
+168,ipv4,operates_at,network layer
+171,ipv6 node,forwards,ipv6 datagram
+172,ipv6 datagram,contains,data
+173,ipv6,enables,anycast address
+173,ipv6,has_part,destination address
+173,ipv6,has_part,flow label
+173,ipv6,has_part,hop limit
+173,ipv6,has_part,next header
+173,ipv6,has_part,payload length
+173,ipv6,has_part,source address
+173,ipv6,has_part,traffic class
+173,ipv6,has_part,version
+173,ipv6,operates_at,network layer
+173,ipv6,prevents,fragmentation
+173,ipv6,prevents,ip fragmentation
+173,ipv6,provides,flow labeling
+174,ipv6,enables,anycast address
+174,ipv6,has_part,destination address
+174,ipv6,has_part,flow label
+174,ipv6,has_part,hop limit
+174,ipv6,has_part,next header
+174,ipv6,has_part,payload length
+174,ipv6,has_part,source address
+174,ipv6,has_part,traffic class
+174,ipv6,has_part,version
+174,ipv6,operates_at,network layer
+174,ipv6,prevents,fragmentation
+174,ipv6,prevents,ip fragmentation
+174,ipv6,provides,flow labeling
+175,ipv6,enables,anycast address
+175,ipv6,has_part,destination address
+175,ipv6,has_part,flow label
+175,ipv6,has_part,hop limit
+175,ipv6,has_part,next header
+175,ipv6,has_part,payload length
+175,ipv6,has_part,source address
+175,ipv6,has_part,traffic class
+175,ipv6,has_part,version
+175,ipv6,operates_at,network layer
+175,ipv6,prevents,fragmentation
+175,ipv6,prevents,ip fragmentation
+175,ipv6,provides,flow labeling
+179,remote controller,provides,forwarding table
+180,openflow,provides,match abstraction
+180,openflow,provides,match-plus-action forwarding abstraction
+181,flow table,contains,action
+181,flow table,contains,counter
+181,flow table,contains,flow table entry
+181,flow table,contains,header field
+181,flow table,contains,ip destination address
+181,flow table,contains,ip source address
+181,flow table,contains,ip type of service field
+181,flow table,contains,transport destination port
+181,flow table,part_of,switch
+182,flow table,contains,action
+182,flow table,contains,counter
+182,flow table,contains,flow table entry
+182,flow table,contains,header field
+182,flow table,contains,ip destination address
+182,flow table,contains,ip source address
+182,flow table,contains,ip type of service field
+182,flow table,contains,transport destination port
+182,flow table,part_of,switch
+182,remote controller,provides,forwarding table
+183,flow table entry,contains,action
+183,flow table entry,contains,counter
+183,flow table entry,contains,header field
+183,output port,connects_to,crossbar switch
+183,output port,connects_to,output link
+183,output port,connects_to,switch fabric
+183,output port,connects_to,switching fabric
+183,output port,forwards,packet
+183,output port,has_part,queue
+183,output port,part_of,router
+183,output port,receives,packet
+183,output port,sends,packet
+186,ethernet type field,identifies,ip
+187,ingress port,part_of,packet switch
+188,flow table,contains,action
+188,flow table,contains,counter
+188,flow table,contains,flow table entry
+188,flow table,contains,header field
+188,flow table,contains,ip destination address
+188,flow table,contains,ip source address
+188,flow table,contains,ip type of service field
+188,flow table,contains,transport destination port
+188,flow table,part_of,switch
+188,openflow,provides,match abstraction
+188,openflow,provides,match-plus-action forwarding abstraction
+188,ip address,identifies,host
+190,openflow,provides,match abstraction
+190,openflow,provides,match-plus-action forwarding abstraction
+190,flow table entry,contains,action
+190,flow table entry,contains,counter
+190,flow table entry,contains,header field
+191,remote controller,provides,forwarding table
+194,flow table entry,contains,action
+194,flow table entry,contains,counter
+194,flow table entry,contains,header field
+204,nat box,connects_to,host
+204,nat box,connects_to,router
+206,data plane,implements,forwarding
+207,ipv4,operates_at,network layer
+207,ipv6,enables,anycast address
+207,ipv6,has_part,destination address
+207,ipv6,has_part,flow label
+207,ipv6,has_part,hop limit
+207,ipv6,has_part,next header
+207,ipv6,has_part,payload length
+207,ipv6,has_part,source address
+207,ipv6,has_part,traffic class
+207,ipv6,has_part,version
+207,ipv6,operates_at,network layer
+207,ipv6,prevents,fragmentation
+207,ipv6,prevents,ip fragmentation
+207,ipv6,provides,flow labeling
+208,network layer,contains,data plane
+208,network layer,has_part,data plane
+208,network layer,implements,forwarding
+208,network layer,implements,routing
+208,network layer,provides,best-effort service
+208,network layer,provides,network service model
+208,network layer,provides,network-layer service model
+208,network layer,receives,datagram
+208,network layer,sends,datagram
+208,data plane,implements,forwarding
+208,control plane,controls,routing
+208,control plane,implements,routing
+208,forwarding table,contains,prefix
+208,forwarding table,maps_to,output port
+208,forwarding table,part_of,router
+208,router,decreases,time-to-live
+208,router,forwards,ip datagram
+208,router,forwards,packet
+208,router,has_part,forwarding table
+208,router,has_part,input port
+208,router,has_part,interface
+208,router,has_part,line card
+208,router,has_part,output port
+208,router,has_part,packet queue
+208,router,has_part,queue
+208,router,has_part,routing processor
+208,router,has_part,switching fabric
+208,router,implements,dhcp relay agent
+208,router,implements,forwarding
+208,router,implements,ip forwarding
+208,router,implements,longest prefix matching
+208,router,implements,longest prefix matching rule
+208,router,operates_at,network layer
+208,router,receives,ip datagram
+208,router,receives,packet
+208,router,requires,forwarding table
+208,router,sends,packet too big icmp error message
+209,input port,connects_to,crossbar switch
+209,input port,connects_to,switch fabric
+209,input port,connects_to,switching fabric
+209,input port,has_part,queue
+209,input port,part_of,router
+209,input port,requires,forwarding table
+209,input port,supports,link layer
+209,forwarding table,contains,prefix
+209,forwarding table,maps_to,output port
+209,forwarding table,part_of,router
+210,forwarding table,contains,prefix
+210,forwarding table,maps_to,output port
+210,forwarding table,part_of,router
+210,output port,connects_to,crossbar switch
+210,output port,connects_to,output link
+210,output port,connects_to,switch fabric
+210,output port,connects_to,switching fabric
+210,output port,forwards,packet
+210,output port,has_part,queue
+210,output port,part_of,router
+210,output port,receives,packet
+210,output port,sends,packet
+212,ip datagram,contains,icmp
+212,ip datagram,contains,tcp segment
+212,ip datagram,contains,udp segment
+213,ip address,identifies,host
+213,dhcp,enables,ip address
+213,dhcp,provides,default gateway
+213,dhcp,provides,ip address
+213,dhcp,provides,lease renewal
+213,dhcp,provides,subnet mask
+213,dhcp,runs_on,udp
+214,ip datagram,contains,icmp
+214,ip datagram,contains,tcp segment
+214,ip datagram,contains,udp segment
+215,ipv4,operates_at,network layer
+215,ipv6,enables,anycast address
+215,ipv6,has_part,destination address
+215,ipv6,has_part,flow label
+215,ipv6,has_part,hop limit
+215,ipv6,has_part,next header
+215,ipv6,has_part,payload length
+215,ipv6,has_part,source address
+215,ipv6,has_part,traffic class
+215,ipv6,has_part,version
+215,ipv6,operates_at,network layer
+215,ipv6,prevents,fragmentation
+215,ipv6,prevents,ip fragmentation
+215,ipv6,provides,flow labeling
+217,forwarding table,contains,prefix
+217,forwarding table,maps_to,output port
+217,forwarding table,part_of,router
+217,openflow,provides,match abstraction
+217,openflow,provides,match-plus-action forwarding abstraction
+218,switch fabric,forwards,packet
+218,shared bus,connects_to,output port
+219,crossbar,is_a,switch fabric
+219,switch fabric,forwards,packet
+220,input port,connects_to,crossbar switch
+220,input port,connects_to,switch fabric
+220,input port,connects_to,switching fabric
+220,input port,has_part,queue
+220,input port,part_of,router
+220,input port,requires,forwarding table
+220,input port,supports,link layer
+220,output port,connects_to,crossbar switch
+220,output port,connects_to,output link
+220,output port,connects_to,switch fabric
+220,output port,connects_to,switching fabric
+220,output port,forwards,packet
+220,output port,has_part,queue
+220,output port,part_of,router
+220,output port,receives,packet
+220,output port,sends,packet
+224,round robin service,supports,class 1
+226,round robin service,supports,class 1
+227,router,decreases,time-to-live
+227,router,forwards,ip datagram
+227,router,forwards,packet
+227,router,has_part,forwarding table
+227,router,has_part,input port
+227,router,has_part,interface
+227,router,has_part,line card
+227,router,has_part,output port
+227,router,has_part,packet queue
+227,router,has_part,queue
+227,router,has_part,routing processor
+227,router,has_part,switching fabric
+227,router,implements,dhcp relay agent
+227,router,implements,forwarding
+227,router,implements,ip forwarding
+227,router,implements,longest prefix matching
+227,router,implements,longest prefix matching rule
+227,router,operates_at,network layer
+227,router,receives,ip datagram
+227,router,receives,packet
+227,router,requires,forwarding table
+227,router,sends,packet too big icmp error message
+228,forwarding table,contains,prefix
+228,forwarding table,maps_to,output port
+228,forwarding table,part_of,router
+229,forwarding table,contains,prefix
+229,forwarding table,maps_to,output port
+229,forwarding table,part_of,router
+230,forwarding table,contains,prefix
+230,forwarding table,maps_to,output port
+230,forwarding table,part_of,router
+230,router,decreases,time-to-live
+230,router,forwards,ip datagram
+230,router,forwards,packet
+230,router,has_part,forwarding table
+230,router,has_part,input port
+230,router,has_part,interface
+230,router,has_part,line card
+230,router,has_part,output port
+230,router,has_part,packet queue
+230,router,has_part,queue
+230,router,has_part,routing processor
+230,router,has_part,switching fabric
+230,router,implements,dhcp relay agent
+230,router,implements,forwarding
+230,router,implements,ip forwarding
+230,router,implements,longest prefix matching
+230,router,implements,longest prefix matching rule
+230,router,operates_at,network layer
+230,router,receives,ip datagram
+230,router,receives,packet
+230,router,requires,forwarding table
+230,router,sends,packet too big icmp error message
+231,forwarding table,contains,prefix
+231,forwarding table,maps_to,output port
+231,forwarding table,part_of,router
+234,arin,part_of,address supporting organization
+241,ip datagram,contains,icmp
+241,ip datagram,contains,tcp segment
+241,ip datagram,contains,udp segment

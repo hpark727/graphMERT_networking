@@ -1,0 +1,255 @@
+head,relation_type,tail
+address block,part_of,address space
+address supporting organization,part_of,icann
+apnic,part_of,address supporting organization
+aqm mechanism,mitigates,bufferbloat
+arin,part_of,address supporting organization
+atm network architecture,provides,guaranteed delivery with bounded delay
+atm network architecture,provides,guaranteed minimal bandwidth
+atm network architecture,provides,in-order packet delivery
+base station,part_of,mobile cellular network
+broadcast link,connects_to,host
+broadcast link,connects_to,router
+buffer,causes,packet loss
+buffer,decreases,packet loss
+buffer,increases,queueing delay
+bufferbloat,increases,queuing delay
+buffering,increases,delay
+buffering,increases,end-to-end delay
+buffering,increases,queueing delay
+cidr,supports,subnet
+classful addressing,decreases,utilization
+client,receives,dhcp ack
+client,sends,dhcp discover message
+client,sends,dhcp request
+client,sends,dhcp request message
+client,sends,udp packet
+codel,is_a,active queue management algorithm
+control plane,controls,routing
+control plane,implements,routing
+controller,is_a,network component
+crossbar,is_a,switch fabric
+crossbar switch,has_part,crosspoint
+crossbar switching fabric,forwards,packet
+crosspoint,part_of,crossbar switch
+data plane,implements,forwarding
+datagram length,part_of,ipv4 datagram
+destination address,part_of,ipv6
+destination-based forwarding,has_part,match
+dhcp,enables,ip address
+dhcp,provides,default gateway
+dhcp,provides,ip address
+dhcp,provides,lease renewal
+dhcp,provides,subnet mask
+dhcp,runs_on,udp
+dhcp discover message,part_of,udp packet
+dhcp offer message,contains,ip address
+dhcp offer message,contains,lease time
+dhcp offer message,contains,network mask
+dhcp offer message,contains,transaction id
+dhcp server,receives,dhcp discover message
+dhcp server,sends,dhcp ack
+dhcp server,sends,dhcp offer message
+digital signature,requires,private key
+digital signature,requires,public key
+distributed games,operates_at,application layer
+ethernet,supports,checksum
+ethernet frame,contains,ip datagram
+ethernet type field,identifies,ip
+explicit congestion notification,part_of,ipv4 datagram
+flags,part_of,ipv4 datagram
+flow table,contains,action
+flow table,contains,counter
+flow table,contains,flow table entry
+flow table,contains,header field
+flow table,contains,ip destination address
+flow table,contains,ip source address
+flow table,contains,ip type of service field
+flow table,contains,transport destination port
+flow table,part_of,switch
+flow table entry,contains,action
+flow table entry,contains,counter
+flow table entry,contains,header field
+forwarding,operates_at,network layer
+forwarding table,contains,prefix
+forwarding table,maps_to,output port
+forwarding table,part_of,router
+forwarding throughput,is_a,throughput
+fragmentation offset,part_of,ipv4 datagram
+frame,contains,ip datagram
+frame,contains,network-layer datagram
+header length,part_of,ipv4 datagram
+home router,has_part,queue
+hop limit,part_of,ipv6
+host,contains,application layer
+host,contains,transport layer
+host,has_part,network layer
+host,receives,datagram
+host,receives,segment
+host,sends,datagram
+host,sends,ip datagram
+host,sends,segment
+host interface,part_of,subnet
+icann,manages,dns root server
+icann,provides,ip address
+identifier,part_of,ipv4 datagram
+ingress port,part_of,packet switch
+input port,connects_to,crossbar switch
+input port,connects_to,switch fabric
+input port,connects_to,switching fabric
+input port,has_part,queue
+input port,part_of,router
+input port,requires,forwarding table
+input port,supports,link layer
+input queuing delay,is_a,queuing delay
+instant messaging,operates_at,application layer
+interface,part_of,subnet
+intserv architecture,provides,congestion-free communication
+intserv architecture,provides,guaranteed delivery with bounded delay
+ip,operates_at,network layer
+ip,requires,ip address
+ip address,identifies,host
+ip broadcast address,is_a,ip address
+ip datagram,contains,icmp
+ip datagram,contains,tcp segment
+ip datagram,contains,udp segment
+ipv4,operates_at,network layer
+ipv4 header,contains,header checksum
+ipv4 header,contains,ttl
+ipv4 router,forwards,ipv4 datagram
+ipv6,enables,anycast address
+ipv6,has_part,destination address
+ipv6,has_part,flow label
+ipv6,has_part,hop limit
+ipv6,has_part,next header
+ipv6,has_part,payload length
+ipv6,has_part,source address
+ipv6,has_part,traffic class
+ipv6,has_part,version
+ipv6,operates_at,network layer
+ipv6,prevents,fragmentation
+ipv6,prevents,ip fragmentation
+ipv6,provides,flow labeling
+ipv6 datagram,contains,data
+ipv6 header,contains,hop limit
+ipv6 header,contains,next header
+ipv6 node,forwards,ipv6 datagram
+isp,has_part,address block
+isp,provides,address allocation
+isp,provides,address block
+lacnic,part_of,address supporting organization
+line card,contains,input port
+line card,contains,output port
+line card,part_of,router
+match-plus-action paradigm,has_part,action
+match-plus-action paradigm,has_part,match
+mobile cellular network,enables,tcp
+multicast protocol,operates_at,network layer
+nat box,connects_to,host
+nat box,connects_to,router
+nat router,has_part,nat translation table
+nat router,manages,nat translation table
+nat-enabled router,connects_to,home network
+network layer,contains,data plane
+network layer,has_part,data plane
+network layer,implements,forwarding
+network layer,implements,routing
+network layer,provides,best-effort service
+network layer,provides,network service model
+network layer,provides,network-layer service model
+network layer,receives,datagram
+network layer,sends,datagram
+network-layer datagram,contains,transport-layer segment
+next header,identifies,tcp
+next header,part_of,ipv6
+openflow,provides,match abstraction
+openflow,provides,match-plus-action forwarding abstraction
+output port,connects_to,crossbar switch
+output port,connects_to,output link
+output port,connects_to,switch fabric
+output port,connects_to,switching fabric
+output port,forwards,packet
+output port,has_part,queue
+output port,part_of,router
+output port,receives,packet
+output port,sends,packet
+packet,contains,destination address
+packet queue,part_of,router
+packet switch,has_part,flow table
+payload length,part_of,ipv6
+per-hop buffer,decreases,packet loss
+per-hop buffer,increases,end-to-end delay
+pie,is_a,active queue management algorithm
+port,part_of,switch
+queue,part_of,output port
+random early detection,is_a,active queue management algorithm
+receiving host,receives,packet
+regional internet registry,manages,ip address
+remote controller,provides,forwarding table
+remote game server,receives,tcp segment
+resource reservation protocol,operates_at,network layer
+ripe,part_of,address supporting organization
+round robin service,supports,class 1
+router,decreases,time-to-live
+router,forwards,ip datagram
+router,forwards,packet
+router,has_part,forwarding table
+router,has_part,input port
+router,has_part,interface
+router,has_part,line card
+router,has_part,output port
+router,has_part,packet queue
+router,has_part,queue
+router,has_part,routing processor
+router,has_part,switching fabric
+router,implements,dhcp relay agent
+router,implements,forwarding
+router,implements,ip forwarding
+router,implements,longest prefix matching
+router,implements,longest prefix matching rule
+router,operates_at,network layer
+router,receives,ip datagram
+router,receives,packet
+router,requires,forwarding table
+router,sends,packet too big icmp error message
+router interface,part_of,subnet
+routing algorithm,manages,forwarding table
+routing messages,contains,routing information
+routing processor,communicates_with,remote controller
+routing processor,part_of,router
+routing processor,receives,control packet
+routing processor,requires,routing protocol
+routing protocol,enables,routing messages
+sender,receives,packet too big icmp error message
+sender,sends,ipv6 datagram
+sending host,sends,packet
+server,sends,dhcp ack
+shared bus,connects_to,output port
+social media,operates_at,application layer
+software-defined networking,provides,control plane service
+source address,part_of,ipv6
+streaming media,operates_at,application layer
+subnet,has_part,host interface
+subnet portion,part_of,ip address
+switch,connects_to,interface
+switch,forwards,frame
+switch,forwards,packet
+switch,has_part,flow table
+switch,has_part,forwarding table
+switch,has_part,input port
+switch,has_part,output port
+switch,has_part,switch fabric
+switch fabric,forwards,packet
+switching fabric,connects_to,input port
+switching fabric,connects_to,output port
+switching fabric,part_of,router
+tls,operates_at,application layer
+tls,runs_on,tcp
+traffic class,part_of,ipv6
+transport layer,provides,process-to-process communication
+type of service,part_of,ipv4 datagram
+udp,supports,checksum
+version,part_of,ipv6
+version number,part_of,ipv4 datagram
+web,operates_at,application layer
+wfq,provides,throughput
