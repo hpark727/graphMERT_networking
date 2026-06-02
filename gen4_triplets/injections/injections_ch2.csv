@@ -1,6 +1,5 @@
 id,head,relation_type,tail
 3,dns,has_part,dns server
-3,dns,maps_to,ip address
 3,dns,operates_at,application layer
 3,dns,provides,directory service
 3,dns,provides,host aliasing
@@ -18,7 +17,6 @@ id,head,relation_type,tail
 5,browser,communicates_with,web server
 5,browser,connects_to,web cache
 5,browser,is_a,client
-5,browser,manages,cookie file
 5,browser,receives,http response
 5,browser,sends,cookie
 5,browser,sends,cookie header line
@@ -54,7 +52,6 @@ id,head,relation_type,tail
 17,browser,communicates_with,web server
 17,browser,connects_to,web cache
 17,browser,is_a,client
-17,browser,manages,cookie file
 17,browser,receives,http response
 17,browser,sends,cookie
 17,browser,sends,cookie header line
@@ -75,7 +72,6 @@ id,head,relation_type,tail
 25,socket,connects_to,transport layer
 25,socket,part_of,host
 25,socket,sends,packet
-25,iana,manages,root dns server
 32,file transfer,runs_on,tcp
 33,internet telephony,runs_on,udp
 33,multiplayer games,requires,timing guarantees
@@ -125,7 +121,6 @@ id,head,relation_type,tail
 48,http,supports,persistent connection
 48,http,supports,pipelining
 49,dns,has_part,dns server
-49,dns,maps_to,ip address
 49,dns,operates_at,application layer
 49,dns,provides,directory service
 49,dns,provides,host aliasing
@@ -220,7 +215,6 @@ id,head,relation_type,tail
 86,browser,communicates_with,web server
 86,browser,connects_to,web cache
 86,browser,is_a,client
-86,browser,manages,cookie file
 86,browser,receives,http response
 86,browser,sends,cookie
 86,browser,sends,cookie header line
@@ -244,15 +238,9 @@ id,head,relation_type,tail
 93,hotmail,implements,email service
 94,web cache,communicates_with,origin web server
 94,web cache,connects_to,origin web server
-94,web cache,decreases,response time
-94,web cache,decreases,traffic intensity
-94,web cache,decreases,web traffic
 94,web cache,is_a,proxy server
 95,web cache,communicates_with,origin web server
 95,web cache,connects_to,origin web server
-95,web cache,decreases,response time
-95,web cache,decreases,traffic intensity
-95,web cache,decreases,web traffic
 95,web cache,is_a,proxy server
 95,http request,contains,cookie header line
 95,origin server,receives,http request
@@ -261,15 +249,9 @@ id,head,relation_type,tail
 96,origin server,sends,http response
 96,web cache,communicates_with,origin web server
 96,web cache,connects_to,origin web server
-96,web cache,decreases,response time
-96,web cache,decreases,traffic intensity
-96,web cache,decreases,web traffic
 96,web cache,is_a,proxy server
 97,web cache,communicates_with,origin web server
 97,web cache,connects_to,origin web server
-97,web cache,decreases,response time
-97,web cache,decreases,traffic intensity
-97,web cache,decreases,web traffic
 97,web cache,is_a,proxy server
 97,isp,provides,ip address
 97,isp,provides,web cache
@@ -277,14 +259,10 @@ id,head,relation_type,tail
 98,origin server,sends,http response
 98,web cache,communicates_with,origin web server
 98,web cache,connects_to,origin web server
-98,web cache,decreases,response time
-98,web cache,decreases,traffic intensity
-98,web cache,decreases,web traffic
 98,web cache,is_a,proxy server
 99,router,forwards,packet
 99,router,has_part,buffer
 99,router,operates_at,network layer
-99,router,routes_to,host
 99,institutional network,connects_to,internet
 99,institutional network,has_part,cache
 100,http request,contains,cookie header line
@@ -294,17 +272,11 @@ id,head,relation_type,tail
 101,internet router,receives,ip datagram
 103,web cache,communicates_with,origin web server
 103,web cache,connects_to,origin web server
-103,web cache,decreases,response time
-103,web cache,decreases,traffic intensity
-103,web cache,decreases,web traffic
 103,web cache,is_a,proxy server
 103,institutional network,connects_to,internet
 103,institutional network,has_part,cache
 105,web cache,communicates_with,origin web server
 105,web cache,connects_to,origin web server
-105,web cache,decreases,response time
-105,web cache,decreases,traffic intensity
-105,web cache,decreases,web traffic
 105,web cache,is_a,proxy server
 107,http,enables,cookie
 107,http,enables,streaming
@@ -443,7 +415,6 @@ id,head,relation_type,tail
 147,http,supports,pipelining
 147,imap,provides,email service
 149,hostname,identifies,host
-149,hostname,maps_to,ip address
 150,ip address,identifies,host
 150,ip address,identifies,server
 150,ip address,identifies,web server
@@ -473,9 +444,7 @@ id,head,relation_type,tail
 154,dns server,sends,dns reply message
 154,dns server,sends,ip address
 154,dns server,supports,recursion
-155,alias hostname,maps_to,canonical hostname
 155,dns,has_part,dns server
-155,dns,maps_to,ip address
 155,dns,operates_at,application layer
 155,dns,provides,directory service
 155,dns,provides,host aliasing
@@ -483,9 +452,7 @@ id,head,relation_type,tail
 155,dns,provides,load distribution
 155,dns,provides,mail server aliasing
 155,dns,runs_on,udp
-157,mx record,maps_to,canonical hostname
 158,dns,has_part,dns server
-158,dns,maps_to,ip address
 158,dns,operates_at,application layer
 158,dns,provides,directory service
 158,dns,provides,host aliasing
@@ -495,7 +462,6 @@ id,head,relation_type,tail
 158,dns,runs_on,udp
 158,dns rotation,provides,load distribution
 158,dns query,contains,hostname
-158,alias hostname,maps_to,canonical hostname
 158,http,enables,cookie
 158,http,enables,streaming
 158,http,operates_at,application layer
@@ -504,7 +470,6 @@ id,head,relation_type,tail
 158,http,supports,persistent connection
 158,http,supports,pipelining
 159,dns,has_part,dns server
-159,dns,maps_to,ip address
 159,dns,operates_at,application layer
 159,dns,provides,directory service
 159,dns,provides,host aliasing
@@ -513,7 +478,6 @@ id,head,relation_type,tail
 159,dns,provides,mail server aliasing
 159,dns,runs_on,udp
 160,dns,has_part,dns server
-160,dns,maps_to,ip address
 160,dns,operates_at,application layer
 160,dns,provides,directory service
 160,dns,provides,host aliasing
@@ -605,7 +569,6 @@ id,head,relation_type,tail
 173,authoritative dns server,has_part,dns record
 173,authoritative dns server,part_of,hierarchical architecture
 173,authoritative dns server,provides,ip address
-173,dns caching,decreases,delay
 174,intermediate dns server,communicates_with,authoritative dns server
 174,authoritative dns server,has_part,dns record
 174,authoritative dns server,part_of,hierarchical architecture
@@ -623,9 +586,7 @@ id,head,relation_type,tail
 175,authoritative dns server,has_part,dns record
 175,authoritative dns server,part_of,hierarchical architecture
 175,authoritative dns server,provides,ip address
-176,dns caching,decreases,delay
 176,dns query,contains,hostname
-177,dns caching,decreases,delay
 177,dns server,communicates_with,dns client
 177,dns server,contains,mapping
 177,dns server,forwards,dns query
@@ -639,7 +600,6 @@ id,head,relation_type,tail
 177,dns server,sends,ip address
 177,dns server,supports,recursion
 177,hostname,identifies,host
-177,hostname,maps_to,ip address
 177,ip address,identifies,host
 177,ip address,identifies,server
 177,ip address,identifies,web server
@@ -668,8 +628,6 @@ id,head,relation_type,tail
 179,local dns server,forwards,tld server
 179,local dns server,receives,dns query
 179,local dns server,sends,dns response
-182,cname record,maps_to,canonical hostname
-182,mx record,maps_to,canonical hostname
 185,authoritative flag,identifies,authoritative server
 187,answer section,contains,resource record
 188,dns query,contains,hostname
@@ -741,7 +699,6 @@ id,head,relation_type,tail
 198,bittorrent,provides,file distribution
 198,bittorrent,implements,p2p architecture
 199,server,communicates_with,client
-199,server,controls,timeout interval
 199,server,has_part,storage
 199,server,implements,http
 199,server,is_a,host
@@ -758,7 +715,6 @@ id,head,relation_type,tail
 199,server,sends,tcp segment
 199,server,sends,udp packet
 201,server,communicates_with,client
-201,server,controls,timeout interval
 201,server,has_part,storage
 201,server,implements,http
 201,server,is_a,host
@@ -782,7 +738,6 @@ id,head,relation_type,tail
 203,peer,sends,chunk
 203,peer,sends,file
 203,server,communicates_with,client
-203,server,controls,timeout interval
 203,server,has_part,storage
 203,server,implements,http
 203,server,is_a,host
@@ -799,7 +754,6 @@ id,head,relation_type,tail
 203,server,sends,tcp segment
 203,server,sends,udp packet
 205,server,communicates_with,client
-205,server,controls,timeout interval
 205,server,has_part,storage
 205,server,implements,http
 205,server,is_a,host
@@ -847,7 +801,6 @@ id,head,relation_type,tail
 238,browser,communicates_with,web server
 238,browser,connects_to,web cache
 238,browser,is_a,client
-238,browser,manages,cookie file
 238,browser,receives,http response
 238,browser,sends,cookie
 238,browser,sends,cookie header line
@@ -856,7 +809,6 @@ id,head,relation_type,tail
 238,url,has_part,hostname
 238,url,has_part,path name
 239,dns,has_part,dns server
-239,dns,maps_to,ip address
 239,dns,operates_at,application layer
 239,dns,provides,directory service
 239,dns,provides,host aliasing
@@ -946,8 +898,6 @@ id,head,relation_type,tail
 271,client,has_part,buffer
 271,client,implements,http
 271,client,implements,rate determination algorithm
-271,client,measures,rtt
-271,client,measures,throughput
 271,client,receives,header line
 271,client,receives,http response
 271,client,receives,ip address
@@ -962,7 +912,6 @@ id,head,relation_type,tail
 271,client,sends,tcp segment
 271,client,sends,udp packet
 271,server,communicates_with,client
-271,server,controls,timeout interval
 271,server,has_part,storage
 271,server,implements,http
 271,server,is_a,host
@@ -991,8 +940,6 @@ id,head,relation_type,tail
 272,client,has_part,buffer
 272,client,implements,http
 272,client,implements,rate determination algorithm
-272,client,measures,rtt
-272,client,measures,throughput
 272,client,receives,header line
 272,client,receives,http response
 272,client,receives,ip address
@@ -1007,7 +954,6 @@ id,head,relation_type,tail
 272,client,sends,tcp segment
 272,client,sends,udp packet
 272,server,communicates_with,client
-272,server,controls,timeout interval
 272,server,has_part,storage
 272,server,implements,http
 272,server,is_a,host
@@ -1024,7 +970,6 @@ id,head,relation_type,tail
 272,server,sends,tcp segment
 272,server,sends,udp packet
 273,hostname,identifies,host
-273,hostname,maps_to,ip address
 273,ip address,identifies,host
 273,ip address,identifies,server
 273,ip address,identifies,web server
@@ -1067,7 +1012,6 @@ id,head,relation_type,tail
 297,smtp,provides,email service
 297,smtp,runs_on,tcp
 297,dns,has_part,dns server
-297,dns,maps_to,ip address
 297,dns,operates_at,application layer
 297,dns,provides,directory service
 297,dns,provides,host aliasing
@@ -1088,7 +1032,6 @@ id,head,relation_type,tail
 299,smtp,provides,email service
 299,smtp,runs_on,tcp
 299,dns,has_part,dns server
-299,dns,maps_to,ip address
 299,dns,operates_at,application layer
 299,dns,provides,directory service
 299,dns,provides,host aliasing
@@ -1202,14 +1145,12 @@ id,head,relation_type,tail
 336,browser,communicates_with,web server
 336,browser,connects_to,web cache
 336,browser,is_a,client
-336,browser,manages,cookie file
 336,browser,receives,http response
 336,browser,sends,cookie
 336,browser,sends,cookie header line
 336,browser,sends,header line
 336,browser,sends,http request
 338,dns,has_part,dns server
-338,dns,maps_to,ip address
 338,dns,operates_at,application layer
 338,dns,provides,directory service
 338,dns,provides,host aliasing

@@ -5,7 +5,6 @@ access isp,connects_to,regional isp
 access isp,connects_to,tier-1 isp
 access isp,part_of,network of networks
 access network,connects_to,host
-access network,controls,throughput
 access point,connects_to,ethernet switch
 application layer,has_part,dns
 application layer,has_part,ftp
@@ -38,7 +37,6 @@ ddos attack,is_a,dos attack
 dedicated end-to-end connection,provides,transmission rate
 dedicated end-to-end connection,requires,circuit
 destination end system,receives,packet
-dns,maps_to,ip address
 dns server,is_a,server
 docsis,provides,reliable delivery
 dsl,requires,telephone line
@@ -58,7 +56,6 @@ ethernet,has_part,copper wire
 ethernet,operates_at,data link layer
 ethernet switch,connects_to,edge router
 fiber optics,connects_to,cable head end
-forwarding table,maps_to,outbound link
 forwarding table,part_of,router
 frequency division multiplexing,has_part,frequency band
 frequency-division multiplexing,supports,frequency spectrum
@@ -109,8 +106,6 @@ network layer,forwards,datagram
 network layer,receives,transport-layer segment
 network layer,requires,ip
 network layer,requires,link layer
-network security,mitigates,denial-of-service attack
-network security,mitigates,distributed denial-of-service attack
 network-layer datagram,has_part,network-layer header information
 network-layer header information,contains,end system address
 network interface card,supports,data link layer
@@ -163,7 +158,6 @@ router,has_part,buffer
 router,has_part,forwarding table
 router,has_part,output buffer
 router,is_a,packet switch
-router,mitigates,ddos attack
 router,part_of,point of presence
 router,receives,packet
 router,receives,special packet

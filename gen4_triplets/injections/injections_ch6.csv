@@ -22,7 +22,6 @@ id,head,relation_type,tail
 1,switch,operates_at,data link layer
 1,switch,operates_at,layer 2
 1,switch,operates_at,link layer
-1,switch,prevents,collision
 1,switch,provides,store-and-forward
 1,switch,receives,frame
 1,switch,receives,link-layer frame
@@ -137,14 +136,8 @@ id,head,relation_type,tail
 41,ethernet,supports,broadcast channel
 41,ethernet,supports,broadcast link
 46,collision,causes,packet loss
-46,collision,decreases,bandwidth
 46,multiple access protocol,supports,broadcast channel
-50,tdm,prevents,collision
-51,tdm,prevents,collision
-52,tdm,prevents,collision
-53,fdm,prevents,collision
 53,fdm,supports,broadcast channel
-53,tdm,prevents,collision
 54,cdma,supports,broadcast channel
 55,cdma,supports,broadcast channel
 57,csma,is_a,random access protocol
@@ -195,16 +188,13 @@ id,head,relation_type,tail
 88,aloha,is_a,random access protocol
 91,token,is_a,frame
 92,token,is_a,frame
-94,fdm,prevents,collision
 94,fdm,supports,broadcast channel
 95,upstream channel,contains,mini-slot
 95,cmts,receives,mini-slot-request frame
 95,cmts,sends,map message
 96,cmts,receives,mini-slot-request frame
 96,cmts,sends,map message
-99,fdm,prevents,collision
 99,fdm,supports,broadcast channel
-99,tdm,prevents,collision
 99,switched local network,contains,switch
 99,link layer,has_part,hardware
 99,link layer,has_part,software
@@ -229,7 +219,6 @@ id,head,relation_type,tail
 107,mac address,identifies,adapter
 107,ip address,identifies,host
 107,ip address,identifies,router
-107,ip address,maps_to,mac address
 108,mac address,identifies,adapter
 109,ethernet,has_part,csma/cd
 109,ethernet,implements,binary exponential backoff algorithm
@@ -254,7 +243,6 @@ id,head,relation_type,tail
 111,switch,operates_at,data link layer
 111,switch,operates_at,layer 2
 111,switch,operates_at,link layer
-111,switch,prevents,collision
 111,switch,provides,store-and-forward
 111,switch,receives,frame
 111,switch,receives,link-layer frame
@@ -296,7 +284,6 @@ id,head,relation_type,tail
 122,router,sends,frame
 123,ip address,identifies,host
 123,ip address,identifies,router
-123,ip address,maps_to,mac address
 123,adapter,connects_to,broadcast channel
 123,adapter,has_part,buffer
 123,adapter,has_part,mac address
@@ -322,7 +309,6 @@ id,head,relation_type,tail
 125,adapter,sends,frame
 126,mac address,identifies,adapter
 127,arp,identifies,mac address
-127,arp,maps_to,mac address
 127,arp,operates_at,link layer
 127,mac address,identifies,adapter
 128,router,connects_to,hub
@@ -352,7 +338,6 @@ id,head,relation_type,tail
 128,adapter,sends,ethernet frame
 128,adapter,sends,frame
 129,arp,identifies,mac address
-129,arp,maps_to,mac address
 129,arp,operates_at,link layer
 129,ethernet,has_part,csma/cd
 129,ethernet,implements,binary exponential backoff algorithm
@@ -381,7 +366,6 @@ id,head,relation_type,tail
 134,hub,operates_at,physical layer
 134,hub,receives,ethernet frame
 134,collision,causes,packet loss
-134,collision,decreases,bandwidth
 134,switch,connects_to,interface
 134,switch,connects_to,lan segment
 134,switch,connects_to,router
@@ -398,7 +382,6 @@ id,head,relation_type,tail
 134,switch,operates_at,data link layer
 134,switch,operates_at,layer 2
 134,switch,operates_at,link layer
-134,switch,prevents,collision
 134,switch,provides,store-and-forward
 134,switch,receives,frame
 134,switch,receives,link-layer frame
@@ -427,8 +410,6 @@ id,head,relation_type,tail
 138,ethernet frame,has_part,data field
 138,mac address,identifies,adapter
 139,mac address,identifies,adapter
-139,type field,maps_to,appletalk
-139,type field,maps_to,novell ipx
 139,ethernet,has_part,csma/cd
 139,ethernet,implements,binary exponential backoff algorithm
 139,ethernet,implements,csma/cd
@@ -479,7 +460,6 @@ id,head,relation_type,tail
 151,switch,operates_at,data link layer
 151,switch,operates_at,layer 2
 151,switch,operates_at,link layer
-151,switch,prevents,collision
 151,switch,provides,store-and-forward
 151,switch,receives,frame
 151,switch,receives,link-layer frame
@@ -502,7 +482,6 @@ id,head,relation_type,tail
 157,switch,operates_at,data link layer
 157,switch,operates_at,layer 2
 157,switch,operates_at,link layer
-157,switch,prevents,collision
 157,switch,provides,store-and-forward
 157,switch,receives,frame
 157,switch,receives,link-layer frame
@@ -534,7 +513,6 @@ id,head,relation_type,tail
 158,switch,operates_at,data link layer
 158,switch,operates_at,layer 2
 158,switch,operates_at,link layer
-158,switch,prevents,collision
 158,switch,provides,store-and-forward
 158,switch,receives,frame
 158,switch,receives,link-layer frame
@@ -567,7 +545,6 @@ id,head,relation_type,tail
 168,switch,operates_at,data link layer
 168,switch,operates_at,layer 2
 168,switch,operates_at,link layer
-168,switch,prevents,collision
 168,switch,provides,store-and-forward
 168,switch,receives,frame
 168,switch,receives,link-layer frame
@@ -575,7 +552,6 @@ id,head,relation_type,tail
 177,ip,operates_at,network layer
 177,ip,requires,internet checksum
 181,arp,identifies,mac address
-181,arp,maps_to,mac address
 181,arp,operates_at,link layer
 182,router,connects_to,hub
 182,router,connects_to,switch
@@ -647,7 +623,6 @@ id,head,relation_type,tail
 232,tor switch,connects_to,server
 232,tor switch,connects_to,tier-2 switch
 235,control plane,enables,operational state management
-235,control plane,manages,data plane
 238,tcp,requires,internet checksum
 238,rdma,runs_on,ethernet
 242,link layer,has_part,hardware
@@ -706,7 +681,6 @@ id,head,relation_type,tail
 252,switch,operates_at,data link layer
 252,switch,operates_at,layer 2
 252,switch,operates_at,link layer
-252,switch,prevents,collision
 252,switch,provides,store-and-forward
 252,switch,receives,frame
 252,switch,receives,link-layer frame
@@ -717,7 +691,6 @@ id,head,relation_type,tail
 256,ethernet frame,contains,vlan tag
 256,ethernet frame,has_part,data field
 256,gateway router,forwards,ip datagram
-256,gateway router,manages,forwarding table
 256,gateway router,receives,ethernet frame
 256,gateway router,sends,ethernet frame
 256,link layer,has_part,hardware
@@ -748,13 +721,11 @@ id,head,relation_type,tail
 257,switch,operates_at,data link layer
 257,switch,operates_at,layer 2
 257,switch,operates_at,link layer
-257,switch,prevents,collision
 257,switch,provides,store-and-forward
 257,switch,receives,frame
 257,switch,receives,link-layer frame
 257,switch,supports,vlan
 257,gateway router,forwards,ip datagram
-257,gateway router,manages,forwarding table
 257,gateway router,receives,ethernet frame
 257,gateway router,sends,ethernet frame
 258,ethernet frame,contains,arp query message
@@ -778,13 +749,11 @@ id,head,relation_type,tail
 258,switch,operates_at,data link layer
 258,switch,operates_at,layer 2
 258,switch,operates_at,link layer
-258,switch,prevents,collision
 258,switch,provides,store-and-forward
 258,switch,receives,frame
 258,switch,receives,link-layer frame
 258,switch,supports,vlan
 258,gateway router,forwards,ip datagram
-258,gateway router,manages,forwarding table
 258,gateway router,receives,ethernet frame
 258,gateway router,sends,ethernet frame
 259,ethernet frame,contains,arp query message
@@ -793,7 +762,6 @@ id,head,relation_type,tail
 259,ethernet frame,contains,vlan tag
 259,ethernet frame,has_part,data field
 259,gateway router,forwards,ip datagram
-259,gateway router,manages,forwarding table
 259,gateway router,receives,ethernet frame
 259,gateway router,sends,ethernet frame
 260,switch,connects_to,interface
@@ -812,13 +780,11 @@ id,head,relation_type,tail
 260,switch,operates_at,data link layer
 260,switch,operates_at,layer 2
 260,switch,operates_at,link layer
-260,switch,prevents,collision
 260,switch,provides,store-and-forward
 260,switch,receives,frame
 260,switch,receives,link-layer frame
 260,switch,supports,vlan
 260,gateway router,forwards,ip datagram
-260,gateway router,manages,forwarding table
 260,gateway router,receives,ethernet frame
 260,gateway router,sends,ethernet frame
 260,forwarding table,contains,mac address
@@ -836,7 +802,6 @@ id,head,relation_type,tail
 265,tcp segment,contains,http get message
 265,tcp segment,contains,http response message
 265,gateway router,forwards,ip datagram
-265,gateway router,manages,forwarding table
 265,gateway router,receives,ethernet frame
 265,gateway router,sends,ethernet frame
 265,switch,connects_to,interface
@@ -855,7 +820,6 @@ id,head,relation_type,tail
 265,switch,operates_at,data link layer
 265,switch,operates_at,layer 2
 265,switch,operates_at,link layer
-265,switch,prevents,collision
 265,switch,provides,store-and-forward
 265,switch,receives,frame
 265,switch,receives,link-layer frame
@@ -878,7 +842,6 @@ id,head,relation_type,tail
 268,tcp segment,contains,http get message
 268,tcp segment,contains,http response message
 270,gateway router,forwards,ip datagram
-270,gateway router,manages,forwarding table
 270,gateway router,receives,ethernet frame
 270,gateway router,sends,ethernet frame
 272,link layer,has_part,hardware
@@ -957,7 +920,6 @@ id,head,relation_type,tail
 301,switch,operates_at,data link layer
 301,switch,operates_at,layer 2
 301,switch,operates_at,link layer
-301,switch,prevents,collision
 301,switch,provides,store-and-forward
 301,switch,receives,frame
 301,switch,receives,link-layer frame
@@ -980,11 +942,8 @@ id,head,relation_type,tail
 308,ethernet,provides,connectionless service
 308,ethernet,supports,broadcast channel
 308,ethernet,supports,broadcast link
-308,dns,maps_to,ip address
-309,dns,maps_to,ip address
 309,tcp,requires,internet checksum
 309,gateway router,forwards,ip datagram
-309,gateway router,manages,forwarding table
 309,gateway router,receives,ethernet frame
 309,gateway router,sends,ethernet frame
 309,data center network,connects_to,host

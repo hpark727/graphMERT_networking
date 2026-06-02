@@ -15,7 +15,6 @@ adapter,sends,ethernet frame
 adapter,sends,frame
 aloha,is_a,random access protocol
 arp,identifies,mac address
-arp,maps_to,mac address
 arp,operates_at,link layer
 arp packet,contains,ip address
 arp packet,contains,mac address
@@ -37,10 +36,8 @@ checksumming method,provides,error detection
 cmts,receives,mini-slot-request frame
 cmts,sends,map message
 collision,causes,packet loss
-collision,decreases,bandwidth
 column parity,part_of,error-detection bits
 control plane,enables,operational state management
-control plane,manages,data plane
 controller,receives,frame
 crc,requires,generator 1001
 crc,requires,generator 10011
@@ -60,12 +57,10 @@ data center interconnection network,has_part,switch
 data center network,connects_to,host
 data center network,has_part,border router
 data center network,has_part,switch
-dns,maps_to,ip address
 docsis,implements,binary exponential backoff algorithm
 ecmp,implements,multipath routing
 edc bits,enables,error correction
 edc bits,enables,error detection
-efficiency,measures,successful slot
 error-detection bits,part_of,link-layer frame
 ethernet,has_part,csma/cd
 ethernet,implements,binary exponential backoff algorithm
@@ -82,7 +77,6 @@ ethernet frame,has_part,data field
 even parity scheme,contains,single parity bit
 even parity scheme,provides,error detection
 fddi protocol,is_a,token-passing protocol
-fdm,prevents,collision
 fdm,supports,broadcast channel
 forward error correction,provides,error correction
 forward error correction,supports,arq
@@ -99,9 +93,7 @@ frame,has_part,cyclic redundancy check
 frame,has_part,preamble
 frame,has_part,source address
 frame,has_part,type field
-full-duplex,prevents,frame collisions
 gateway router,forwards,ip datagram
-gateway router,manages,forwarding table
 gateway router,receives,ethernet frame
 gateway router,sends,ethernet frame
 gigabit ethernet,supports,csma/cd
@@ -129,7 +121,6 @@ ip,operates_at,network layer
 ip,requires,internet checksum
 ip address,identifies,host
 ip address,identifies,router
-ip address,maps_to,mac address
 label-switched router,forwards,mpls frame
 label-switched router,is_a,router
 leftmost router,forwards,ip datagram
@@ -208,7 +199,6 @@ switch,implements,store-and-forward
 switch,operates_at,data link layer
 switch,operates_at,layer 2
 switch,operates_at,link layer
-switch,prevents,collision
 switch,provides,store-and-forward
 switch,receives,frame
 switch,receives,link-layer frame
@@ -220,7 +210,6 @@ tag control information,contains,vlan identifier
 tcp,requires,internet checksum
 tcp segment,contains,http get message
 tcp segment,contains,http response message
-tdm,prevents,collision
 tier-1 switch,connects_to,tier-2 switch
 tier-2 switch,connects_to,tier-1 switch
 tier-2 switch,connects_to,tor switch
@@ -245,8 +234,6 @@ two-dimensional parity,provides,error detection
 two-dimensional parity scheme,contains,row parity
 two-dimensional parity scheme,provides,error correction
 two-dimensional parity scheme,provides,error detection
-type field,maps_to,appletalk
-type field,maps_to,novell ipx
 udp,contains,dns query
 upstream channel,contains,mini-slot
 vlan,has_part,priority field

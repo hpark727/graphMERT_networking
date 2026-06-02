@@ -24,7 +24,6 @@ id,head,relation_type,tail
 28,router,has_part,forwarding table
 28,router,has_part,output buffer
 28,router,is_a,packet switch
-28,router,mitigates,ddos attack
 28,router,part_of,point of presence
 28,router,receives,packet
 28,router,receives,special packet
@@ -32,7 +31,6 @@ id,head,relation_type,tail
 29,web server,is_a,server
 30,web server,is_a,server
 35,access network,connects_to,host
-35,access network,controls,throughput
 36,dsl modem,connects_to,dslam
 38,dsl modem,connects_to,dslam
 40,dsl,requires,telephone line
@@ -88,7 +86,6 @@ id,head,relation_type,tail
 55,router,has_part,forwarding table
 55,router,has_part,output buffer
 55,router,is_a,packet switch
-55,router,mitigates,ddos attack
 55,router,part_of,point of presence
 55,router,receives,packet
 55,router,receives,special packet
@@ -112,7 +109,6 @@ id,head,relation_type,tail
 71,router,has_part,forwarding table
 71,router,has_part,output buffer
 71,router,is_a,packet switch
-71,router,mitigates,ddos attack
 71,router,part_of,point of presence
 71,router,receives,packet
 71,router,receives,special packet
@@ -128,7 +124,6 @@ id,head,relation_type,tail
 72,router,has_part,forwarding table
 72,router,has_part,output buffer
 72,router,is_a,packet switch
-72,router,mitigates,ddos attack
 72,router,part_of,point of presence
 72,router,receives,packet
 72,router,receives,special packet
@@ -144,7 +139,6 @@ id,head,relation_type,tail
 73,router,has_part,forwarding table
 73,router,has_part,output buffer
 73,router,is_a,packet switch
-73,router,mitigates,ddos attack
 73,router,part_of,point of presence
 73,router,receives,packet
 73,router,receives,special packet
@@ -162,7 +156,6 @@ id,head,relation_type,tail
 74,router,has_part,forwarding table
 74,router,has_part,output buffer
 74,router,is_a,packet switch
-74,router,mitigates,ddos attack
 74,router,part_of,point of presence
 74,router,receives,packet
 74,router,receives,special packet
@@ -183,7 +176,6 @@ id,head,relation_type,tail
 75,router,has_part,forwarding table
 75,router,has_part,output buffer
 75,router,is_a,packet switch
-75,router,mitigates,ddos attack
 75,router,part_of,point of presence
 75,router,receives,packet
 75,router,receives,special packet
@@ -204,7 +196,6 @@ id,head,relation_type,tail
 76,router,has_part,forwarding table
 76,router,has_part,output buffer
 76,router,is_a,packet switch
-76,router,mitigates,ddos attack
 76,router,part_of,point of presence
 76,router,receives,packet
 76,router,receives,special packet
@@ -230,7 +221,6 @@ id,head,relation_type,tail
 77,router,has_part,forwarding table
 77,router,has_part,output buffer
 77,router,is_a,packet switch
-77,router,mitigates,ddos attack
 77,router,part_of,point of presence
 77,router,receives,packet
 77,router,receives,special packet
@@ -255,7 +245,6 @@ id,head,relation_type,tail
 79,router,has_part,forwarding table
 79,router,has_part,output buffer
 79,router,is_a,packet switch
-79,router,mitigates,ddos attack
 79,router,part_of,point of presence
 79,router,receives,packet
 79,router,receives,special packet
@@ -271,7 +260,6 @@ id,head,relation_type,tail
 80,router,has_part,forwarding table
 80,router,has_part,output buffer
 80,router,is_a,packet switch
-80,router,mitigates,ddos attack
 80,router,part_of,point of presence
 80,router,receives,packet
 80,router,receives,special packet
@@ -292,7 +280,6 @@ id,head,relation_type,tail
 81,router,has_part,forwarding table
 81,router,has_part,output buffer
 81,router,is_a,packet switch
-81,router,mitigates,ddos attack
 81,router,part_of,point of presence
 81,router,receives,packet
 81,router,receives,special packet
@@ -309,12 +296,10 @@ id,head,relation_type,tail
 82,router,has_part,forwarding table
 82,router,has_part,output buffer
 82,router,is_a,packet switch
-82,router,mitigates,ddos attack
 82,router,part_of,point of presence
 82,router,receives,packet
 82,router,receives,special packet
 82,router,sends,message
-82,forwarding table,maps_to,outbound link
 82,forwarding table,part_of,router
 85,router,communicates_with,host
 85,router,connects_to,base station
@@ -327,12 +312,10 @@ id,head,relation_type,tail
 85,router,has_part,forwarding table
 85,router,has_part,output buffer
 85,router,is_a,packet switch
-85,router,mitigates,ddos attack
 85,router,part_of,point of presence
 85,router,receives,packet
 85,router,receives,special packet
 85,router,sends,message
-85,forwarding table,maps_to,outbound link
 85,forwarding table,part_of,router
 86,routing protocol,enables,forwarding table
 86,routing protocol,enables,shortest path
@@ -399,7 +382,6 @@ id,head,relation_type,tail
 117,router,has_part,forwarding table
 117,router,has_part,output buffer
 117,router,is_a,packet switch
-117,router,mitigates,ddos attack
 117,router,part_of,point of presence
 117,router,receives,packet
 117,router,receives,special packet
@@ -467,7 +449,6 @@ id,head,relation_type,tail
 135,router,has_part,forwarding table
 135,router,has_part,output buffer
 135,router,is_a,packet switch
-135,router,mitigates,ddos attack
 135,router,part_of,point of presence
 135,router,receives,packet
 135,router,receives,special packet
@@ -497,7 +478,6 @@ id,head,relation_type,tail
 139,router,has_part,forwarding table
 139,router,has_part,output buffer
 139,router,is_a,packet switch
-139,router,mitigates,ddos attack
 139,router,part_of,point of presence
 139,router,receives,packet
 139,router,receives,special packet
@@ -543,7 +523,6 @@ id,head,relation_type,tail
 151,router,has_part,forwarding table
 151,router,has_part,output buffer
 151,router,is_a,packet switch
-151,router,mitigates,ddos attack
 151,router,part_of,point of presence
 151,router,receives,packet
 151,router,receives,special packet
@@ -563,7 +542,6 @@ id,head,relation_type,tail
 159,router,has_part,forwarding table
 159,router,has_part,output buffer
 159,router,is_a,packet switch
-159,router,mitigates,ddos attack
 159,router,part_of,point of presence
 159,router,receives,packet
 159,router,receives,special packet
@@ -597,7 +575,6 @@ id,head,relation_type,tail
 165,router,has_part,forwarding table
 165,router,has_part,output buffer
 165,router,is_a,packet switch
-165,router,mitigates,ddos attack
 165,router,part_of,point of presence
 165,router,receives,packet
 165,router,receives,special packet
@@ -613,7 +590,6 @@ id,head,relation_type,tail
 166,router,has_part,forwarding table
 166,router,has_part,output buffer
 166,router,is_a,packet switch
-166,router,mitigates,ddos attack
 166,router,part_of,point of presence
 166,router,receives,packet
 166,router,receives,special packet
@@ -663,7 +639,6 @@ id,head,relation_type,tail
 170,client,connects_to,router
 170,client,is_a,host
 171,access network,connects_to,host
-171,access network,controls,throughput
 177,packet,contains,destination address
 177,packet,contains,segment
 177,packet,contains,source address
@@ -733,7 +708,6 @@ id,head,relation_type,tail
 192,router,has_part,forwarding table
 192,router,has_part,output buffer
 192,router,is_a,packet switch
-192,router,mitigates,ddos attack
 192,router,part_of,point of presence
 192,router,receives,packet
 192,router,receives,special packet
@@ -761,7 +735,6 @@ id,head,relation_type,tail
 196,router,has_part,forwarding table
 196,router,has_part,output buffer
 196,router,is_a,packet switch
-196,router,mitigates,ddos attack
 196,router,part_of,point of presence
 196,router,receives,packet
 196,router,receives,special packet
@@ -770,10 +743,6 @@ id,head,relation_type,tail
 198,transport layer,provides,reliable delivery service
 198,transport layer,requires,unreliable channel
 199,link layer,sends,link-layer frame
-203,network security,mitigates,denial-of-service attack
-203,network security,mitigates,distributed denial-of-service attack
-204,network security,mitigates,denial-of-service attack
-204,network security,mitigates,distributed denial-of-service attack
 209,connection flooding,is_a,dos attack
 212,packet sniffer,receives,packet
 214,packet sniffer,receives,packet
@@ -791,7 +760,6 @@ id,head,relation_type,tail
 228,tcp,implements,congestion control
 228,tcp,provides,congestion-control mechanism
 228,tcp,provides,reliable delivery
-232,dns,maps_to,ip address
 236,http,operates_at,application layer
 236,http,provides,web service
 236,web server,is_a,server

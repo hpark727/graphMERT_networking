@@ -297,10 +297,6 @@ id,head,relation_type,tail
 108,certificate,contains,public key
 108,certificate,identifies,server
 112,ip address,identifies,application gateway
-121,nonce,prevents,connection replay attack
-121,nonce,prevents,replay attack
-122,nonce,prevents,connection replay attack
-122,nonce,prevents,replay attack
 123,public key cryptography,provides,authentication
 123,public key cryptography,provides,digital signature
 123,public key cryptography,requires,private key
@@ -429,7 +425,6 @@ id,head,relation_type,tail
 155,hmac,supports,sha-1
 156,hash function,enables,fingerprint
 156,hash function,enables,message integrity
-157,sequence numbers,prevents,replay attack
 158,tls,provides,confidentiality
 158,tls,provides,data integrity
 158,tls,provides,end-point authentication
@@ -439,7 +434,6 @@ id,head,relation_type,tail
 158,tls,supports,block cipher
 158,hmac,provides,message authentication code
 158,hmac,supports,sha-1
-158,sequence numbers,prevents,replay attack
 159,tls,provides,confidentiality
 159,tls,provides,data integrity
 159,tls,provides,end-point authentication
@@ -449,7 +443,6 @@ id,head,relation_type,tail
 159,tls,supports,block cipher
 159,hmac,provides,message authentication code
 159,hmac,supports,sha-1
-159,sequence number,prevents,replay attack
 162,tls,provides,confidentiality
 162,tls,provides,data integrity
 162,tls,provides,end-point authentication
@@ -489,8 +482,6 @@ id,head,relation_type,tail
 168,tls,requires,session key
 168,tls,runs_on,tcp
 168,tls,supports,block cipher
-168,nonce,prevents,connection replay attack
-168,nonce,prevents,replay attack
 170,hmac,provides,message authentication code
 170,hmac,supports,sha-1
 171,ipsec,contains,transport mode
@@ -654,8 +645,6 @@ id,head,relation_type,tail
 217,authentication server,provides,shared session key
 217,authentication server,sends,nonce
 220,wpa2,requires,aes
-222,nonce,prevents,connection replay attack
-222,nonce,prevents,replay attack
 222,mobile device,communicates_with,ap
 222,mobile device,communicates_with,remote host
 222,mobile device,connects_to,access point
@@ -666,8 +655,6 @@ id,head,relation_type,tail
 222,mobile device,sends,link-level frame
 223,hmac,provides,message authentication code
 223,hmac,supports,sha-1
-223,nonce,prevents,connection replay attack
-223,nonce,prevents,replay attack
 223,authentication server,provides,authentication services
 223,authentication server,provides,shared session key
 223,authentication server,sends,nonce
@@ -707,8 +694,6 @@ id,head,relation_type,tail
 240,public key cryptography,provides,digital signature
 240,public key cryptography,requires,private key
 240,public key cryptography,requires,public key
-243,firewall,controls,malformed packet
-243,firewall,controls,packet
 243,firewall,forwards,packet
 243,firewall,has_part,connection table
 243,firewall,receives,datagram
@@ -717,8 +702,6 @@ id,head,relation_type,tail
 243,firewall,supports,port
 243,firewall,supports,tcp
 243,firewall,supports,udp
-244,firewall,controls,malformed packet
-244,firewall,controls,packet
 244,firewall,forwards,packet
 244,firewall,has_part,connection table
 244,firewall,receives,datagram
@@ -729,7 +712,6 @@ id,head,relation_type,tail
 244,firewall,supports,udp
 245,packet filter,identifies,udp
 245,packet filter,is_a,firewall
-245,packet filter,prevents,telnet
 246,application gateway,connects_to,external server
 246,application gateway,is_a,firewall
 246,application gateway,is_a,server
@@ -740,11 +722,8 @@ id,head,relation_type,tail
 246,gateway router,implements,firewall
 248,packet filter,identifies,udp
 248,packet filter,is_a,firewall
-248,packet filter,prevents,telnet
 251,router interface,has_part,access control list
 254,connection table,part_of,firewall
-255,firewall,controls,malformed packet
-255,firewall,controls,packet
 255,firewall,forwards,packet
 255,firewall,has_part,connection table
 255,firewall,receives,datagram
@@ -757,8 +736,6 @@ id,head,relation_type,tail
 256,stateful filter,has_part,access control list
 256,stateful filter,is_a,firewall
 256,connection table,part_of,firewall
-257,firewall,controls,malformed packet
-257,firewall,controls,packet
 257,firewall,forwards,packet
 257,firewall,has_part,connection table
 257,firewall,receives,datagram
@@ -774,7 +751,6 @@ id,head,relation_type,tail
 260,application gateway,supports,deep packet inspection
 260,packet filter,identifies,udp
 260,packet filter,is_a,firewall
-260,packet filter,prevents,telnet
 260,router,connects_to,isp
 260,router,forwards,ip datagram
 260,router,forwards,ipsec datagram
@@ -793,14 +769,11 @@ id,head,relation_type,tail
 261,application gateway,supports,deep packet inspection
 264,packet filter,identifies,udp
 264,packet filter,is_a,firewall
-264,packet filter,prevents,telnet
 265,packet filter,identifies,udp
 265,packet filter,is_a,firewall
-265,packet filter,prevents,telnet
 266,intrusion detection system,supports,operational security
 269,packet filter,identifies,udp
 269,packet filter,is_a,firewall
-269,packet filter,prevents,telnet
 269,application gateway,connects_to,external server
 269,application gateway,is_a,firewall
 269,application gateway,is_a,server

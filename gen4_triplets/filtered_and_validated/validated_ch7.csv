@@ -38,7 +38,6 @@ ap,receives,association request frame
 ap,receives,probe request frame
 ap,sends,association response frame
 ap,sends,probe response frame
-arp,maps_to,mac address
 base station,communicates_with,mme
 base station,communicates_with,mobile device
 base station,communicates_with,wireless host
@@ -49,11 +48,6 @@ base station,connects_to,serving gateway
 base station,enables,channel access
 base station,forwards,ip datagram
 base station,is_a,network component
-base station,manages,interference
-base station,manages,mobile device
-base station,manages,mobility
-base station,manages,wireless host
-base station,manages,wireless radio resources
 base station,operates_at,link layer
 base station,receives,ip datagram
 base station,receives,packet
@@ -89,10 +83,8 @@ data frame,contains,datagram
 embb,provides,bandwidth
 ethernet,implements,csma/cd
 ethernet frame,contains,mac address
-fading,prevents,collision detection
 foreign agent,provides,agent discovery
 foreign agent,provides,care-of-address
-forwarding table,maps_to,switch interface
 forwarding table,part_of,router
 forwarding table,part_of,switch
 frame,contains,crc
@@ -102,10 +94,8 @@ gateway router,is_a,router
 global unique identifier,identifies,mobile device
 gprs tunneling protocol,runs_on,udp
 gsm,supports,circuit switching
-handover,mitigates,congestion
 hidden terminal,causes,collision
 hidden terminal problem,causes,interference
-hidden terminal problem,prevents,collision detection
 home agent,forwards,datagram
 home gateway,forwards,datagram
 home network,communicates_with,visited network
@@ -124,22 +114,16 @@ ieee 802.11,supports,rts frame
 imsi,identifies,mobile device
 indirect routing,causes,triangle routing problem
 ip address,identifies,mobile device
-ip address,maps_to,mac address
 link layer,has_part,mac
 link layer,has_part,rlc
 lte,supports,orthogonal frequency division multiplexing
 lte-advanced,enables,aggregated channel
 mac,operates_at,link layer
-master,controls,client
 master,sends,beacon message
 master node,communicates_with,client device
 master node,receives,ack
 mme,communicates_with,hss
-mme,controls,attachment process
-mme,controls,tunnel
 mme,enables,tunnel
-mme,manages,mobile device
-mme,manages,serving gateway
 mobile device,causes,datagram loss
 mobile device,communicates_with,base station
 mobile device,communicates_with,foreign agent
@@ -167,7 +151,6 @@ mobile ip,implements,registration
 mobile ip,provides,mobility
 mobile ip,runs_on,ipv4
 mobile ip,supports,visited network
-mobility management entity,manages,mobile device
 nat,provides,ip address
 nat gateway router,forwards,datagram
 nat gateway router,provides,address translation
@@ -195,8 +178,6 @@ router,implements,distance-vector algorithm
 router interface,connects_to,subnet
 router interface,part_of,router
 rts frame,increases,delay
-rts frame,mitigates,hidden terminal
-rts/cts exchange,decreases,collision
 rts/cts exchange,enables,data frame
 rts/cts exchange,increases,delay
 serving gateway,connects_to,pdn gateway
@@ -206,7 +187,6 @@ serving gateway,sends,datagram
 signal,causes,handover
 sim card,has_part,imsi
 "single-hop, infrastructure-based network",has_part,base station
-smart antennas,decreases,interference
 smartphone,connects_to,base station
 smartphone,connects_to,wifi
 source base station,communicates_with,mobile device
@@ -220,7 +200,6 @@ station,sends,frame
 streaming server,provides,streaming
 streaming server,receives,ip datagram
 switch,has_part,forwarding table
-switch,manages,forwarding table
 switch,receives,broadcast ethernet frame
 switch,receives,ethernet frame
 tablet,connects_to,wifi
@@ -240,10 +219,8 @@ tunnel endpoint,connects_to,gateway router
 tunnel endpoint identifier,identifies,tunnel
 tunneling,supports,ipv6
 udp,operates_at,transport layer
-upper-layer mechanisms,mitigates,datagram loss
 user equipment,is_a,mobile device
 visited network,connects_to,mobile device
-visited network,routes_to,mobile device
 visited network gateway router,forwards,datagram
 visited network gateway router,provides,address translation
 visited network gateway router,receives,datagram

@@ -1,6 +1,4 @@
 head,relation_type,tail
-a record,maps_to,ip address
-alias hostname,maps_to,canonical hostname
 answer section,contains,resource record
 apache,provides,response message
 arin,provides,ip address range
@@ -19,7 +17,6 @@ browser,communicates_with,web proxy
 browser,communicates_with,web server
 browser,connects_to,web cache
 browser,is_a,client
-browser,manages,cookie file
 browser,receives,http response
 browser,sends,cookie
 browser,sends,cookie header line
@@ -38,8 +35,6 @@ client,connects_to,web cache
 client,has_part,buffer
 client,implements,http
 client,implements,rate determination algorithm
-client,measures,rtt
-client,measures,throughput
 client,receives,header line
 client,receives,http response
 client,receives,ip address
@@ -60,9 +55,6 @@ client-server architecture,has_part,server
 client-server architecture,supports,email service
 client-server architecture,supports,ftp
 client-server architecture,supports,web service
-cname record,maps_to,canonical hostname
-congestion,decreases,throughput
-congestion-control mechanism,controls,throughput
 connection-oriented service,requires,handshaking procedure
 content distribution network,connects_to,access isp
 content distribution network,has_part,server cluster
@@ -78,7 +70,6 @@ data center,provides,web-based email
 dhcp,provides,ip address
 dig,communicates_with,dns server
 dns,has_part,dns server
-dns,maps_to,ip address
 dns,operates_at,application layer
 dns,provides,directory service
 dns,provides,host aliasing
@@ -86,7 +77,6 @@ dns,provides,hostname-to-ip-address translation service
 dns,provides,load distribution
 dns,provides,mail server aliasing
 dns,runs_on,udp
-dns caching,decreases,delay
 dns client,communicates_with,authoritative dns server
 dns client,communicates_with,dns server
 dns client,communicates_with,root dns server
@@ -128,7 +118,6 @@ host,provides,content processing
 host,sends,dns query
 host header line,identifies,host
 hostname,identifies,host
-hostname,maps_to,ip address
 hotmail,implements,email service
 html file,part_of,web page
 http,enables,cookie
@@ -141,20 +130,16 @@ http,supports,pipelining
 http client,communicates_with,http server
 http request,contains,cookie header line
 http/1.1,runs_on,tcp
-http/2,decreases,latency
 http/2,enables,multiplexing
-http/2,mitigates,head of line blocking
 http/2,provides,server push
 http/2,runs_on,tcp
 http/3,runs_on,quic
-iana,manages,root dns server
 imap,provides,email service
 institutional network,connects_to,internet
 institutional network,has_part,cache
 institutional router,connects_to,internet router
 institutional router,forwards,ip datagram
 interactive real-time applications,requires,timing guarantees
-interleaving,decreases,delay
 intermediate dns server,communicates_with,authoritative dns server
 internet explorer,implements,http
 internet router,receives,ip datagram
@@ -181,7 +166,6 @@ mail server,has_part,queue
 mail server,receives,email
 mail server,receives,mail message
 multiplayer games,requires,timing guarantees
-mx record,maps_to,canonical hostname
 network cache server,sends,header line
 nslookup,communicates_with,dns server
 nslookup,enables,reconnaissance
@@ -229,9 +213,7 @@ root server,is_a,dns server
 router,forwards,packet
 router,has_part,buffer
 router,operates_at,network layer
-router,routes_to,host
 server,communicates_with,client
-server,controls,timeout interval
 server,has_part,storage
 server,implements,http
 server,is_a,host
@@ -292,15 +274,11 @@ user agent,communicates_with,mail server
 user agent,sends,email
 user agent,sends,mail message
 user-agent header line,identifies,browser
-verisign global registry services,manages,tld dns server
 web,runs_on,tcp
 web browser,communicates_with,dns
 web browser,implements,http
 web cache,communicates_with,origin web server
 web cache,connects_to,origin web server
-web cache,decreases,response time
-web cache,decreases,traffic intensity
-web cache,decreases,web traffic
 web cache,is_a,proxy server
 web page,contains,object
 web proxy,receives,http request

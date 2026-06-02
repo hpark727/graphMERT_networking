@@ -11,8 +11,6 @@ bgp,implements,hot potato routing
 bgp,implements,route-selection algorithm
 bgp,implements,routing algorithm
 bgp,requires,port 179
-bgp,routes_to,destination prefix
-bgp,routes_to,prefix
 bgp,runs_on,tcp
 buffer,causes,packet loss
 buffer,increases,end-to-end delay
@@ -25,14 +23,10 @@ client,receives,ip address
 client,sends,packet
 client host,receives,icmp echo response
 congestion,increases,delay
-control agent,manages,flow table
-control plane,controls,router
 control plane,has_part,network-control application
 control plane,has_part,sdn controller
 controller,communicates_with,control agent
-controller,manages,router
 controller,provides,forwarding table
-cost,measures,number of links traversed
 dijkstra's algorithm,enables,shortest path
 dijkstra's algorithm,provides,least-cost path
 dijkstra's algorithm,requires,link cost
@@ -43,7 +37,6 @@ distance-vector algorithm,causes,count-to-infinity problem
 distance-vector algorithm,implements,bellman-ford equation
 distance-vector algorithm,requires,link cost
 distance-vector routing algorithm,implements,bellman-ford equation
-domain name,maps_to,ip address
 ebgp connection,enables,reachability information
 ebgp connection,is_a,bgp connection
 edge,part_of,graph
@@ -52,7 +45,6 @@ flow table,has_part,flow table entry
 flow table,part_of,router
 flow table,part_of,sdn-controlled switch
 forwarding table,contains,next-hop node
-forwarding table,maps_to,interface
 forwarding table,part_of,node
 forwarding table,part_of,router
 gateway router,connects_to,router
@@ -60,7 +52,6 @@ gateway router,is_a,router
 graph,has_part,edge
 graph,has_part,node
 host,communicates_with,router
-host,measures,round-trip time
 host,receives,icmp
 host,receives,icmp port unreachable message
 host,sends,icmp echo reply
@@ -99,7 +90,6 @@ ls algorithm,provides,least-cost path
 managed device,receives,rpc
 managed device,sends,notification
 managing server,communicates_with,managed device
-managing server,controls,managed device
 managing server,receives,notification
 managing server,receives,response
 managing server,sends,request
@@ -114,14 +104,12 @@ netconf,requires,secure connection
 netconf,supports,rpc
 network layer,has_part,control plane
 network management protocol,connects_to,managed device
-network-control application,controls,data plane
 network-control application,part_of,control plane
 network-control application,provides,access control
 network-control application,provides,server load balancing
 next-hop attribute,identifies,ip address
 node,has_part,distance vector
 node,has_part,routing table
-node,manages,forwarding table
 node,part_of,graph
 node,receives,distance vector
 node,receives,link-state packet
@@ -144,11 +132,8 @@ ospf,supports,authentication
 ospf,supports,md5 authentication
 ospf,supports,simple authentication
 ospf message,contains,ospf advertisement
-ping,measures,packet loss
-ping,measures,rtt
 ping,receives,icmp echo response
 ping,sends,icmp echo request
-poisoned reverse,mitigates,count-to-infinity problem
 request,contains,mib object
 rip,implements,distance-vector algorithm
 route,has_part,as-path
@@ -184,9 +169,7 @@ router,sends,link-state information
 router,sends,link-state packet
 router,sends,packet
 routing network-control application,implements,dijkstra's algorithm
-routing policy,controls,local-preference attribute
 routing table,part_of,node
-sdn,controls,router
 sdn,implements,logically centralized control
 sdn,supports,4g/5g cellular networking
 sdn controller,communicates_with,sdn-enabled switch
@@ -194,7 +177,6 @@ sdn controller,communicates_with,sdn-controlled switch
 sdn controller,communicates_with,switch
 sdn controller,enables,unbundling
 sdn controller,implements,openflow
-sdn controller,manages,flow table
 sdn controller,part_of,control plane
 sdn controller,provides,api
 sdn controller,provides,network state information

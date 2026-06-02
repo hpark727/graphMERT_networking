@@ -145,7 +145,18 @@ def is_commercial(h: str, r: str, t: str) -> bool:
     )
 
 
-# ─── 7. Explicit near-duplicates (always remove) ────────────────────────────
+# ─── 7. Relations dropped: < 30 seed triples across all chapters ─────────────
+# Threshold set by advisor: keep all relations with ≥ 30 triples ("causes" is
+# the cutoff). Dropped: manages, controls, maps_to, decreases, prevents,
+# measures, mitigates, routes_to.
+
+_DROPPED_RELATIONS = {
+    'manages', 'controls', 'maps_to', 'decreases',
+    'prevents', 'measures', 'mitigates', 'routes_to',
+}
+
+
+# ─── 8. Explicit near-duplicates (always remove) ────────────────────────────
 
 _EXPLICIT_DUPES = {
     ('dns',              'provides',   'dns service'),        # tautological
@@ -239,6 +250,10 @@ def filter_chapter(chapter: int) -> dict:
 
         if key in _EXPLICIT_DUPES:
             removed['near_dupe'] += 1
+            continue
+
+        if r in _DROPPED_RELATIONS:
+            removed['dropped_relation'] += 1
             continue
 
         triples_out.append(key)

@@ -15,15 +15,7 @@
   "forwards": 14,
   "communicates_with": 15,
   "identifies": 16,
-  "maps_to": 17,
   "connects_to": 18,
-  "controls": 19,
   "causes": 20,
-  "increases": 21,
-  "prevents": 22,
-  "routes_to": 14,
-  "mitigates": 22,
-  "manages": 19,
-  "measures": 16,
-  "decreases": 19
+  "increases": 21
 }

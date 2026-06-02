@@ -58,8 +58,6 @@ email service,provides,sender authentication
 encryption,provides,confidentiality
 encryption algorithm,requires,key
 esp,provides,confidentiality
-firewall,controls,malformed packet
-firewall,controls,packet
 firewall,forwards,packet
 firewall,has_part,connection table
 firewall,receives,datagram
@@ -92,7 +90,6 @@ ids sensor,communicates_with,central ids processor
 ieee 802.11,operates_at,link layer
 ieee 802.11,provides,confidentiality
 ike,enables,security association
-integrity,prevents,tampering
 intrusion detection system,supports,operational security
 ip address,identifies,application gateway
 ipsec,contains,transport mode
@@ -130,12 +127,9 @@ mobility management entity,communicates_with,home subscriber service
 mobility management entity,provides,base station keys
 mobility management entity,sends,international mobile subscriber identity
 modular arithmetic,enables,rsa
-nonce,prevents,connection replay attack
-nonce,prevents,replay attack
 package,contains,encrypted symmetric key
 packet filter,identifies,udp
 packet filter,is_a,firewall
-packet filter,prevents,telnet
 pgp,provides,authentication
 pgp,provides,confidentiality
 pgp,provides,data integrity
@@ -175,9 +169,6 @@ secure e-mail system,provides,confidentiality
 secure e-mail system,provides,sender authentication
 security association,has_part,authentication key
 security association,has_part,encryption key
-sequence number,prevents,replay attack
-sequence numbers,prevents,replay attack
-sequence-number field,prevents,replay attack
 server,sends,hmac
 server,supports,tls
 sha-1,implements,hash function

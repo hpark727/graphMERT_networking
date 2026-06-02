@@ -19,9 +19,7 @@ id,head,relation_type,tail
 1,network layer,receives,datagram
 1,network layer,sends,datagram
 1,data plane,implements,forwarding
-1,control plane,controls,routing
 1,control plane,implements,routing
-1,router,decreases,time-to-live
 1,router,forwards,ip datagram
 1,router,forwards,packet
 1,router,has_part,forwarding table
@@ -63,11 +61,8 @@ id,head,relation_type,tail
 2,ipv6,has_part,traffic class
 2,ipv6,has_part,version
 2,ipv6,operates_at,network layer
-2,ipv6,prevents,fragmentation
-2,ipv6,prevents,ip fragmentation
 2,ipv6,provides,flow labeling
 4,data plane,implements,forwarding
-4,control plane,controls,routing
 4,control plane,implements,routing
 4,network layer,contains,data plane
 4,network layer,has_part,data plane
@@ -88,7 +83,6 @@ id,head,relation_type,tail
 5,network layer,receives,datagram
 5,network layer,sends,datagram
 5,transport layer,provides,process-to-process communication
-6,router,decreases,time-to-live
 6,router,forwards,ip datagram
 6,router,forwards,packet
 6,router,has_part,forwarding table
@@ -122,10 +116,8 @@ id,head,relation_type,tail
 7,forwarding,operates_at,network layer
 7,packet,contains,destination address
 7,data plane,implements,forwarding
-8,routing algorithm,manages,forwarding table
 8,packet,contains,destination address
 9,forwarding,operates_at,network layer
-9,control plane,controls,routing
 9,control plane,implements,routing
 9,network layer,contains,data plane
 9,network layer,has_part,data plane
@@ -136,7 +128,6 @@ id,head,relation_type,tail
 9,network layer,provides,network-layer service model
 9,network layer,receives,datagram
 9,network layer,sends,datagram
-11,router,decreases,time-to-live
 11,router,forwards,ip datagram
 11,router,forwards,packet
 11,router,has_part,forwarding table
@@ -159,7 +150,6 @@ id,head,relation_type,tail
 11,router,requires,forwarding table
 11,router,sends,packet too big icmp error message
 11,forwarding table,contains,prefix
-11,forwarding table,maps_to,output port
 11,forwarding table,part_of,router
 12,network layer,contains,data plane
 12,network layer,has_part,data plane
@@ -170,9 +160,7 @@ id,head,relation_type,tail
 12,network layer,provides,network-layer service model
 12,network layer,receives,datagram
 12,network layer,sends,datagram
-13,control plane,controls,routing
 13,control plane,implements,routing
-13,routing algorithm,manages,forwarding table
 13,routing messages,contains,routing information
 14,routing protocol,enables,routing messages
 16,remote controller,provides,forwarding table
@@ -202,7 +190,6 @@ id,head,relation_type,tail
 22,atm network architecture,provides,in-order packet delivery
 23,intserv architecture,provides,congestion-free communication
 23,intserv architecture,provides,guaranteed delivery with bounded delay
-24,router,decreases,time-to-live
 24,router,forwards,ip datagram
 24,router,forwards,packet
 24,router,has_part,forwarding table
@@ -235,8 +222,6 @@ id,head,relation_type,tail
 24,ipv6,has_part,traffic class
 24,ipv6,has_part,version
 24,ipv6,operates_at,network layer
-24,ipv6,prevents,fragmentation
-24,ipv6,prevents,ip fragmentation
 24,ipv6,provides,flow labeling
 26,packet switch,has_part,flow table
 29,input port,connects_to,crossbar switch
@@ -247,7 +232,6 @@ id,head,relation_type,tail
 29,input port,requires,forwarding table
 29,input port,supports,link layer
 30,forwarding table,contains,prefix
-30,forwarding table,maps_to,output port
 30,forwarding table,part_of,router
 30,switching fabric,connects_to,input port
 30,switching fabric,connects_to,output port
@@ -291,7 +275,6 @@ id,head,relation_type,tail
 32,routing processor,receives,control packet
 32,routing processor,requires,routing protocol
 32,forwarding table,contains,prefix
-32,forwarding table,maps_to,output port
 32,forwarding table,part_of,router
 33,remote controller,provides,forwarding table
 33,routing processor,communicates_with,remote controller
@@ -326,7 +309,6 @@ id,head,relation_type,tail
 38,output port,part_of,router
 38,output port,receives,packet
 38,output port,sends,packet
-40,router,decreases,time-to-live
 40,router,forwards,ip datagram
 40,router,forwards,packet
 40,router,has_part,forwarding table
@@ -364,7 +346,6 @@ id,head,relation_type,tail
 41,input port,requires,forwarding table
 41,input port,supports,link layer
 41,forwarding table,contains,prefix
-41,forwarding table,maps_to,output port
 41,forwarding table,part_of,router
 41,routing processor,communicates_with,remote controller
 41,routing processor,part_of,router
@@ -397,9 +378,7 @@ id,head,relation_type,tail
 43,output port,receives,packet
 43,output port,sends,packet
 43,forwarding table,contains,prefix
-43,forwarding table,maps_to,output port
 43,forwarding table,part_of,router
-43,router,decreases,time-to-live
 43,router,forwards,ip datagram
 43,router,forwards,packet
 43,router,has_part,forwarding table
@@ -422,9 +401,7 @@ id,head,relation_type,tail
 43,router,requires,forwarding table
 43,router,sends,packet too big icmp error message
 44,forwarding table,contains,prefix
-44,forwarding table,maps_to,output port
 44,forwarding table,part_of,router
-45,router,decreases,time-to-live
 45,router,forwards,ip datagram
 45,router,forwards,packet
 45,router,has_part,forwarding table
@@ -447,7 +424,6 @@ id,head,relation_type,tail
 45,router,requires,forwarding table
 45,router,sends,packet too big icmp error message
 46,forwarding table,contains,prefix
-46,forwarding table,maps_to,output port
 46,forwarding table,part_of,router
 48,switching fabric,connects_to,input port
 48,switching fabric,connects_to,output port
@@ -477,7 +453,6 @@ id,head,relation_type,tail
 52,switching fabric,connects_to,input port
 52,switching fabric,connects_to,output port
 52,switching fabric,part_of,router
-52,router,decreases,time-to-live
 52,router,forwards,ip datagram
 52,router,forwards,packet
 52,router,has_part,forwarding table
@@ -524,7 +499,6 @@ id,head,relation_type,tail
 53,routing processor,receives,control packet
 53,routing processor,requires,routing protocol
 53,forwarding table,contains,prefix
-53,forwarding table,maps_to,output port
 53,forwarding table,part_of,router
 53,forwarding throughput,is_a,throughput
 54,line card,contains,input port
@@ -604,7 +578,6 @@ id,head,relation_type,tail
 79,home router,has_part,queue
 80,home router,has_part,queue
 81,bufferbloat,increases,queuing delay
-82,aqm mechanism,mitigates,bufferbloat
 95,network layer,contains,data plane
 95,network layer,has_part,data plane
 95,network layer,implements,forwarding
@@ -614,12 +587,10 @@ id,head,relation_type,tail
 95,network layer,provides,network-layer service model
 95,network layer,receives,datagram
 95,network layer,sends,datagram
-95,control plane,controls,routing
 95,control plane,implements,routing
 95,forwarding,operates_at,network layer
 96,ipv4,operates_at,network layer
 98,version number,part_of,ipv4 datagram
-98,router,decreases,time-to-live
 98,router,forwards,ip datagram
 98,router,forwards,packet
 98,router,has_part,forwarding table
@@ -667,8 +638,6 @@ id,head,relation_type,tail
 102,ipv6,has_part,traffic class
 102,ipv6,has_part,version
 102,ipv6,operates_at,network layer
-102,ipv6,prevents,fragmentation
-102,ipv6,prevents,ip fragmentation
 102,ipv6,provides,flow labeling
 103,udp,supports,checksum
 109,ipv6 header,contains,hop limit
@@ -685,7 +654,6 @@ id,head,relation_type,tail
 111,host,sends,datagram
 111,host,sends,ip datagram
 111,host,sends,segment
-111,router,decreases,time-to-live
 111,router,forwards,ip datagram
 111,router,forwards,packet
 111,router,has_part,forwarding table
@@ -720,7 +688,6 @@ id,head,relation_type,tail
 119,broadcast link,connects_to,host
 119,broadcast link,connects_to,router
 120,subnet,has_part,host interface
-120,router,decreases,time-to-live
 120,router,forwards,ip datagram
 120,router,forwards,packet
 120,router,has_part,forwarding table
@@ -752,7 +719,6 @@ id,head,relation_type,tail
 120,host,sends,segment
 122,cidr,supports,subnet
 122,ip address,identifies,host
-123,router,decreases,time-to-live
 123,router,forwards,ip datagram
 123,router,forwards,packet
 123,router,has_part,forwarding table
@@ -775,15 +741,12 @@ id,head,relation_type,tail
 123,router,requires,forwarding table
 123,router,sends,packet too big icmp error message
 124,forwarding table,contains,prefix
-124,forwarding table,maps_to,output port
 124,forwarding table,part_of,router
-126,classful addressing,decreases,utilization
 128,ip broadcast address,is_a,ip address
 128,subnet,has_part,host interface
 129,isp,has_part,address block
 129,isp,provides,address allocation
 129,isp,provides,address block
-131,icann,manages,dns root server
 131,icann,provides,ip address
 131,arin,part_of,address supporting organization
 131,ripe,part_of,address supporting organization
@@ -835,14 +798,11 @@ id,head,relation_type,tail
 148,dhcp server,sends,dhcp ack
 148,dhcp server,sends,dhcp offer message
 148,nat router,has_part,nat translation table
-148,nat router,manages,nat translation table
 148,isp,has_part,address block
 148,isp,provides,address allocation
 148,isp,provides,address block
 150,nat router,has_part,nat translation table
-150,nat router,manages,nat translation table
 151,nat router,has_part,nat translation table
-151,nat router,manages,nat translation table
 153,network layer,contains,data plane
 153,network layer,has_part,data plane
 153,network layer,implements,forwarding
@@ -863,8 +823,6 @@ id,head,relation_type,tail
 154,ipv6,has_part,traffic class
 154,ipv6,has_part,version
 154,ipv6,operates_at,network layer
-154,ipv6,prevents,fragmentation
-154,ipv6,prevents,ip fragmentation
 154,ipv6,provides,flow labeling
 157,ipv6,enables,anycast address
 157,ipv6,has_part,destination address
@@ -876,8 +834,6 @@ id,head,relation_type,tail
 157,ipv6,has_part,traffic class
 157,ipv6,has_part,version
 157,ipv6,operates_at,network layer
-157,ipv6,prevents,fragmentation
-157,ipv6,prevents,ip fragmentation
 157,ipv6,provides,flow labeling
 157,ipv6 datagram,contains,data
 158,ipv6,enables,anycast address
@@ -890,8 +846,6 @@ id,head,relation_type,tail
 158,ipv6,has_part,traffic class
 158,ipv6,has_part,version
 158,ipv6,operates_at,network layer
-158,ipv6,prevents,fragmentation
-158,ipv6,prevents,ip fragmentation
 158,ipv6,provides,flow labeling
 158,ip address,identifies,host
 159,ipv4,operates_at,network layer
@@ -905,8 +859,6 @@ id,head,relation_type,tail
 159,ipv6,has_part,traffic class
 159,ipv6,has_part,version
 159,ipv6,operates_at,network layer
-159,ipv6,prevents,fragmentation
-159,ipv6,prevents,ip fragmentation
 159,ipv6,provides,flow labeling
 160,ipv6,enables,anycast address
 160,ipv6,has_part,destination address
@@ -918,8 +870,6 @@ id,head,relation_type,tail
 160,ipv6,has_part,traffic class
 160,ipv6,has_part,version
 160,ipv6,operates_at,network layer
-160,ipv6,prevents,fragmentation
-160,ipv6,prevents,ip fragmentation
 160,ipv6,provides,flow labeling
 161,ipv6 datagram,contains,data
 161,traffic class,part_of,ipv6
@@ -939,8 +889,6 @@ id,head,relation_type,tail
 164,ipv6,has_part,traffic class
 164,ipv6,has_part,version
 164,ipv6,operates_at,network layer
-164,ipv6,prevents,fragmentation
-164,ipv6,prevents,ip fragmentation
 164,ipv6,provides,flow labeling
 164,ipv4,operates_at,network layer
 165,ipv6,enables,anycast address
@@ -953,8 +901,6 @@ id,head,relation_type,tail
 165,ipv6,has_part,traffic class
 165,ipv6,has_part,version
 165,ipv6,operates_at,network layer
-165,ipv6,prevents,fragmentation
-165,ipv6,prevents,ip fragmentation
 165,ipv6,provides,flow labeling
 166,hop limit,part_of,ipv6
 167,next header,identifies,tcp
@@ -969,8 +915,6 @@ id,head,relation_type,tail
 167,ipv6,has_part,traffic class
 167,ipv6,has_part,version
 167,ipv6,operates_at,network layer
-167,ipv6,prevents,fragmentation
-167,ipv6,prevents,ip fragmentation
 167,ipv6,provides,flow labeling
 168,ipv6,enables,anycast address
 168,ipv6,has_part,destination address
@@ -982,8 +926,6 @@ id,head,relation_type,tail
 168,ipv6,has_part,traffic class
 168,ipv6,has_part,version
 168,ipv6,operates_at,network layer
-168,ipv6,prevents,fragmentation
-168,ipv6,prevents,ip fragmentation
 168,ipv6,provides,flow labeling
 168,ipv4,operates_at,network layer
 171,ipv6 node,forwards,ipv6 datagram
@@ -998,8 +940,6 @@ id,head,relation_type,tail
 173,ipv6,has_part,traffic class
 173,ipv6,has_part,version
 173,ipv6,operates_at,network layer
-173,ipv6,prevents,fragmentation
-173,ipv6,prevents,ip fragmentation
 173,ipv6,provides,flow labeling
 174,ipv6,enables,anycast address
 174,ipv6,has_part,destination address
@@ -1011,8 +951,6 @@ id,head,relation_type,tail
 174,ipv6,has_part,traffic class
 174,ipv6,has_part,version
 174,ipv6,operates_at,network layer
-174,ipv6,prevents,fragmentation
-174,ipv6,prevents,ip fragmentation
 174,ipv6,provides,flow labeling
 175,ipv6,enables,anycast address
 175,ipv6,has_part,destination address
@@ -1024,8 +962,6 @@ id,head,relation_type,tail
 175,ipv6,has_part,traffic class
 175,ipv6,has_part,version
 175,ipv6,operates_at,network layer
-175,ipv6,prevents,fragmentation
-175,ipv6,prevents,ip fragmentation
 175,ipv6,provides,flow labeling
 179,remote controller,provides,forwarding table
 180,openflow,provides,match abstraction
@@ -1098,8 +1034,6 @@ id,head,relation_type,tail
 207,ipv6,has_part,traffic class
 207,ipv6,has_part,version
 207,ipv6,operates_at,network layer
-207,ipv6,prevents,fragmentation
-207,ipv6,prevents,ip fragmentation
 207,ipv6,provides,flow labeling
 208,network layer,contains,data plane
 208,network layer,has_part,data plane
@@ -1111,12 +1045,9 @@ id,head,relation_type,tail
 208,network layer,receives,datagram
 208,network layer,sends,datagram
 208,data plane,implements,forwarding
-208,control plane,controls,routing
 208,control plane,implements,routing
 208,forwarding table,contains,prefix
-208,forwarding table,maps_to,output port
 208,forwarding table,part_of,router
-208,router,decreases,time-to-live
 208,router,forwards,ip datagram
 208,router,forwards,packet
 208,router,has_part,forwarding table
@@ -1146,10 +1077,8 @@ id,head,relation_type,tail
 209,input port,requires,forwarding table
 209,input port,supports,link layer
 209,forwarding table,contains,prefix
-209,forwarding table,maps_to,output port
 209,forwarding table,part_of,router
 210,forwarding table,contains,prefix
-210,forwarding table,maps_to,output port
 210,forwarding table,part_of,router
 210,output port,connects_to,crossbar switch
 210,output port,connects_to,output link
@@ -1184,11 +1113,8 @@ id,head,relation_type,tail
 215,ipv6,has_part,traffic class
 215,ipv6,has_part,version
 215,ipv6,operates_at,network layer
-215,ipv6,prevents,fragmentation
-215,ipv6,prevents,ip fragmentation
 215,ipv6,provides,flow labeling
 217,forwarding table,contains,prefix
-217,forwarding table,maps_to,output port
 217,forwarding table,part_of,router
 217,openflow,provides,match abstraction
 217,openflow,provides,match-plus-action forwarding abstraction
@@ -1214,7 +1140,6 @@ id,head,relation_type,tail
 220,output port,sends,packet
 224,round robin service,supports,class 1
 226,round robin service,supports,class 1
-227,router,decreases,time-to-live
 227,router,forwards,ip datagram
 227,router,forwards,packet
 227,router,has_part,forwarding table
@@ -1237,15 +1162,11 @@ id,head,relation_type,tail
 227,router,requires,forwarding table
 227,router,sends,packet too big icmp error message
 228,forwarding table,contains,prefix
-228,forwarding table,maps_to,output port
 228,forwarding table,part_of,router
 229,forwarding table,contains,prefix
-229,forwarding table,maps_to,output port
 229,forwarding table,part_of,router
 230,forwarding table,contains,prefix
-230,forwarding table,maps_to,output port
 230,forwarding table,part_of,router
-230,router,decreases,time-to-live
 230,router,forwards,ip datagram
 230,router,forwards,packet
 230,router,has_part,forwarding table
@@ -1268,7 +1189,6 @@ id,head,relation_type,tail
 230,router,requires,forwarding table
 230,router,sends,packet too big icmp error message
 231,forwarding table,contains,prefix
-231,forwarding table,maps_to,output port
 231,forwarding table,part_of,router
 234,arin,part_of,address supporting organization
 241,ip datagram,contains,icmp

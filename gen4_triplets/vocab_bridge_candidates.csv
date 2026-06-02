@@ -1,0 +1,262 @@
+seed_head,confirmed_bridge,score_1,candidate_1,score_2,candidate_2,score_3,candidate_3,score_4,candidate_4,score_5,candidate_5
+4g authentication and key agreement protocol,,0.85,authentication and key agreement,0.85,authentication,0.85,4g,0.57,mutual authentication and key agreement,0.56,authentication and key agreement ( aka ) protocol
+5g,,0.85,5ghz frequency band,,,,,,,,
+802.11,,,,,,,,,,,
+802.11 ac,,,,,,,,,,,
+802.11 ax,,0.25,802. 11 ax,,,,,,,,
+802.11 frame,,0.85,frame,0.33,rts frame,0.33,frame times,0.33,frame time,0.33,frame structure
+802.11 n,,0.25,layer n protocol,0.25,802. 11 n,0.20,go - back - n,,,,
+802.1q,,,,,,,,,,,
+a record,,0.85,type a record,0.33,tls record,0.33,subnet a,0.33,router a,0.33,resource record
+ack segment,,0.85,tcp synack segment,0.85,tcp ack segment,0.85,synack segment,0.85,segment,0.85,ack
+address block,,0.85,lock,0.85,ip address blocks,0.85,ip address block,0.33,subnet block,0.33,subnet address
+address supporting organization,,0.25,subnet address,0.25,source address,0.25,return address,0.25,physical address,0.25,permanent address
+ah,,0.85,yahoo. com,0.85,yahoo mail,0.85,tcp tahoe,0.85,robert kahn,0.85,ah protocol
+aka protocol,,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol,0.33,ssl protocol
+alternating-bit protocol,,0.85,nat,0.85,lte,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol
+arq,,0.85,retransmission ( arq ) scheme,0.85,link - layer arq techniques,0.85,arq protocols,0.85,arq protocol,0.85,802. 11 arq protocol
+as-path,,0.85,path,,,,,,,,
+atheros ar5006 controller,,0.25,xl710 controller,0.25,sdn controller,0.25,remote controller,0.25,opendaylight controller,0.25,omniscient controller
+attach message,,0.33,trap message,0.33,tcp message,0.33,status message,0.33,polling message,0.33,ping message
+attacker,,0.85,ack,,,,,,,,
+authoritative server,,0.85,server,0.85,iv,0.85,authoritative servers,0.67,authoritative dns server,0.33,web server
+bandwidth flooding,,0.85,bandwidth,0.40,dos bandwidth - flooding attacks,0.33,wireless bandwidth,0.33,syn flooding,0.33,memory bandwidth
+bandwidth-sensitive applications,,0.85,iv,0.85,bandwidth,0.85,ap,0.33,p2p applications,0.33,network applications
+block cipher algorithm,,0.85,lock,0.85,ip,0.85,block cipher,0.75,block - cipher algorithm,0.60,block - cipher encryption algorithm
+ca,,0.85,wireless communication link,0.85,wired broadcast links,0.85,wired broadcast lan,0.85,window scaling factor,0.85,web proxy caches
+cell tower,,0.85,cell towers,0.85,cell,0.33,lte cell,0.33,hexagonal cell,0.33,cell phones
+checksumming method,,0.85,checksumming methods,0.85,checksumming,0.85,checksum,0.33,method field,0.33,checksumming techniques
+chosen-plaintext attack,,0.85,plaintext,0.85,ack,0.33,vulnerability attack,0.33,truncation attack,0.33,playback attack
+cipher block chaining,,0.85,lock,0.85,ip,0.85,cipher block chaining ( cbc ),0.67,block cipher,0.40,block - cipher algorithm
+ciphertext-only attack,,0.85,ip,0.85,ciphertext,0.85,ack,0.33,vulnerability attack,0.33,truncation attack
+circuit switch,,0.85,tdm circuit switching,0.85,switch,0.85,circuit switching,0.85,circuit switches,0.85,circuit
+circuit-switched network,,0.85,switch,0.85,circuit,0.33,wireless network,0.33,wired network,0.33,wifi network
+client host,,0.85,host,0.85,client,0.33,wireless host,0.33,tcp client,0.33,source host
+client program,,0.85,client,0.67,client ping program,0.33,traceroute program,0.33,tcp client,0.33,smtp client
+client-server architecture,,0.85,server,0.85,client,0.33,sdn architecture,0.33,pon architecture,0.33,p2p architecture
+column parity,,0.33,simple parity,0.33,parity checks,0.25,single parity bit,0.25,odd parity schemes,0.25,even parity scheme
+computer,,0.85,packet - switched computer network,0.85,core of the computer network,0.85,computer network protocols,0.85,computer network protocol,,
+congestion-control mechanism,,0.85,congestion,0.33,arp mechanism,0.33,aqm mechanism,0.25,rate adaptation mechanism,0.20,timeout / retransmit mechanism
+congestion-control protocol,,0.85,congestion,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol
+connection-establishment request,,0.33,request rate,0.33,request messages,0.33,request line,0.33,http request,0.33,echo request
+connection-oriented service,,0.33,whois service,0.33,wfq service,0.33,telnet service,0.33,service models,0.33,service model
+content distribution network,,0.85,content distribution networks,0.50,optical distribution network,0.25,wireless network,0.25,wired network,0.25,wifi network
+controller,,0.85,xl710 controller,0.85,switch fabric controller,0.85,sdn controllers,0.85,sdn controller,0.85,remote controller
+cookie,,0.85,syn cookies,0.85,cookies,0.85,cookie header line,0.85,cookie header,0.85,cookie file
+cost,,0.85,zero - cost path,0.85,monetary cost,0.85,link costs,0.85,link cost increases,0.85,link cost
+cryptographic hash function,,0.85,hash function,0.85,graph,0.85,cryptographic hash functions,0.85,ap,0.25,md5 hash
+csma/ca,,0.85,csma,,,,,,,,
+csma/cd,,0.85,csma,,,,,,,,
+csma/cd-like multiple access protocol,,0.85,multiple access protocol,0.85,multiple access,0.85,ip,0.85,ike,0.85,csma
+customer isp,,0.85,isp,0.85,customer isps,0.33,small isp,0.33,residential isp,0.33,regional isp
+data center interconnection network,,0.85,interconnection network,0.85,data center,0.75,data center network,0.60,data center network designs,0.40,network operations center
+ddos attack,,0.85,ddos attacks,0.85,ack,0.33,vulnerability attack,0.33,truncation attack,0.33,playback attack
+decryption,,0.85,decryption algorithm,,,,,,,,
+dedicated end-to-end connection,,0.33,dedicated end - to - end connection,0.25,tcp connection,0.25,socket connection,0.25,secure connection,0.25,quic connection
+destination end system,,0.85,nat,0.85,end system,0.85,destination,0.85,des,0.25,head end
+destination-based forwarding,,0.85,nat,0.85,forwarding,0.85,destination,0.85,des,0.33,sdn forwarding
+devrtt,,0.85,rtt,,,,,,,,
+diffie-hellman,,,,,,,,,,,
+diffie-hellman algorithm,,0.33,trading algorithm,0.33,rsa algorithm,0.33,routing algorithm,0.33,ls algorithm,0.33,encryption algorithm
+dijkstra's algorithm,,0.33,trading algorithm,0.33,rsa algorithm,0.33,routing algorithm,0.33,ls algorithm,0.33,encryption algorithm
+distance vector routing,,0.85,tor,0.85,routing,0.85,distance vector,0.75,distance - vector routing,0.60,distance - vector routing algorithm
+distance-vector algorithm,,0.85,tor,0.33,trading algorithm,0.33,rsa algorithm,0.33,routing algorithm,0.33,ls algorithm
+distance-vector routing algorithm,,0.85,tor,0.85,routing algorithm,0.85,routing,0.50,decentralized routing algorithm,0.50,centralized routing algorithm
+distributed games,,0.33,multiplayer games,0.33,distributed servers,0.33,distributed firewalls,0.33,distributed firewall,0.33,distributed database
+dns client,,0.85,dns clients,0.85,dns,0.85,client,0.50,client side of dns,0.33,tcp client
+ecmp,,,,,,,,,,,
+edc bits,,0.33,tos bits,0.33,flag bits,0.33,fin bits,0.33,ecn bits,0.33,ece bits
+edge,,0.85,unacknowledged segments,0.85,unacknowledged data,0.85,oldest unacknowledged segment,0.85,oldest unacknowledged byte,0.85,network edge
+efficiency,,0.85,spectral efficiency,0.85,channel efficiency,,,,,,
+email,,,,,,,,,,,
+email server,,0.85,server,0.85,mail server,0.33,web server,0.33,virtual server,0.33,tld server
+email service,,0.33,whois service,0.33,wfq service,0.33,telnet service,0.33,service models,0.33,service model
+end-to-end delay,,0.85,delay,0.33,transmission delay,0.33,roundtrip delay,0.33,queuing delay,0.33,propagation delay
+error-detection bits,,0.33,tos bits,0.33,flag bits,0.33,fin bits,0.33,ecn bits,0.33,ece bits
+esp,,0.85,total average response time,0.85,salesperson ’ s laptop,0.85,rpc - response,0.85,response messages,0.85,request - response mode
+estimatedrtt,,0.85,rtt,,,,,,,,
+fddi protocol,,0.85,fddi,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol
+four-way handshake,,0.85,sha,0.85,handshake,0.33,handshake phase,0.33,handshake messages,0.20,two - way handshake
+frequency-division multiplexing,,0.85,multiplexing,0.85,iv,0.85,ip,0.33,udp multiplexing,0.33,message multiplexing
+full-duplex,,,,,,,,,,,
+global unique identifier,,0.85,identifier,0.25,transient identifier,0.25,global isp,0.25,global internetwork,0.20,verisign global registry
+go-back-n,,0.85,ack,,,,,,,,
+gsm,,0.85,2 g gsm networks,,,,,,,,
+head of line blocking,,0.85,lock,0.20,status line,0.20,request line,0.20,line cards,0.20,line card
+header,,0.85,udp header,0.85,tcp segment header,0.85,tcp header fields,0.85,tcp header,0.85,tcp / ip header
+header section,,0.33,udp header,0.33,tcp header,0.33,question section,0.33,next header,0.33,mpls header
+hidden terminal,,0.85,hidden terminals,0.85,hidden terminal problem,0.25,hidden station problem,,,,
+hierarchical tiered network,,0.67,hierarchical network,0.25,wireless network,0.25,wired network,0.25,wifi network,0.25,visited network
+high-level data link control,,0.85,link,0.43,high - level data link control,0.40,data link protocols,0.40,data link layers,0.33,data - link header
+higher-tier isp,,0.85,isp,0.33,small isp,0.33,residential isp,0.33,regional isp,0.33,provider isp
+home gateway,,0.85,home gateway router,0.67,home network gateway,0.33,serving gateway,0.33,pdn gateway,0.33,home router
+home network gateway router,,0.85,router,0.85,route,0.85,home network gateway,0.85,home network,0.85,gateway router
+host header line,,0.85,host header,0.85,host,0.85,header line,0.50,cookie header line,0.25,wireless host
+host interface,,0.85,interface,0.85,host,0.33,wireless host,0.33,switch interface,0.33,source host
+http/1.1,,0.85,http,,,,,,,,
+http/2,,0.85,http,,,,,,,,
+http/3,,0.85,http,,,,,,,,
+hybrid fiber coax,,0.85,hybrid fiber coax ( hfc ),0.85,fiber,0.85,coax,0.85,ber,0.25,optical fiber
+ibgp connection,,0.85,ibgp connections,0.85,ibgp,0.85,bgp connection,0.85,bgp,0.33,tcp connection
+ids,,0.85,signature - based ids,0.85,ids sensors,0.85,central ids processor,0.85,anomaly - based ids,0.85,androids
+ids sensor,,0.85,sensor,0.85,ids sensors,0.33,sensor networks,0.25,wireless sensor networks,0.25,central ids processor
+ieee 802.11,,0.85,ieee 802,0.85,ieee,0.25,ieee 802. 3z,0.25,ieee 802. 3,0.25,ieee 802. 11b
+input queuing delay,,0.85,queuing delay,0.85,delay,0.50,average queuing delay,0.40,variance of queuing delay,0.29,probability that the queuing delay exceeds
+integrity,,0.85,message integrity,0.85,integrity checking,0.85,integrity check,0.85,data integrity,,
+interactive real-time applications,,0.85,iv,0.85,ap,0.33,interactive real - time applications,0.25,p2p applications,0.25,network applications
+interleaving,,0.85,frame interleaving,,,,,,,,
+ipv4 router,,0.85,router,0.85,route,0.85,ipv4 routers,0.85,ipv4,0.85,ip
+is-is,,,,,,,,,,,
+key,,0.85,symmetric shared session key,0.85,symmetric session key,0.85,symmetric secret key,0.85,symmetric key systems,0.85,symmetric key encryption
+kingcdn dns system,,0.85,kingcdn,0.85,dns system,0.85,dns,0.85,cdn,0.40,dns style query system
+known-plaintext attack,,0.85,plaintext,0.85,ack,0.33,vulnerability attack,0.33,truncation attack,0.33,playback attack
+label-switched router,,0.85,switch,0.85,router,0.85,route,0.33,wireless router,0.33,upstream router
+laptop,,0.85,salesperson ’ s laptop,0.85,bob ’ s laptop,0.85,ap,,,,
+least-cost path,,0.85,path,0.33,shortest path,0.33,routing path,0.33,path mtu,0.33,path loss
+leo satellite,,0.85,leo satellites,0.33,satellite networks,0.33,satellite links,0.33,communication satellite,0.25,satellite radio spectrum
+link layer software,,0.85,link layer,0.85,link,0.75,link - layer software,0.50,link - layer,0.40,link - layer switches
+link state routing,,0.85,routing,0.85,link,0.75,link - state routing,0.60,link - state routing application,0.60,link - state routing algorithm
+link-layer frame,,0.85,link,0.85,frame,0.33,rts frame,0.33,frame times,0.33,frame time
+link-layer protocol,,0.85,link,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol
+link-layer switch,,0.85,switch,0.85,link,0.33,vlan switch,0.33,tor switch,0.33,switch table
+link-level frame,,0.85,link,0.85,frame,0.33,rts frame,0.33,frame times,0.33,frame time
+link-state algorithm,,0.85,link,0.33,trading algorithm,0.33,rsa algorithm,0.33,routing algorithm,0.33,ls algorithm
+link-state packet,,0.85,packet,0.85,link,0.85,ack,0.33,udp packet,0.33,packet trace
+link-state protocol,,0.85,link,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol
+link-state routing,,0.85,routing,0.85,link,0.33,routing tables,0.33,routing protocols,0.33,routing protocol
+load,,0.85,upload rate,0.85,upload capacity,0.85,upload and download access bandwidth,0.85,total upload capacity,0.85,top four uploaders
+load-sensitive algorithm,,0.85,iv,0.33,trading algorithm,0.33,rsa algorithm,0.33,routing algorithm,0.33,ls algorithm
+lower-tier isp,,0.85,isp,0.33,small isp,0.33,residential isp,0.33,regional isp,0.33,provider isp
+lte-advanced,,0.85,lte,0.85,dv,,,,,,
+mail message,,0.33,yahoo mail,0.33,trap message,0.33,tcp message,0.33,status message,0.33,polling message
+mail service,,0.33,yahoo mail,0.33,whois service,0.33,wfq service,0.33,telnet service,0.33,service models
+master,,0.85,pre - master secret,0.85,master secret,0.85,master node,0.85,master device,0.85,encrypted master secret
+match-plus-action paradigm,,0.85,dig,,,,,,,,
+mobile cellular network,,0.85,mobile cellular networks,0.85,cellular network,0.85,cellular,0.85,cell,0.50,global cellular network
+modular arithmetic,,0.25,modular data centers,0.25,1s complement arithmetic,0.20,modulo - 2 arithmetic,,,,
+multicast protocol,,0.85,multicast protocols,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol
+multiplicative-decrease approach,,0.85,iv,0.85,ip,0.85,ap,0.25,logically centralized approach,0.25,direct routing approach
+nat-enabled router,,0.85,router,0.85,route,0.85,nat,0.33,wireless router,0.33,upstream router
+national isp,,0.85,national isps,0.85,nat,0.85,isp,0.33,small isp,0.33,residential isp
+network,,0.85,wireless sensor networks,0.85,wireless personal area networks ( wpans ),0.85,wireless networks,0.85,wireless networking,0.85,wireless network standards
+network cache server,,0.85,server,0.85,network cache servers,0.85,cache,0.29,cache - to - server tcp connection,0.25,wireless network
+network-control application,,0.85,ap,0.33,web application,0.33,video application,0.33,speedtest application,0.33,receiver application
+network-layer datagram,,0.85,datagram,0.33,udp datagram,0.33,original datagram,0.33,ipv6 datagram,0.33,ipv4 datagram
+network-layer header information,,0.25,udp header,0.25,tcp header,0.25,routing information,0.25,next header,0.25,mpls header
+next-hop attribute,,0.20,next - hop attribute,0.20,local - preference attribute,0.20,as - path attribute,,,,
+nox,,0.85,nox controller,,,,,,,,
+odd parity scheme,,0.85,odd parity schemes,0.50,even parity scheme,0.25,simple parity,0.25,reservation scheme,0.25,parity checks
+olt,,0.85,optical line terminator ( olt ),,,,,,,,
+openflow1.0,,0.85,openflow,0.85,flow,,,,,,
+optical line terminator,,0.85,tor,0.85,optical line terminator ( olt ),0.85,nat,0.29,optical network terminator ( ont ),0.25,status line
+optical network terminator,,0.85,tor,0.85,optical network terminator ( ont ),0.85,nat,0.50,optical distribution network,0.29,optical line terminator ( olt )
+ospf message,,0.85,ospf messages,0.85,ospf,0.33,trap message,0.33,tcp message,0.33,status message
+out-of-order packet,,0.85,packet,0.85,ack,0.33,udp packet,0.33,packet trace,0.33,packet switching
+p-gw,,,,,,,,,,,
+package,,0.85,ack,,,,,,,,
+packet data network gateway,,0.85,packet data network gateway ( p - gw ),0.85,packet,0.85,ack,0.50,data packet,0.40,home network gateway
+packet header,,0.85,quic packet header,0.85,packet,0.85,ack,0.50,packet - header fields,0.33,udp packet
+packet-arrival rate,,0.85,packet,0.85,iv,0.85,arrival rate,0.85,ack,0.33,upload rate
+packet-switched network,,0.85,switch,0.85,packet,0.85,ack,0.33,wireless network,0.33,wired network
+parity check,,0.85,two - dimensional parity checks,0.85,parity checks,0.33,simple parity,0.33,integrity check,0.33,crc check
+peer-to-peer,,0.85,peer,,,,,,,,
+peer-to-peer architecture,,0.85,peer,0.33,sdn architecture,0.33,pon architecture,0.33,p2p architecture,0.33,network architecture
+per-hop buffer,,0.85,buffer,0.33,send buffer,0.33,receive buffer,0.33,output buffer,0.33,maximum buffer
+phone number,,0.85,ber,0.33,version number,0.33,type number,0.33,sequence number,0.33,router number
+pie,,,,,,,,,,,
+point of presence,,0.50,point of attachment,0.29,points of presence ( pops ),0.25,check point,0.25,anchor point,0.25,access point
+point-to-point link,,0.85,link,0.33,wireless link,0.33,wifi link,0.33,transoceanic link,0.33,telephone link
+point-to-point protocol,,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol,0.33,ssl protocol
+polyalphabetic encryption,,0.85,encryption,0.33,encryption technique,0.33,encryption services,0.33,encryption keys,0.33,encryption algorithms
+port,,0.85,well - known port numbers,0.85,unlikely udp port number,0.85,udp transport service,0.85,udp port 19157,0.85,trunk port
+port-to-vlan mapping table,,0.85,vlan,0.85,ping,0.85,lan,0.85,ap,0.25,switch table
+provincial isp,,0.85,provincial isps,0.85,isp,0.33,small isp,0.33,residential isp,0.33,regional isp
+public-key cryptography,,0.85,graph,0.85,cryptography,0.85,ap,0.25,symmetric key cryptography,0.25,public key cryptography
+rate-determination algorithm,,0.85,nat,0.33,trading algorithm,0.33,rsa algorithm,0.33,routing algorithm,0.33,ls algorithm
+rdt2.1,,0.85,rdt,,,,,,,,
+receiver,,0.85,udp receiver,0.85,tcp receiver,0.85,sender - to - receiver packet,0.85,receiver windows,0.85,receiver window
+receiving host,,0.85,iv,0.85,host,0.33,wireless host,0.33,source host,0.33,mobile host
+receiving node,,0.85,node,0.85,iv,0.33,node z,0.33,node y,0.33,node x
+recursion-available field,,0.33,version field,0.33,url field,0.33,type field,0.33,ttl field,0.33,protocol field
+recursion-available flag,,0.33,rst flag,0.33,flag field,0.33,flag day,0.33,flag bits,0.33,authoritative flag
+recursion-desired flag,,0.85,des,0.33,rst flag,0.33,flag field,0.33,flag day,0.33,flag bits
+regional internet registry,,0.85,internet,0.67,regional registry,0.25,regional isps,0.25,regional isp,0.25,public internet
+remote game server,,0.85,server,0.85,game server,0.25,web server,0.25,virtual server,0.25,tld server
+remote terminal access,,0.40,remote direct memory access,0.25,wireless access,0.25,remote modem,0.25,remote controller,0.25,random access
+request,,0.85,requests for comments,0.85,request to send ( rts ) control frame,0.85,request rate,0.85,request messages,0.85,request line
+request message,,0.85,request messages,0.85,http request message,0.85,handover request message,0.85,dhcp request message,0.85,arp request message
+resource reservation protocol,,0.85,source,0.85,resource reservation protocols,0.25,udp protocol,0.25,transport protocol,0.25,tls protocol
+response message,,0.85,response messages,0.85,http response message,0.85,authentication response message,0.85,arp response message,0.33,trap message
+rlc,,,,,,,,,,,
+root server,,0.85,server,0.85,root servers,0.85,dns root servers,0.67,root dns server,0.33,web server
+round-trip delay,,0.85,rip,0.85,ip,0.85,delay,0.33,transmission delay,0.33,roundtrip delay
+round-trip time estimation,,0.85,rip,0.85,ip,0.25,time slots,0.25,time slot,0.25,roundtrip time
+router buffer,,0.85,router buffers,0.85,router buffering,0.85,router buffer overflow,0.85,router b,0.85,router
+routing network-control application,,0.85,routing,0.85,ap,0.33,routing network - control application,0.33,link - state routing application,0.25,web application
+routing policy,,0.85,routing,0.85,bgp routing policy,0.85,as routing policy,0.33,routing tables,0.33,routing protocols
+routing table,,0.85,routing tables,0.85,routing,0.85,initial routing table,0.85,bgp routing tables,0.33,switch table
+rts/cts exchange,,0.25,internet key exchange,0.25,internet exchange points,0.20,routing information exchange protocol,,,,
+sdn-controlled switch,,0.85,switch,0.85,sdn,0.33,vlan switch,0.33,tor switch,0.33,switch table
+second-tier switch,,0.85,switch,0.33,vlan switch,0.33,tor switch,0.33,switch table,0.33,switch s2
+secret key,,0.85,symmetric secret key,0.85,shared secret keys,0.85,shared - in - advance secret key,0.33,symmetric key,0.33,session key
+secure e-mail system,,0.25,secure shell,0.25,secure http,0.25,secure connection,0.25,end system,0.25,dns system
+send rate,,0.33,upload rate,0.33,transmission rate,0.33,send buffer,0.33,request rate,0.33,rate control
+sender,,0.85,tcp sender awareness,0.85,tcp sender,0.85,sender window,0.85,sender utilization,0.85,sender timeout
+sending host,,0.85,host,0.33,wireless host,0.33,source host,0.33,sending adapter,0.33,mobile host
+sending node,,0.85,node,0.33,sending adapter,0.33,node z,0.33,node y,0.33,node x
+sending rate,,0.33,upload rate,0.33,transmission rate,0.33,sending adapter,0.33,request rate,0.33,rate control
+sequence-number field,,0.85,ber,0.33,version field,0.33,url field,0.33,type field,0.33,ttl field
+server program,,0.85,server,0.85,client - server programming,0.33,web server,0.33,virtual server,0.33,traceroute program
+server rack,,0.85,server racks,0.85,server,0.85,ack,0.33,web server,0.33,virtual server
+sha-1,,0.85,sha,,,,,,,,
+shared secret,,0.85,shared secret keys,0.85,sha,0.67,shared initial secret,0.33,shared memory,0.33,shared medium
+signal,,0.85,signal strength,0.85,signal propagation delay,0.85,secondary synchronization signal,0.85,primary synchronization signal,0.85,millimeter wave signals
+"single-hop, infrastructure-based network",,0.25,wireless network,0.25,wired network,0.25,wifi network,0.25,visited network,0.25,verisign network
+smart antennas,,,,,,,,,,,
+smartphone,,0.85,smartphones,0.85,4 g smartphone,,,,,,
+social media,,0.33,unguided media,0.33,physical media,0.33,guided media,0.25,streaming media transport,0.25,media packetization delay
+software-defined networking,,0.33,wireless networking,0.33,multimedia networking,0.33,cellular networking,0.20,software - defined networking,,
+source end system,,0.85,source,0.85,end system,0.25,source socket,0.25,source port,0.25,source masquerading
+station,,0.85,wireless stations,0.85,wireless station h1,0.85,wireless station,0.85,target base station,0.85,source base station
+statistical analysis,,,,,,,,,,,
+stop-and-wait protocol,,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol,0.33,ssl protocol
+store-and-forward transmission,,0.85,tor,0.85,smi,0.33,transmission scheduling,0.33,transmission rate,0.33,transmission radius
+streaming,,0.85,video streaming,0.85,streaming video,0.85,streaming media transport,0.85,music streaming,0.85,http streaming
+streaming media,,0.85,streaming media transport,0.33,video streaming,0.33,unguided media,0.33,streaming video,0.33,physical media
+streaming server,,0.85,server,0.33,web server,0.33,virtual server,0.33,video streaming,0.33,tld server
+subnet portion,,0.85,subnet,0.33,subnet mask,0.33,subnet c,0.33,subnet block,0.33,subnet b
+tablet,,,,,,,,,,,
+tag control information,,0.85,tag control information field,0.25,vlan tag,0.25,routing information,0.25,rate control,0.25,flow control
+target host,,0.85,host,0.85,get,0.33,wireless host,0.33,source host,0.33,mobile host
+tcp congestion-control algorithm,,0.85,tcp,0.85,congestion,0.25,trading algorithm,0.25,tcp vegas,0.25,tcp variants
+telephone calls,,0.33,telephone networks,0.33,telephone network,0.33,telephone link,0.25,traditional telephone networks,0.25,local telephone infrastructure
+third-party telecommunications provider,,0.33,third - party telecommunications provider,0.25,provider network,0.25,provider isps,0.25,provider isp,0.25,content provider
+three-way handshake,,0.85,sha,0.85,handshake,0.33,handshake phase,0.33,handshake messages,0.20,two - way handshake
+tier-1 isp,,0.85,isp,0.33,small isp,0.33,residential isp,0.33,regional isp,0.33,provider isp
+tier-1 switch,,0.85,switch,0.33,vlan switch,0.33,tor switch,0.33,switch table,0.33,switch s2
+tier-2 switch,,0.85,switch,0.33,vlan switch,0.33,tor switch,0.33,switch table,0.33,switch s2
+time frame,,1.00,frame time,0.85,frame,0.33,time slots,0.33,time slot,0.33,rts frame
+tld dns server,,0.85,server,0.85,dns server,0.85,dns,0.67,tld server,0.50,tld com server
+token-passing protocol,,0.85,token,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol
+token-ring protocol,,0.85,token,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol
+top of rack switch,,0.85,switch,0.85,ack,0.33,top - tier switch,0.20,vlan switch,0.20,tor switch
+top-tier switch,,0.85,switch,0.33,vlan switch,0.33,tor switch,0.33,switch table,0.33,switch s2
+traditional telephone network,,0.85,traditional telephone networks,0.85,telephone network,0.33,circuit - switched telephone network,0.25,wireless network,0.25,wired network
+transport-layer demultiplexing,,0.85,multiplexing,0.85,ip,0.85,demultiplexing,0.33,demultiplexing service,0.20,multiplexing / demultiplexing service
+transport-layer multiplexing,,0.85,multiplexing,0.85,ip,0.33,udp multiplexing,0.33,message multiplexing,0.25,time division multiplexing
+transport-layer protocol,,0.33,udp protocol,0.33,transport protocol,0.33,tls protocol,0.33,tcp protocol,0.33,ssl protocol
+transport-layer segment,,0.85,segment,0.33,udp segment,0.33,tcp segment,0.33,synack segment,0.33,syn segment
+tunnel endpoint,,0.85,tunnel endpoints,0.85,tunnel endpoint identifier,0.85,tunnel,0.85,homegateway - router - to - visited - gateway - router tunnel endpoint,0.33,tunnel mode
+two-dimensional parity,,0.33,simple parity,0.33,parity checks,0.25,single parity bit,0.25,odd parity schemes,0.25,even parity scheme
+two-dimensional parity scheme,,0.50,even parity scheme,0.25,simple parity,0.25,reservation scheme,0.25,parity checks,0.20,single parity bit
+udt,,,,,,,,,,,
+upper-layer mechanisms,,0.85,sms,0.20,congestion - control mechanisms,,,,,,
+user equipment,,0.85,user equipment ( ue ),0.85,ip,0.33,user agents,0.33,user agent,0.33,mobile user
+user-agent header line,,0.85,header line,0.85,agent,0.50,cookie header line,0.25,udp header,0.25,tcp header
+verisign global registry services,,0.85,verisign global registry,0.20,verisign network,0.20,security services,0.20,regional registry,0.20,global isp
+version,,0.85,version number,0.85,version field,0.85,simple network management protocol version 3,0.85,http version field,,
+video conference calls,,0.25,video streaming,0.25,video distribution,0.25,video conferencing,0.25,video application,0.25,streaming video
+web page,,0.85,web,0.33,web transfers,0.33,web servers,0.33,web server,0.33,web proxy
+wfq,,0.85,wfq weight,0.85,wfq service,0.85,wfq scheduler,0.85,weighted fair queuing ( wfq ) discipline,,
+wireless laptop,,0.85,ap,0.33,wireless transmitter,0.33,wireless stations,0.33,wireless station,0.33,wireless router
+wpa1,,0.85,wifi protected access ( wpa1 ),,,,,,,,

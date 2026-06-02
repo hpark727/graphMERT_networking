@@ -1,8 +1,12 @@
 # GraphMERT MLM training config — Kurose & Ross networking textbook (gen4 KG)
 # Update paths prefixed with DELLA_ROOT before submitting to Princeton Della.
 # DELLA_ROOT suggested: /scratch/gpfs/<netid>/graphmert_networking
+#
+# Scale note: 2,039 training sequences (296k tokens) vs paper's 1M sequences.
+# Architecture: paper base (8H/512H/2048FFN/128 roots) with 6 layers and 3 leaves (max_nodes=512).
+# Key adaptations: higher dropout, lower LR vs paper.
 
-config_overrides: 'max_nodes=1024,vocab_size=30522,num_hidden_layers=12,num_attention_heads=8,hidden_size=512,intermediate_size=2048,pretrained_emb_dim=0'
+config_overrides: 'max_nodes=512,vocab_size=30522,num_hidden_layers=6,num_attention_heads=8,hidden_size=512,intermediate_size=2048,pretrained_emb_dim=0'
 cache_dir: DELLA_ROOT/cache
 
 # Raw text files (not used at preprocessing time — heads dataset is pre-built)
@@ -13,37 +17,37 @@ tokenized_dataset_output_path: null
 cut_dataset_for_testing: false
 
 # Head-position datasets (output of find_heads_positions.py, merged by merge_for_training.py)
-train_dataset_with_heads: DELLA_ROOT/data/heads_train
-eval_dataset_with_heads: DELLA_ROOT/data/heads_eval
+train_dataset_with_heads: DELLA_ROOT/gen4_triplets/training_data/heads_train
+eval_dataset_with_heads: DELLA_ROOT/gen4_triplets/training_data/heads_eval
 
 # Injection CSVs (output of create_injection_csv.py, merged by merge_for_training.py)
-injections_train_path: DELLA_ROOT/data/injections_train.csv
-injections_eval_path:  DELLA_ROOT/data/injections_eval.csv
+injections_train_path: DELLA_ROOT/gen4_triplets/training_data/injections_train.csv
+injections_eval_path:  DELLA_ROOT/gen4_triplets/training_data/injections_eval.csv
 
-# Relation map (gen4 — 32 relation types, values 1-32; 0 reserved for empty)
-relation_map_path: DELLA_ROOT/data/relation_map.json
+# Relation map (gen4 — 22 canonical relation types, values 1-22; 0 reserved for empty)
+relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
 
 lr_scheduler_kwargs:
-    min_lr: !!float 1e-5
-learning_rate: !!float 0.0004
-num_train_epochs: 25
+    min_lr: !!float 1e-6
+learning_rate: !!float 3e-5
+num_train_epochs: 20
 
 output_dir: DELLA_ROOT/outputs/networking_graphmert
 
-per_device_train_batch_size: 32
-per_device_eval_batch_size: 32
-gradient_accumulation_steps: 2
-warmup_steps: 200
+per_device_train_batch_size: 8
+per_device_eval_batch_size: 8
+gradient_accumulation_steps: 4
+warmup_steps: 100
 
 preprocessing_num_workers: 8
 dataloader_num_workers: 4
 
-save_steps: 500
-eval_steps: 500
-logging_steps: 100
+save_steps: 200
+eval_steps: 100
+logging_steps: 25
 
-# 22 canonical relation types (values 1-22); 5 aliases mapped to canonical ids
-num_relationships: 23
+# 19 canonical relation types (max ID 21); IDs 17, 19, 22 dropped (< 30 triples)
+num_relationships: 22
 
 exp_mask_base: 0.6
 
@@ -52,10 +56,10 @@ graph_types:
     - leaf_undirected
     - leaf_connected_undirected
 
-relation_emb_dropout: 0.3
+relation_emb_dropout: 0.45
 mlm_sbo: true
 mlm_on_leaves_probability: 0.15
-span_upper_length: null
+span_upper_length: 3
 weight_decay: 0.01
 
 max_train_samples: null
@@ -64,9 +68,9 @@ tokenizer_name: bert-base-uncased
 subword_token_start: "##"
 
 use_auth_token: false
-dropout: 0.1
-attention_dropout: 0.1
-activation_dropout: 0.1
+dropout: 0.2
+attention_dropout: 0.2
+activation_dropout: 0.2
 layerdrop: 0.0
 
 overwrite_cache: false

@@ -19,8 +19,6 @@ id,head,relation_type,tail
 0,bgp,implements,route-selection algorithm
 0,bgp,implements,routing algorithm
 0,bgp,requires,port 179
-0,bgp,routes_to,destination prefix
-0,bgp,routes_to,prefix
 0,bgp,runs_on,tcp
 1,ospf,implements,dijkstra's algorithm
 1,ospf,implements,link-state algorithm
@@ -41,8 +39,6 @@ id,head,relation_type,tail
 1,bgp,implements,route-selection algorithm
 1,bgp,implements,routing algorithm
 1,bgp,requires,port 179
-1,bgp,routes_to,destination prefix
-1,bgp,routes_to,prefix
 1,bgp,runs_on,tcp
 2,icmp,enables,ping
 2,icmp,enables,traceroute
@@ -50,7 +46,6 @@ id,head,relation_type,tail
 2,snmp,operates_at,application layer
 2,snmp,runs_on,udp
 2,forwarding table,contains,next-hop node
-2,forwarding table,maps_to,interface
 2,forwarding table,part_of,node
 2,forwarding table,part_of,router
 3,flow table,contains,header field value
@@ -58,7 +53,6 @@ id,head,relation_type,tail
 3,flow table,part_of,router
 3,flow table,part_of,sdn-controlled switch
 4,forwarding table,contains,next-hop node
-4,forwarding table,maps_to,interface
 4,forwarding table,part_of,node
 4,forwarding table,part_of,router
 4,ospf,implements,dijkstra's algorithm
@@ -80,21 +74,15 @@ id,head,relation_type,tail
 4,bgp,implements,route-selection algorithm
 4,bgp,implements,routing algorithm
 4,bgp,requires,port 179
-4,bgp,routes_to,destination prefix
-4,bgp,routes_to,prefix
 4,bgp,runs_on,tcp
-6,control agent,manages,flow table
 6,flow table,contains,header field value
 6,flow table,has_part,flow table entry
 6,flow table,part_of,router
 6,flow table,part_of,sdn-controlled switch
-7,sdn,controls,router
 7,sdn,implements,logically centralized control
 7,sdn,supports,4g/5g cellular networking
-8,sdn,controls,router
 8,sdn,implements,logically centralized control
 8,sdn,supports,4g/5g cellular networking
-9,sdn,controls,router
 9,sdn,implements,logically centralized control
 9,sdn,supports,4g/5g cellular networking
 10,graph,has_part,edge
@@ -124,19 +112,15 @@ id,head,relation_type,tail
 22,bgp,implements,route-selection algorithm
 22,bgp,implements,routing algorithm
 22,bgp,requires,port 179
-22,bgp,routes_to,destination prefix
-22,bgp,routes_to,prefix
 22,bgp,runs_on,tcp
 26,centralized routing algorithm,requires,global knowledge
 26,centralized routing algorithm,runs_on,controller
 28,ls algorithm,provides,least-cost path
 30,ls algorithm,provides,least-cost path
 30,forwarding table,contains,next-hop node
-30,forwarding table,maps_to,interface
 30,forwarding table,part_of,node
 30,forwarding table,part_of,router
 31,forwarding table,contains,next-hop node
-31,forwarding table,maps_to,interface
 31,forwarding table,part_of,node
 31,forwarding table,part_of,router
 32,ls algorithm,provides,least-cost path
@@ -144,18 +128,15 @@ id,head,relation_type,tail
 35,ls algorithm,provides,least-cost path
 36,ls algorithm,provides,least-cost path
 42,forwarding table,contains,next-hop node
-42,forwarding table,maps_to,interface
 42,forwarding table,part_of,node
 42,forwarding table,part_of,router
 43,distance vector,contains,cost
 44,distance vector,contains,cost
 45,distance vector,contains,cost
 46,forwarding table,contains,next-hop node
-46,forwarding table,maps_to,interface
 46,forwarding table,part_of,node
 46,forwarding table,part_of,router
 47,forwarding table,contains,next-hop node
-47,forwarding table,maps_to,interface
 47,forwarding table,part_of,node
 47,forwarding table,part_of,router
 47,ls algorithm,provides,least-cost path
@@ -167,8 +148,6 @@ id,head,relation_type,tail
 49,bgp,implements,route-selection algorithm
 49,bgp,implements,routing algorithm
 49,bgp,requires,port 179
-49,bgp,routes_to,destination prefix
-49,bgp,routes_to,prefix
 49,bgp,runs_on,tcp
 50,distance vector,contains,cost
 51,distance vector,contains,cost
@@ -176,9 +155,6 @@ id,head,relation_type,tail
 53,distance vector,contains,cost
 55,distance vector,contains,cost
 56,distance vector,contains,cost
-62,poisoned reverse,mitigates,count-to-infinity problem
-63,poisoned reverse,mitigates,count-to-infinity problem
-65,poisoned reverse,mitigates,count-to-infinity problem
 70,router,causes,oscillation
 70,router,forwards,ip datagram
 70,router,forwards,packet
@@ -296,11 +272,8 @@ id,head,relation_type,tail
 85,bgp,implements,route-selection algorithm
 85,bgp,implements,routing algorithm
 85,bgp,requires,port 179
-85,bgp,routes_to,destination prefix
-85,bgp,routes_to,prefix
 85,bgp,runs_on,tcp
 86,forwarding table,contains,next-hop node
-86,forwarding table,maps_to,interface
 86,forwarding table,part_of,node
 86,forwarding table,part_of,router
 86,bgp,enables,ip-anycast service
@@ -310,8 +283,6 @@ id,head,relation_type,tail
 86,bgp,implements,route-selection algorithm
 86,bgp,implements,routing algorithm
 86,bgp,requires,port 179
-86,bgp,routes_to,destination prefix
-86,bgp,routes_to,prefix
 86,bgp,runs_on,tcp
 87,bgp,enables,ip-anycast service
 87,bgp,enables,policy
@@ -320,11 +291,8 @@ id,head,relation_type,tail
 87,bgp,implements,route-selection algorithm
 87,bgp,implements,routing algorithm
 87,bgp,requires,port 179
-87,bgp,routes_to,destination prefix
-87,bgp,routes_to,prefix
 87,bgp,runs_on,tcp
 87,forwarding table,contains,next-hop node
-87,forwarding table,maps_to,interface
 87,forwarding table,part_of,node
 87,forwarding table,part_of,router
 88,bgp,enables,ip-anycast service
@@ -334,8 +302,6 @@ id,head,relation_type,tail
 88,bgp,implements,route-selection algorithm
 88,bgp,implements,routing algorithm
 88,bgp,requires,port 179
-88,bgp,routes_to,destination prefix
-88,bgp,routes_to,prefix
 88,bgp,runs_on,tcp
 90,bgp,enables,ip-anycast service
 90,bgp,enables,policy
@@ -344,8 +310,6 @@ id,head,relation_type,tail
 90,bgp,implements,route-selection algorithm
 90,bgp,implements,routing algorithm
 90,bgp,requires,port 179
-90,bgp,routes_to,destination prefix
-90,bgp,routes_to,prefix
 90,bgp,runs_on,tcp
 90,gateway router,connects_to,router
 90,gateway router,is_a,router
@@ -366,7 +330,6 @@ id,head,relation_type,tail
 98,route,has_part,next-hop
 102,hot potato routing,requires,cost
 104,forwarding table,contains,next-hop node
-104,forwarding table,maps_to,interface
 104,forwarding table,part_of,node
 104,forwarding table,part_of,router
 104,bgp,enables,ip-anycast service
@@ -376,8 +339,6 @@ id,head,relation_type,tail
 104,bgp,implements,route-selection algorithm
 104,bgp,implements,routing algorithm
 104,bgp,requires,port 179
-104,bgp,routes_to,destination prefix
-104,bgp,routes_to,prefix
 104,bgp,runs_on,tcp
 104,hot potato routing,requires,cost
 105,ospf,implements,dijkstra's algorithm
@@ -401,8 +362,6 @@ id,head,relation_type,tail
 106,bgp,implements,route-selection algorithm
 106,bgp,implements,routing algorithm
 106,bgp,requires,port 179
-106,bgp,routes_to,destination prefix
-106,bgp,routes_to,prefix
 106,bgp,runs_on,tcp
 109,hot potato routing,requires,cost
 110,bgp,enables,ip-anycast service
@@ -412,8 +371,6 @@ id,head,relation_type,tail
 110,bgp,implements,route-selection algorithm
 110,bgp,implements,routing algorithm
 110,bgp,requires,port 179
-110,bgp,routes_to,destination prefix
-110,bgp,routes_to,prefix
 110,bgp,runs_on,tcp
 112,cdn,supports,ip-anycast service
 113,ip address,identifies,dns server
@@ -433,8 +390,6 @@ id,head,relation_type,tail
 123,bgp,implements,route-selection algorithm
 123,bgp,implements,routing algorithm
 123,bgp,requires,port 179
-123,bgp,routes_to,destination prefix
-123,bgp,routes_to,prefix
 123,bgp,runs_on,tcp
 124,bgp,enables,ip-anycast service
 124,bgp,enables,policy
@@ -443,14 +398,11 @@ id,head,relation_type,tail
 124,bgp,implements,route-selection algorithm
 124,bgp,implements,routing algorithm
 124,bgp,requires,port 179
-124,bgp,routes_to,destination prefix
-124,bgp,routes_to,prefix
 124,bgp,runs_on,tcp
 125,gateway router,connects_to,router
 125,gateway router,is_a,router
 126,gateway router,connects_to,router
 126,gateway router,is_a,router
-127,domain name,maps_to,ip address
 129,ip datagram,contains,ttl
 129,ip datagram,contains,udp segment
 130,router,causes,oscillation
@@ -484,7 +436,6 @@ id,head,relation_type,tail
 130,router,sends,link-state packet
 130,router,sends,packet
 130,forwarding table,contains,next-hop node
-130,forwarding table,maps_to,interface
 130,forwarding table,part_of,node
 130,forwarding table,part_of,router
 130,bgp,enables,ip-anycast service
@@ -494,8 +445,6 @@ id,head,relation_type,tail
 130,bgp,implements,route-selection algorithm
 130,bgp,implements,routing algorithm
 130,bgp,requires,port 179
-130,bgp,routes_to,destination prefix
-130,bgp,routes_to,prefix
 130,bgp,runs_on,tcp
 131,bgp,enables,ip-anycast service
 131,bgp,enables,policy
@@ -504,14 +453,11 @@ id,head,relation_type,tail
 131,bgp,implements,route-selection algorithm
 131,bgp,implements,routing algorithm
 131,bgp,requires,port 179
-131,bgp,routes_to,destination prefix
-131,bgp,routes_to,prefix
 131,bgp,runs_on,tcp
 134,flow table,contains,header field value
 134,flow table,has_part,flow table entry
 134,flow table,part_of,router
 134,flow table,part_of,sdn-controlled switch
-134,control plane,controls,router
 134,control plane,has_part,network-control application
 134,control plane,has_part,sdn controller
 136,sdn controller,communicates_with,sdn-enabled switch
@@ -519,7 +465,6 @@ id,head,relation_type,tail
 136,sdn controller,communicates_with,switch
 136,sdn controller,enables,unbundling
 136,sdn controller,implements,openflow
-136,sdn controller,manages,flow table
 136,sdn controller,part_of,control plane
 136,sdn controller,provides,api
 136,sdn controller,provides,network state information
@@ -528,11 +473,9 @@ id,head,relation_type,tail
 137,sdn controller,communicates_with,switch
 137,sdn controller,enables,unbundling
 137,sdn controller,implements,openflow
-137,sdn controller,manages,flow table
 137,sdn controller,part_of,control plane
 137,sdn controller,provides,api
 137,sdn controller,provides,network state information
-139,sdn,controls,router
 139,sdn,implements,logically centralized control
 139,sdn,supports,4g/5g cellular networking
 141,sdn controller,communicates_with,sdn-enabled switch
@@ -540,7 +483,6 @@ id,head,relation_type,tail
 141,sdn controller,communicates_with,switch
 141,sdn controller,enables,unbundling
 141,sdn controller,implements,openflow
-141,sdn controller,manages,flow table
 141,sdn controller,part_of,control plane
 141,sdn controller,provides,api
 141,sdn controller,provides,network state information
@@ -549,7 +491,6 @@ id,head,relation_type,tail
 142,sdn controller,communicates_with,switch
 142,sdn controller,enables,unbundling
 142,sdn controller,implements,openflow
-142,sdn controller,manages,flow table
 142,sdn controller,part_of,control plane
 142,sdn controller,provides,api
 142,sdn controller,provides,network state information
@@ -563,7 +504,6 @@ id,head,relation_type,tail
 149,sdn controller,communicates_with,switch
 149,sdn controller,enables,unbundling
 149,sdn controller,implements,openflow
-149,sdn controller,manages,flow table
 149,sdn controller,part_of,control plane
 149,sdn controller,provides,api
 149,sdn controller,provides,network state information
@@ -572,15 +512,12 @@ id,head,relation_type,tail
 153,sdn controller,communicates_with,switch
 153,sdn controller,enables,unbundling
 153,sdn controller,implements,openflow
-153,sdn controller,manages,flow table
 153,sdn controller,part_of,control plane
 153,sdn controller,provides,api
 153,sdn controller,provides,network state information
 155,openflow protocol,runs_on,tcp
-157,control plane,controls,router
 157,control plane,has_part,network-control application
 157,control plane,has_part,sdn controller
-157,sdn,controls,router
 157,sdn,implements,logically centralized control
 157,sdn,supports,4g/5g cellular networking
 160,icmp,enables,ping
@@ -601,21 +538,17 @@ id,head,relation_type,tail
 168,icmp,enables,traceroute
 168,icmp,provides,error reporting
 169,network layer,has_part,control plane
-170,sdn,controls,router
 170,sdn,implements,logically centralized control
 170,sdn,supports,4g/5g cellular networking
-171,sdn,controls,router
 171,sdn,implements,logically centralized control
 171,sdn,supports,4g/5g cellular networking
 173,managing server,communicates_with,managed device
-173,managing server,controls,managed device
 173,managing server,receives,notification
 173,managing server,receives,response
 173,managing server,sends,request
 174,managed device,receives,rpc
 174,managed device,sends,notification
 174,host,communicates_with,router
-174,host,measures,round-trip time
 174,host,receives,icmp
 174,host,receives,icmp port unreachable message
 174,host,sends,icmp echo reply
@@ -669,7 +602,6 @@ id,head,relation_type,tail
 175,ip address,identifies,mail server
 175,ip address,identifies,web server
 176,managing server,communicates_with,managed device
-176,managing server,controls,managed device
 176,managing server,receives,notification
 176,managing server,receives,response
 176,managing server,sends,request
@@ -695,7 +627,6 @@ id,head,relation_type,tail
 183,netconf,supports,rpc
 185,snmpv3,operates_at,application layer
 190,managing server,communicates_with,managed device
-190,managing server,controls,managed device
 190,managing server,receives,notification
 190,managing server,receives,response
 190,managing server,sends,request
@@ -736,7 +667,6 @@ id,head,relation_type,tail
 193,router,sends,packet
 194,tcp,provides,congestion control
 195,managing server,communicates_with,managed device
-195,managing server,controls,managed device
 195,managing server,receives,notification
 195,managing server,receives,response
 195,managing server,sends,request
@@ -751,7 +681,6 @@ id,head,relation_type,tail
 196,tls,runs_on,tcp
 196,tcp,provides,congestion control
 197,managing server,communicates_with,managed device
-197,managing server,controls,managed device
 197,managing server,receives,notification
 197,managing server,receives,response
 197,managing server,sends,request
@@ -796,7 +725,6 @@ id,head,relation_type,tail
 201,netconf,supports,rpc
 204,snmp,operates_at,application layer
 204,snmp,runs_on,udp
-206,control plane,controls,router
 206,control plane,has_part,network-control application
 206,control plane,has_part,sdn controller
 206,router,causes,oscillation
@@ -829,7 +757,6 @@ id,head,relation_type,tail
 206,router,sends,link-state information
 206,router,sends,link-state packet
 206,router,sends,packet
-206,sdn,controls,router
 206,sdn,implements,logically centralized control
 206,sdn,supports,4g/5g cellular networking
 207,ospf,implements,dijkstra's algorithm
@@ -851,10 +778,7 @@ id,head,relation_type,tail
 207,bgp,implements,route-selection algorithm
 207,bgp,implements,routing algorithm
 207,bgp,requires,port 179
-207,bgp,routes_to,destination prefix
-207,bgp,routes_to,prefix
 207,bgp,runs_on,tcp
-207,sdn,controls,router
 207,sdn,implements,logically centralized control
 207,sdn,supports,4g/5g cellular networking
 208,sdn controller,communicates_with,sdn-enabled switch
@@ -862,7 +786,6 @@ id,head,relation_type,tail
 208,sdn controller,communicates_with,switch
 208,sdn controller,enables,unbundling
 208,sdn controller,implements,openflow
-208,sdn controller,manages,flow table
 208,sdn controller,part_of,control plane
 208,sdn controller,provides,api
 208,sdn controller,provides,network state information
@@ -901,8 +824,6 @@ id,head,relation_type,tail
 209,bgp,implements,route-selection algorithm
 209,bgp,implements,routing algorithm
 209,bgp,requires,port 179
-209,bgp,routes_to,destination prefix
-209,bgp,routes_to,prefix
 209,bgp,runs_on,tcp
 210,bgp,enables,ip-anycast service
 210,bgp,enables,policy
@@ -911,12 +832,9 @@ id,head,relation_type,tail
 210,bgp,implements,route-selection algorithm
 210,bgp,implements,routing algorithm
 210,bgp,requires,port 179
-210,bgp,routes_to,destination prefix
-210,bgp,routes_to,prefix
 210,bgp,runs_on,tcp
 214,distance vector,contains,cost
 216,distance vector,contains,cost
-217,poisoned reverse,mitigates,count-to-infinity problem
 218,bgp,enables,ip-anycast service
 218,bgp,enables,policy
 218,bgp,has_part,as-path
@@ -924,8 +842,6 @@ id,head,relation_type,tail
 218,bgp,implements,route-selection algorithm
 218,bgp,implements,routing algorithm
 218,bgp,requires,port 179
-218,bgp,routes_to,destination prefix
-218,bgp,routes_to,prefix
 218,bgp,runs_on,tcp
 218,ospf,implements,dijkstra's algorithm
 218,ospf,implements,link-state algorithm
@@ -941,7 +857,6 @@ id,head,relation_type,tail
 218,ospf,supports,simple authentication
 219,rip,implements,distance-vector algorithm
 220,forwarding table,contains,next-hop node
-220,forwarding table,maps_to,interface
 220,forwarding table,part_of,node
 220,forwarding table,part_of,router
 222,bgp,enables,ip-anycast service
@@ -951,16 +866,12 @@ id,head,relation_type,tail
 222,bgp,implements,route-selection algorithm
 222,bgp,implements,routing algorithm
 222,bgp,requires,port 179
-222,bgp,routes_to,destination prefix
-222,bgp,routes_to,prefix
 222,bgp,runs_on,tcp
 225,snmp,operates_at,application layer
 225,snmp,runs_on,udp
 226,icmp,enables,ping
 226,icmp,enables,traceroute
 226,icmp,provides,error reporting
-226,ping,measures,packet loss
-226,ping,measures,rtt
 226,ping,receives,icmp echo response
 226,ping,sends,icmp echo request
 227,icmp,enables,ping

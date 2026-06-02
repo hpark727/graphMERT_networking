@@ -42,18 +42,13 @@ congestion,increases,round-trip time
 congestion,increases,rtt
 congestion avoidance,increases,congestion window
 congestion avoidance,increases,congestion window size
-congestion control,controls,transmission rate
-congestion control,decreases,transmission rate
 congestion control,requires,congestion window
 congestion control,supports,delay-based approach
-congestion window,controls,send rate
-congestion window,controls,unacknowledged data
 connection state,has_part,acknowledgment number parameters
 connection state,has_part,congestion-control parameters
 connection state,has_part,receive buffer
 connection-establishment request,is_a,tcp segment
 cumulative acknowledgment,is_a,ack
-cwnd,controls,send rate
 datagram,contains,segment
 destination port number field,part_of,segment
 devrtt,requires,ewma
@@ -65,7 +60,6 @@ estimatedrtt,requires,ewma
 ethernet,implements,csma/cd
 ethernet,provides,error detection
 file transfer,runs_on,tcp
-firewall,prevents,syn segment
 ftp,requires,well-known port number
 gbn,requires,sequence number
 go-back-n,implements,cumulative acknowledgment
@@ -94,18 +88,14 @@ ip,runs_on,link layer
 ip address,identifies,client
 ip address,identifies,host
 link layer,provides,error detection
-loss event,decreases,congestion window size
-loss rate,measures,packet loss
 mail service,requires,address
 multimedia applications,runs_on,udp
-multiplicative decrease,decreases,congestion window
 multiplicative-decrease approach,is_a,congestion control
 nak,is_a,negative acknowledgment
 name server,receives,datagram
 network,causes,packet reordering
 network layer,enables,explicit congestion indication
 network layer,sends,datagram
-offered load,decreases,throughput
 out-of-order packet,causes,positive acknowledgment
 packet,contains,checksum
 packet,contains,packet checksum field
@@ -142,7 +132,6 @@ reliable data transfer protocol,has_part,sender
 reliable data transfer protocol,implements,finite-state machine
 reliable data transfer protocol,requires,positive acknowledgment
 reliable data transfer protocol,requires,unreliable channel
-round-trip time estimation,measures,rtt
 router,causes,retransmission
 router,enables,congestion indication bit
 router,enables,network-assisted congestion control
@@ -150,7 +139,6 @@ router,forwards,datagram
 router,has_part,buffer
 router,receives,datagram
 router buffer,causes,packet loss
-sample rtt,measures,round-trip time
 segment,contains,destination port number
 segment,contains,port
 segment,contains,source port number
@@ -202,7 +190,6 @@ socket,receives,segment
 source host,receives,synack segment
 source host,sends,syn segment
 source port number field,part_of,segment
-stop-and-wait protocol,decreases,channel utilization
 stop-and-wait protocol,requires,ack
 stop-and-wait protocol,requires,acknowledgment
 stop-and-wait protocol,requires,checksum
@@ -212,7 +199,6 @@ streaming,runs_on,udp
 syn flood attack,is_a,denial-of-service attack
 target host,receives,syn segment
 target host,sends,rst segment
-tcp,controls,send rate
 tcp,has_part,congestion avoidance
 tcp,has_part,congestion control mechanism
 tcp,has_part,connection state
@@ -256,7 +242,6 @@ tcp,requires,timers
 tcp,runs_on,ip
 tcp,sends,segment
 tcp,supports,full-duplex
-tcp congestion control,controls,sending rate
 tcp congestion-control algorithm,has_part,congestion avoidance
 tcp congestion-control algorithm,has_part,fast recovery
 tcp congestion-control algorithm,has_part,slow start
@@ -271,7 +256,6 @@ tcp segment,contains,destination port number
 tcp segment,provides,acknowledgment
 tcp segment header,has_part,acknowledgment number field
 tcp segment header,has_part,sequence number field
-tcp vegas,measures,rtt
 telnet,operates_at,application layer
 telnet,runs_on,tcp
 timeout,causes,multiplicative decrease
