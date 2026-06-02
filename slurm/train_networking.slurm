@@ -13,7 +13,7 @@
 #SBATCH --mail-user=${USER}@princeton.edu
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-REPO=/scratch/gpfs/JHA/hp9084/graphmert_cnets
+REPO=/scratch/gpfs/JHA/hp9084/graphMERT_cnets
 YAML_TEMPLATE=${REPO}/launch_configs/args_mlm_networking.yaml
 YAML_LIVE=${REPO}/launch_configs/args_mlm_networking_run.yaml
 
