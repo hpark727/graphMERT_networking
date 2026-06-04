@@ -77,6 +77,7 @@ overwrite_cache: false
 validation_split_percentage: 5
 max_seq_length: 128
 log_level: info
+report_to: tensorboard
 
 dataloader_prefetch_factor: null
 seed: 42
