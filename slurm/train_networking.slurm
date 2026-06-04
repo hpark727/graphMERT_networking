@@ -39,8 +39,8 @@ mkdir -p slurm_logs
 
 # ── Step 1: dataset preprocessing (CPU) ──────────────────────────────────────
 echo "=== Dataset preprocessing ==="
-python3 run_dataset_preprocessing.py --yaml_file ${YAML_LIVE}
+conda run -n graphmert python3 run_dataset_preprocessing.py --yaml_file ${YAML_LIVE}
 
 # ── Step 2: training ──────────────────────────────────────────────────────────
 echo "=== Training ==="
-python3 run_mlm.py --yaml_file ${YAML_LIVE}
+conda run -n graphmert python3 run_mlm.py --yaml_file ${YAML_LIVE}
