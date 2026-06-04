@@ -1,0 +1,87 @@
+# GraphMERT MLM stage-2 training config — Kurose & Ross networking textbook (gen4 KG)
+# Continues from stage-1 checkpoint; lower LR, fresh cosine schedule.
+
+config_overrides: 'max_nodes=512,vocab_size=30522,num_hidden_layers=6,num_attention_heads=8,hidden_size=512,intermediate_size=2048,pretrained_emb_dim=0'
+cache_dir: DELLA_ROOT/cache
+
+train_file: DELLA_ROOT/data/ch1_txt_train.txt
+validation_file: DELLA_ROOT/data/ch8_txt_eval.txt
+
+tokenized_dataset_output_path: null
+cut_dataset_for_testing: false
+
+train_dataset_with_heads: DELLA_ROOT/gen4_triplets/training_data/heads_train
+eval_dataset_with_heads: DELLA_ROOT/gen4_triplets/training_data/heads_eval
+
+injections_train_path: DELLA_ROOT/gen4_triplets/training_data/injections_train.csv
+injections_eval_path:  DELLA_ROOT/gen4_triplets/training_data/injections_eval.csv
+
+relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
+
+lr_scheduler_kwargs:
+    min_lr: !!float 1e-7
+learning_rate: !!float 1e-5
+num_train_epochs: 20
+
+# Load weights from stage-1 output
+resume_from_checkpoint: DELLA_ROOT/outputs/networking_graphmert/span/rel22/bs32_lr_3e-05
+
+output_dir: DELLA_ROOT/outputs/networking_graphmert_stage2
+
+per_device_train_batch_size: 8
+per_device_eval_batch_size: 8
+gradient_accumulation_steps: 4
+warmup_steps: 50
+
+preprocessing_num_workers: 8
+dataloader_num_workers: 4
+
+save_steps: 200
+eval_steps: 100
+logging_steps: 25
+
+num_relationships: 22
+
+exp_mask_base: 0.6
+
+graph_types:
+    - root_undirected
+    - leaf_undirected
+    - leaf_connected_undirected
+
+relation_emb_dropout: 0.45
+mlm_sbo: true
+mlm_on_leaves_probability: 0.15
+span_upper_length: 3
+weight_decay: 0.01
+
+max_train_samples: null
+
+tokenizer_name: bert-base-uncased
+subword_token_start: "##"
+
+use_auth_token: false
+dropout: 0.2
+attention_dropout: 0.2
+activation_dropout: 0.2
+layerdrop: 0.0
+
+overwrite_cache: false
+validation_split_percentage: 5
+max_seq_length: 128
+log_level: info
+report_to: wandb
+
+dataloader_prefetch_factor: null
+seed: 42
+do_predict: false
+do_eval: true
+do_train: true
+bf16: true
+eval_strategy: steps
+logging_strategy: steps
+lr_scheduler_type: cosine_with_min_lr
+overwrite_output_dir: false
+remove_unused_columns: false
+save_safetensors: false
+save_total_limit: 3
