@@ -26,6 +26,7 @@ conda activate graphmert
 export PYTHONPATH=${REPO}:${REPO}/utils:${PYTHONPATH}
 export HF_DATASETS_CACHE=${REPO}/cache/hf_datasets
 export TRANSFORMERS_CACHE=${REPO}/cache/transformers
+export TQDM_DISABLE=0
 
 # ── Substitute DELLA_ROOT placeholder in yaml ────────────────────────────────
 sed "s|DELLA_ROOT|${REPO}|g" ${YAML_TEMPLATE} > ${YAML_LIVE}

@@ -44,7 +44,7 @@ dataloader_num_workers: 4
 
 save_steps: 200
 eval_steps: 100
-logging_steps: 25
+logging_steps: 5
 
 # 19 canonical relation types (max ID 21); IDs 17, 19, 22 dropped (< 30 triples)
 num_relationships: 22
