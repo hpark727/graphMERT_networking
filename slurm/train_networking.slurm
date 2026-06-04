@@ -7,6 +7,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=mig
 #SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --time=01:00:01
 #SBATCH --mail-user=${USER}@princeton.edu
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
