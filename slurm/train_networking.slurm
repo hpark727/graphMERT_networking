@@ -4,7 +4,7 @@
 #SBATCH --error=slurm_logs/graphmert_networking_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=8
 #SBATCH --partition=mig
 #SBATCH --gres=gpu:1
 #SBATCH --mail-type=BEGIN,END,FAIL
@@ -21,6 +21,7 @@ cd ${REPO}
 # ── Environment ───────────────────────────────────────────────────────────────
 module purge
 module load anaconda3/2024.2
+source $(conda info --base)/etc/profile.d/conda.sh
 conda activate graphmert
 
 export PYTHONPATH=${REPO}:${REPO}/utils:${PYTHONPATH}
