@@ -91,5 +91,5 @@ lr_scheduler_type: cosine_with_min_lr
 overwrite_output_dir: true
 resume_from_checkpoint: false
 remove_unused_columns: false
-save_safetensors: false
+save_safetensors: true
 save_total_limit: 3
