@@ -8,7 +8,7 @@
 #SBATCH --partition=mig
 #SBATCH --gres=gpu:1
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --time=01:00:01
+#SBATCH --time=24:00:00
 #SBATCH --mail-user=${USER}@princeton.edu
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
@@ -30,6 +30,7 @@ export HF_HUB_CACHE=${REPO}/cache/transformers
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 export TQDM_DISABLE=0
+export WANDB_MODE=offline
 
 # ── Substitute DELLA_ROOT placeholder in yaml ────────────────────────────────
 sed "s|DELLA_ROOT|${REPO}|g" ${YAML_TEMPLATE} > ${YAML_LIVE}
