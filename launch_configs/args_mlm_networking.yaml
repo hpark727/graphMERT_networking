@@ -88,7 +88,7 @@ bf16: true
 eval_strategy: steps
 logging_strategy: steps
 lr_scheduler_type: cosine_with_min_lr
-overwrite_output_dir: false
+overwrite_output_dir: true
 resume_from_checkpoint: false
 remove_unused_columns: false
 save_safetensors: false
