@@ -26,7 +26,7 @@ conda activate graphmert
 
 export PYTHONPATH=${REPO}:${REPO}/utils:${PYTHONPATH}
 export HF_DATASETS_CACHE=${REPO}/cache/hf_datasets
-export HF_HUB_CACHE=${REPO}/cache/transformers
+export HF_HUB_CACHE=${REPO}/cache
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 export TQDM_DISABLE=0
