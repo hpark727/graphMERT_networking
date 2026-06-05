@@ -31,8 +31,16 @@ export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 export TQDM_DISABLE=0
 
-# ── Substitute DELLA_ROOT placeholder in yaml ────────────────────────────────
-sed "s|DELLA_ROOT|${REPO}|g" ${YAML_TEMPLATE} > ${YAML_LIVE}
+# ── Resolve bert-base-uncased snapshot path from local HF cache ──────────────
+BERT_SNAPSHOT=$(ls -d ${HF_HUB_CACHE}/models--bert-base-uncased/snapshots/*/ 2>/dev/null | head -1 | sed 's|/$||')
+if [ -z "${BERT_SNAPSHOT}" ]; then
+    echo "ERROR: bert-base-uncased not found in ${HF_HUB_CACHE}" >&2
+    exit 1
+fi
+echo "Using bert tokenizer from: ${BERT_SNAPSHOT}"
+
+# ── Substitute DELLA_ROOT and BERT_TOKENIZER_PATH placeholders in yaml ───────
+sed "s|DELLA_ROOT|${REPO}|g; s|BERT_TOKENIZER_PATH|${BERT_SNAPSHOT}|g" ${YAML_TEMPLATE} > ${YAML_LIVE}
 
 # ── Create required directories ───────────────────────────────────────────────
 mkdir -p ${REPO}/gen4_triplets/predict_tails_input

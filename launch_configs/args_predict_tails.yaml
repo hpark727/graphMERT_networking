@@ -2,7 +2,7 @@
 # Predicts top-k tail tokens for every (head, relation) pair found in training sentences.
 
 model_path: DELLA_ROOT/outputs/networking_graphmert/span/rel22/bs32_lr_3e-05
-tokenizer_path: bert-base-uncased
+tokenizer_path: BERT_TOKENIZER_PATH
 
 preprocessed_dataset_path: DELLA_ROOT/gen4_triplets/predict_tails_input/train
 relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
