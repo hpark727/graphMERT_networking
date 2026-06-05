@@ -3,11 +3,19 @@ Map single predicted tokens → canonical seed-KG entity names, then emit ranked
 candidate triples that are not already in the seed KG.
 
 Usage (on Della):
+  # Single split
   python3 scripts/expand_kg_from_predictions.py \
       --predictions  outputs/kg_expansion_bert_init_stage2/train/top_15 \
       --seed_kg_dir  gen4_triplets/seed_kg \
-      --output       outputs/kg_expansion_bert_init_stage2/train/candidate_triples.csv \
-      [--per_pair_top_k 20] [--min_score -8.0] [--min_evidence 1]
+      --output       outputs/kg_expansion_bert_init_stage2/full_kg/candidate_triples.csv
+
+  # Full textbook: combine train (ch1-ch7) + eval (ch8)
+  python3 scripts/expand_kg_from_predictions.py \
+      --predictions  outputs/kg_expansion_bert_init_stage2/train/top_15 \
+                     outputs/kg_expansion_bert_init_stage2/eval/top_15 \
+      --seed_kg_dir  gen4_triplets/seed_kg \
+      --output       outputs/kg_expansion_bert_init_stage2/full_kg/candidate_triples.csv \
+      --per_pair_top_k 20
 
 --per_pair_top_k (default 20): for each unique (head, relation) pair, take the
   top-N candidate entities ranked by specificity-weighted score.  This ensures
@@ -17,9 +25,11 @@ Usage (on Della):
 Optional comparison:
   python3 scripts/expand_kg_from_predictions.py \
       --predictions  outputs/kg_expansion_bert_init_stage2/train/top_15 \
+                     outputs/kg_expansion_bert_init_stage2/eval/top_15 \
       --compare      outputs/kg_expansion_bert_init/train/top_15 \
+                     outputs/kg_expansion_bert_init/eval/top_15 \
       --seed_kg_dir  gen4_triplets/seed_kg \
-      --output       outputs/kg_expansion_bert_init_stage2/train/candidate_triples.csv
+      --output       outputs/kg_expansion_bert_init_stage2/full_kg/candidate_triples.csv
 """
 
 import argparse
@@ -29,7 +39,7 @@ import math
 import os
 from collections import defaultdict
 
-from datasets import load_from_disk
+from datasets import load_from_disk, concatenate_datasets
 
 
 # ── Seed-KG helpers ──────────────────────────────────────────────────────────
@@ -175,14 +185,15 @@ def print_summary(ranked, scores, counts, token_hit, existing, label=""):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--predictions",    required=True,
-                        help="Path to top_k HuggingFace dataset from predict_tails")
+    parser.add_argument("--predictions",    required=True, nargs="+",
+                        help="One or more paths to top_k HuggingFace datasets from predict_tails "
+                             "(e.g. train/top_15 eval/top_15 — they are concatenated before scoring)")
     parser.add_argument("--seed_kg_dir",    required=True,
                         help="Directory containing seed_kg_ch*.csv files")
     parser.add_argument("--output",         required=True,
                         help="Output CSV path")
-    parser.add_argument("--compare",        default=None,
-                        help="Optional second predictions dataset for side-by-side output")
+    parser.add_argument("--compare",        default=None, nargs="+",
+                        help="Optional second set of prediction paths for side-by-side output")
     parser.add_argument("--per_pair_top_k", type=int,   default=20,
                         help="Max candidates per (head, relation) pair (default 20)")
     parser.add_argument("--min_score",      type=float, default=-5.0,
@@ -200,9 +211,9 @@ def main():
     print(f"  {len(token_idx):,} unique word-tokens in entity index")
 
     # Load & score primary predictions
-    print(f"\nLoading predictions from {args.predictions} …")
-    ds = load_from_disk(args.predictions)
-    print(f"  {len(ds):,} rows")
+    print(f"\nLoading predictions from: {args.predictions} …")
+    ds = concatenate_datasets([load_from_disk(p) for p in args.predictions])
+    print(f"  {len(ds):,} rows total ({len(args.predictions)} split(s))")
 
     scores, counts, token_hit = aggregate_scores(ds, token_idx, fan_out)
     print(f"  {len(scores):,} raw (head, rel, entity) candidates before filtering")
@@ -216,8 +227,8 @@ def main():
 
     # Optional comparison
     if args.compare:
-        print(f"\nLoading comparison predictions from {args.compare} …")
-        ds2 = load_from_disk(args.compare)
+        print(f"\nLoading comparison predictions from: {args.compare} …")
+        ds2 = concatenate_datasets([load_from_disk(p) for p in args.compare])
         scores2, counts2, token_hit2 = aggregate_scores(ds2, token_idx, fan_out)
         ranked2 = select_candidates(scores2, counts2, token_hit2, existing,
                                     args.min_score, args.min_evidence,
