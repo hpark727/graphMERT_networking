@@ -119,32 +119,57 @@ def aggregate_scores(ds, token_idx, fan_out):
     return scores, counts, token_hit
 
 
+def token_density(entity, tok):
+    """Fraction of the entity's words that equal tok (higher = more specific match)."""
+    words = entity.split()
+    return words.count(tok) / len(words) if words else 0.0
+
+
 def select_candidates(scores, counts, token_hit, existing,
-                      min_score, min_evidence, per_pair_top_k):
+                      min_score, min_evidence, per_pair_top_k, per_token_top_k=1):
     """
     Filter candidates and apply per-(head, relation) budget.
+
+    To eliminate fan-out ties (a single broad token like "packet" mapping to 32
+    entities and filling the entire budget), we first select the top
+    per_token_top_k entities per (head, relation, token) group ranked by token
+    density (fraction of the entity's words that equal the predicted token).
+    This means "packet" → "packet" (density 1.0) beats "udp packet" (0.5) beats
+    "deep packet inspection" (0.33).  After this reduction, the per-pair budget
+    is applied across distinct token signals.
 
     Returns a list of keys sorted by score (descending).
     """
     # Global filter
     valid = {k for k in scores
              if k not in existing
-             and k[0] != k[2]           # drop circular
+             and k[0] != k[2]
              and scores[k] >= min_score
              and counts[k] >= min_evidence}
 
-    # Per-(head, relation) top-K
+    # Per-(head, rel, token) reduction: keep top per_token_top_k entities by density
+    by_token_group = defaultdict(list)
+    for key in valid:
+        for tok in token_hit[key]:
+            by_token_group[(key[0], key[1], tok)].append(key)
+
+    reduced = set()
+    for group_keys in by_token_group.values():
+        group_keys.sort(key=lambda k: token_density(k[2], next(iter(token_hit[k]))), reverse=True)
+        reduced.update(group_keys[:per_token_top_k])
+
+    # Per-(head, relation) top-K across distinct token representatives
     if per_pair_top_k is not None:
         by_pair = defaultdict(list)
-        for k in valid:
+        for k in reduced:
             by_pair[(k[0], k[1])].append(k)
         selected = []
         for pair_keys in by_pair.values():
             pair_keys.sort(key=lambda k: scores[k], reverse=True)
             selected.extend(pair_keys[:per_pair_top_k])
-        valid = set(selected)
+        reduced = set(selected)
 
-    return sorted(valid, key=lambda k: scores[k], reverse=True)
+    return sorted(reduced, key=lambda k: scores[k], reverse=True)
 
 
 # ── Output ───────────────────────────────────────────────────────────────────
@@ -194,11 +219,15 @@ def main():
                         help="Output CSV path")
     parser.add_argument("--compare",        default=None, nargs="+",
                         help="Optional second set of prediction paths for side-by-side output")
-    parser.add_argument("--per_pair_top_k", type=int,   default=20,
+    parser.add_argument("--per_pair_top_k",  type=int,   default=20,
                         help="Max candidates per (head, relation) pair (default 20)")
-    parser.add_argument("--min_score",      type=float, default=-5.0,
+    parser.add_argument("--per_token_top_k", type=int,   default=1,
+                        help="Max entities per (head, relation, token) group, ranked by token "
+                             "density — 1 = only the most specific entity per token signal, "
+                             "higher values trade quality for more candidates (default 1)")
+    parser.add_argument("--min_score",       type=float, default=-5.0,
                         help="Min specificity-weighted log-prob score (default -5.0)")
-    parser.add_argument("--min_evidence",   type=int,   default=1,
+    parser.add_argument("--min_evidence",    type=int,   default=1,
                         help="Min number of supporting prediction rows (default 1)")
     args = parser.parse_args()
 
@@ -220,7 +249,7 @@ def main():
 
     ranked = select_candidates(scores, counts, token_hit, existing,
                                args.min_score, args.min_evidence,
-                               args.per_pair_top_k)
+                               args.per_pair_top_k, args.per_token_top_k)
 
     print_summary(ranked, scores, counts, token_hit, existing)
     write_candidates(args.output, ranked, scores, counts, token_hit, existing)
@@ -232,7 +261,7 @@ def main():
         scores2, counts2, token_hit2 = aggregate_scores(ds2, token_idx, fan_out)
         ranked2 = select_candidates(scores2, counts2, token_hit2, existing,
                                     args.min_score, args.min_evidence,
-                                    args.per_pair_top_k)
+                                    args.per_pair_top_k, args.per_token_top_k)
         print_summary(ranked2, scores2, counts2, token_hit2, existing, label="(compare) ")
         compare_path = args.output.replace(".csv", "_compare.csv")
         write_candidates(compare_path, ranked2, scores2, counts2, token_hit2, existing)
