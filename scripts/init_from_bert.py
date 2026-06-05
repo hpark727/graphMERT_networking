@@ -113,6 +113,22 @@ def main():
     os.makedirs(args.output_path, exist_ok=True)
     model.save_pretrained(args.output_path, safe_serialization=True)
 
+    # Write minimal trainer_state.json so HuggingFace Trainer accepts this
+    # directory as a valid checkpoint and starts training from step 0.
+    import json
+    trainer_state = {
+        "epoch": 0.0,
+        "global_step": 0,
+        "log_history": [],
+        "best_metric": None,
+        "best_model_checkpoint": None,
+        "is_world_process_zero": True,
+        "stateful_callbacks": {},
+        "total_flos": 0.0,
+    }
+    with open(os.path.join(args.output_path, "trainer_state.json"), "w") as f:
+        json.dump(trainer_state, f, indent=2)
+
     print(f"\nTransferred {transferred} tensors.")
     if skipped:
         print(f"Skipped ({len(skipped)}): {skipped}")
