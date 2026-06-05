@@ -125,6 +125,7 @@ def main():
         "is_world_process_zero": True,
         "stateful_callbacks": {},
         "total_flos": 0.0,
+        "train_batch_size": 8,
     }
     with open(os.path.join(args.output_path, "trainer_state.json"), "w") as f:
         json.dump(trainer_state, f, indent=2)
