@@ -1,0 +1,19 @@
+# predict_tails.py config — KG expansion using BERT-init stage-2 GraphMERT checkpoint
+# Model: networking_graphmert_bert_init_stage2 (50 total epochs: stage1 + stage2)
+
+model_path: DELLA_ROOT/outputs/networking_graphmert_bert_init_stage2/span/rel22/bs32_lr_2e-05
+tokenizer_path: BERT_TOKENIZER_PATH
+
+preprocessed_dataset_path: DELLA_ROOT/gen4_triplets/predict_tails_input/train
+relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
+
+output_dir: DELLA_ROOT/outputs/kg_expansion_bert_init_stage2/train
+
+top_k: 15
+batch_size: 8
+
+num_leaves: 3
+root_nodes: 128
+
+num_parallel_jobs: 1
+take_subset: false
