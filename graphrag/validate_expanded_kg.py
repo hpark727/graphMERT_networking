@@ -56,7 +56,7 @@ MODEL_GPT  = "openai/gpt-oss-120b"
 
 TEMPERATURE = 0.0
 MAX_TOKENS  = 512
-MAX_CONCURRENT_PER_MODEL = 10
+MAX_CONCURRENT_PER_MODEL = 50  # overridden by --max_concurrent
 
 _sem_qwen: asyncio.Semaphore | None = None
 _sem_gpt:  asyncio.Semaphore | None = None
@@ -225,5 +225,10 @@ if __name__ == "__main__":
         "--threshold", choices=["both", "either", "soft"], default="both",
         help="both=both yes (strictest, default); either=at least one yes; soft=one yes and no hard no",
     )
+    ap.add_argument(
+        "--max_concurrent", type=int, default=MAX_CONCURRENT_PER_MODEL,
+        help=f"Max simultaneous requests per model (default {MAX_CONCURRENT_PER_MODEL})",
+    )
     args = ap.parse_args()
+    MAX_CONCURRENT_PER_MODEL = args.max_concurrent
     asyncio.run(validate(args.input, args.output, args.threshold))
