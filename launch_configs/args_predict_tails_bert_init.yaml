@@ -10,7 +10,7 @@ relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
 output_dir: DELLA_ROOT/outputs/kg_expansion_bert_init/train
 
 top_k: 15
-batch_size: 64
+batch_size: 8
 
 num_leaves: 3
 root_nodes: 128
