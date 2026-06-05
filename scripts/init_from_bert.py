@@ -57,7 +57,20 @@ def main():
 
     config = GraphMertConfig()
     if args.config_overrides:
-        config.update_from_string(args.config_overrides)
+        for kv in args.config_overrides.split(","):
+            k, _, v = kv.strip().partition("=")
+            k, v = k.strip(), v.strip()
+            for cast in (int, float):
+                try:
+                    v = cast(v)
+                    break
+                except ValueError:
+                    pass
+            if v == "true":
+                v = True
+            elif v == "false":
+                v = False
+            setattr(config, k, v)
         print(f"Config overrides applied: {args.config_overrides}")
 
     print(f"Creating GraphMERT: hidden={config.hidden_size}, heads={config.num_attention_heads}, "
