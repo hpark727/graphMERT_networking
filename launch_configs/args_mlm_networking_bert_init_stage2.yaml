@@ -1,0 +1,88 @@
+# GraphMERT MLM training — stage 2 (continue from BERT-init trained model)
+# Loads weights from the completed stage-1 BERT-init run and trains another 25 epochs.
+# LR schedule restarts from scratch (cosine from 2e-5 → 1e-7).
+
+config_overrides: 'max_nodes=512,vocab_size=30522,num_hidden_layers=6,num_attention_heads=12,hidden_size=768,intermediate_size=3072,pretrained_emb_dim=0'
+cache_dir: DELLA_ROOT/cache
+
+train_file: DELLA_ROOT/data/ch1_txt_train.txt
+validation_file: DELLA_ROOT/data/ch8_txt_eval.txt
+
+tokenized_dataset_output_path: null
+cut_dataset_for_testing: false
+
+train_dataset_with_heads: DELLA_ROOT/gen4_triplets/training_data/heads_train
+eval_dataset_with_heads: DELLA_ROOT/gen4_triplets/training_data/heads_eval
+
+injections_train_path: DELLA_ROOT/gen4_triplets/training_data/injections_train.csv
+injections_eval_path:  DELLA_ROOT/gen4_triplets/training_data/injections_eval.csv
+
+relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
+
+lr_scheduler_kwargs:
+    min_lr: !!float 1e-7
+learning_rate: !!float 2e-5
+num_train_epochs: 25
+
+# Stage-1 weights staged here by the SLURM script before training starts.
+resume_from_checkpoint: DELLA_ROOT/outputs/networking_graphmert_bert_init_stage2_weights
+
+output_dir: DELLA_ROOT/outputs/networking_graphmert_bert_init_stage2
+
+per_device_train_batch_size: 8
+per_device_eval_batch_size: 8
+gradient_accumulation_steps: 4
+warmup_steps: 100
+
+preprocessing_num_workers: 8
+dataloader_num_workers: 4
+
+save_steps: 200
+eval_steps: 100
+logging_steps: 25
+
+num_relationships: 22
+
+exp_mask_base: 0.6
+
+graph_types:
+    - root_undirected
+    - leaf_undirected
+    - leaf_connected_undirected
+
+relation_emb_dropout: 0.45
+mlm_sbo: true
+mlm_on_leaves_probability: 0.15
+span_upper_length: 3
+weight_decay: 0.01
+
+max_train_samples: null
+
+tokenizer_name: bert-base-uncased
+subword_token_start: "##"
+
+use_auth_token: false
+dropout: 0.1
+attention_dropout: 0.1
+activation_dropout: 0.1
+layerdrop: 0.0
+
+overwrite_cache: false
+validation_split_percentage: 5
+max_seq_length: 128
+log_level: info
+report_to: wandb
+
+dataloader_prefetch_factor: null
+seed: 42
+do_predict: false
+do_eval: true
+do_train: true
+bf16: true
+eval_strategy: steps
+logging_strategy: steps
+lr_scheduler_type: cosine_with_min_lr
+overwrite_output_dir: true
+remove_unused_columns: false
+save_safetensors: true
+save_total_limit: 3
