@@ -4,9 +4,8 @@
 #SBATCH --error=slurm_logs/graphmert_bert_init_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --partition=gpu
-#SBATCH --constraint="intel&gpu40"
+#SBATCH --cpus-per-task=1
+#SBATCH --partition=mig
 #SBATCH --gres=gpu:1
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --time=24:00:00
