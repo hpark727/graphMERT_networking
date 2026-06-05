@@ -7,9 +7,14 @@ Usage (on Della):
       --predictions  outputs/kg_expansion_bert_init_stage2/train/top_15 \
       --seed_kg_dir  gen4_triplets/seed_kg \
       --output       outputs/kg_expansion_bert_init_stage2/train/candidate_triples.csv \
-      [--min_score -5.0] [--min_evidence 1] [--top_k 2000]
+      [--per_pair_top_k 20] [--min_score -8.0] [--min_evidence 1]
 
-Optional: compare two prediction sets:
+--per_pair_top_k (default 20): for each unique (head, relation) pair, take the
+  top-N candidate entities ranked by specificity-weighted score.  This ensures
+  every predicted pair gets representation rather than high-frequency tokens
+  dominating the global ranking.
+
+Optional comparison:
   python3 scripts/expand_kg_from_predictions.py \
       --predictions  outputs/kg_expansion_bert_init_stage2/train/top_15 \
       --compare      outputs/kg_expansion_bert_init/train/top_15 \
@@ -24,7 +29,6 @@ import math
 import os
 from collections import defaultdict
 
-import numpy as np
 from datasets import load_from_disk
 
 
@@ -47,44 +51,55 @@ def load_seed_kg(seed_kg_dir):
 
 
 def build_token_index(entities):
-    """Build word-token → set of entities index (word-level split of entity names)."""
+    """
+    Build word-token → set of entities index (word-level split of entity names).
+    Also returns fan_out: token → number of entities that contain it (used for
+    specificity weighting — lower fan-out = more specific prediction).
+    """
     idx = defaultdict(set)
     for entity in entities:
         for tok in entity.split():
             idx[tok].add(entity)
-    return idx
+    fan_out = {tok: len(ents) for tok, ents in idx.items()}
+    return idx, fan_out
 
 
 # ── Scoring ──────────────────────────────────────────────────────────────────
 
-def aggregate_scores(ds, token_idx):
+def aggregate_scores(ds, token_idx, fan_out):
     """
-    For each (head, relation, entity) triple candidate, accumulate log-prob
-    evidence across all rows in the dataset.
+    For each (head, relation, entity) triple candidate, accumulate a
+    specificity-weighted log-prob score across all rows in the dataset.
+
+    The raw log-prob for a (head, rel, tok→entity) hit is divided by the
+    token's fan-out (number of entities it maps to).  A token like "chrome"
+    that maps to exactly 1 entity contributes its full log-prob; "delay"
+    mapping to 17 entities contributes 1/17 of its log-prob.  This ensures
+    specific signals dominate the ranking rather than frequent broad tokens.
 
     Returns:
-        scores  : dict[(head, rel, entity)] → sum of log(prob)
-        counts  : dict[(head, rel, entity)] → number of supporting rows
-        token_used : dict[(head, rel, entity)] → set of matched tokens
+        scores    : dict[(head, rel, entity)] → weighted score
+        counts    : dict[(head, rel, entity)] → number of supporting rows
+        token_hit : dict[(head, rel, entity)] → set of matched tokens
     """
     scores    = defaultdict(float)
     counts    = defaultdict(int)
     token_hit = defaultdict(set)
 
     for row in ds:
-        head = row["head"]
-        rel  = row["relation"]
+        head   = row["head"]
+        rel    = row["relation"]
         tokens = row["predictions"].split()
         probs  = row["probabilities"]
 
         for tok, prob in zip(tokens, probs):
-            # Skip subword fragments (##...) — not mappable to full entities
             if tok.startswith("##"):
                 continue
             candidates = token_idx.get(tok)
             if not candidates:
                 continue
-            log_p = math.log(prob + 1e-12)
+            n_entities = fan_out[tok]
+            log_p = math.log(prob + 1e-12) / n_entities  # specificity weight
             for entity in candidates:
                 key = (head, rel, entity)
                 scores[key]    += log_p
@@ -92,6 +107,34 @@ def aggregate_scores(ds, token_idx):
                 token_hit[key].add(tok)
 
     return scores, counts, token_hit
+
+
+def select_candidates(scores, counts, token_hit, existing,
+                      min_score, min_evidence, per_pair_top_k):
+    """
+    Filter candidates and apply per-(head, relation) budget.
+
+    Returns a list of keys sorted by score (descending).
+    """
+    # Global filter
+    valid = {k for k in scores
+             if k not in existing
+             and k[0] != k[2]           # drop circular
+             and scores[k] >= min_score
+             and counts[k] >= min_evidence}
+
+    # Per-(head, relation) top-K
+    if per_pair_top_k is not None:
+        by_pair = defaultdict(list)
+        for k in valid:
+            by_pair[(k[0], k[1])].append(k)
+        selected = []
+        for pair_keys in by_pair.values():
+            pair_keys.sort(key=lambda k: scores[k], reverse=True)
+            selected.extend(pair_keys[:per_pair_top_k])
+        valid = set(selected)
+
+    return sorted(valid, key=lambda k: scores[k], reverse=True)
 
 
 # ── Output ───────────────────────────────────────────────────────────────────
@@ -111,27 +154,41 @@ def write_candidates(path, ranked, scores, counts, token_hit, existing):
                 " | ".join(sorted(token_hit[key])),
                 "yes" if key in existing else "no",
             ])
-    print(f"Wrote {len(ranked)} rows → {path}")
+    print(f"Wrote {len(ranked):,} rows → {path}")
+
+
+def print_summary(ranked, scores, counts, token_hit, existing, label=""):
+    n = len(ranked)
+    unique_pairs = len({(k[0], k[1]) for k in ranked})
+    unique_heads = len({k[0] for k in ranked})
+    print(f"\n{label}Summary: {n:,} candidates | {unique_pairs:,} (head,rel) pairs | {unique_heads:,} unique heads")
+
+    print(f"\n=== Top 30 novel candidates {label}===")
+    for key in ranked[:30]:
+        head, rel, entity = key
+        print(f"  {head:30s} --{rel:20s}--> {entity:35s}"
+              f"  score={scores[key]:6.3f}  n={counts[key]}"
+              f"  tok=[{' | '.join(sorted(token_hit[key]))}]")
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--predictions",  required=True,
+    parser.add_argument("--predictions",    required=True,
                         help="Path to top_k HuggingFace dataset from predict_tails")
-    parser.add_argument("--seed_kg_dir",  required=True,
+    parser.add_argument("--seed_kg_dir",    required=True,
                         help="Directory containing seed_kg_ch*.csv files")
-    parser.add_argument("--output",       required=True,
+    parser.add_argument("--output",         required=True,
                         help="Output CSV path")
-    parser.add_argument("--compare",      default=None,
+    parser.add_argument("--compare",        default=None,
                         help="Optional second predictions dataset for side-by-side output")
-    parser.add_argument("--min_score",    type=float, default=-8.0,
-                        help="Drop candidates with total log-prob below this threshold")
-    parser.add_argument("--min_evidence", type=int,   default=1,
-                        help="Minimum number of supporting rows")
-    parser.add_argument("--top_k",        type=int,   default=2000,
-                        help="Maximum number of candidate triples to output")
+    parser.add_argument("--per_pair_top_k", type=int,   default=20,
+                        help="Max candidates per (head, relation) pair (default 20)")
+    parser.add_argument("--min_score",      type=float, default=-5.0,
+                        help="Min specificity-weighted log-prob score (default -5.0)")
+    parser.add_argument("--min_evidence",   type=int,   default=1,
+                        help="Min number of supporting prediction rows (default 1)")
     args = parser.parse_args()
 
     # Load seed KG
@@ -139,7 +196,7 @@ def main():
     entities, existing = load_seed_kg(args.seed_kg_dir)
     print(f"  {len(entities):,} entities, {len(existing):,} existing triples")
 
-    token_idx = build_token_index(entities)
+    token_idx, fan_out = build_token_index(entities)
     print(f"  {len(token_idx):,} unique word-tokens in entity index")
 
     # Load & score primary predictions
@@ -147,58 +204,32 @@ def main():
     ds = load_from_disk(args.predictions)
     print(f"  {len(ds):,} rows")
 
-    scores, counts, token_hit = aggregate_scores(ds, token_idx)
+    scores, counts, token_hit = aggregate_scores(ds, token_idx, fan_out)
     print(f"  {len(scores):,} raw (head, rel, entity) candidates before filtering")
 
-    # Filter
-    new_only = {k for k in scores
-                if k not in existing
-                and k[0] != k[2]             # drop circular (head == tail)
-                and scores[k] >= args.min_score
-                and counts[k] >= args.min_evidence}
-    print(f"  {len(new_only):,} novel candidates after filtering")
+    ranked = select_candidates(scores, counts, token_hit, existing,
+                               args.min_score, args.min_evidence,
+                               args.per_pair_top_k)
 
-    ranked_new = sorted(new_only, key=lambda k: scores[k], reverse=True)[:args.top_k]
-    ranked_all = sorted(scores,   key=lambda k: scores[k], reverse=True)[:args.top_k]
-
-    # Print top-30 novel candidates
-    print(f"\n=== Top 30 novel candidate triples (not in seed KG) ===")
-    for key in ranked_new[:30]:
-        head, rel, entity = key
-        print(f"  {head:30s} --{rel:25s}--> {entity:30s}"
-              f"  score={scores[key]:6.2f}  n={counts[key]}"
-              f"  tok=[{' | '.join(sorted(token_hit[key]))}]")
-
-    # Also show how many new entities (tails not already in seed KG entity set)
-    new_tail_entities = {k[2] for k in new_only if k[2] not in entities}
-    known_tails = {k[2] for k in new_only if k[2] in entities}
-    print(f"\n  Tail entity breakdown:")
-    print(f"    Known seed-KG entities used as tails : {len(known_tails):,}")
-    print(f"    Entirely new tail entities            : {len(new_tail_entities):,}")
-
-    # Write primary output (novel only)
-    write_candidates(args.output, ranked_new, scores, counts, token_hit, existing)
+    print_summary(ranked, scores, counts, token_hit, existing)
+    write_candidates(args.output, ranked, scores, counts, token_hit, existing)
 
     # Optional comparison
     if args.compare:
         print(f"\nLoading comparison predictions from {args.compare} …")
         ds2 = load_from_disk(args.compare)
-        scores2, counts2, token_hit2 = aggregate_scores(ds2, token_idx)
-        new2 = {k for k in scores2
-                if k not in existing
-                and k[0] != k[2]
-                and scores2[k] >= args.min_score
-                and counts2[k] >= args.min_evidence}
-        ranked2 = sorted(new2, key=lambda k: scores2[k], reverse=True)[:args.top_k]
-
-        novel_in_s2_not_s1 = set(ranked_new[:500]) - set(ranked2[:500])
-        novel_in_s1_not_s2 = set(ranked2[:500]) - set(ranked_new[:500])
-        print(f"\n  Top-500 comparison:")
-        print(f"    In stage-2 but not stage-1 : {len(novel_in_s2_not_s1)}")
-        print(f"    In stage-1 but not stage-2 : {len(novel_in_s1_not_s2)}")
-
-        compare_path = args.output.replace(".csv", "_compare_s1.csv")
+        scores2, counts2, token_hit2 = aggregate_scores(ds2, token_idx, fan_out)
+        ranked2 = select_candidates(scores2, counts2, token_hit2, existing,
+                                    args.min_score, args.min_evidence,
+                                    args.per_pair_top_k)
+        print_summary(ranked2, scores2, counts2, token_hit2, existing, label="(compare) ")
+        compare_path = args.output.replace(".csv", "_compare.csv")
         write_candidates(compare_path, ranked2, scores2, counts2, token_hit2, existing)
+
+        top_s2 = set(ranked[:500])
+        top_c  = set(ranked2[:500])
+        print(f"\n  Top-500 overlap: {len(top_s2 & top_c)} shared, "
+              f"{len(top_s2 - top_c)} only in primary, {len(top_c - top_s2)} only in compare")
 
     print("\nDone.")
 
