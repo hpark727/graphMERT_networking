@@ -21,6 +21,7 @@ https://huggingface.co/models?filter=fill-mask
 """
 
 
+import json
 import logging
 import math
 import os, sys
@@ -201,7 +202,26 @@ def main(yaml_file: str):
         logger.info(f"Overriding config: {model_args.config_overrides}")
         logger.info(f"New config: {config}")
 
-    model = AutoModelForMaskedLM.from_config(config)
+    # If resume_from_checkpoint is a global_step=0 init checkpoint (e.g. BERT-seeded
+    # weights written by init_from_bert.py), load the weights directly via from_pretrained
+    # and clear resume_from_checkpoint so the Trainer starts a fresh training loop.
+    # This avoids a bug in transformers 4.57 where _save_checkpoint reads
+    # stateful_callbacks[cb_name] without a .get() default, causing KeyError for
+    # any callback that wasn't already in the hand-crafted trainer_state.json.
+    _bert_init_path = None
+    if training_args.resume_from_checkpoint is not None:
+        _state_path = os.path.join(training_args.resume_from_checkpoint, "trainer_state.json")
+        if os.path.isfile(_state_path):
+            with open(_state_path) as _f:
+                if json.load(_f).get("global_step", -1) == 0:
+                    _bert_init_path = training_args.resume_from_checkpoint
+                    training_args.resume_from_checkpoint = None
+
+    if _bert_init_path is not None:
+        logger.info(f"Loading BERT-initialized weights from {_bert_init_path} (bypassing Trainer resume)")
+        model = AutoModelForMaskedLM.from_pretrained(_bert_init_path, config=config)
+    else:
+        model = AutoModelForMaskedLM.from_config(config)
 
 
     # We resize the embeddings only when necessary to avoid index errors. If you are creating a model from scratch
