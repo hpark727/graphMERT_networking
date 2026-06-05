@@ -50,26 +50,20 @@ echo "=== Staging stage-1 weights for stage-2 init ==="
 mkdir -p ${STAGE2_INIT}
 cp ${STAGE1_MODEL}/model.safetensors ${STAGE2_INIT}/
 cp ${STAGE1_MODEL}/config.json       ${STAGE2_INIT}/
-export STAGE2_INIT  # make visible to the python subprocess below
-
-conda run -n graphmert python3 - << 'PYEOF'
-import json, os
-out = os.environ['STAGE2_INIT']
-trainer_state = {
-    "epoch": 0.0,
-    "global_step": 0,
-    "log_history": [],
-    "best_metric": None,
-    "best_model_checkpoint": None,
-    "is_world_process_zero": True,
-    "stateful_callbacks": {},
-    "total_flos": 0.0,
-    "train_batch_size": 8,
+cat > ${STAGE2_INIT}/trainer_state.json << 'JSONEOF'
+{
+  "epoch": 0.0,
+  "global_step": 0,
+  "log_history": [],
+  "best_metric": null,
+  "best_model_checkpoint": null,
+  "is_world_process_zero": true,
+  "stateful_callbacks": {},
+  "total_flos": 0.0,
+  "train_batch_size": 8
 }
-with open(os.path.join(out, "trainer_state.json"), "w") as f:
-    json.dump(trainer_state, f, indent=2)
-print(f"Wrote trainer_state.json to {out}")
-PYEOF
+JSONEOF
+echo "Wrote trainer_state.json to ${STAGE2_INIT}"
 
 # ── Step 2: dataset preprocessing (uses cache — should be instant) ────────────
 echo "=== Dataset preprocessing ==="
