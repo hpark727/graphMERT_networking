@@ -222,8 +222,8 @@ if __name__ == "__main__":
         help="Output path for validated triples",
     )
     ap.add_argument(
-        "--threshold", choices=["both", "either", "soft"], default="both",
-        help="both=both yes (strictest, default); either=at least one yes; soft=one yes and no hard no",
+        "--threshold", choices=["both", "either", "soft"], default="either",
+        help="either=at least one yes (default); both=both yes (strictest); soft=one yes and no hard no",
     )
     ap.add_argument(
         "--max_concurrent", type=int, default=MAX_CONCURRENT_PER_MODEL,
