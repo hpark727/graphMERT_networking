@@ -41,7 +41,7 @@ mkdir -p ${REPO}/outputs/networking_graphmert_stage3
 mkdir -p slurm_logs
 
 # ── Build fresh init checkpoint from stage-2 weights (epoch/step reset to 0) ─
-STAGE2_CKPT=${REPO}/outputs/networking_graphmert_stage2/span/rel22/bs32_lr_1e-05
+STAGE2_CKPT=${REPO}/outputs/networking_graphmert_bert_init/span/rel22/bs32_lr_2e-05
 STAGE3_INIT=${REPO}/outputs/networking_graphmert_stage3_init
 
 mkdir -p ${STAGE3_INIT}
