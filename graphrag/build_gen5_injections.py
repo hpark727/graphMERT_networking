@@ -63,8 +63,11 @@ def build_head_index(ch: int) -> dict[str, list[int]]:
 
 def main() -> None:
     logger.info(f"Loading validated triples from {VALIDATED_PATH}")
-    val_df = pd.read_csv(VALIDATED_PATH, usecols=["head", "relation", "tail"])
-    logger.info(f"  {len(val_df):,} validated triples")
+    val_df = pd.read_csv(VALIDATED_PATH)
+    before = len(val_df)
+    val_df = val_df[(val_df["verdict_qwen"] == "yes") & (val_df["verdict_gpt"] == "yes")]
+    logger.info(f"  {len(val_df):,} both-yes triples (filtered from {before:,})")
+    val_df = val_df[["head", "relation", "tail"]]
 
     OUTPUT_INJECTIONS_DIR.mkdir(parents=True, exist_ok=True)
 
