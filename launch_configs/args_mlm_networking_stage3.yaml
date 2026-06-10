@@ -23,8 +23,8 @@ lr_scheduler_kwargs:
 learning_rate: !!float 1e-5
 num_train_epochs: 40
 
-# Load weights from stage-2 output
-resume_from_checkpoint: DELLA_ROOT/outputs/networking_graphmert_stage2/span/rel22/bs32_lr_1e-05
+# Load weights from stage-2 output (training state reset to epoch 0 by slurm script)
+resume_from_checkpoint: DELLA_ROOT/outputs/networking_graphmert_stage3_init
 
 output_dir: DELLA_ROOT/outputs/networking_graphmert_stage3
 

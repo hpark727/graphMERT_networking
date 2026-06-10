@@ -40,6 +40,32 @@ mkdir -p ${REPO}/cache
 mkdir -p ${REPO}/outputs/networking_graphmert_stage3
 mkdir -p slurm_logs
 
+# ── Build fresh init checkpoint from stage-2 weights (epoch/step reset to 0) ─
+STAGE2_CKPT=${REPO}/outputs/networking_graphmert_stage2/span/rel22/bs32_lr_1e-05
+STAGE3_INIT=${REPO}/outputs/networking_graphmert_stage3_init
+
+mkdir -p ${STAGE3_INIT}
+cp ${STAGE2_CKPT}/model.safetensors ${STAGE3_INIT}/
+cp ${STAGE2_CKPT}/config.json ${STAGE3_INIT}/
+python3 -c "
+import json
+state = {
+    'epoch': 0.0,
+    'global_step': 0,
+    'log_history': [],
+    'best_metric': None,
+    'best_model_checkpoint': None,
+    'is_world_process_zero': True,
+    'stateful_callbacks': {},
+    'total_flos': 0.0,
+    'train_batch_size': 8
+}
+out = '${STAGE3_INIT}/trainer_state.json'
+with open(out, 'w') as f:
+    json.dump(state, f, indent=2)
+print('Wrote fresh trainer_state.json ->', out)
+"
+
 # ── Step 1: dataset preprocessing (CPU) ──────────────────────────────────────
 echo "=== Dataset preprocessing ==="
 conda run -n graphmert python3 run_dataset_preprocessing.py --yaml_file ${YAML_LIVE}
