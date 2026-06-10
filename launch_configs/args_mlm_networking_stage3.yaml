@@ -1,7 +1,7 @@
 # GraphMERT MLM stage-3 training config — Kurose & Ross networking textbook (gen4 expanded KG, both-yes validated triples)
 # Continues from stage-2 checkpoint; same LR/schedule, gen4_expanded injection data.
 
-config_overrides: 'max_nodes=512,vocab_size=30522,num_hidden_layers=6,num_attention_heads=8,hidden_size=512,intermediate_size=2048,pretrained_emb_dim=0'
+config_overrides: 'max_nodes=512,vocab_size=30522,num_hidden_layers=6,num_attention_heads=12,hidden_size=768,intermediate_size=3072,pretrained_emb_dim=0'
 cache_dir: DELLA_ROOT/cache
 
 train_file: DELLA_ROOT/data/all_chapters_train.txt
