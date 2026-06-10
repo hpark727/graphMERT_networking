@@ -21,7 +21,7 @@ relation_map_path: DELLA_ROOT/gen4_triplets/relation_map.json
 lr_scheduler_kwargs:
     min_lr: !!float 1e-7
 learning_rate: !!float 1e-5
-num_train_epochs: 40
+num_train_epochs: 20
 
 # Load weights from stage-2 output (training state reset to epoch 0 by slurm script)
 resume_from_checkpoint: DELLA_ROOT/outputs/networking_graphmert_stage3_init
